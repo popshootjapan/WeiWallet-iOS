@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wMg-yz-5Yj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--バックアップキーの記録-->
+        <scene sceneID="Vip-mR-Doc">
+            <objects>
+                <viewController id="wMg-yz-5Yj" customClass="BackupViewController" customModule="Wei" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xxq-ue-xYH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ifm-qs-5hp">
+                                <rect key="frame" x="0.0" y="164" width="375" height="384"/>
+                                <color key="backgroundColor" red="0.71372549019607845" green="0.74509803921568629" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="384" id="ioD-5U-fjk"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="A48-bX-gT7">
+                                    <size key="itemSize" width="155" height="64"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MnemonicWordViewCell" id="TlG-Qn-3gO" customClass="MnemonicWordViewCell" customModule="Wei" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="64"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="64"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6Q-AL-Tox">
+                                                    <rect key="frame" x="16" y="16.5" width="32" height="32"/>
+                                                    <color key="backgroundColor" red="0.086274509803921567" green="0.32549019607843138" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="Anj-tR-A2Z"/>
+                                                        <constraint firstAttribute="height" constant="32" id="tN9-Yw-Sfb"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="16"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTa-Te-LyZ">
+                                                    <rect key="frame" x="64" y="24" width="80" height="17.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" red="0.1764705882352941" green="0.18431372549019609" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Isl-bX-4Hu">
+                                                    <rect key="frame" x="0.0" y="63" width="160" height="1"/>
+                                                    <color key="backgroundColor" red="0.71372549019607845" green="0.74509803921568629" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="zI7-96-gI2"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.87058823529411766" green="0.89803921568627454" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="bTa-Te-LyZ" secondAttribute="trailing" constant="16" id="6En-mg-ZDw"/>
+                                            <constraint firstAttribute="trailing" secondItem="Isl-bX-4Hu" secondAttribute="trailing" id="81J-I2-AYb"/>
+                                            <constraint firstItem="H6Q-AL-Tox" firstAttribute="leading" secondItem="TlG-Qn-3gO" secondAttribute="leading" constant="16" id="89r-DN-cTb"/>
+                                            <constraint firstAttribute="bottom" secondItem="Isl-bX-4Hu" secondAttribute="bottom" id="Fxc-VL-BwR"/>
+                                            <constraint firstItem="bTa-Te-LyZ" firstAttribute="leading" secondItem="H6Q-AL-Tox" secondAttribute="trailing" constant="16" id="KWO-3F-hPd"/>
+                                            <constraint firstItem="H6Q-AL-Tox" firstAttribute="centerY" secondItem="TlG-Qn-3gO" secondAttribute="centerY" id="Trr-6d-R8P"/>
+                                            <constraint firstItem="Isl-bX-4Hu" firstAttribute="leading" secondItem="TlG-Qn-3gO" secondAttribute="leading" id="Vwf-Lg-ghw"/>
+                                            <constraint firstItem="bTa-Te-LyZ" firstAttribute="centerY" secondItem="TlG-Qn-3gO" secondAttribute="centerY" id="bpB-Ap-7q0"/>
+                                        </constraints>
+                                        <size key="customSize" width="160" height="64"/>
+                                        <connections>
+                                            <outlet property="mnemonicWordLabel" destination="bTa-Te-LyZ" id="Qke-e6-Hhh"/>
+                                            <outlet property="numberLabel" destination="H6Q-AL-Tox" id="qYc-Db-NVP"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="delegate" destination="wMg-yz-5Yj" id="CFn-lY-AzC"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12個の単語の並びがお客様のバックアップキーです。順番通りに記録して大事に保管してください。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dX-Cn-ZZI">
+                                <rect key="frame" x="16" y="80" width="343" height="68"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ifm-qs-5hp" firstAttribute="top" secondItem="amK-53-hMO" secondAttribute="top" constant="100" id="DjK-pc-SDB"/>
+                            <constraint firstItem="6dX-Cn-ZZI" firstAttribute="top" secondItem="amK-53-hMO" secondAttribute="top" constant="16" id="GUG-lf-7sl"/>
+                            <constraint firstItem="6dX-Cn-ZZI" firstAttribute="leading" secondItem="amK-53-hMO" secondAttribute="leading" constant="16" id="V79-0k-TIR"/>
+                            <constraint firstItem="amK-53-hMO" firstAttribute="trailing" secondItem="ifm-qs-5hp" secondAttribute="trailing" id="VgV-vj-aqR"/>
+                            <constraint firstItem="amK-53-hMO" firstAttribute="trailing" secondItem="6dX-Cn-ZZI" secondAttribute="trailing" constant="16" id="Xgc-QV-VDx"/>
+                            <constraint firstItem="ifm-qs-5hp" firstAttribute="leading" secondItem="amK-53-hMO" secondAttribute="leading" id="l0g-5r-yJe"/>
+                            <constraint firstItem="ifm-qs-5hp" firstAttribute="top" secondItem="6dX-Cn-ZZI" secondAttribute="bottom" constant="16" id="rAa-lU-Ujl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="amK-53-hMO"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="バックアップキーの記録" id="A4s-ne-pRG">
+                        <barButtonItem key="rightBarButtonItem" title="確認" id="CZX-ag-fFv"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="collectionView" destination="ifm-qs-5hp" id="s6N-LL-B5G"/>
+                        <outlet property="confirmButton" destination="CZX-ag-fFv" id="gtX-FN-c1g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Msn-z4-Cc7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2004" y="-766.86656671664173"/>
+        </scene>
+    </scenes>
+</document>

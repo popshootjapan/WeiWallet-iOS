@@ -1,0 +1,10 @@
+github "pinterest/PINCache"
+github "ishkawa/APIKit"
+github "Swinject/Swinject"
+github "ReactiveX/RxSwift"
+github "yuzushioh/EthereumKit" "master"
+github "kishikawakatsumi/KeychainAccess"
+github "SVProgressHUD/SVProgressHUD"
+github "Quick/Quick"
+github "Quick/Nimble"
+

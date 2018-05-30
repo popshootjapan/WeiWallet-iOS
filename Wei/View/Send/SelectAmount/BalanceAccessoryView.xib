@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BalanceAccessoryView" customModule="Wei" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3x0-sK-u9Y">
+                    <rect key="frame" x="142" y="27" width="4.5" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="送金可能額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbQ-vh-lcM">
+                    <rect key="frame" x="158" y="8" width="60" height="12"/>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="12"/>
+                    <color key="textColor" red="0.63137254901960782" green="0.66274509803921566" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZw-xs-Jla">
+                    <rect key="frame" x="150.5" y="33" width="30" height="15"/>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- 手数料" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79C-5V-UF3">
+                    <rect key="frame" x="188.5" y="32" width="55.5" height="15"/>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
+                    <color key="textColor" red="0.63137254901960782" green="0.66274509803921566" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85E-3Y-HGw">
+                    <rect key="frame" x="252" y="32" width="15" height="15"/>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
+                    <color key="textColor" red="0.63137254899999995" green="0.66274509800000003" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8D-mk-elX">
+                    <rect key="frame" x="246" y="30" width="4" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.63137254899999995" green="0.66274509800000003" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.87450980392156863" green="0.89803921568627454" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="H8D-mk-elX" firstAttribute="centerY" secondItem="79C-5V-UF3" secondAttribute="centerY" id="4fZ-RG-TxB"/>
+                <constraint firstItem="79C-5V-UF3" firstAttribute="leading" secondItem="HZw-xs-Jla" secondAttribute="trailing" constant="8" id="6qy-9L-7go"/>
+                <constraint firstItem="kbQ-vh-lcM" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="P2c-yk-ML8"/>
+                <constraint firstItem="85E-3Y-HGw" firstAttribute="centerY" secondItem="79C-5V-UF3" secondAttribute="centerY" id="PT7-fd-kwg"/>
+                <constraint firstItem="HZw-xs-Jla" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" constant="-22" id="Xg5-2N-aJ3"/>
+                <constraint firstItem="HZw-xs-Jla" firstAttribute="leading" secondItem="3x0-sK-u9Y" secondAttribute="trailing" constant="4" id="Ycv-Gh-wwY"/>
+                <constraint firstItem="79C-5V-UF3" firstAttribute="centerY" secondItem="3x0-sK-u9Y" secondAttribute="centerY" id="c6q-hf-99y"/>
+                <constraint firstItem="85E-3Y-HGw" firstAttribute="leading" secondItem="H8D-mk-elX" secondAttribute="trailing" constant="2" id="gu1-1G-HOz"/>
+                <constraint firstItem="HZw-xs-Jla" firstAttribute="baseline" secondItem="3x0-sK-u9Y" secondAttribute="baseline" id="jiL-ho-zD9"/>
+                <constraint firstItem="H8D-mk-elX" firstAttribute="leading" secondItem="79C-5V-UF3" secondAttribute="trailing" constant="2" id="rHt-O9-h5g"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="3x0-sK-u9Y" secondAttribute="bottom" constant="8" id="uCC-VO-bXM"/>
+                <constraint firstItem="kbQ-vh-lcM" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="x20-w3-0rq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="balanceLabel" destination="3x0-sK-u9Y" id="sbJ-ap-rfl"/>
+                <outlet property="fiatUnitLabel" destination="HZw-xs-Jla" id="HWf-K2-3oZ"/>
+                <outlet property="txFeeLabel" destination="H8D-mk-elX" id="hWo-yR-dGH"/>
+            </connections>
+            <point key="canvasLocation" x="-467.5" y="-23.5"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Pr-8c-Ett">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Suggest Backup View Controller-->
+        <scene sceneID="Uwu-0F-Dkg">
+            <objects>
+                <viewController id="8Pr-8c-Ett" customClass="SuggestBackupViewController" customModule="Wei" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="of1-E3-aYk">
+                        <rect key="frame" x="0.0" y="0.0" width="316" height="500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_backup" translatesAutoresizingMaskIntoConstraints="NO" id="Q5O-np-zWE">
+                                <rect key="frame" x="0.0" y="0.0" width="316" height="253"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="316" id="ABz-LZ-tJ8"/>
+                                    <constraint firstAttribute="height" constant="253" id="s0L-Ic-MbE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="バックアップを取りましょう" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vp6-I4-9TO">
+                                <rect key="frame" x="28" y="277" width="260" height="20"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="バックアップを取ることであなたの保有しているイーサリアムは復元することができます" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnQ-SC-dXu">
+                                <rect key="frame" x="16" y="313" width="284" height="45"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
+                                <color key="textColor" red="0.1764705882352941" green="0.18431372549019609" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gno-wO-Q4M">
+                                <rect key="frame" x="16" y="465" width="284" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="65t-f8-q1N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
+                                <state key="normal" title="閉じる">
+                                    <color key="titleColor" red="0.63137254901960782" green="0.65490196078431373" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVJ-aK-cRO">
+                                <rect key="frame" x="16" y="401" width="284" height="56"/>
+                                <color key="backgroundColor" red="0.086274509803921567" green="0.32549019607843138" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="rRL-Pc-1os"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
+                                <state key="normal" title="バックアップを取る">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vp6-I4-9TO" firstAttribute="top" secondItem="Q5O-np-zWE" secondAttribute="bottom" constant="24" id="1BB-F5-6vJ"/>
+                            <constraint firstItem="mVJ-aK-cRO" firstAttribute="centerX" secondItem="52x-zb-59h" secondAttribute="centerX" id="36p-v2-Y6F"/>
+                            <constraint firstItem="vp6-I4-9TO" firstAttribute="centerX" secondItem="52x-zb-59h" secondAttribute="centerX" id="3CA-kD-eOh"/>
+                            <constraint firstItem="gno-wO-Q4M" firstAttribute="centerX" secondItem="52x-zb-59h" secondAttribute="centerX" id="81e-lq-Xvx"/>
+                            <constraint firstItem="52x-zb-59h" firstAttribute="trailing" secondItem="mVJ-aK-cRO" secondAttribute="trailing" constant="16" id="86s-AG-1wY"/>
+                            <constraint firstItem="SnQ-SC-dXu" firstAttribute="top" secondItem="vp6-I4-9TO" secondAttribute="bottom" constant="16" id="8HQ-ps-nHe"/>
+                            <constraint firstItem="gno-wO-Q4M" firstAttribute="top" secondItem="mVJ-aK-cRO" secondAttribute="bottom" constant="8" id="9wm-xY-GJ2"/>
+                            <constraint firstItem="SnQ-SC-dXu" firstAttribute="centerX" secondItem="52x-zb-59h" secondAttribute="centerX" id="AZQ-JZ-zJh"/>
+                            <constraint firstItem="52x-zb-59h" firstAttribute="trailing" secondItem="gno-wO-Q4M" secondAttribute="trailing" constant="16" id="H8m-Dj-XGw"/>
+                            <constraint firstItem="52x-zb-59h" firstAttribute="bottom" secondItem="gno-wO-Q4M" secondAttribute="bottom" constant="20" id="LIi-DX-yk3"/>
+                            <constraint firstItem="mVJ-aK-cRO" firstAttribute="leading" secondItem="52x-zb-59h" secondAttribute="leading" constant="16" id="OOd-r3-LHI"/>
+                            <constraint firstItem="gno-wO-Q4M" firstAttribute="leading" secondItem="52x-zb-59h" secondAttribute="leading" constant="16" id="QOm-DR-w0m"/>
+                            <constraint firstItem="52x-zb-59h" firstAttribute="trailing" secondItem="Q5O-np-zWE" secondAttribute="trailing" id="Usl-b0-Bi7"/>
+                            <constraint firstItem="52x-zb-59h" firstAttribute="trailing" secondItem="SnQ-SC-dXu" secondAttribute="trailing" constant="16" id="Vgh-qs-q5n"/>
+                            <constraint firstItem="52x-zb-59h" firstAttribute="top" secondItem="Q5O-np-zWE" secondAttribute="top" constant="20" id="nhP-SN-VwR"/>
+                            <constraint firstItem="Q5O-np-zWE" firstAttribute="leading" secondItem="52x-zb-59h" secondAttribute="leading" id="njB-68-ijI"/>
+                            <constraint firstItem="SnQ-SC-dXu" firstAttribute="leading" secondItem="52x-zb-59h" secondAttribute="leading" constant="16" id="wGd-aS-R5p"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="52x-zb-59h"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="316" height="500"/>
+                    <connections>
+                        <outlet property="backupButton" destination="mVJ-aK-cRO" id="32r-Wu-GqK"/>
+                        <outlet property="closeButton" destination="gno-wO-Q4M" id="H8E-Xr-oXg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wkv-Ln-89N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234" y="139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_backup" width="316" height="253"/>
+    </resources>
+</document>

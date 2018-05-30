@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v86-JT-VpN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Maintenance View Controller-->
+        <scene sceneID="jbU-2q-KPK">
+            <objects>
+                <viewController id="v86-JT-VpN" customClass="MaintenanceViewController" customModule="Wei" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mWO-xy-zxm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メンテナンス中です" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99a-Ji-iOE">
+                                <rect key="frame" x="97.5" y="344" width="180" height="20"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="しばらくお待ちください。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLa-zB-EEx">
+                                <rect key="frame" x="85.5" y="390" width="204" height="17"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                <color key="textColor" red="0.1764705882352941" green="0.18431372549019609" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_warning" translatesAutoresizingMaskIntoConstraints="NO" id="YC0-bO-Uk4">
+                                <rect key="frame" x="151" y="243" width="72" height="61"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="99a-Ji-iOE" firstAttribute="top" secondItem="YC0-bO-Uk4" secondAttribute="bottom" constant="40" id="HYK-00-gDG"/>
+                            <constraint firstItem="iLa-zB-EEx" firstAttribute="centerX" secondItem="X5q-sH-u52" secondAttribute="centerX" id="MEi-i1-dlJ"/>
+                            <constraint firstItem="YC0-bO-Uk4" firstAttribute="centerY" secondItem="mWO-xy-zxm" secondAttribute="centerY" constant="-60" id="UvC-Qk-tdg"/>
+                            <constraint firstItem="YC0-bO-Uk4" firstAttribute="centerX" secondItem="mWO-xy-zxm" secondAttribute="centerX" id="iN6-2a-x3o"/>
+                            <constraint firstItem="iLa-zB-EEx" firstAttribute="top" secondItem="99a-Ji-iOE" secondAttribute="bottom" constant="26" id="lYM-Sf-COv"/>
+                            <constraint firstItem="99a-Ji-iOE" firstAttribute="centerX" secondItem="X5q-sH-u52" secondAttribute="centerX" id="qwK-S2-3Ma"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="X5q-sH-u52"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jVM-Vk-2bP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-293" y="-234"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_warning" width="72" height="61"/>
+    </resources>
+</document>

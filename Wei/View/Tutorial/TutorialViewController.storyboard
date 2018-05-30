@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jKW-A3-PkB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tutorial View Controller-->
+        <scene sceneID="hMc-Ad-LPY">
+            <objects>
+                <viewController id="jKW-A3-PkB" customClass="TutorialViewController" customModule="Wei" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uv5-G2-faT">
+                        <rect key="frame" x="0.0" y="0.0" width="316" height="500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejp-7X-3Ao">
+                                <rect key="frame" x="0.0" y="0.0" width="316" height="440"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="440" id="fZx-4f-c5O"/>
+                                    <constraint firstAttribute="width" constant="316" id="pop-Rr-3Xc"/>
+                                </constraints>
+                            </scrollView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="e78-5V-Bxs">
+                                <rect key="frame" x="232" y="448.5" width="68" height="58"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZS5-6I-fqq">
+                                        <rect key="frame" x="0.0" y="0.0" width="68" height="29"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
+                                        <state key="normal" title="次へ"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgs-4Y-jas">
+                                        <rect key="frame" x="0.0" y="29" width="68" height="29"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
+                                        <state key="normal" title="はじめる"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="qzi-HH-7aB">
+                                <rect key="frame" x="139" y="459" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="currentPageIndicatorTintColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ejp-7X-3Ao" firstAttribute="leading" secondItem="iGY-0G-DtW" secondAttribute="leading" id="9tk-Az-dIo"/>
+                            <constraint firstItem="iGY-0G-DtW" firstAttribute="bottom" secondItem="qzi-HH-7aB" secondAttribute="bottom" constant="4" id="Dta-aI-Sc3"/>
+                            <constraint firstItem="iGY-0G-DtW" firstAttribute="trailing" secondItem="e78-5V-Bxs" secondAttribute="trailing" constant="16" id="RlI-Qg-x6h"/>
+                            <constraint firstItem="e78-5V-Bxs" firstAttribute="centerY" secondItem="qzi-HH-7aB" secondAttribute="centerY" id="S8A-eo-RS9"/>
+                            <constraint firstItem="qzi-HH-7aB" firstAttribute="centerX" secondItem="iGY-0G-DtW" secondAttribute="centerX" id="Zb6-gm-jdz"/>
+                            <constraint firstItem="iGY-0G-DtW" firstAttribute="top" secondItem="Ejp-7X-3Ao" secondAttribute="top" constant="20" id="mB2-2i-crJ"/>
+                            <constraint firstItem="iGY-0G-DtW" firstAttribute="trailing" secondItem="Ejp-7X-3Ao" secondAttribute="trailing" id="tvz-cD-N83"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iGY-0G-DtW"/>
+                    </view>
+                    <size key="freeformSize" width="316" height="500"/>
+                    <connections>
+                        <outlet property="nextButton" destination="ZS5-6I-fqq" id="ZT1-4p-l8e"/>
+                        <outlet property="pageControl" destination="qzi-HH-7aB" id="DBL-I4-Coo"/>
+                        <outlet property="scrollView" destination="Ejp-7X-3Ao" id="scW-hr-rbe"/>
+                        <outlet property="startButton" destination="Qgs-4Y-jas" id="UVA-tK-dQO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yu2-1T-2MM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-289.60000000000002" y="111.54422788605699"/>
+        </scene>
+    </scenes>
+</document>

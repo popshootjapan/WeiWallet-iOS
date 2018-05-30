@@ -2,6 +2,8 @@
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
+.DS_Store
+
 ## Build generated
 build/
 DerivedData/
@@ -45,14 +47,13 @@ playground.xcworkspace
 # you should judge for yourself, the pros and cons are mentioned at:
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
-# Pods/
+Pods/
 
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
+Carthage/
 
-Carthage/Build
 
 # fastlane
 #
@@ -65,3 +66,6 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
+
+# license pilist
+Wei/Settings.bundle/com.mono0926.LicensePlist.latest_result.txt

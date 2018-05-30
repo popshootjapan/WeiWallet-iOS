@@ -1,0 +1,104 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  before_all do
+    ENV["CRASHLYTICS_FRAMEWORK_PATH"] = ENV["WEI_CRASHLYTICS_FRAMEWORK_PATH"]
+    ENV["CRASHLYTICS_API_TOKEN"]      = ENV["WEI_CRASHLYTICS_API_TOKEN"]
+    ENV["CRASHLYTICS_BUILD_SECRET"]   = ENV["WEI_CRASHLYTICS_BUILD_SECRET"]
+    ENV["SLACK_URL"]                  = ENV["WEI_SLACK_URL"]
+    cocoapods
+  end
+
+  desc "Submit InHouse for fabric, after unit testing"
+  lane :inhouse do
+    test
+    fabric(config: "InHouse")
+    upload_symbols_to_crashlytics
+    clean_build_artifacts
+  end
+
+  desc "Runs all the tests"
+  lane :test do
+    scan(
+	    workspace: "Wei.xcworkspace",
+	    scheme: "Wei",
+	    device: "iPhone 7"
+    )
+  end
+
+  lane :match_development do
+    match(app_identifier: "com.popshoot.wei.debug")
+  end
+
+  lane :match_adhoc do
+    match(app_identifier: "com.popshoot.wei.inhouse")
+  end
+
+  lane :match_appstore do
+    match(app_identifier: "com.popshoot.wei")
+  end
+
+  lane :refresh_dsyms do |options|
+    version = options[:version] || get_info_plist_value(path: "Wei/Info.plist", key: "CFBundleShortVersionString")
+    # Download dSYM files from iTC
+    download_dsyms(
+      version: version,
+      build_number: get_build_number,
+      app_identifier: "com.popshoot.wei"
+    )
+    upload_symbols_to_crashlytics   # Upload them to Crashlytics
+    clean_build_artifacts           # Delete the local dSYM files
+  end
+
+  private_lane :fabric do |options|
+    clean_build_artifacts
+    ensure_git_status_clean
+    config_name = options[:config] || 'InHouse'
+    export_method = options[:export_method] || 'ad-hoc'
+    config_names = ["InHouse"]
+
+    unless config_names.include?(config_name)
+      abort "You must specify a config that exists"
+    end
+
+    slack(message: "Upload #{config_name} :coffee:")
+
+    gym(
+      workspace: "Wei.xcworkspace",
+      configuration: "#{config_name}",
+      export_method: "#{export_method}",
+      output_name: "#{config_name}",
+      scheme: "Wei",
+      clean: true
+    )
+    crashlytics(
+      crashlytics_path: ENV['CRASHLYTICS_FRAMEWORK_PATH'],
+      ipa_path: "#{config_name}.ipa",
+      groups: ['wei-team'],
+      api_token: ENV['CRASHLYTICS_API_TOKEN'],
+      notes: "deployed",
+      build_secret: ENV['CRASHLYTICS_BUILD_SECRET']
+    )
+    slack(
+      message: ":rocket: launched InHouse.ipa to fabric"
+    )
+  end
+
+  error do |lane, exception|
+    slack(
+      message: exception.message,
+      success: false
+    )
+  end
+end

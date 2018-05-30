@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FWK-ni-uLY">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Select Address ByQR View Controller-->
+        <scene sceneID="oVh-vg-jqu">
+            <objects>
+                <viewController id="FWK-ni-uLY" customClass="SelectAddressByQRViewController" customModule="Wei" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bny-3b-l2k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Av-Za-qJ6">
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36K-bo-aGX" customClass="CutoutView" customModule="Wei" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhu-2h-3kK">
+                                        <rect key="frame" x="114.66666666666667" y="50" width="184.33333333333331" height="52"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">相手のQRコードを撮影するか、
+アドレスを入力してください</string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Qhu-2h-3kK" firstAttribute="top" secondItem="36K-bo-aGX" secondAttribute="top" constant="50" id="evg-pO-yA2"/>
+                                    <constraint firstItem="Qhu-2h-3kK" firstAttribute="centerX" secondItem="36K-bo-aGX" secondAttribute="centerX" id="xTa-2P-IYx"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" white="0.0" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="79v-Yg-s7B" firstAttribute="trailing" secondItem="36K-bo-aGX" secondAttribute="trailing" id="5ib-zt-4Dv"/>
+                            <constraint firstItem="36K-bo-aGX" firstAttribute="leading" secondItem="79v-Yg-s7B" secondAttribute="leading" id="AMZ-9x-TwQ"/>
+                            <constraint firstItem="2Av-Za-qJ6" firstAttribute="leading" secondItem="79v-Yg-s7B" secondAttribute="leading" id="AyL-Hg-KaW"/>
+                            <constraint firstItem="2Av-Za-qJ6" firstAttribute="bottom" secondItem="79v-Yg-s7B" secondAttribute="bottom" id="Mni-k3-OpC"/>
+                            <constraint firstItem="36K-bo-aGX" firstAttribute="top" secondItem="79v-Yg-s7B" secondAttribute="top" id="kTq-wD-LpE"/>
+                            <constraint firstItem="2Av-Za-qJ6" firstAttribute="top" secondItem="79v-Yg-s7B" secondAttribute="top" id="uo6-ZQ-hPo"/>
+                            <constraint firstItem="79v-Yg-s7B" firstAttribute="bottom" secondItem="36K-bo-aGX" secondAttribute="bottom" id="uys-xZ-Wkx"/>
+                            <constraint firstItem="2Av-Za-qJ6" firstAttribute="trailing" secondItem="79v-Yg-s7B" secondAttribute="trailing" id="w1M-E9-K4Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="79v-Yg-s7B"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="2Av-Za-qJ6" id="Ga0-XB-nUu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lSY-hf-pD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-135.19999999999999" y="64.31784107946028"/>
+        </scene>
+    </scenes>
+</document>

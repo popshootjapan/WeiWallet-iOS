@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Eoa-k9-vee">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Create Wallet View Controller-->
+        <scene sceneID="ySf-D2-xez">
+            <objects>
+                <viewController id="Eoa-k9-vee" customClass="CreateWalletViewController" customModule="Wei" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p3v-Ho-XYU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XTu-gl-sjV">
+                                <rect key="frame" x="87.5" y="48" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="XUa-Lu-lnm"/>
+                                    <constraint firstAttribute="height" constant="200" id="a25-xA-OCf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたの仮想通貨を、日常に連れだそう。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ysB-vy-zik">
+                                <rect key="frame" x="26" y="296" width="323" height="17"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TN6-qa-4iJ">
+                                <rect key="frame" x="32" y="539" width="311" height="56"/>
+                                <color key="backgroundColor" red="0.086274509803921567" green="0.32549019607843138" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="Jre-iF-AYZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
+                                <state key="normal" title="ウォレットを作成する">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="El0-Tc-t1K">
+                                <rect key="frame" x="16" y="341" width="343" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ZYp-zr-Wlz"/>
+                                </constraints>
+                                <string key="text">Wei Wallet(ウェイウォレット)は
+すべての人のための、もっともシンプルな
+イーサリアムウォレットです。</string>
+                                <color key="textColor" red="0.26666666666666666" green="0.27843137254901962" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7a0-6L-X5V">
+                                <rect key="frame" x="157.5" y="480" width="60" height="27"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
+                                <state key="normal" title="利用規約">
+                                    <color key="titleColor" red="0.086274509799999996" green="0.32549019610000002" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QvX-qs-kRG">
+                                <rect key="frame" x="32" y="603" width="311" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="fV8-St-biB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
+                                <state key="normal" title="復元する">
+                                    <color key="titleColor" red="0.086274509803921567" green="0.32549019607843138" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QvX-qs-kRG" firstAttribute="top" secondItem="TN6-qa-4iJ" secondAttribute="bottom" constant="8" id="1sb-wG-HLf"/>
+                            <constraint firstItem="7a0-6L-X5V" firstAttribute="centerX" secondItem="p3v-Ho-XYU" secondAttribute="centerX" id="23r-3q-um4"/>
+                            <constraint firstItem="ysB-vy-zik" firstAttribute="leading" secondItem="VeX-qV-GiW" secondAttribute="leading" constant="26" id="4nM-we-psh"/>
+                            <constraint firstItem="QvX-qs-kRG" firstAttribute="leading" secondItem="VeX-qV-GiW" secondAttribute="leading" constant="32" id="6wn-JY-6Me"/>
+                            <constraint firstItem="VeX-qV-GiW" firstAttribute="trailing" secondItem="TN6-qa-4iJ" secondAttribute="trailing" constant="32" id="9Hh-LM-eaF"/>
+                            <constraint firstItem="VeX-qV-GiW" firstAttribute="trailing" secondItem="QvX-qs-kRG" secondAttribute="trailing" constant="32" id="Fxi-uW-Biq"/>
+                            <constraint firstItem="ysB-vy-zik" firstAttribute="centerX" secondItem="p3v-Ho-XYU" secondAttribute="centerX" id="HRe-nB-c6H"/>
+                            <constraint firstItem="XTu-gl-sjV" firstAttribute="centerX" secondItem="p3v-Ho-XYU" secondAttribute="centerX" id="Nue-Xa-RK6"/>
+                            <constraint firstItem="VeX-qV-GiW" firstAttribute="bottom" secondItem="QvX-qs-kRG" secondAttribute="bottom" constant="8" id="PQ2-FO-bpu"/>
+                            <constraint firstItem="VeX-qV-GiW" firstAttribute="trailing" secondItem="El0-Tc-t1K" secondAttribute="trailing" constant="16" id="aD3-pq-wSg"/>
+                            <constraint firstItem="XTu-gl-sjV" firstAttribute="top" secondItem="VeX-qV-GiW" secondAttribute="top" constant="28" id="ceo-Y8-AwL"/>
+                            <constraint firstItem="TN6-qa-4iJ" firstAttribute="leading" secondItem="VeX-qV-GiW" secondAttribute="leading" constant="32" id="gO7-3K-FIh"/>
+                            <constraint firstItem="ysB-vy-zik" firstAttribute="top" secondItem="XTu-gl-sjV" secondAttribute="bottom" constant="48" id="jv4-8q-ql4"/>
+                            <constraint firstItem="El0-Tc-t1K" firstAttribute="leading" secondItem="VeX-qV-GiW" secondAttribute="leading" constant="16" id="sZp-C9-qYe"/>
+                            <constraint firstItem="VeX-qV-GiW" firstAttribute="trailing" secondItem="ysB-vy-zik" secondAttribute="trailing" constant="26" id="t6g-fD-Jtr"/>
+                            <constraint firstItem="TN6-qa-4iJ" firstAttribute="top" secondItem="7a0-6L-X5V" secondAttribute="bottom" constant="32" id="tEA-I4-lf7"/>
+                            <constraint firstItem="El0-Tc-t1K" firstAttribute="top" secondItem="ysB-vy-zik" secondAttribute="bottom" constant="28" id="uFD-Fz-Td5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VeX-qV-GiW"/>
+                    </view>
+                    <connections>
+                        <outlet property="createWalletButton" destination="TN6-qa-4iJ" id="TBO-dW-a4a"/>
+                        <outlet property="restoreButton" destination="QvX-qs-kRG" id="wwY-A9-KiY"/>
+                        <outlet property="showServiceTermsButton" destination="7a0-6L-X5V" id="b6B-HI-Of0"/>
+                        <outlet property="textView" destination="El0-Tc-t1K" id="2Hf-Fo-Igv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Thu-GT-xAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="144.3778110944528"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo_vertical" width="200" height="200"/>
+    </resources>
+</document>

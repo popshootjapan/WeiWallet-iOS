@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VlQ-eA-iu5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--宛先選択-->
+        <scene sceneID="92l-xK-Dge">
+            <objects>
+                <viewController id="VlQ-eA-iu5" customClass="SendBaseViewController" customModule="Wei" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cd0-lj-cD2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ejs-Cz-efd">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ejs-Cz-efd" firstAttribute="leading" secondItem="ZJ2-ak-doJ" secondAttribute="leading" id="Quy-ye-f5M"/>
+                            <constraint firstItem="ejs-Cz-efd" firstAttribute="top" secondItem="ZJ2-ak-doJ" secondAttribute="top" id="b8g-Fz-XA2"/>
+                            <constraint firstAttribute="bottom" secondItem="ejs-Cz-efd" secondAttribute="bottom" id="dfj-Xv-QuH"/>
+                            <constraint firstItem="ejs-Cz-efd" firstAttribute="trailing" secondItem="ZJ2-ak-doJ" secondAttribute="trailing" id="hsh-OV-0YM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZJ2-ak-doJ"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" title="宛先選択" id="HNy-y6-kRi">
+                        <barButtonItem key="leftBarButtonItem" id="i6L-24-TOS">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="z1f-gb-AVV">
+                                <rect key="frame" x="16" y="7" width="85" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                <state key="normal" title="キャンセル">
+                                    <color key="titleColor" red="0.086274509799999996" green="0.32549019610000002" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="z1f-gb-AVV" id="fV2-AP-o45"/>
+                        <outlet property="containerView" destination="ejs-Cz-efd" id="3ke-ck-LOI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zkr-zQ-DYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1034.4000000000001" y="80.50974512743629"/>
+        </scene>
+    </scenes>
+</document>
