@@ -1,8 +1,9 @@
 # The bundle identifier of your app
-app_identifier("com.popshoot.wei")
+app_identifier(ENV["WEI_BUNDLE_IDENTIFIER"])
 
 # Your Apple email address
 apple_id(ENV["WEI_APPLE_ID"])
 
 # Your team id
 team_id ENV["WEI_TEAM_ID"]
+

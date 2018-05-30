@@ -11,8 +11,8 @@
 		1A3BD8F6205BF6EB00FE485D /* GethRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3BD8F5205BF6EB00FE485D /* GethRepository.swift */; };
 		1A3BD8FA205C042600FE485D /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3BD8F9205C042600FE485D /* Action.swift */; };
 		1A3BD8FD205C0FBF00FE485D /* WalletManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3BD8FC205C0FBF00FE485D /* WalletManager.swift */; };
-		1A51791020B5341D00D642D3 /* UITextField+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A51790F20B5341D00D642D3 /* UITextField+Rx.swift */; };
 		1A51790C20B50FEE00D642D3 /* EmptyViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A51790B20B50FEE00D642D3 /* EmptyViewManager.swift */; };
+		1A51791020B5341D00D642D3 /* UITextField+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A51790F20B5341D00D642D3 /* UITextField+Rx.swift */; };
 		1A798BFF2081D8C400812D80 /* EthereumKit+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A798BFE2081D8C400812D80 /* EthereumKit+Extension.swift */; };
 		1A798C012081DE1E00812D80 /* LatestTransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A798C002081DE1E00812D80 /* LatestTransactionListViewController.swift */; };
 		1A798C032081DE7200812D80 /* LatestTransactionListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A798C022081DE7200812D80 /* LatestTransactionListViewCell.swift */; };
@@ -179,8 +179,8 @@
 		1A3BD8F5205BF6EB00FE485D /* GethRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GethRepository.swift; sourceTree = "<group>"; };
 		1A3BD8F9205C042600FE485D /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		1A3BD8FC205C0FBF00FE485D /* WalletManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletManager.swift; sourceTree = "<group>"; };
-		1A51790F20B5341D00D642D3 /* UITextField+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Rx.swift"; sourceTree = "<group>"; };
 		1A51790B20B50FEE00D642D3 /* EmptyViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewManager.swift; sourceTree = "<group>"; };
+		1A51790F20B5341D00D642D3 /* UITextField+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Rx.swift"; sourceTree = "<group>"; };
 		1A798BFE2081D8C400812D80 /* EthereumKit+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EthereumKit+Extension.swift"; sourceTree = "<group>"; };
 		1A798C002081DE1E00812D80 /* LatestTransactionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestTransactionListViewController.swift; sourceTree = "<group>"; };
 		1A798C022081DE7200812D80 /* LatestTransactionListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestTransactionListViewCell.swift; sourceTree = "<group>"; };
@@ -1002,6 +1002,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PINCache.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/CryptoEthereumSwift.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -1278,7 +1279,7 @@
 				CODE_SIGN_ENTITLEMENTS = Wei/Wei.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = JUG749AXCX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1307,7 +1308,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 0;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -1444,7 +1445,7 @@
 				BUNDLE_DISPLAY_SUFFIX = "-D";
 				CODE_SIGN_ENTITLEMENTS = Wei/Wei.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = JUG749AXCX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1456,7 +1457,7 @@
 				OTHER_SWIFT_FLAGS = "\"-D\" \"DEBUG\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.popshoot.wei.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5e2a10b3-242c-4963-989d-3c79844b1944";
+				PROVISIONING_PROFILE = "9e168b6c-afd3-4ba2-9bd4-1d4ed8d3ee87";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.popshoot.wei.debug";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1474,7 +1475,7 @@
 				CODE_SIGN_ENTITLEMENTS = Wei/Wei.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = JUG749AXCX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1486,7 +1487,7 @@
 				OTHER_SWIFT_FLAGS = "\"-D\" \"INHOUSE\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.popshoot.wei.inhouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ed378c39-e92c-4361-a557-3aae78922d14";
+				PROVISIONING_PROFILE = "9980223d-6790-45e5-8b2f-cc4a9dc17d46";
 				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.popshoot.wei.inhouse";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1503,7 +1504,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;	
+				CURRENT_PROJECT_VERSION = 0;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -1528,7 +1529,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 0;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

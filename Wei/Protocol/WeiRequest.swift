@@ -34,10 +34,7 @@ extension WeiRequest {
     func intercept(urlRequest: URLRequest) throws -> URLRequest {
         #if DEBUG || INHOUSE
             if let url = urlRequest.url {
-                print(
-                    "\n Sent request to \(url) \n",
-                    "HeaderFields: \(urlRequest.allHTTPHeaderFields ?? [:]) \n"
-                )
+                print("\nSent request to \(url)\n", "HeaderFields: \(urlRequest.allHTTPHeaderFields ?? [:])\n")
             }
         #endif
         

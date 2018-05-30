@@ -41,7 +41,7 @@ final class TutorialTopView: UIView {
             case .first:
                 return "あなたのウォレットが作成されました。"
             case .second:
-                return "受取や送金は素早く完了します。\nまた、Wei Walletは余計な手数料を取りません。"
+                return "受取や送金は素早く完了します。"
             case .third:
                 return "バックアップを取ることでウォレット内のイーサリアムはいつでも復元することができます。"
             }

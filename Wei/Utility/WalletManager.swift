@@ -28,18 +28,7 @@ final class WalletManager: WalletManagerProtocol, Injectable {
     init(dependency: Dependency) {
         let applicationStore = dependency
         
-        let seedString: String?
-        #if DEBUG
-            if applicationStore.seed == nil {
-                seedString = nil
-            } else {
-                seedString = "e804433e7c8228bb097c1801d3a8121fecd6bf07c5133956b53bc621887821be8e61a247b596bfeb1e274f69e5cb11b71b4bcd3696bcdc14cca3a09e54b18668"
-            }
-        #else
-            seedString = applicationStore.seed
-        #endif
-        
-        guard let seed = seedString else {
+        guard let seed = applicationStore.seed else {
             fatalError("Store seed before instantiating Wallet")
         }
         

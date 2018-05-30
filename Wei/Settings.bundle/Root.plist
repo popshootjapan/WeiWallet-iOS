@@ -22,6 +22,14 @@
 		</dict>
 		<dict>
 			<key>File</key>
+			<string>com.mono0926.LicensePlist/CryptoEthereumSwift</string>
+			<key>Title</key>
+			<string>CryptoEthereumSwift</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
 			<string>com.mono0926.LicensePlist/CryptoSwift</string>
 			<key>Title</key>
 			<string>CryptoSwift</string>
