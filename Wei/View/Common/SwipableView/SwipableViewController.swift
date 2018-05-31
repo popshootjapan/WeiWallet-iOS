@@ -39,8 +39,10 @@ final class SwipableViewController: UIViewController {
         scrollView.contentSize = contentSize
         layoutViewControllers()
     }
-    
-    private func bindPageIndicator() {
+}
+
+private extension SwipableViewController {
+    func bindPageIndicator() {
         pageControl.selectedIndex.asDriver()
             .drive(onNext: { [weak self] index in
                 guard let weakSelf = self else {
@@ -67,7 +69,7 @@ final class SwipableViewController: UIViewController {
             .disposed(by: disposeBag)
     }
     
-    private func layoutViewControllers() {
+    func layoutViewControllers() {
         childViewControllers.forEach(remove(_:))
         viewControllers.enumerated().forEach { index, viewController in
             viewController.view.frame = CGRect(origin: CGPoint(x: scrollView.frame.width * CGFloat(index), y: 0.0), size: scrollView.frame.size)

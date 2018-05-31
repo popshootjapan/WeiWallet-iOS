@@ -116,7 +116,7 @@ private extension QRCoder {
         videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
     }
     
-    private func addVideoPreviewLayer(on view: UIView) {
+    func addVideoPreviewLayer(on view: UIView) {
         videoPreviewLayer?.frame = view.layer.bounds
         #if !targetEnvironment(simulator)
             view.layer.addSublayer(videoPreviewLayer!)

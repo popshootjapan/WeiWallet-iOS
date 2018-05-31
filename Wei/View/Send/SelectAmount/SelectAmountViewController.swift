@@ -34,7 +34,9 @@ final class SelectAmountViewController: UIViewController {
         super.viewWillAppear(animated)
         amountTextField.becomeFirstResponder()
     }
-    
+}
+
+private extension SelectAmountViewController {
     func bindViewModel() {
         let input = SelectAmountViewModel.Input(
             viewWillAppear: rx.viewWillAppear.asDriver(),
@@ -81,12 +83,12 @@ final class SelectAmountViewController: UIViewController {
             .disposed(by: disposeBag)
     }
     
-    private func pushSendConfirmationViewController(with transactionContext: TransactionContext) {
+    func pushSendConfirmationViewController(with transactionContext: TransactionContext) {
         let sendConfirmationViewController = SendConfirmationViewController.make(transactionContext)
         navigationController?.pushViewController(sendConfirmationViewController, animated: true)
     }
     
-    private func addInputAccessoryViewIntoAmountTextField() {
+    func addInputAccessoryViewIntoAmountTextField() {
         amountTextField.inputAccessoryView = balanceAccessoryView
     }
 }

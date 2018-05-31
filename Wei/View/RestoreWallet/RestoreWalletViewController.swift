@@ -31,8 +31,10 @@ final class RestoreWalletViewController: UIViewController {
         super.viewWillAppear(animated)
         mnemonicWordTextFields.first?.becomeFirstResponder()
     }
-    
-    private func bindViewModel() {
+}
+
+private extension RestoreWalletViewController {
+    func bindViewModel() {
         let output = viewModel.build(input: .init(
             words: mnemonicWordTextFields.map { $0.rx.trimmedText.orEmpty.asDriver() },
             confirmButtonDidTap: confirmButton.rx.tap.asDriver()
@@ -65,7 +67,7 @@ final class RestoreWalletViewController: UIViewController {
             .disposed(by: disposeBag)
     }
     
-    private func bindKeyboard() {
+    func bindKeyboard() {
         NotificationCenter.default.rx.notification(.UIKeyboardWillShow).asDriver(onErrorDriveWith: .empty())
             .drive(onNext: { [weak self] notification in
                 self?.keyboardWillBeShown(notification: notification)
@@ -79,7 +81,7 @@ final class RestoreWalletViewController: UIViewController {
             .disposed(by: disposeBag)
     }
     
-    private func keyboardWillBeShown(notification: Notification) {
+    func keyboardWillBeShown(notification: Notification) {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
             guard let userInfo = notification.userInfo,
                 let keyboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as AnyObject).cgRectValue,
@@ -98,7 +100,7 @@ final class RestoreWalletViewController: UIViewController {
         }
     }
     
-    private func keyboardWillBeHidden(notification: Notification) {
+    func keyboardWillBeHidden(notification: Notification) {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
             guard let userInfo = notification.userInfo,
                 let animationDuration = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as AnyObject).doubleValue,

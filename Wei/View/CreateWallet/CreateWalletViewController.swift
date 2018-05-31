@@ -31,8 +31,10 @@ final class CreateWalletViewController: UIViewController {
         super.viewDidLoad()
         bindViewModel()
     }
-    
-    private func bindViewModel() {
+}
+
+private extension CreateWalletViewController {
+    func bindViewModel() {
         let input = CreateWalletViewModel.Input(
             createWalletButtonDidTap: createWalletButton.rx.tap.asDriver(),
             restoreButtonDidTap: restoreButton.rx.tap.asDriver(),
@@ -72,17 +74,17 @@ final class CreateWalletViewController: UIViewController {
             .disposed(by: disposeBag)
     }
     
-    private func presentAgreeTermsViewController() {
+    func presentAgreeTermsViewController() {
         let viewController = AgreeServiceTermsViewController.make()
         present(viewController, animated: true)
     }
     
-    private func pushRestoreWalletViewController() {
+    func pushRestoreWalletViewController() {
         let viewController = RestoreWalletViewController.make()
         navigationController?.pushViewController(viewController, animated: true)
     }
     
-    private func dismissAndPresentTutorialViewController() {
+    func dismissAndPresentTutorialViewController() {
         dismiss(animated: true, completion: {
             let viewController = TutorialViewController.make()
             AppDelegate.rootViewController.present(viewController, animated: true)

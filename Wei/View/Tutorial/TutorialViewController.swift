@@ -38,8 +38,10 @@ final class TutorialViewController: UIViewController {
         confiugrePage()
         bindViewModel()
     }
-    
-    private func bindViewModel() {
+}
+
+private extension TutorialViewController {
+    func bindViewModel() {
         let input = TutorialViewModel.Input(
             startButtonDidTap: startButton.rx.tap.asDriver(),
             nextButtonDidTap: nextButton.rx.tap.asDriver(),
@@ -76,13 +78,13 @@ final class TutorialViewController: UIViewController {
             .disposed(by: disposeBag)
     }
     
-    private func nextContentOffset() {
+    func nextContentOffset() {
         let page = TutorialTopView.Page(rawValue: pageControl.currentPage) ?? .first
         let point = CGPoint(x: page.nextWidth(), y: 0)
         scrollView.setContentOffset(point, animated: true)
     }
     
-    private func confiugrePage() {
+    func confiugrePage() {
         let pages: [TutorialTopView.Page] = [.first, .second, .third]
         
         pages
@@ -95,7 +97,7 @@ final class TutorialViewController: UIViewController {
         }
     }
     
-    private func configureScrollView() {
+    func configureScrollView() {
         scrollView.contentSize = CGSize(
             width: TutorialTopView.size().width * CGFloat(TutorialTopView.Page.numberOfPages),
             height: TutorialTopView.size().height

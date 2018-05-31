@@ -38,7 +38,9 @@ final class SelectAddressByQRViewController: UIViewController {
         super.viewWillDisappear(animated)
         qrCoder.stopRunning()
     }
-    
+}
+
+private extension SelectAddressByQRViewController {
     func bindViewModel() {
         let input = SelectAddressByQRViewModel.Input(
             address: address.asDriver(onErrorDriveWith: .empty())
@@ -62,7 +64,7 @@ final class SelectAddressByQRViewController: UIViewController {
         
     }
     
-    private func configureQRCodeView() {
+    func configureQRCodeView() {
         QRCoder.requestAccess { [weak self] granted in
             guard granted else {
                 self?.showSettingsAlertController()
@@ -72,7 +74,7 @@ final class SelectAddressByQRViewController: UIViewController {
         }
     }
     
-    private func configureQRCoder() {
+    func configureQRCoder() {
         DispatchQueue.main.async { [weak self] in
             guard let weakSelf = self else { return }
             weakSelf.qrCoder.configure(on: weakSelf.containerView)
@@ -80,7 +82,7 @@ final class SelectAddressByQRViewController: UIViewController {
         }
     }
     
-    private func showSettingsAlertController() {
+    func showSettingsAlertController() {
         DispatchQueue.main.async { () in
             AppDelegate.rootViewController.presentedViewController?.showAlertController(
                 title: "“WeiWallet”がカメラへのアクセスを求めています",
@@ -96,12 +98,12 @@ final class SelectAddressByQRViewController: UIViewController {
         }
     }
     
-    private func pushSelectAddressByPasteViewController() {
+    func pushSelectAddressByPasteViewController() {
         let viewController = SelectAddressByPasteViewController.make()
         navigationController?.pushViewController(viewController, animated: true)
     }
     
-    private func pushSelectAmountViewController(with transactionContext: TransactionContext) {
+    func pushSelectAmountViewController(with transactionContext: TransactionContext) {
         let selectAmountViewController = SelectAmountViewController.make(transactionContext)
         navigationController?.pushViewController(selectAmountViewController, animated: true)
     }

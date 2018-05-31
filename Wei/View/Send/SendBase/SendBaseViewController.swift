@@ -31,8 +31,10 @@ final class SendBaseViewController: UIViewController {
         embedSwipableViewController()
         bindViewModel()
     }
-    
-    private func bindViewModel() {
+}
+
+private extension SendBaseViewController {
+    func bindViewModel() {
         let input = SendBaseViewModel.Input(
             cancelButtonDidTap: cancelButton.rx.tap.asDriver()
         )
@@ -47,7 +49,7 @@ final class SendBaseViewController: UIViewController {
             .disposed(by: disposeBag)
     }
     
-    private func embedSwipableViewController() {
+    func embedSwipableViewController() {
         let viewController = SwipableViewController.make(
             viewControllers: [SelectAddressByQRViewController.make(), SelectAddressByPasteViewController.make()],
             titles: ["QRコード撮影", "アドレスコピー"]

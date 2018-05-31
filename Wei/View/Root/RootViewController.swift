@@ -20,8 +20,10 @@ final class RootViewController: UIViewController {
         super.viewDidLoad()
         bindViewModel()
     }
-    
-    private func bindViewModel() {
+}
+
+private extension RootViewController {
+    func bindViewModel() {
         let input = RootViewModel.Input(
             viewWillAppear: rx.viewWillAppear.asDriver(),
             viewDidAppear: rx.viewDidAppear.asDriver()
@@ -58,7 +60,7 @@ final class RootViewController: UIViewController {
             .disposed(by: disposeBag)
     }
     
-    private func openAppStore() {
+    func openAppStore() {
         showAlertController(
             title: "アップデートのお知らせ",
             message: "新しい機能が追加されました。\nアプリご利用いただくためにアップデートが必要になります。",
@@ -69,19 +71,19 @@ final class RootViewController: UIViewController {
             })
     }
     
-    private func showHomeViewController() {
+    func showHomeViewController() {
         let viewController = HomeViewController.make()
         let navigationController = NavigationController(rootViewController: viewController)
         embed(navigationController, to: view)
     }
     
-    private func presentCreateWalletViewController() {
+    func presentCreateWalletViewController() {
         let viewController = CreateWalletViewController.make()
         let navigationController = NavigationController(rootViewController: viewController)
         present(navigationController, animated: true)
     }
     
-    private func presentMaintenanceViewController() {
+    func presentMaintenanceViewController() {
         let viewController = MaintenanceViewController.make()
         present(viewController, animated: false)
     }

@@ -85,7 +85,7 @@ private extension SendConfirmationViewController {
             .disposed(by: disposeBag)
     }
     
-    private func handleSentSomeView(with success: Bool) {
+    func handleSentSomeView(with success: Bool) {
         sentImageView.isHidden = false
         sentImageView.image = success ? #imageLiteral(resourceName: "icon_send_success") : #imageLiteral(resourceName: "icon_send_failed")
         
@@ -97,7 +97,7 @@ private extension SendConfirmationViewController {
         reselectAddressButton.isHidden = success
     }
     
-    private func dismissViewController() {
+    func dismissViewController() {
         comfirmButton.isEnabled = false
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: { [weak self] in

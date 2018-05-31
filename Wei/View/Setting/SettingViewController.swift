@@ -11,6 +11,19 @@ import RxSwift
 import RxCocoa
 
 final class SettingViewController: UITableViewController {
+    fileprivate enum SettingSection: Int {
+        case security
+        case info
+        
+        enum SecurityCellType: Int {
+            case backup
+        }
+        
+        enum InfoCellType: Int {
+            case terms
+            case policy
+        }
+    }
 
     var viewModel: SettingViewModel!
     
@@ -28,7 +41,9 @@ final class SettingViewController: UITableViewController {
             tableView.deselectRow(at: indexPath, animated: true)
         }
     }
+}
 
+private extension SettingViewController {
     func bindViewModel() {
         let input = SettingViewModel.Input(
             itemSelected: tableView.rx.itemSelected.asDriver()
@@ -50,21 +65,7 @@ final class SettingViewController: UITableViewController {
             .disposed(by: disposeBag)
     }
     
-    enum SettingSection: Int {
-        case security
-        case info
-        
-        enum SecurityCellType: Int {
-            case backup
-        }
-        
-        enum InfoCellType: Int {
-            case terms
-            case policy
-        }
-    }
-    
-    private func showWebView(for cellType: SettingSection.InfoCellType) {
+    func showWebView(for cellType: SettingSection.InfoCellType) {
         switch cellType {
         case .terms:
             UIApplication.shared.open(URL.wei.terms)

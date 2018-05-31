@@ -58,13 +58,15 @@ final class NavigationController: UINavigationController {
         viewControllers.forEach(addBackButton)
         super.setViewControllers(viewControllers, animated: animated)
     }
-    
-    private func addBackButton(_ viewController: UIViewController) {
+}
+
+private extension NavigationController {
+    func addBackButton(_ viewController: UIViewController) {
         let backButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         viewController.navigationItem.backBarButtonItem = backButtonItem
     }
     
-    private func setBaseAppearence() {
+    func setBaseAppearence() {
         // TODO: change color
         navigationBar.tintColor = UIColor.wei.black
         navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.black]

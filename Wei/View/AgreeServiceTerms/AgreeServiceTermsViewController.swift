@@ -18,7 +18,7 @@ final class AgreeServiceTermsViewController: UIViewController {
         modalPresentationStyle = .custom
     }
     
-    @IBAction func agreeButtonDidTap(_ sender: Any) {
+    @IBAction private func agreeButtonDidTap(_ sender: Any) {
         dismiss(animated: true)
     }
 }

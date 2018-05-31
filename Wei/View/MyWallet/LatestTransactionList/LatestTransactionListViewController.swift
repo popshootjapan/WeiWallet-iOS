@@ -28,8 +28,10 @@ final class LatestTransactionListViewController: UITableViewController {
         emptyViewManager = EmptyViewManager(emptyView: emptyView, container: tableView)
         bindViewModel()
     }
-    
-    private func bindViewModel() {
+}
+
+private extension LatestTransactionListViewController {
+    func bindViewModel() {
         let input = LatestTransactionListViewModel.Input(
             viewWillAppear: rx.viewWillAppear.asDriver(),
             refreshControlDidRefresh: refresher.rx.controlEvent(.valueChanged).asDriver()
