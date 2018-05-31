@@ -58,10 +58,13 @@ final class RootViewModel: InjectableViewModel {
             .map { _ in }
         
         let showHomeViewController = input.viewWillAppear
-            .filter { applicationStore.seed != nil }
+            .filter { applicationStore.seed != nil && applicationStore.accessToken != nil }
         
+        // NOTE: app needs to show create wallet view controller if app does not have
+        // the seed or access token. This case will happen if seed is saved in the keychain
+        // from other apps developed by us.
         let presentCreateWalletViewController = input.viewDidAppear
-            .filter { applicationStore.seed == nil }
+            .filter { applicationStore.seed == nil || applicationStore.accessToken != nil }
         
         return Output(
             showHomeViewController: showHomeViewController,
