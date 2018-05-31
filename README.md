@@ -13,11 +13,11 @@
 
 ## Dependencies
 
-We depend heavly on following project which is maintained by one of the contributors of this project. so it can be helpful to be familier with it.
+We depend heavily on following project which is maintained by one of the contributors of this project. So it can be helpful to be familier with it.
 
 ### [EthereumKit](https://github.com/yuzushioh/EthereumKit)
 
-EthereumKit is a free, open-source Swift framework for easily interacting with the Ethereum.It handles core jobs such as RLP encoding, signing transactions, and broadcasting them.
+EthereumKit is a free, open-source Swift framework for easily interacting with the Ethereum. It handles core jobs such as RLP encoding, signing transactions, and broadcasting them.
 
 ## Contributing
 
