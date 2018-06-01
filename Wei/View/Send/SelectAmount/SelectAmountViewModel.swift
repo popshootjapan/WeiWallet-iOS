@@ -46,7 +46,7 @@ final class SelectAmountViewModel: InjectableViewModel {
         let transactionContext = self.transactionContext
         
         // NOTE: Deal with fixed tx fee
-        let txFee = Wei(Gas.normal.gasLimit * Gas.normal.gasPrice)
+        let txFee = Wei(Gas.safeLow.gasLimit * Gas.safeLow.gasPrice)
         
         // User's total fiat balance
         let fiatBalance = balanceStore.fiatBalance.asDriver(onErrorDriveWith: .empty())
