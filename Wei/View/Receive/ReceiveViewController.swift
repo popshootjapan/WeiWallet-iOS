@@ -71,7 +71,7 @@ private extension ReceiveViewController {
             .disposed(by: disposeBag)
     }
     
-    private func animateCopyNoticeView() {
+    func animateCopyNoticeView() {
         copyNoticeView.isHidden = false
         slideUp() {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: { [weak self] in

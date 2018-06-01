@@ -61,7 +61,7 @@ private extension SelectAddressByPasteViewController {
             .disposed(by: disposeBag)
     }
     
-    private func pushSelectAmountViewController(with transactionContext: TransactionContext) {
+    func pushSelectAmountViewController(with transactionContext: TransactionContext) {
         handleAddressLabel(with: transactionContext.address)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: { [weak self] in
@@ -70,7 +70,7 @@ private extension SelectAddressByPasteViewController {
         })
     }
     
-    private func handleAddressLabel(with address: String?) {
+    func handleAddressLabel(with address: String?) {
         if let address = address {
             addressLabel.text = address
             addressLabel.textColor = .black
