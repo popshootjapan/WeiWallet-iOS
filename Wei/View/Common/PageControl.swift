@@ -52,15 +52,7 @@ class PageControl: UIControl {
         commonInit()
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        collectionView.frame = bounds
-        updateSelectionIndicatorViewAnimated(animated: false)
-    }
-}
-
-private extension PageControl {
-    func commonInit() {
+    private func commonInit() {
         collectionView.delegate = self
         addSubview(collectionView)
         
@@ -71,7 +63,13 @@ private extension PageControl {
         bind()
     }
     
-    func bind() {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        collectionView.frame = bounds
+        updateSelectionIndicatorViewAnimated(animated: false)
+    }
+    
+    private func bind() {
         titles.asDriver()
             .drive(collectionView.rx.items(cellType: Cell.self))
             .disposed(by: disposeBag)
@@ -97,7 +95,7 @@ private extension PageControl {
             .disposed(by: disposeBag)
     }
     
-    func updateSelectionIndicatorViewAnimated(animated: Bool) {
+    private func updateSelectionIndicatorViewAnimated(animated: Bool) {
         guard titles.value.count > 0 else {
             return
         }

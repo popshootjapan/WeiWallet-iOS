@@ -32,10 +32,8 @@ final class MyWalletViewController: UIViewController {
         bindViewModel()
         embedLatestTransactionListViewController()
     }
-}
-
-private extension MyWalletViewController {
-    func bindViewModel() {
+    
+    private func bindViewModel() {
         let input = MyWalletViewModel.Input(
             viewWillAppear: rx.viewWillAppear.asDriver(),
             sendButtonDidTap: sendButton.rx.tap.asDriver(),
@@ -79,17 +77,17 @@ private extension MyWalletViewController {
             .disposed(by: disposeBag)
     }
     
-    func embedLatestTransactionListViewController() {
+    private func embedLatestTransactionListViewController() {
         let viewController = LatestTransactionListViewController.make()
         embed(viewController, to: transactionListContainer)
     }
 
-    func presentSendViewController() {
+    private func presentSendViewController() {
         let viewController = SendBaseViewController.make()
         present(viewController, animated: true)
     }
     
-    func pushTransactionHistoryViewController() {
+    private func pushTransactionHistoryViewController() {
         let viewController = TransactionHistoryViewController.make()
         navigationController?.pushViewController(viewController, animated: true)
     }

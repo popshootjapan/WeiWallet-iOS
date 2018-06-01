@@ -25,10 +25,8 @@ final class HomeViewController: UIViewController {
         bindViewModel()
         embedMyWalletViewController()
     }
-}
-
-private extension HomeViewController {
-    func bindViewModel() {
+    
+    private func bindViewModel() {
         let input = HomeViewModel.Input(
             settingButtonDidTap: settingButton.rx.tap.asDriver(),
             receiveButtonDidTap: receiveButton.rx.tap.asDriver()
@@ -51,17 +49,17 @@ private extension HomeViewController {
             .disposed(by: disposeBag)
     }
     
-    func embedMyWalletViewController() {
+    private func embedMyWalletViewController() {
         let viewController = MyWalletViewController.make()
         embed(viewController, to: myWalletContainerView)
     }
     
-    func presentReceiveViewController() {
+    private func presentReceiveViewController() {
         let viewController = ReceiveViewController.make()
         present(viewController, animated: true)
     }
     
-    func pushSettingViewController() {
+    private func pushSettingViewController() {
         let viewController = SettingViewController.make()
         navigationController?.pushViewController(viewController, animated: true)
     }

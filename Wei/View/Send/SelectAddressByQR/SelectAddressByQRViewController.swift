@@ -38,9 +38,7 @@ final class SelectAddressByQRViewController: UIViewController {
         super.viewWillDisappear(animated)
         qrCoder.stopRunning()
     }
-}
-
-private extension SelectAddressByQRViewController {
+    
     func bindViewModel() {
         let input = SelectAddressByQRViewModel.Input(
             address: address.asDriver(onErrorDriveWith: .empty())
@@ -64,7 +62,7 @@ private extension SelectAddressByQRViewController {
         
     }
     
-    func configureQRCodeView() {
+    private func configureQRCodeView() {
         QRCoder.requestAccess { [weak self] granted in
             guard granted else {
                 self?.showSettingsAlertController()
@@ -74,7 +72,7 @@ private extension SelectAddressByQRViewController {
         }
     }
     
-    func configureQRCoder() {
+    private func configureQRCoder() {
         DispatchQueue.main.async { [weak self] in
             guard let weakSelf = self else { return }
             weakSelf.qrCoder.configure(on: weakSelf.containerView)
@@ -82,7 +80,7 @@ private extension SelectAddressByQRViewController {
         }
     }
     
-    func showSettingsAlertController() {
+    private func showSettingsAlertController() {
         DispatchQueue.main.async { () in
             AppDelegate.rootViewController.presentedViewController?.showAlertController(
                 title: "“WeiWallet”がカメラへのアクセスを求めています",
@@ -98,12 +96,12 @@ private extension SelectAddressByQRViewController {
         }
     }
     
-    func pushSelectAddressByPasteViewController() {
+    private func pushSelectAddressByPasteViewController() {
         let viewController = SelectAddressByPasteViewController.make()
         navigationController?.pushViewController(viewController, animated: true)
     }
     
-    func pushSelectAmountViewController(with transactionContext: TransactionContext) {
+    private func pushSelectAmountViewController(with transactionContext: TransactionContext) {
         let selectAmountViewController = SelectAmountViewController.make(transactionContext)
         navigationController?.pushViewController(selectAmountViewController, animated: true)
     }

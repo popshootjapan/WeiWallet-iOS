@@ -28,9 +28,7 @@ final class BackupViewController: UIViewController {
         addCloseButtonWhenExistPresentingViewController()
         bindViewModel()
     }
-}
-
-private extension BackupViewController {
+    
     func bindViewModel() {
         let input = BackupViewModel.Input(
             viewWillAppear: rx.viewWillAppear.asDriver(),
@@ -68,13 +66,13 @@ private extension BackupViewController {
             .disposed(by: disposeBag)
     }
     
-    func addCloseButtonWhenExistPresentingViewController() {
+    private func addCloseButtonWhenExistPresentingViewController() {
         if presentingViewController != nil {
             navigationItem.leftBarButtonItem = closeButton
         }
     }
     
-    func showConfirmAlert() {
+    private func showConfirmAlert() {
         showAlertController(
             title: "バックアップキーを大切に保管してください",
             message: "復元する際に必要になります。\n無くさないように気をつけてください。",
@@ -84,7 +82,7 @@ private extension BackupViewController {
         })
     }
     
-    func dismissOrPopViewController() {
+    private func dismissOrPopViewController() {
         if presentingViewController == nil {
             // To setting vc
             navigationController?.popViewController(animated: true)
