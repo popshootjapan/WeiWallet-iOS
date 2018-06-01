@@ -35,10 +35,10 @@ final class SelectAmountViewModel: InjectableViewModel {
     
     struct Output {
         let showSendConfirmationViewController: Driver<TransactionContext>
-        let fiatBalance: Driver<String>
-        let fiatAmount: Driver<String>
+        let fiatBalance: Driver<Int64>
+        let fiatAmount: Driver<Int64>
         let etherAmount: Driver<String>
-        let txFee: Driver<String>
+        let txFee: Driver<Int64>
         let error: Driver<Error>
     }
     
@@ -47,32 +47,6 @@ final class SelectAmountViewModel: InjectableViewModel {
         
         // NOTE: Deal with fixed tx fee
         let txFee = Wei(Gas.normal.gasLimit * Gas.normal.gasPrice)
-        
-        // User's total fiat balance
-        let fiatBalance = balanceStore.fiatBalance.asDriver(onErrorDriveWith: .empty())
-        
-        // fiatAmount represents an amount user gives as an input in text field.
-        // if user's input is larger than user's fiat balance, it returns user's total balance.
-        let fiatAmount = Driver
-            .combineLatest(input.amountTextFieldDidInput, fiatBalance)
-            .map { inputAmount, currentBalance -> String in
-                guard let amount = Int64(inputAmount), let balance = Int64(currentBalance) else {
-                    return "0"
-                }
-                return amount <= balance ? String(amount) : String(balance)
-            }
-        
-        // in convertToEtherAction fiatAmount is converted to ether unit
-        // if fiatAmount is empty, or 0, it will return the price of 0.
-        let convertToEtherAction = fiatAmount.flatMapLatest { [weak self] fiatAmount -> Driver<Action<Price>> in
-            guard let weakSelf = self, !fiatAmount.isEmpty, fiatAmount != "0" else {
-                // NOTE: Returns price of 0 if the fiatAmount is empty and/or fiatAmount is 0
-                return Driver.just(Action.succeeded(Price(price: "0", currency: nil)))
-            }
-            
-            let source = weakSelf.rateRepository.convertToEther(from: fiatAmount)
-            return Action.makeDriver(source)
-        }
         
         // fiatTxFeeAction converts specified tx fee to fiat price.
         let fiatTxFeeAction = input.viewWillAppear.flatMap { [weak self] _ -> Driver<Action<Price>> in
@@ -83,21 +57,59 @@ final class SelectAmountViewModel: InjectableViewModel {
             return Action.makeDriver(source)
         }
         
-        let etherAmount = convertToEtherAction.elements
-            .map { $0.price }
-        
+        // stripe the decimal amount from tx fee.
         let fiatTxFee = fiatTxFeeAction.elements
             // only use number before the decimal poin.
             // for exsample 1 for 1.2345
             .map { String($0.price.split(separator: ".").first ?? "") }
+            // will never fail here
+            .map { Int64($0)! }
+        
+        // User's total fiat balance
+        let fiatBalance = balanceStore.fiatBalance.asDriver(onErrorDriveWith: .empty()).flatMap { balanceString -> Driver<Int64> in
+            return Driver.just(Int64(balanceString) ?? 0)
+        }
+        
+        // User's usable fiat balance (totalBalance - txFee)
+        let availableBalance = Driver.combineLatest(fiatBalance, fiatTxFee) { balance, txFee -> Int64 in
+            let availableBalance = balance - txFee
+            // do not return negative value here.
+            return availableBalance > 0 ? availableBalance : 0
+        }
+        
+        // fiatAmount represents an amount user gives as an input in text field.
+        // if user's input is larger than user's fiat balance, it returns user's total balance.
+        let inputFiatAmount = Driver
+            .combineLatest(input.amountTextFieldDidInput, availableBalance)
+            .map { inputAmount, balance -> Int64 in
+                guard let amount = Int64(inputAmount) else {
+                    return 0
+                }
+                return amount <= balance ? amount : balance
+            }
+        
+        // in convertToEtherAction fiatAmount is converted to ether unit
+        // if fiatAmount is empty, or 0, it will return the price of 0.
+        let convertToEtherAction = inputFiatAmount.flatMapLatest { [weak self] fiatAmount -> Driver<Action<Price>> in
+            guard let weakSelf = self, fiatAmount > 0 else {
+                // NOTE: Returns price of 0 if the fiatAmount is empty and/or fiatAmount is 0
+                return Driver.just(Action.succeeded(Price(price: "0", currency: nil)))
+            }
+            
+            let source = weakSelf.rateRepository.convertToEther(from: String(fiatAmount))
+            return Action.makeDriver(source)
+        }
+        
+        let etherAmount = convertToEtherAction.elements
+            .map { $0.price }
         
         let showSendConfirmationWithTransactionContext = input.confirmButtonDidTap
-            .withLatestFrom(Driver.combineLatest(fiatAmount, etherAmount, fiatTxFee))
+            .withLatestFrom(Driver.combineLatest(inputFiatAmount, etherAmount, fiatTxFee))
             .map { TransactionContext(
                 transactionContext.address,
-                fiatAmount: .fiat(Int64($0)!),
+                fiatAmount: .fiat($0),
                 etherAmount: .ether(Ether($1)!),
-                fiatFee: .fiat(Int64($2)!),
+                fiatFee: .fiat($2),
                 etherFee: .ether(Converter.toEther(wei: txFee))
             )}
         
@@ -109,7 +121,7 @@ final class SelectAmountViewModel: InjectableViewModel {
         return Output(
             showSendConfirmationViewController: showSendConfirmationWithTransactionContext,
             fiatBalance: fiatBalance,
-            fiatAmount: fiatAmount,
+            fiatAmount: inputFiatAmount,
             etherAmount: etherAmount,
             txFee: fiatTxFee,
             error: errors
