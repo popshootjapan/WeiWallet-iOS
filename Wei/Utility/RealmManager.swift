@@ -17,7 +17,6 @@ protocol RealmManagerProtocol {
 final class RealmManager: RealmManagerProtocol {
     
     private static let schemaVersion: UInt64 = 1
-    static var enablesUpdateTick: Bool = true
     
     let realm: Realm
     let updateTick: PublishSubject<Void>
@@ -35,9 +34,7 @@ final class RealmManager: RealmManagerProtocol {
         
         let updateTick = PublishSubject<Void>()
         let notificationToken = realm.observe { _, _ in
-            if RealmManager.enablesUpdateTick {
-                updateTick.onNext(())
-            }
+            updateTick.onNext(())
         }
         
         self.realm = realm

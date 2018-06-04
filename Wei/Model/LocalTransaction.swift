@@ -19,7 +19,6 @@ final class LocalTransaction: Object {
     @objc dynamic var from: String = ""
     @objc dynamic var to: String = ""
     @objc dynamic var value: String = ""
-    @objc dynamic var nonce: Int = 0
     @objc dynamic var gasPrice: Int = 0
     @objc dynamic var gasLimit: Int = 0
     @objc dynamic var date: Int64 = 0

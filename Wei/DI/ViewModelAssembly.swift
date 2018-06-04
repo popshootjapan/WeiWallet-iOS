@@ -108,6 +108,7 @@ final class ViewModelAssembly: Assembly {
                 resolver.resolve(GethRepositoryProtocol.self)!,
                 resolver.resolve(WalletManagerProtocol.self)!,
                 resolver.resolve(UpdaterProtocol.self)!,
+                resolver.resolve(LocalTransactionRepositoryProtocol.self)!,
                 context
             ))
         }
