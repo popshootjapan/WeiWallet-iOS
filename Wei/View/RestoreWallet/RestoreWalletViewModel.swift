@@ -17,15 +17,17 @@ final class RestoreWalletViewModel: InjectableViewModel {
     typealias Dependency = (
         ApplicationStoreProtocol,
         DeviceCheckerProtocol,
-        RegistrationRepositoryProtocol
+        RegistrationRepositoryProtocol,
+        MnemonicManagerProtocol
     )
     
     private var applicationStore: ApplicationStoreProtocol
     private let deviceChecker: DeviceCheckerProtocol
     private let registrationRepository: RegistrationRepositoryProtocol
+    private let mnemonicManager: MnemonicManagerProtocol
     
     init(dependency: Dependency) {
-        (applicationStore, deviceChecker, registrationRepository) = dependency
+        (applicationStore, deviceChecker, registrationRepository, mnemonicManager) = dependency
     }
     
     struct Input {
@@ -54,10 +56,9 @@ final class RestoreWalletViewModel: InjectableViewModel {
                     return Driver.empty()
                 }
                 
-                let mnemonicSentence = mnemonic.joined(separator: " ")
                 let seed: String
                 do {
-                    seed = try Mnemonic.createSeed(mnemonic: mnemonic).toHexString()
+                    seed = try weakSelf.mnemonicManager.createSeed(mnemonic: mnemonic).toHexString()
                 } catch let error {
                     return Driver.just(Action.failed(error))
                 }
@@ -69,7 +70,7 @@ final class RestoreWalletViewModel: InjectableViewModel {
                 }
                 
                 // Save mnemonic words and seed string in keychain
-                weakSelf.applicationStore.mnemonic = mnemonicSentence
+                weakSelf.applicationStore.mnemonic = mnemonic.joined(separator: " ")
                 weakSelf.applicationStore.seed = seed
                 
                 // when restored, it is certain that user has a backup

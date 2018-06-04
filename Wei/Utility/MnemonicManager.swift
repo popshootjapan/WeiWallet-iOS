@@ -10,7 +10,7 @@ import EthereumKit
 
 protocol MnemonicManagerProtocol {
     func create() -> [String]
-    func createSeed(mnemonic: [String]) -> Data
+    func createSeed(mnemonic: [String]) throws -> Data
 }
 
 final class MnemonicManager: MnemonicManagerProtocol {
@@ -30,7 +30,7 @@ final class MnemonicManager: MnemonicManagerProtocol {
         return Mnemonic.create(strength: .normal, language: language)
     }
     
-    func createSeed(mnemonic: [String]) -> Data {
-        return Mnemonic.createSeed(mnemonic: mnemonic)
+    func createSeed(mnemonic: [String]) throws -> Data {
+        return try Mnemonic.createSeed(mnemonic: mnemonic)
     }
 }
