@@ -59,12 +59,12 @@ final class SelectAmountViewModel: InjectableViewModel {
         
         // stripe the decimal amount from tx fee.
         // only use number before the decimal poin.
-        // for example 1 for 1.2345
+        // for example 2 for 1.2345
         let fiatTxFee = fiatTxFeeAction.elements.flatMap { price -> Driver<Int64> in
             guard let doubleValue = Double(price.price) else {
                 return .empty()
             }
-            return Int64(ceil(doubleValue))!
+            return Driver.just(Int64(ceil(doubleValue)))
         }
         
         // User's total fiat balance
