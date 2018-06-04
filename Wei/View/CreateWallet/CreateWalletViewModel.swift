@@ -56,10 +56,14 @@ final class CreateWalletViewModel: InjectableViewModel {
             // to prevent it.
             if weakSelf.applicationStore.seed == nil {
                 let mnemonic = weakSelf.mnemonicManager.create()
+                let seed: String
+                do {
+                    seed = try weakSelf.mnemonicManager.createSeed(mnemonic: mnemonic).toHexString()
+                } catch let error {
+                    return Driver.just(Action.failed(error))
+                }
                 weakSelf.applicationStore.mnemonic = mnemonic.joined(separator: " ")
-                
-                let seed = weakSelf.mnemonicManager.createSeed(mnemonic: mnemonic)
-                weakSelf.applicationStore.seed = seed.toHexString()
+                weakSelf.applicationStore.seed = seed
             }
                 
             // NOTE: To register user's address, you need the instance of wallet,

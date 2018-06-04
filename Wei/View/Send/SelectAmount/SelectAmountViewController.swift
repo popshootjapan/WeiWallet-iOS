@@ -60,6 +60,7 @@ final class SelectAmountViewController: UIViewController {
         
         output
             .fiatAmount
+            .map(String.init)
             .drive(amountTextField.rx.text)
             .disposed(by: disposeBag)
         

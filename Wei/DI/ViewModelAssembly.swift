@@ -47,7 +47,8 @@ final class ViewModelAssembly: Assembly {
             return RestoreWalletViewModel(dependency: (
                 resolver.resolve(ApplicationStoreProtocol.self)!,
                 resolver.resolve(DeviceCheckerProtocol.self)!,
-                resolver.resolve(RegistrationRepositoryProtocol.self)!
+                resolver.resolve(RegistrationRepositoryProtocol.self)!,
+                resolver.resolve(MnemonicManagerProtocol.self)!
             ))
         }
         

@@ -22,7 +22,14 @@ struct Gas {
         gasPrice: Converter.toWei(GWei: 41)
     )
     
-    // Low value of gas is 21000 for gas limit and 1 GWei for gas price
+    // NOTE: you can check safe low gas price at https://ethgasstation.info/
+    // TODO: change to get estimate gas price from node or sever
+    static let safeLow = Gas(
+        gasLimit: 21000,
+        gasPrice: 15
+    )
+    
+    /// Low value of gas is 21000 for gas limit and 1 GWei for gas price
     static let low = Gas(
         gasLimit: 21000,
         gasPrice: Converter.toWei(GWei: 1)
