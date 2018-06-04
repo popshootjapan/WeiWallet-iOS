@@ -82,6 +82,7 @@ final class SendConfirmationViewModel: InjectableViewModel {
                         localTransaction.value = value
                         localTransaction.gasLimit = gas.gasLimit
                         localTransaction.gasPrice = gas.gasPrice
+                        localTransaction.date = Int64(Date().timeIntervalSince1970)
                         self?.localTransactionRepository.add(localTransaction)
                     })
             }

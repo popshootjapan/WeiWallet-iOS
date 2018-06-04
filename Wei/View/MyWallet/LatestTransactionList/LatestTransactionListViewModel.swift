@@ -87,20 +87,22 @@ final class LatestTransactionListViewModel: InjectableViewModel {
         )
         
         // Create TransactionHistoryKind model from local transactions and remote transactions
-        let transactionHistoryKinds = Driver.merge(
-            localTransactions
-                .map { $0
-                    .map { TransactionHistoryKind.local($0) }
-                },
-            transactions
-                .map { $0.elements
-                    .filter { $0.isExecutedLessThanDay }
-                    .reversed()
-                }
-                .map { $0
-                    .map { TransactionHistoryKind.remote($0) }
-                }
-        )
+        let transactionHistoryKinds = Driver
+            .combineLatest(
+                localTransactions
+                    .map { $0
+                        .map { TransactionHistoryKind.local($0) }
+                    },
+                transactions
+                    .map { $0.elements
+                        .filter { $0.isExecutedLessThanDay }
+                        .reversed()
+                    }
+                    .map { $0
+                        .map { TransactionHistoryKind.remote($0) }
+                    }
+            )
+            .map { $0 + $1 }
         
         let latestTransactions = transactionHistoryKinds.map { kinds -> [TransactionHistory] in
             return kinds
