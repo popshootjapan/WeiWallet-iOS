@@ -64,6 +64,14 @@ final class UtilityAssembly: Assembly {
             }
             .inObjectScope(.container)
         
+        // RealmManager
+        
+        container
+            .register(RealmManagerProtocol.self) { resolver in
+                return RealmManager()
+            }
+            .inObjectScope(.container)
+        
         // APIClient
         
         container
@@ -134,6 +142,14 @@ final class UtilityAssembly: Assembly {
         container.register(RegistrationRepositoryProtocol.self) { resolver in
             return RegistrationRepository(dependency: (
                 resolver.resolve(APIClientProtocol.self)!
+            ))
+        }
+        
+        // LocalTransactionRepository
+        
+        container.register(LocalTransactionRepositoryProtocol.self) { resolver in
+            return LocalTransactionRepository(dependency: (
+                resolver.resolve(RealmManagerProtocol.self)!
             ))
         }
     }
