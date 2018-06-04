@@ -102,6 +102,8 @@
 		AE61468F2088FA3E00A9E77A /* DialogPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE61468E2088FA3E00A9E77A /* DialogPresentationController.swift */; };
 		AE8C9FC6209EF85F00C616E1 /* DebugListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */; };
 		AE8C9FC8209EF87300C616E1 /* DebugListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */; };
+		AEC36ADA20C538EF00FE4737 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC36AD820C538EF00FE4737 /* RealmSwift.framework */; };
+		AEC36ADB20C538EF00FE4737 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC36AD920C538EF00FE4737 /* Realm.framework */; };
 		AED6F445205514BB004A280F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6F444205514BB004A280F /* AppDelegate.swift */; };
 		AED6F44C205514BB004A280F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AED6F44B205514BB004A280F /* Assets.xcassets */; };
 		AED6F44F205514BB004A280F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED6F44D205514BB004A280F /* LaunchScreen.storyboard */; };
@@ -273,6 +275,8 @@
 		AE61468E2088FA3E00A9E77A /* DialogPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogPresentationController.swift; sourceTree = "<group>"; };
 		AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugListViewController.swift; sourceTree = "<group>"; };
 		AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DebugListViewController.storyboard; sourceTree = "<group>"; };
+		AEC36AD820C538EF00FE4737 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		AEC36AD920C538EF00FE4737 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		AED6F441205514BB004A280F /* Wei.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wei.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED6F444205514BB004A280F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AED6F44B205514BB004A280F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -346,11 +350,13 @@
 			files = (
 				AE3EB62520AF05A400D61CE6 /* RxSwift.framework in Frameworks */,
 				AE3EB62120AF05A400D61CE6 /* APIKit.framework in Frameworks */,
+				AEC36ADA20C538EF00FE4737 /* RealmSwift.framework in Frameworks */,
 				AE3EB61E20AF05A400D61CE6 /* SVProgressHUD.framework in Frameworks */,
 				AE3EB61F20AF05A400D61CE6 /* Swinject.framework in Frameworks */,
 				AE3EB62420AF05A400D61CE6 /* Result.framework in Frameworks */,
 				AE3EB62220AF05A400D61CE6 /* KeychainAccess.framework in Frameworks */,
 				AE3EB62320AF05A400D61CE6 /* RxCocoa.framework in Frameworks */,
+				AEC36ADB20C538EF00FE4737 /* Realm.framework in Frameworks */,
 				AE3EB62620AF05A400D61CE6 /* RxBlocking.framework in Frameworks */,
 				AE3EB62020AF05A400D61CE6 /* EthereumKit.framework in Frameworks */,
 				A7AF3D52759E96BE87D5E7DE /* Pods_Wei.framework in Frameworks */,
@@ -454,6 +460,8 @@
 		1AEA0A54205961E00068C2E1 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				AEC36AD920C538EF00FE4737 /* Realm.framework */,
+				AEC36AD820C538EF00FE4737 /* RealmSwift.framework */,
 				AE3EB61720AF05A300D61CE6 /* APIKit.framework */,
 				AE3EB61320AF05A300D61CE6 /* CryptoSwift.framework */,
 				AE3EB61620AF05A300D61CE6 /* EthereumKit.framework */,
@@ -1003,6 +1011,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/PINCache.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/CryptoEthereumSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
 			name = Carthage;
 			outputPaths = (
