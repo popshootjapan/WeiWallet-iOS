@@ -21,7 +21,12 @@ final class TransactionHistoryViewCell: UITableViewCell, InputAppliable {
     typealias Input = TransactionHistory
     
     func apply(input: Input) {
-        let (transaction, address) = (input.transaction, input.myAddress)
+        let (kind, address) = (input.kind, input.myAddress)
+        
+        guard case .remote(let transaction) = kind else {
+            return
+        }
+        
         timestampLabel.text = DateFormatter.fullDateString(from: Date(timeIntervalSince1970: TimeInterval(transaction.timeStamp)!))
         etherAmountLabel.text = Converter.toEther(wei: Wei(transaction.value)!).string
         

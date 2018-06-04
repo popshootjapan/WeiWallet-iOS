@@ -19,21 +19,32 @@ final class LatestTransactionListViewCell: UITableViewCell, InputAppliable {
     typealias Input = TransactionHistory
     
     func apply(input: Input) {
-        let (transaction, address) = (input.transaction, input.myAddress)
-        timestampLabel.text = DateFormatter.fullDateString(from: Date(timeIntervalSince1970: TimeInterval(Int64(transaction.timeStamp)!)))
-        etherAmountLabel.text = Converter.toEther(wei: Wei(transaction.value)!).string
+        let (kind, address) = (input.kind, input.myAddress)
         
-        let isReceiveTransaction = transaction.isReceiveTransaction(myAddress: address)
-        if transaction.isPending {
-            let text = isReceiveTransaction ? "受け取り中" : "送金中"
-            transactionStatusLabel.text = text
-            transactionStatusImageViewView.image = #imageLiteral(resourceName: "icon_card_waiting")
-        } else {
-            let text = isReceiveTransaction ? "受け取り済み" : "送金済み"
-            transactionStatusLabel.text = text
+        switch kind {
+        case .local(let localTransaction):
+            timestampLabel.text = DateFormatter.fullDateString(from: Date(timeIntervalSince1970: TimeInterval(localTransaction.date)))
+            etherAmountLabel.text = Converter.toEther(wei: Wei(localTransaction.value)!).string
             
-            let icon = isReceiveTransaction ? #imageLiteral(resourceName: "icon_card_receive") : #imageLiteral(resourceName: "icon_card_send")
-            transactionStatusImageViewView.image = icon
+            transactionStatusLabel.text = "送金中"
+            transactionStatusImageViewView.image = #imageLiteral(resourceName: "icon_card_waiting")
+            
+        case .remote(let transaction):
+            timestampLabel.text = DateFormatter.fullDateString(from: Date(timeIntervalSince1970: TimeInterval(Int64(transaction.timeStamp)!)))
+            etherAmountLabel.text = Converter.toEther(wei: Wei(transaction.value)!).string
+            
+            let isReceiveTransaction = transaction.isReceiveTransaction(myAddress: address)
+            if transaction.isPending {
+                let text = isReceiveTransaction ? "受け取り中" : "送金中"
+                transactionStatusLabel.text = text
+                transactionStatusImageViewView.image = #imageLiteral(resourceName: "icon_card_waiting")
+            } else {
+                let text = isReceiveTransaction ? "受け取り済み" : "送金済み"
+                transactionStatusLabel.text = text
+                
+                let icon = isReceiveTransaction ? #imageLiteral(resourceName: "icon_card_receive") : #imageLiteral(resourceName: "icon_card_send")
+                transactionStatusImageViewView.image = icon
+            }
         }
     }
 }

@@ -68,7 +68,8 @@ final class ViewModelAssembly: Assembly {
             return LatestTransactionListViewModel(dependency: (
                 resolver.resolve(WalletManagerProtocol.self)!,
                 resolver.resolve(GethRepositoryProtocol.self)!,
-                resolver.resolve(UpdaterProtocol.self)!
+                resolver.resolve(UpdaterProtocol.self)!,
+                resolver.resolve(LocalTransactionRepositoryProtocol.self)!
             ))
         }
         
