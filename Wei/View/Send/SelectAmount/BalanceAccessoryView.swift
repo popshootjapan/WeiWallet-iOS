@@ -17,16 +17,16 @@ final class BalanceAccessoryView: UIView, InputAppliable {
     @IBOutlet private weak var txFeeLabel: UILabel!
 
     enum Input {
-        case balance(String)
-        case txFee(String)
+        case balance(Int64)
+        case txFee(Int64)
     }
     
     func apply(input: Input) {
         switch input {
         case .balance(let text):
-            balanceLabel.text = text
+            balanceLabel.text = String(text)
         case .txFee(let text):
-            txFeeLabel.text = text
+            txFeeLabel.text = String(text)
         }
     }
 }
