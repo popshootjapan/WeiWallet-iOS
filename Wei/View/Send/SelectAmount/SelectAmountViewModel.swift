@@ -58,12 +58,14 @@ final class SelectAmountViewModel: InjectableViewModel {
         }
         
         // stripe the decimal amount from tx fee.
-        let fiatTxFee = fiatTxFeeAction.elements
-            // only use number before the decimal poin.
-            // for exsample 1 for 1.2345
-            .map { String($0.price.split(separator: ".").first ?? "") }
-            // will never fail here
-            .map { Int64($0)! }
+        // only use number before the decimal poin.
+        // for example 1 for 1.2345
+        let fiatTxFee = fiatTxFeeAction.elements.flatMap { price -> Driver<Int64> in
+            guard let doubleValue = Double(price.price), let ceiledValue = ceil(doubleValue) else {
+                return .empty()
+            }
+            return Int64(ceiledValue)!
+        }
         
         // User's total fiat balance
         let fiatBalance = balanceStore.fiatBalance.asDriver(onErrorDriveWith: .empty()).flatMap { balanceString -> Driver<Int64> in
