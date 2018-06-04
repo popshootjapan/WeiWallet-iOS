@@ -50,7 +50,10 @@ struct TransactionContext {
     var etherFee: Amount
     
     var isAddressValid: Bool {
-        return !address.isEmpty && address.count == 42
+        let isAddressNotEmpty = !address.isEmpty
+        let isValidLength = address.count == 42
+        let isStartWith0x = address.hasPrefix("0x")
+        return isAddressNotEmpty && isValidLength && isStartWith0x
     }
     
     var isAmountValid: Bool {
