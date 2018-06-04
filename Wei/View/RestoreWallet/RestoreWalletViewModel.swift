@@ -55,7 +55,12 @@ final class RestoreWalletViewModel: InjectableViewModel {
                 }
                 
                 let mnemonicSentence = mnemonic.joined(separator: " ")
-                let seed = Mnemonic.createSeed(mnemonic: mnemonic).toHexString()
+                let seed: String
+                do {
+                    seed = try Mnemonic.createSeed(mnemonic: mnemonic).toHexString()
+                } catch let error {
+                    return Driver.just(Action.failed(error))
+                }
                 
                 // If generated seed string is empty, it indicates that mnemonic words are incorrect.
                 // in this case returns Action.failed to handle error.
