@@ -113,6 +113,7 @@
 		AEFA450020B31BE500844D4A /* RestoreWalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFA44FF20B31BE500844D4A /* RestoreWalletViewModel.swift */; };
 		AEFE57F420C6EAB300CE47F8 /* AdjustGasPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE57F320C6EAB300CE47F8 /* AdjustGasPriceViewController.swift */; };
 		AEFE57F620C6EAC700CE47F8 /* AdjustGasPriceViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEFE57F520C6EAC700CE47F8 /* AdjustGasPriceViewController.storyboard */; };
+		AEFE57F920C6ED7800CE47F8 /* UserDefaultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE57F820C6ED7800CE47F8 /* UserDefaultsStore.swift */; };
 		DE02317C209169AC00508B5B /* UINotificationFeedbackGenerator+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE02317B209169AC00508B5B /* UINotificationFeedbackGenerator+Extension.swift */; };
 		DE02317F2091711900508B5B /* MaintenanceViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE02317E2091711900508B5B /* MaintenanceViewController.storyboard */; };
 		DE0231812091712700508B5B /* MaintenanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0231802091712700508B5B /* MaintenanceViewController.swift */; };
@@ -290,6 +291,7 @@
 		AEFA44FF20B31BE500844D4A /* RestoreWalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreWalletViewModel.swift; sourceTree = "<group>"; };
 		AEFE57F320C6EAB300CE47F8 /* AdjustGasPriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustGasPriceViewController.swift; sourceTree = "<group>"; };
 		AEFE57F520C6EAC700CE47F8 /* AdjustGasPriceViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdjustGasPriceViewController.storyboard; sourceTree = "<group>"; };
+		AEFE57F820C6ED7800CE47F8 /* UserDefaultsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStore.swift; sourceTree = "<group>"; };
 		D86A64040CB267923480718A /* Pods-Wei.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wei.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wei/Pods-Wei.debug.xcconfig"; sourceTree = "<group>"; };
 		DE02317B209169AC00508B5B /* UINotificationFeedbackGenerator+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINotificationFeedbackGenerator+Extension.swift"; sourceTree = "<group>"; };
 		DE02317E2091711900508B5B /* MaintenanceViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MaintenanceViewController.storyboard; sourceTree = "<group>"; };
@@ -515,6 +517,7 @@
 			children = (
 				1AEA0A94205978730068C2E1 /* Environment.swift */,
 				1AEA0A90205978250068C2E1 /* KeychainStore.swift */,
+				AEFE57F820C6ED7800CE47F8 /* UserDefaultsStore.swift */,
 				1AEA0A97205979DB0068C2E1 /* ApplicationStore.swift */,
 				AE171AFF207FA41C00212494 /* RateStore.swift */,
 				1A3BD8FC205C0FBF00FE485D /* WalletManager.swift */,
@@ -1125,6 +1128,7 @@
 				AEFE57F420C6EAB300CE47F8 /* AdjustGasPriceViewController.swift in Sources */,
 				1AEA0A95205978730068C2E1 /* Environment.swift in Sources */,
 				DE624F952072486B00840B06 /* SendConfirmationViewModel.swift in Sources */,
+				AEFE57F920C6ED7800CE47F8 /* UserDefaultsStore.swift in Sources */,
 				DE624F8B207247AF00840B06 /* SelectAmountViewController.swift in Sources */,
 				DE9133B120A82EB1003CDE67 /* BackupViewController.swift in Sources */,
 				1AEA0A9A20597AD00068C2E1 /* UtilityAssembly.swift in Sources */,
