@@ -179,6 +179,7 @@ final class ViewControllerAssembly: Assembly {
         
         container.register(AdjustGasPriceViewController.self) { resolver in
             let viewController = UIStoryboard.instantiateViewController(of: AdjustGasPriceViewController.self)
+            viewController.viewModel = resolver.resolve(AdjustGasPriceViewModel.self)!
             return viewController
         }
     }

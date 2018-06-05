@@ -154,5 +154,13 @@ final class ViewModelAssembly: Assembly {
         container.register(SuggestBackupViewModel.self) { (resolver) in
             return SuggestBackupViewModel()
         }
+        
+        // MARK: - AdjustGasPriceViewModel
+        
+        container.register(AdjustGasPriceViewModel.self) { resolver in
+            return AdjustGasPriceViewModel(dependency: (
+                resolver.resolve(ApplicationStoreProtocol.self)!
+            ))
+        }
     }
 }
