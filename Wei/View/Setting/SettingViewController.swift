@@ -43,6 +43,10 @@ final class SettingViewController: UITableViewController {
                 case .security:
                     let viewController = BackupViewController.make()
                     self?.navigationController?.pushViewController(viewController, animated: true)
+                
+                case .transactionSetting:
+                    print("yes")
+                    
                 case .info:
                     self?.showWebView(for: SettingSection.InfoCellType(rawValue: indexPath.row)!)
                 }
@@ -52,11 +56,8 @@ final class SettingViewController: UITableViewController {
     
     enum SettingSection: Int {
         case security
+        case transactionSetting
         case info
-        
-        enum SecurityCellType: Int {
-            case backup
-        }
         
         enum InfoCellType: Int {
             case terms
