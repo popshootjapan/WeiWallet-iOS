@@ -64,7 +64,7 @@ final class RootViewModel: InjectableViewModel {
         // the seed or access token. This case will happen if seed is saved in the keychain
         // from other apps developed by us.
         let presentCreateWalletViewController = input.viewDidAppear
-            .filter { applicationStore.seed == nil || applicationStore.accessToken != nil }
+            .filter { applicationStore.seed == nil || applicationStore.accessToken == nil }
         
         return Output(
             showHomeViewController: showHomeViewController,
