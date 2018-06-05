@@ -43,18 +43,13 @@ enum Amount {
 
 struct TransactionContext {
     
-    var address: String
-    var fiatAmount: Amount
-    var etherAmount: Amount
-    var fiatFee: Amount
-    var etherFee: Amount
-    
-    var isAddressValid: Bool {
-        let isAddressNotEmpty = !address.isEmpty
-        let isValidLength = address.count == 42
-        let isStartWith0x = address.hasPrefix("0x")
-        return isAddressNotEmpty && isValidLength && isStartWith0x
-    }
+    let address: String
+    let fiatAmount: Amount
+    let etherAmount: Amount
+    let fiatFee: Amount
+    let etherFee: Amount
+    let gasPrice: Int
+    let gasLimit: Int
     
     var isAmountValid: Bool {
         return fiatAmount.valid() && etherAmount.valid()
@@ -65,16 +60,6 @@ struct TransactionContext {
     }
     
     var isContextValid: Bool {
-        return isAddressValid && isAmountValid && isFeeValid
-    }
-}
-
-extension TransactionContext {
-    init(_ address: String, fiatAmount: Amount = .fiat(0), etherAmount: Amount = .ether(0), fiatFee: Amount = .fiat(0), etherFee: Amount = .ether(0)) {
-        self.address = address
-        self.fiatAmount = fiatAmount
-        self.etherAmount = etherAmount
-        self.fiatFee = fiatFee
-        self.etherFee = etherFee
+        return isAmountValid && isFeeValid && AddressValidator.validate(address)
     }
 }

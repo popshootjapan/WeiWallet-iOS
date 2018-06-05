@@ -16,15 +16,17 @@ final class SelectAmountViewModel: InjectableViewModel {
     typealias Dependency = (
         BalanceStoreProtocol,
         RateRepositoryProtocol,
-        TransactionContext
+        ApplicationStoreProtocol,
+        String
     )
     
     private let balanceStore: BalanceStoreProtocol
     private let rateRepository: RateRepositoryProtocol
-    private let transactionContext: TransactionContext
+    private let applicationStore: ApplicationStoreProtocol
+    private let address: String
 
     init(dependency: Dependency) {
-        (balanceStore, rateRepository, transactionContext) = dependency
+        (balanceStore, rateRepository, applicationStore, address) = dependency
     }
     
     struct Input {
@@ -43,10 +45,12 @@ final class SelectAmountViewModel: InjectableViewModel {
     }
     
     func build(input: Input) -> Output {
-        let transactionContext = self.transactionContext
+        let address = self.address
         
         // NOTE: Deal with fixed tx fee
-        let txFee = Wei(Gas.safeLow.gasLimit * Gas.safeLow.gasPrice)
+        let gasPrice = applicationStore.gasPrice
+        let gasLimit = applicationStore.gasLimit
+        let txFee = Wei(gasLimit * gasPrice)
         
         // fiatTxFeeAction converts specified tx fee to fiat price.
         let fiatTxFeeAction = input.viewWillAppear.flatMap { [weak self] _ -> Driver<Action<Price>> in
@@ -108,11 +112,13 @@ final class SelectAmountViewModel: InjectableViewModel {
         let showSendConfirmationWithTransactionContext = input.confirmButtonDidTap
             .withLatestFrom(Driver.combineLatest(inputFiatAmount, etherAmount, fiatTxFee))
             .map { TransactionContext(
-                transactionContext.address,
+                address: address,
                 fiatAmount: .fiat($0),
                 etherAmount: .ether(Ether($1)!),
                 fiatFee: .fiat($2),
-                etherFee: .ether(Converter.toEther(wei: txFee))
+                etherFee: .ether(Converter.toEther(wei: txFee)),
+                gasPrice: gasPrice,
+                gasLimit: gasLimit
             )}
         
         let errors = Driver.merge(

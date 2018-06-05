@@ -76,8 +76,8 @@ extension SelectAddressByPasteViewController {
 }
 
 extension SelectAmountViewController {
-    static func make(_ transactionContext: TransactionContext) -> SelectAmountViewController {
-        return Container.shared.resolve(SelectAmountViewController.self, argument: transactionContext)!
+    static func make(_ address: String) -> SelectAmountViewController {
+        return Container.shared.resolve(SelectAmountViewController.self, argument: address)!
     }
 }
 

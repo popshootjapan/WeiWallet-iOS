@@ -101,8 +101,8 @@ final class SelectAddressByQRViewController: UIViewController {
         navigationController?.pushViewController(viewController, animated: true)
     }
     
-    private func pushSelectAmountViewController(with transactionContext: TransactionContext) {
-        let selectAmountViewController = SelectAmountViewController.make(transactionContext)
+    private func pushSelectAmountViewController(with address: String) {
+        let selectAmountViewController = SelectAmountViewController.make(address)
         navigationController?.pushViewController(selectAmountViewController, animated: true)
     }
 }

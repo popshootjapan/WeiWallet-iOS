@@ -7,12 +7,26 @@
 //
 
 protocol ApplicationStoreProtocol {
+    
+    /// Represents user's master seed
     var seed: String? { get set }
+    
+    /// Represents user's mnemonic backup phrase
     var mnemonic: String? { get set }
+    
+    /// Represents user's access token for wei server
     var accessToken: String? { get set }
+    
+    /// Represents a flag whether user has done backup
     var isAlreadyBackup: Bool { get set }
+    
+    /// Represents a gas price set for the app
     var gasPrice: Int { get set }
     
+    /// Represents a gas limit set for the app
+    var gasLimit: Int { get }
+    
+    /// Clears data in keychain
     func clearKeychain()
 }
 
@@ -73,6 +87,10 @@ final class ApplicationStore: ApplicationStoreProtocol, Injectable {
         set {
             userDefaultsStore.gasPrice = newValue
         }
+    }
+    
+    var gasLimit: Int {
+        return Gas.safeLow.gasLimit
     }
     
     func clearKeychain() {

@@ -92,11 +92,12 @@ final class ViewModelAssembly: Assembly {
         
         // MARK: - SelectAmountViewModel
         
-        container.register(SelectAmountViewModel.self) { (resolver, context: TransactionContext) in
+        container.register(SelectAmountViewModel.self) { (resolver, address: String) in
             return SelectAmountViewModel(dependency: (
                 resolver.resolve(BalanceStoreProtocol.self)!,
                 resolver.resolve(RateRepositoryProtocol.self)!,
-                context
+                resolver.resolve(ApplicationStoreProtocol.self)!,
+                address
             ))
         }
         
