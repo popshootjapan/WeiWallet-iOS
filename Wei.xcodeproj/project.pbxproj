@@ -111,6 +111,8 @@
 		AEFA44FB20B318C100844D4A /* RestoreWalletViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEFA44FA20B318C100844D4A /* RestoreWalletViewController.storyboard */; };
 		AEFA44FD20B318D100844D4A /* RestoreWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFA44FC20B318D100844D4A /* RestoreWalletViewController.swift */; };
 		AEFA450020B31BE500844D4A /* RestoreWalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFA44FF20B31BE500844D4A /* RestoreWalletViewModel.swift */; };
+		AEFE57F420C6EAB300CE47F8 /* AdjustGasPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE57F320C6EAB300CE47F8 /* AdjustGasPriceViewController.swift */; };
+		AEFE57F620C6EAC700CE47F8 /* AdjustGasPriceViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEFE57F520C6EAC700CE47F8 /* AdjustGasPriceViewController.storyboard */; };
 		DE02317C209169AC00508B5B /* UINotificationFeedbackGenerator+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE02317B209169AC00508B5B /* UINotificationFeedbackGenerator+Extension.swift */; };
 		DE02317F2091711900508B5B /* MaintenanceViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE02317E2091711900508B5B /* MaintenanceViewController.storyboard */; };
 		DE0231812091712700508B5B /* MaintenanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0231802091712700508B5B /* MaintenanceViewController.swift */; };
@@ -286,6 +288,8 @@
 		AEFA44FA20B318C100844D4A /* RestoreWalletViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RestoreWalletViewController.storyboard; sourceTree = "<group>"; };
 		AEFA44FC20B318D100844D4A /* RestoreWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreWalletViewController.swift; sourceTree = "<group>"; };
 		AEFA44FF20B31BE500844D4A /* RestoreWalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreWalletViewModel.swift; sourceTree = "<group>"; };
+		AEFE57F320C6EAB300CE47F8 /* AdjustGasPriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustGasPriceViewController.swift; sourceTree = "<group>"; };
+		AEFE57F520C6EAC700CE47F8 /* AdjustGasPriceViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdjustGasPriceViewController.storyboard; sourceTree = "<group>"; };
 		D86A64040CB267923480718A /* Pods-Wei.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wei.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wei/Pods-Wei.debug.xcconfig"; sourceTree = "<group>"; };
 		DE02317B209169AC00508B5B /* UINotificationFeedbackGenerator+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINotificationFeedbackGenerator+Extension.swift"; sourceTree = "<group>"; };
 		DE02317E2091711900508B5B /* MaintenanceViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MaintenanceViewController.storyboard; sourceTree = "<group>"; };
@@ -725,6 +729,7 @@
 				AE14A61E2070A50C003A63FF /* Common */,
 				AE8C9FC9209EF87800C616E1 /* Debug */,
 				AEFA44FE20B318F600844D4A /* RestoreWallet */,
+				AEFE57F720C6EAD800CE47F8 /* AdjustGasPrice */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -737,6 +742,15 @@
 				AEFA44FF20B31BE500844D4A /* RestoreWalletViewModel.swift */,
 			);
 			path = RestoreWallet;
+			sourceTree = "<group>";
+		};
+		AEFE57F720C6EAD800CE47F8 /* AdjustGasPrice */ = {
+			isa = PBXGroup;
+			children = (
+				AEFE57F520C6EAC700CE47F8 /* AdjustGasPriceViewController.storyboard */,
+				AEFE57F320C6EAB300CE47F8 /* AdjustGasPriceViewController.swift */,
+			);
+			path = AdjustGasPrice;
 			sourceTree = "<group>";
 		};
 		DE02317D209170F900508B5B /* Maintenance */ = {
@@ -963,6 +977,7 @@
 				DE624F7E2072459B00840B06 /* SelectAddressByQRViewController.storyboard in Resources */,
 				DE7682DE207F3C63004094BA /* SettingViewController.storyboard in Resources */,
 				AE14A6172070A1E8003A63FF /* CreateWalletViewController.storyboard in Resources */,
+				AEFE57F620C6EAC700CE47F8 /* AdjustGasPriceViewController.storyboard in Resources */,
 				DE9272C8208AD55000E03AB9 /* TutorialTopView.xib in Resources */,
 				AE14A63120712240003A63FF /* MyWalletViewController.storyboard in Resources */,
 				AED6F44C205514BB004A280F /* Assets.xcassets in Resources */,
@@ -1107,6 +1122,7 @@
 				AE14A6342071226F003A63FF /* MyWalletViewModel.swift in Sources */,
 				AEFA44FD20B318D100844D4A /* RestoreWalletViewController.swift in Sources */,
 				DEC5772D2075F51700DC3923 /* QRCoder.swift in Sources */,
+				AEFE57F420C6EAB300CE47F8 /* AdjustGasPriceViewController.swift in Sources */,
 				1AEA0A95205978730068C2E1 /* Environment.swift in Sources */,
 				DE624F952072486B00840B06 /* SendConfirmationViewModel.swift in Sources */,
 				DE624F8B207247AF00840B06 /* SelectAmountViewController.swift in Sources */,

@@ -134,3 +134,9 @@ extension SuggestBackupViewController {
         return Container.shared.resolve(SuggestBackupViewController.self)!
     }
 }
+
+extension AdjustGasPriceViewController {
+    static func make() -> AdjustGasPriceViewController {
+        return Container.shared.resolve(AdjustGasPriceViewController.self)!
+    }
+}

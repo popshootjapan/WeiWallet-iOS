@@ -174,6 +174,13 @@ final class ViewControllerAssembly: Assembly {
             viewController.viewModel = resolver.resolve(SuggestBackupViewModel.self)!
             return viewController
         }
+        
+        // MARK: - AdjustGasPriceViewController
+        
+        container.register(AdjustGasPriceViewController.self) { resolver in
+            let viewController = UIStoryboard.instantiateViewController(of: AdjustGasPriceViewController.self)
+            return viewController
+        }
     }
 }
 

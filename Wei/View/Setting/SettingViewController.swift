@@ -45,7 +45,8 @@ final class SettingViewController: UITableViewController {
                     self?.navigationController?.pushViewController(viewController, animated: true)
                 
                 case .transactionSetting:
-                    print("yes")
+                    let viewController = AdjustGasPriceViewController.make()
+                    self?.navigationController?.pushViewController(viewController, animated: true)
                     
                 case .info:
                     self?.showWebView(for: SettingSection.InfoCellType(rawValue: indexPath.row)!)
