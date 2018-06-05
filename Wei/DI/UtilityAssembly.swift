@@ -19,12 +19,17 @@ final class UtilityAssembly: Assembly {
             return KeychainStore(environment: Environment.current)
         }
         
+        container.register(UserDefaultsStoreProtocol.self) { resolver in
+            return UserDefaultsStore(environment: Environment.current)
+        }
+        
         // ApplicationStore
         
         container
             .register(ApplicationStoreProtocol.self) { resolver in
                 return ApplicationStore(dependency: (
-                    resolver.resolve(KeychainStore.self)!
+                    resolver.resolve(KeychainStore.self)!,
+                    resolver.resolve(UserDefaultsStoreProtocol.self)!
                 ))
             }
             .inObjectScope(.container)

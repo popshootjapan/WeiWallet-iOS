@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GZ1-TO-Cgb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ガス価格を調整-->
+        <scene sceneID="b8v-dm-ohR">
+            <objects>
+                <viewController id="GZ1-TO-Cgb" customClass="AdjustGasPriceViewController" customModule="Wei" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="idO-fM-x6C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ivK-WO-VLd">
+                                <rect key="frame" x="14" y="128" width="347" height="31"/>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ivK-WO-VLd" firstAttribute="leading" secondItem="UyP-fp-avu" secondAttribute="leading" constant="16" id="8eo-3D-gFR"/>
+                            <constraint firstItem="UyP-fp-avu" firstAttribute="trailing" secondItem="ivK-WO-VLd" secondAttribute="trailing" constant="16" id="BY3-OW-IY5"/>
+                            <constraint firstItem="ivK-WO-VLd" firstAttribute="top" secondItem="UyP-fp-avu" secondAttribute="top" constant="64" id="LUa-in-i43"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UyP-fp-avu"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ガス価格を調整" id="RyE-Rd-bo2"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="gasPriceSlider" destination="ivK-WO-VLd" id="0OZ-0E-BRY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cmv-yY-f4h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47" y="150"/>
+        </scene>
+    </scenes>
+</document>

@@ -101,9 +101,9 @@ final class ViewControllerAssembly: Assembly {
         
         // MARK: - SelectAmountViewController
         
-        container.register(SelectAmountViewController.self) { (resolver, context: TransactionContext) in
+        container.register(SelectAmountViewController.self) { (resolver, address: String) in
             let viewController = UIStoryboard.instantiateViewController(of: SelectAmountViewController.self)
-            viewController.viewModel = resolver.resolve(SelectAmountViewModel.self, argument: context)!
+            viewController.viewModel = resolver.resolve(SelectAmountViewModel.self, argument: address)!
             return viewController
         }
         
@@ -172,6 +172,14 @@ final class ViewControllerAssembly: Assembly {
         container.register(SuggestBackupViewController.self) { resolver in
             let viewController = UIStoryboard.instantiateViewController(of: SuggestBackupViewController.self)
             viewController.viewModel = resolver.resolve(SuggestBackupViewModel.self)!
+            return viewController
+        }
+        
+        // MARK: - AdjustGasPriceViewController
+        
+        container.register(AdjustGasPriceViewController.self) { resolver in
+            let viewController = UIStoryboard.instantiateViewController(of: AdjustGasPriceViewController.self)
+            viewController.viewModel = resolver.resolve(AdjustGasPriceViewModel.self)!
             return viewController
         }
     }

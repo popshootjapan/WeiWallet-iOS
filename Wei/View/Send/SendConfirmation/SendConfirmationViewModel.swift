@@ -60,8 +60,8 @@ final class SendConfirmationViewModel: InjectableViewModel {
                 let rawTransaction = RawTransaction(
                     wei: wei,
                     to: transactionContext.address,
-                    gasPrice: Gas.safeLow.gasPrice,
-                    gasLimit: Gas.safeLow.gasLimit,
+                    gasPrice: transactionContext.gasPrice,
+                    gasLimit: transactionContext.gasLimit,
                     nonce: nonce
                 )
                 return Observable.just(try weakSelf.walletManager.sign(rawTransaction: rawTransaction))

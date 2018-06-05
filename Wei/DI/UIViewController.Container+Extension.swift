@@ -76,8 +76,8 @@ extension SelectAddressByPasteViewController {
 }
 
 extension SelectAmountViewController {
-    static func make(_ transactionContext: TransactionContext) -> SelectAmountViewController {
-        return Container.shared.resolve(SelectAmountViewController.self, argument: transactionContext)!
+    static func make(_ address: String) -> SelectAmountViewController {
+        return Container.shared.resolve(SelectAmountViewController.self, argument: address)!
     }
 }
 
@@ -132,5 +132,11 @@ extension BackupViewController {
 extension SuggestBackupViewController {
     static func make() -> SuggestBackupViewController {
         return Container.shared.resolve(SuggestBackupViewController.self)!
+    }
+}
+
+extension AdjustGasPriceViewController {
+    static func make() -> AdjustGasPriceViewController {
+        return Container.shared.resolve(AdjustGasPriceViewController.self)!
     }
 }
