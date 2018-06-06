@@ -77,6 +77,7 @@ final class LatestTransactionListViewModel: InjectableViewModel {
                 return Driver.just(weakSelf.localTransactionRepository.objects())
             }
             .do(onNext: { [weak self] localTransactions in
+                // Delete local transactions which are older than 1 hour.
                 localTransactions
                     .filter { Double($0.date) > Double(-3600.0) }
                     .forEach { [weak self] localTransaction in
