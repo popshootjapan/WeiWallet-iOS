@@ -12,19 +12,23 @@ protocol ApplicationStoreProtocol {
     var accessToken: String? { get set }
     var isAlreadyBackup: Bool { get set }
     
-    func clearKeychain()
+    func clearData()
 }
 
 final class ApplicationStore: ApplicationStoreProtocol, Injectable {
     
-    private let keychainStore: KeychainStore
-    
     typealias Dependency = (
-        KeychainStore
+        KeychainStore,
+        CacheProtocol,
+        LocalTransactionRepositoryProtocol
     )
     
+    private let keychainStore: KeychainStore
+    private let cache: CacheProtocol
+    private let localTransactionRepository: LocalTransactionRepositoryProtocol
+    
     init(dependency: Dependency) {
-        self.keychainStore = dependency
+        (keychainStore, cache, localTransactionRepository)  = dependency
     }
     
     var seed: String? {
@@ -63,12 +67,9 @@ final class ApplicationStore: ApplicationStoreProtocol, Injectable {
         }
     }
     
-    func clearKeychain() {
-        seed = nil
-        mnemonic = nil
-        accessToken = nil
-        
-        isAlreadyBackup = false
-        keychainStore[.isAlreadyBackup] = nil
+    func clearData() {
+        keychainStore.clearKeychain()
+        cache.clear()
+        localTransactionRepository.deleteAllObjects()
     }
 }

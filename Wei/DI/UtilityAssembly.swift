@@ -24,7 +24,9 @@ final class UtilityAssembly: Assembly {
         container
             .register(ApplicationStoreProtocol.self) { resolver in
                 return ApplicationStore(dependency: (
-                    resolver.resolve(KeychainStore.self)!
+                    resolver.resolve(KeychainStore.self)!,
+                    resolver.resolve(CacheProtocol.self)!,
+                    resolver.resolve(LocalTransactionRepositoryProtocol.self)!
                 ))
             }
             .inObjectScope(.container)
