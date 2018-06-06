@@ -54,6 +54,9 @@ final class SendConfirmationViewModel: InjectableViewModel {
             
             let address = weakSelf.walletManager.address()
             let nonce = weakSelf.gethRepository.getTransactionCount(address: address, blockParameter: .pending).asObservable()
+                // NonceManager.manage manages the nonce value because sending ether constantly cases
+                // the not-increment nonce value problem.
+                .map(NonceManager.manage)
             
             let signTransaction = nonce.flatMap { nonce -> Observable<String> in
                 let wei = Converter.toWei(ether: transactionContext.etherAmount.ether()).asString(withBase: 10)

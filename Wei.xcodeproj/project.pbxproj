@@ -111,6 +111,7 @@
 		AEFA44FB20B318C100844D4A /* RestoreWalletViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEFA44FA20B318C100844D4A /* RestoreWalletViewController.storyboard */; };
 		AEFA44FD20B318D100844D4A /* RestoreWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFA44FC20B318D100844D4A /* RestoreWalletViewController.swift */; };
 		AEFA450020B31BE500844D4A /* RestoreWalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFA44FF20B31BE500844D4A /* RestoreWalletViewModel.swift */; };
+		AEFE581220C7C07B00CE47F8 /* NonceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE581120C7C07B00CE47F8 /* NonceManager.swift */; };
 		DE02317C209169AC00508B5B /* UINotificationFeedbackGenerator+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE02317B209169AC00508B5B /* UINotificationFeedbackGenerator+Extension.swift */; };
 		DE02317F2091711900508B5B /* MaintenanceViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE02317E2091711900508B5B /* MaintenanceViewController.storyboard */; };
 		DE0231812091712700508B5B /* MaintenanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0231802091712700508B5B /* MaintenanceViewController.swift */; };
@@ -286,6 +287,7 @@
 		AEFA44FA20B318C100844D4A /* RestoreWalletViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RestoreWalletViewController.storyboard; sourceTree = "<group>"; };
 		AEFA44FC20B318D100844D4A /* RestoreWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreWalletViewController.swift; sourceTree = "<group>"; };
 		AEFA44FF20B31BE500844D4A /* RestoreWalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreWalletViewModel.swift; sourceTree = "<group>"; };
+		AEFE581120C7C07B00CE47F8 /* NonceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonceManager.swift; sourceTree = "<group>"; };
 		D86A64040CB267923480718A /* Pods-Wei.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wei.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wei/Pods-Wei.debug.xcconfig"; sourceTree = "<group>"; };
 		DE02317B209169AC00508B5B /* UINotificationFeedbackGenerator+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINotificationFeedbackGenerator+Extension.swift"; sourceTree = "<group>"; };
 		DE02317E2091711900508B5B /* MaintenanceViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MaintenanceViewController.storyboard; sourceTree = "<group>"; };
@@ -527,6 +529,7 @@
 				DE318DE220915BAD008FA01E /* BalanceStore.swift */,
 				DE318DE420916626008FA01E /* Formatter.swift */,
 				1A51790B20B50FEE00D642D3 /* EmptyViewManager.swift */,
+				AEFE581120C7C07B00CE47F8 /* NonceManager.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -1170,6 +1173,7 @@
 				DE7682EA207F4AFD004094BA /* TransactionHistoryViewController.swift in Sources */,
 				AE6146622087149900A9E77A /* RegistrationService.swift in Sources */,
 				AE171B042083436400212494 /* TransactionHistoryViewCell.swift in Sources */,
+				AEFE581220C7C07B00CE47F8 /* NonceManager.swift in Sources */,
 				DE0231812091712700508B5B /* MaintenanceViewController.swift in Sources */,
 				DE3A38392084969A00AB44B0 /* BalanceAccessoryView.swift in Sources */,
 				AE3F730B207F7F6300482502 /* Price.swift in Sources */,
