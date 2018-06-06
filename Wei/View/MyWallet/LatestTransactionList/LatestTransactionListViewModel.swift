@@ -69,12 +69,20 @@ final class LatestTransactionListViewModel: InjectableViewModel {
         // Local transactions saved in realm database, a local transaction will be deleted
         // when transactions get included into a block
         let updateTick = localTransactionRepository.updateTick.asDriver(onErrorDriveWith: .empty())
-        let localTransactions = updateTick.startWith(()).flatMap { [weak self] _ -> Driver<[LocalTransaction]> in
-            guard let weakSelf = self else {
-                return Driver.empty()
+        let localTransactions = updateTick.startWith(())
+            .flatMap { [weak self] _ -> Driver<[LocalTransaction]> in
+                guard let weakSelf = self else {
+                    return Driver.empty()
+                }
+                return Driver.just(weakSelf.localTransactionRepository.objects())
             }
-            return Driver.just(weakSelf.localTransactionRepository.objects())
-        }
+            .do(onNext: { [weak self] localTransactions in
+                localTransactions
+                    .filter { Double($0.date) > Double(-3600.0) }
+                    .forEach { [weak self] localTransaction in
+                        self?.localTransactionRepository.delete(primaryKey: localTransaction.txID)
+                    }
+            })
         
         let (transactions, error) = (
             getTransactionsAction.elements.do(onNext: { [weak self] transactions in
