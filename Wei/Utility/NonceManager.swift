@@ -15,19 +15,13 @@ struct NonceManager {
     
     /// Manage a nonce value with both fetched nonce snd last nonce
     static func manage(_ fetchedNonce: Int) -> Int {
-        guard let storedNonce = lastNonce else {
-            lastNonce = fetchedNonce
-            return fetchedNonce
+        let nonce: Int
+        if let storedNonce = lastNonce {
+            nonce = storedNonce < fetchedNonce ? fetchedNonce : storedNonce + 1
+        } else {
+            nonce = fetchedNonce
         }
-        
-        let incrementedNonce = storedNonce + 1
-        
-        guard incrementedNonce < fetchedNonce else {
-            lastNonce = fetchedNonce
-            return fetchedNonce
-        }
-        
-        lastNonce = incrementedNonce
-        return incrementedNonce
+        lastNonce = nonce
+        return nonce
     }
 }
