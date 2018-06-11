@@ -3,7 +3,7 @@
 //  Wei
 //
 //  Created by Ryosuke Fukuda on 2018/04/14.
-//  Copyright © 2018 yz. All rights reserved.
+//  Copyright © 2018 popshoot All rights reserved.
 //
 
 protocol InputAppliable {
