@@ -74,12 +74,15 @@ final class LatestTransactionListViewModel: InjectableViewModel {
                 guard let weakSelf = self else {
                     return Driver.empty()
                 }
-                return Driver.just(weakSelf.localTransactionRepository.objects())
+                let localObjects = weakSelf.localTransactionRepository.objects()
+                    .sorted { $0.date > $1.date }
+                
+                return Driver.just(localObjects)
             }
             .do(onNext: { [weak self] localTransactions in
                 // Delete local transactions which are older than 1 hour.
                 localTransactions
-                    .filter { Double($0.date) > Double(-3600.0) }
+                    .filter { Date(timeIntervalSince1970: TimeInterval($0.date)).timeIntervalSinceNow < Double(-3600.0) }
                     .forEach { [weak self] localTransaction in
                         self?.localTransactionRepository.delete(primaryKey: localTransaction.txID)
                     }
@@ -98,18 +101,14 @@ final class LatestTransactionListViewModel: InjectableViewModel {
         // Create TransactionHistoryKind model from local transactions and remote transactions
         let transactionHistoryKinds = Driver
             .combineLatest(
-                localTransactions
-                    .map { $0
-                        .map { TransactionHistoryKind.local($0) }
-                    },
-                transactions
-                    .map { $0.elements
-                        .filter { $0.isExecutedLessThanDay }
-                        .reversed()
-                    }
-                    .map { $0
-                        .map { TransactionHistoryKind.remote($0) }
-                    }
+                localTransactions.map { $0
+                    .map { TransactionHistoryKind.local($0) }
+                },
+                transactions.map { $0.elements
+                    .filter { $0.isExecutedLessThanDay }
+                    .reversed()
+                    .map { TransactionHistoryKind.remote($0) }
+                }
             )
             .map { $0 + $1 }
         
