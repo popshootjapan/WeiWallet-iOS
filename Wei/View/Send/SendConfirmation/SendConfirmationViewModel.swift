@@ -3,7 +3,7 @@
 //  Wei
 //
 //  Created by omatty198 on 2018/04/02.
-//  Copyright © 2018年 yz. All rights reserved.
+//  Copyright © 2018年 popshoot All rights reserved.
 //
 
 import Foundation
@@ -58,6 +58,9 @@ final class SendConfirmationViewModel: InjectableViewModel {
             let address = weakSelf.walletManager.address()
             let value = Converter.toWei(ether: transactionContext.etherAmount.ether()).asString(withBase: 10)
             let nonce = weakSelf.gethRepository.getTransactionCount(address: address, blockParameter: .pending).asObservable()
+                // NonceManager.manage manages the nonce value because sending ether constantly cases
+                // the not-increment nonce value problem.
+                .map(NonceManager.manage)
             
             let signTransaction = nonce.flatMap { [weak self] nonce -> Observable<String> in
                 guard let weakSelf = self else {
