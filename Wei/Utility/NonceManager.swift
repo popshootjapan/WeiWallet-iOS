@@ -13,7 +13,7 @@ struct NonceManager {
     /// Represents a nonce value used in the last transction
     static var lastNonce: Int?
     
-    /// Manage a nonce value with both fetched nonce snd last nonce
+    /// Manage a nonce value with both fetched nonce and last nonce
     static func manage(_ fetchedNonce: Int) -> Int {
         let nonce: Int
         if let storedNonce = lastNonce {
