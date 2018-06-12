@@ -14,14 +14,16 @@ final class TransactionHistoryViewModel: InjectableViewModel {
     
     typealias Dependency = (
         GethRepositoryProtocol,
-        WalletManagerProtocol
+        WalletManagerProtocol,
+        CacheProtocol
     )
     
     private let gethRepository: GethRepositoryProtocol
     private let walletManager: WalletManagerProtocol
+    private let cache: CacheProtocol
     
     init(dependency: Dependency) {
-        (gethRepository, walletManager) = dependency
+        (gethRepository, walletManager, cache) = dependency
     }
     
     struct Input {
@@ -37,38 +39,45 @@ final class TransactionHistoryViewModel: InjectableViewModel {
     
     func build(input: Input) -> Output {
         let myAddress = walletManager.address()
-        let refreshTrigger = Driver.merge(input.viewWillAppear, input.refreshControlDidRefresh)
         
-        let getTransactionsAction = refreshTrigger.flatMap { [weak self] _ -> Driver<Action<[Transaction]>> in
+        let initialGetTransactionsAction = input.viewWillAppear.flatMap { [weak self] _ -> Driver<Action<[Transaction]>> in
             guard let weakSelf = self else {
                 return Driver.empty()
             }
-            
-            let source = weakSelf.gethRepository.getTransactions(address: myAddress)
-                .map { $0.elements.reversed().compactMap { $0 } }
-            
-            return Action.makeDriver(source)
+            return weakSelf.getTransactionsAction()
         }
         
-        let (transactionHistories, isExecuting, error) = (
-            getTransactionsAction.elements
-                .map { $0
-                    .map {
-                        TransactionHistory(
-                            kind: TransactionHistoryKind.remote($0),
-                            myAddress: myAddress
-                        )
-                    }
-                },
-            getTransactionsAction.isExecuting,
-            getTransactionsAction.error
-        )
+        let refreshGetTransactionsAction = input.refreshControlDidRefresh.flatMap { [weak self] _ -> Driver<Action<[Transaction]>> in
+            guard let weakSelf = self else {
+                return Driver.empty()
+            }
+            return weakSelf.getTransactionsAction()
+        }
+        
+        let getTransactionsAction = Driver.merge(initialGetTransactionsAction, refreshGetTransactionsAction)
+            .do(onNext: { [weak self] action in
+                guard case .succeeded(let transactions) = action else {
+                    return
+                }
+                self?.cache.save(transactions, for: .transactionHistory)
+            })
+        
+        let cachedTransactions = cache.load(type: [Transaction].self, for: .transactionHistory).asDriver(onErrorJustReturn: [])
+        
+        let transactionHistories = Driver.merge(getTransactionsAction.elements, cachedTransactions)
+            .map { $0.map { TransactionHistory(kind: TransactionHistoryKind.remote($0), myAddress: myAddress) } }
         
         return Output(
             transactionHistories: transactionHistories,
-            isExecuting: isExecuting,
-            error: error
+            isExecuting: refreshGetTransactionsAction.isExecuting,
+            error: getTransactionsAction.error
         )
+    }
+    
+    private func getTransactionsAction() -> Driver<Action<[Transaction]>> {
+        let source = gethRepository.getTransactions(address: walletManager.address())
+            .map { $0.elements.reversed().compactMap { $0 } }
+        return Action.makeDriver(source)
     }
 }
 

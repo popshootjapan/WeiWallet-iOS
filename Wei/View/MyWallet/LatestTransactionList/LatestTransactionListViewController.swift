@@ -38,12 +38,12 @@ final class LatestTransactionListViewController: UITableViewController {
         let output = viewModel.build(input: input)
         
         output
-            .latestTransactions
+            .latestTransactionHistories
             .drive(tableView.rx.items(cellType: LatestTransactionListViewCell.self))
             .disposed(by: disposeBag)
         
         output
-            .latestTransactions
+            .latestTransactionHistories
             .drive(onNext: { [weak self] transactions in
                 if transactions.isEmpty {
                     self?.emptyViewManager.showEmptyView()

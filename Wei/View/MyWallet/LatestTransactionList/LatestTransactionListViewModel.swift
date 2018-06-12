@@ -17,16 +17,18 @@ final class LatestTransactionListViewModel: InjectableViewModel {
         WalletManagerProtocol,
         GethRepositoryProtocol,
         UpdaterProtocol,
+        CacheProtocol,
         LocalTransactionRepositoryProtocol
     )
     
     private let walletManager: WalletManagerProtocol
     private let gethRepository: GethRepositoryProtocol
     private let updater: UpdaterProtocol
+    private let cache: CacheProtocol
     private let localTransactionRepository: LocalTransactionRepositoryProtocol
     
     init(dependency: Dependency) {
-        (walletManager, gethRepository, updater, localTransactionRepository) = dependency
+        (walletManager, gethRepository, updater, cache, localTransactionRepository) = dependency
     }
     
     struct Input {
@@ -35,7 +37,7 @@ final class LatestTransactionListViewModel: InjectableViewModel {
     }
     
     struct Output {
-        let latestTransactions: Driver<[TransactionHistory]>
+        let latestTransactionHistories: Driver<[TransactionHistory]>
         let isFetching: Driver<Bool>
         let error: Driver<Error>
     }
@@ -47,8 +49,8 @@ final class LatestTransactionListViewModel: InjectableViewModel {
         // Represents initial get transaction action. emits only when view will appear and updater.refreshTransactions.
         // the reason why initial and refresh actions are separated is to prevent a refresh control to be animated
         let getTransactionAction = Driver.merge(input.viewWillAppear, updater.refreshTransactions.asDriver(onErrorDriveWith: .empty()))
-            .flatMap { _ -> Driver<Action<Transactions>> in
-                let source = geth.getTransactions(address: myAddress)
+            .flatMap { _ -> Driver<Action<[Transaction]>> in
+                let source = geth.getTransactions(address: myAddress).map { $0.elements }
                 return Action.makeDriver(source)
             }
         
@@ -59,8 +61,8 @@ final class LatestTransactionListViewModel: InjectableViewModel {
                 self?.updater.refreshRate.onNext(())
             })
         
-        let refreshTransactionAction = refreshControlDidRefresh.flatMap { _ -> Driver<Action<Transactions>> in
-            let source = geth.getTransactions(address: myAddress)
+        let refreshTransactionAction = refreshControlDidRefresh.flatMap { _ -> Driver<Action<[Transaction]>> in
+            let source = geth.getTransactions(address: myAddress).map { $0.elements }
             return Action.makeDriver(source)
         }
         
@@ -85,47 +87,43 @@ final class LatestTransactionListViewModel: InjectableViewModel {
                     .filter { Date(timeIntervalSince1970: TimeInterval($0.date)).timeIntervalSinceNow < Double(-3600.0) }
                     .forEach { [weak self] localTransaction in
                         self?.localTransactionRepository.delete(primaryKey: localTransaction.txID)
-                    }
+                }
             })
         
-        let (transactions, error) = (
-            getTransactionsAction.elements.do(onNext: { [weak self] transactions in
-                transactions.elements.forEach {
+        let cachedTransactions = cache.load(type: [Transaction].self, for: .transactionHistory).asDriver(onErrorJustReturn: [])
+        let latestTransactions = Driver.merge(getTransactionsAction.elements, cachedTransactions)
+            .do(onNext: { [weak self] transactions in
+                transactions.forEach {
                     // delete local transaction if the same txID is included in one of the transactions
                     self?.localTransactionRepository.delete(primaryKey: $0.hash)
                 }
-            }),
-            getTransactionsAction.error
-        )
-        
-        // Create TransactionHistoryKind model from local transactions and remote transactions
-        let transactionHistoryKinds = Driver
-            .combineLatest(
-                localTransactions.map { $0
-                    .map { TransactionHistoryKind.local($0) }
-                },
-                transactions.map { $0.elements
-                    // filters transactions executed more than a day ago
+            })
+            
+        let latestHistoryKinds = latestTransactions
+            .map { elements -> [TransactionHistoryKind] in
+                return elements
+                    // filters transactions executed more than a day ago,
+                    // and shows only the first 5th.
                     .filter { $0.isExecutedLessThanDay }
                     .reversed()
                     .map { TransactionHistoryKind.remote($0) }
-                }
-            )
-            .map { $0 + $1 }
+            }
         
-        let latestTransactions = transactionHistoryKinds.map { kinds -> [TransactionHistory] in
+        let localHistoryKinds = localTransactions
+            .map { $0.map { TransactionHistoryKind.local($0) } }
+        
+        let transactionHistoryKinds = Driver.combineLatest(localHistoryKinds, latestHistoryKinds) { $0 + $1 }
+        let latestTransactionHistories = transactionHistoryKinds.map { kinds -> [TransactionHistory] in
             return kinds
                 // display only five elements
                 .prefix(5)
                 .map { TransactionHistory(kind: $0, myAddress: myAddress) }
         }
         
-        let isFetching = refreshTransactionAction.isExecuting
-        
         return Output(
-            latestTransactions: latestTransactions,
-            isFetching: isFetching,
-            error: error
+            latestTransactionHistories: latestTransactionHistories,
+            isFetching: refreshTransactionAction.isExecuting,
+            error: getTransactionsAction.error
         )
     }
 }
