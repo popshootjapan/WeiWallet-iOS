@@ -24,7 +24,9 @@ final class UtilityAssembly: Assembly {
         container
             .register(ApplicationStoreProtocol.self) { resolver in
                 return ApplicationStore(dependency: (
-                    resolver.resolve(KeychainStore.self)!
+                    resolver.resolve(KeychainStore.self)!,
+                    resolver.resolve(CacheProtocol.self)!,
+                    resolver.resolve(LocalTransactionRepositoryProtocol.self)!
                 ))
             }
             .inObjectScope(.container)
@@ -61,6 +63,14 @@ final class UtilityAssembly: Assembly {
                 return WalletManager(dependency: (
                     resolver.resolve(ApplicationStoreProtocol.self)!
                 ))
+            }
+            .inObjectScope(.container)
+        
+        // RealmManager
+        
+        container
+            .register(RealmManagerProtocol.self) { resolver in
+                return RealmManager()
             }
             .inObjectScope(.container)
         
@@ -134,6 +144,14 @@ final class UtilityAssembly: Assembly {
         container.register(RegistrationRepositoryProtocol.self) { resolver in
             return RegistrationRepository(dependency: (
                 resolver.resolve(APIClientProtocol.self)!
+            ))
+        }
+        
+        // LocalTransactionRepository
+        
+        container.register(LocalTransactionRepositoryProtocol.self) { resolver in
+            return LocalTransactionRepository(dependency: (
+                resolver.resolve(RealmManagerProtocol.self)!
             ))
         }
     }

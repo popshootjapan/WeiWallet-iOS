@@ -52,7 +52,14 @@ final class TransactionHistoryViewModel: InjectableViewModel {
         
         let (transactionHistories, isExecuting, error) = (
             getTransactionsAction.elements
-                .map { $0.map { TransactionHistory(transaction: $0, myAddress: myAddress) }},
+                .map { $0
+                    .map {
+                        TransactionHistory(
+                            kind: TransactionHistoryKind.remote($0),
+                            myAddress: myAddress
+                        )
+                    }
+                },
             getTransactionsAction.isExecuting,
             getTransactionsAction.error
         )

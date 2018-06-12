@@ -102,6 +102,11 @@
 		AE61468F2088FA3E00A9E77A /* DialogPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE61468E2088FA3E00A9E77A /* DialogPresentationController.swift */; };
 		AE8C9FC6209EF85F00C616E1 /* DebugListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */; };
 		AE8C9FC8209EF87300C616E1 /* DebugListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */; };
+		AEC36ADA20C538EF00FE4737 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC36AD820C538EF00FE4737 /* RealmSwift.framework */; };
+		AEC36ADB20C538EF00FE4737 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC36AD920C538EF00FE4737 /* Realm.framework */; };
+		AEC36ADD20C5851E00FE4737 /* LocalTransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC36ADC20C5851E00FE4737 /* LocalTransactionRepository.swift */; };
+		AEC36ADF20C5855600FE4737 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC36ADE20C5855600FE4737 /* RealmManager.swift */; };
+		AEC36AE120C58A9800FE4737 /* LocalTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC36AE020C58A9800FE4737 /* LocalTransaction.swift */; };
 		AED6F445205514BB004A280F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6F444205514BB004A280F /* AppDelegate.swift */; };
 		AED6F44C205514BB004A280F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AED6F44B205514BB004A280F /* Assets.xcassets */; };
 		AED6F44F205514BB004A280F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED6F44D205514BB004A280F /* LaunchScreen.storyboard */; };
@@ -275,6 +280,11 @@
 		AE61468E2088FA3E00A9E77A /* DialogPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogPresentationController.swift; sourceTree = "<group>"; };
 		AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugListViewController.swift; sourceTree = "<group>"; };
 		AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DebugListViewController.storyboard; sourceTree = "<group>"; };
+		AEC36AD820C538EF00FE4737 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		AEC36AD920C538EF00FE4737 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		AEC36ADC20C5851E00FE4737 /* LocalTransactionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTransactionRepository.swift; sourceTree = "<group>"; };
+		AEC36ADE20C5855600FE4737 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		AEC36AE020C58A9800FE4737 /* LocalTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTransaction.swift; sourceTree = "<group>"; };
 		AED6F441205514BB004A280F /* Wei.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wei.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED6F444205514BB004A280F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AED6F44B205514BB004A280F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -350,11 +360,13 @@
 			files = (
 				AE3EB62520AF05A400D61CE6 /* RxSwift.framework in Frameworks */,
 				AE3EB62120AF05A400D61CE6 /* APIKit.framework in Frameworks */,
+				AEC36ADA20C538EF00FE4737 /* RealmSwift.framework in Frameworks */,
 				AE3EB61E20AF05A400D61CE6 /* SVProgressHUD.framework in Frameworks */,
 				AE3EB61F20AF05A400D61CE6 /* Swinject.framework in Frameworks */,
 				AE3EB62420AF05A400D61CE6 /* Result.framework in Frameworks */,
 				AE3EB62220AF05A400D61CE6 /* KeychainAccess.framework in Frameworks */,
 				AE3EB62320AF05A400D61CE6 /* RxCocoa.framework in Frameworks */,
+				AEC36ADB20C538EF00FE4737 /* Realm.framework in Frameworks */,
 				AE3EB62620AF05A400D61CE6 /* RxBlocking.framework in Frameworks */,
 				AE3EB62020AF05A400D61CE6 /* EthereumKit.framework in Frameworks */,
 				A7AF3D52759E96BE87D5E7DE /* Pods_Wei.framework in Frameworks */,
@@ -393,6 +405,7 @@
 				AE1F8C262090B4270088A043 /* APIClientError.swift */,
 				AE3EB5FE20A83A9000D61CE6 /* Gas.swift */,
 				DE9133C520AEFE78003CDE67 /* MnemonicWord.swift */,
+				AEC36AE020C58A9800FE4737 /* LocalTransaction.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -458,6 +471,8 @@
 		1AEA0A54205961E00068C2E1 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				AEC36AD920C538EF00FE4737 /* Realm.framework */,
+				AEC36AD820C538EF00FE4737 /* RealmSwift.framework */,
 				AE3EB61720AF05A300D61CE6 /* APIKit.framework */,
 				AE3EB61320AF05A300D61CE6 /* CryptoSwift.framework */,
 				AE3EB61620AF05A300D61CE6 /* EthereumKit.framework */,
@@ -531,6 +546,8 @@
 				DE318DE220915BAD008FA01E /* BalanceStore.swift */,
 				DE318DE420916626008FA01E /* Formatter.swift */,
 				1A51790B20B50FEE00D642D3 /* EmptyViewManager.swift */,
+				AEC36ADC20C5851E00FE4737 /* LocalTransactionRepository.swift */,
+				AEC36ADE20C5855600FE4737 /* RealmManager.swift */,
 				AEFE581120C7C07B00CE47F8 /* NonceManager.swift */,
 			);
 			path = Utility;
@@ -1009,6 +1026,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/PINCache.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/CryptoEthereumSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -1089,6 +1108,7 @@
 				DE318DE520916626008FA01E /* Formatter.swift in Sources */,
 				AE3F7302207E6CE100482502 /* AppStatus.swift in Sources */,
 				AE1F8C1A208B8E3B0088A043 /* HUD+Rx.swift in Sources */,
+				AEC36ADF20C5855600FE4737 /* RealmManager.swift in Sources */,
 				AE3F7300207E6C8000482502 /* AppStatusRepository.swift in Sources */,
 				DE0DDCF4207F977200735C3C /* SendBaseViewModel.swift in Sources */,
 				DE7682E0207F3C88004094BA /* SettingViewModel.swift in Sources */,
@@ -1103,6 +1123,7 @@
 				AE1F8C23208CE28D0088A043 /* APIClient.swift in Sources */,
 				1AB92244207652A700DEF52B /* RateRepository.swift in Sources */,
 				AE14A6222070A689003A63FF /* MnemonicManager.swift in Sources */,
+				AEC36AE120C58A9800FE4737 /* LocalTransaction.swift in Sources */,
 				1A798C012081DE1E00812D80 /* LatestTransactionListViewController.swift in Sources */,
 				DE9133C820B2DE12003CDE67 /* MnemonicWordViewCell.swift in Sources */,
 				DE02318320917DF200508B5B /* UIApplication+WeiExtension.swift in Sources */,
@@ -1179,6 +1200,7 @@
 				AEFE581220C7C07B00CE47F8 /* NonceManager.swift in Sources */,
 				DE0231812091712700508B5B /* MaintenanceViewController.swift in Sources */,
 				DE3A38392084969A00AB44B0 /* BalanceAccessoryView.swift in Sources */,
+				AEC36ADD20C5851E00FE4737 /* LocalTransactionRepository.swift in Sources */,
 				AE3F730B207F7F6300482502 /* Price.swift in Sources */,
 				AE3EB5FF20A83A9000D61CE6 /* Gas.swift in Sources */,
 				1AEA0A91205978250068C2E1 /* KeychainStore.swift in Sources */,
