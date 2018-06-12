@@ -17,16 +17,18 @@ final class LatestTransactionListViewModel: InjectableViewModel {
         WalletManagerProtocol,
         GethRepositoryProtocol,
         UpdaterProtocol,
-        CacheProtocol
+        CacheProtocol,
+        LocalTransactionRepositoryProtocol
     )
     
     private let walletManager: WalletManagerProtocol
     private let gethRepository: GethRepositoryProtocol
     private let updater: UpdaterProtocol
     private let cache: CacheProtocol
+    private let localTransactionRepository: LocalTransactionRepositoryProtocol
     
     init(dependency: Dependency) {
-        (walletManager, gethRepository, updater, cache) = dependency
+        (walletManager, gethRepository, updater, cache, localTransactionRepository) = dependency
     }
     
     struct Input {
@@ -35,7 +37,7 @@ final class LatestTransactionListViewModel: InjectableViewModel {
     }
     
     struct Output {
-        let latestTransactions: Driver<[TransactionHistory]>
+        let latestTransactionHistories: Driver<[TransactionHistory]>
         let isFetching: Driver<Bool>
         let error: Driver<Error>
     }
@@ -66,19 +68,60 @@ final class LatestTransactionListViewModel: InjectableViewModel {
         
         let getTransactionsAction = Driver.merge(getTransactionAction, refreshTransactionAction)
         
+        // Local transactions saved in realm database, a local transaction will be deleted
+        // when transactions get included into a block
+        let updateTick = localTransactionRepository.updateTick.asDriver(onErrorDriveWith: .empty())
+        let localTransactions = updateTick.startWith(())
+            .flatMap { [weak self] _ -> Driver<[LocalTransaction]> in
+                guard let weakSelf = self else {
+                    return Driver.empty()
+                }
+                let localObjects = weakSelf.localTransactionRepository.objects()
+                    .sorted { $0.date > $1.date }
+                
+                return Driver.just(localObjects)
+            }
+            .do(onNext: { [weak self] localTransactions in
+                // Delete local transactions which are older than 1 hour.
+                localTransactions
+                    .filter { Date(timeIntervalSince1970: TimeInterval($0.date)).timeIntervalSinceNow < Double(-3600.0) }
+                    .forEach { [weak self] localTransaction in
+                        self?.localTransactionRepository.delete(primaryKey: localTransaction.txID)
+                }
+            })
+        
         let cachedTransactions = cache.load(type: [Transaction].self, for: .transactionHistory).asDriver(onErrorJustReturn: [])
-        let latestTransactions = Driver.merge(getTransactionsAction.elements, cachedTransactions).map { elements -> [TransactionHistory] in
-            return elements
-                // filters transactions executed more than a day ago,
-                // and shows only the first 5th.
-                .filter { $0.isExecutedLessThanDay }
-                .reversed()
+        let latestTransactions = Driver.merge(getTransactionsAction.elements, cachedTransactions)
+            .do(onNext: { [weak self] transactions in
+                transactions.forEach {
+                    // delete local transaction if the same txID is included in one of the transactions
+                    self?.localTransactionRepository.delete(primaryKey: $0.hash)
+                }
+            })
+            
+        let latestHistoryKinds = latestTransactions
+            .map { elements -> [TransactionHistoryKind] in
+                return elements
+                    // filters transactions executed more than a day ago,
+                    // and shows only the first 5th.
+                    .filter { $0.isExecutedLessThanDay }
+                    .reversed()
+                    .map { TransactionHistoryKind.remote($0) }
+            }
+        
+        let localHistoryKinds = localTransactions
+            .map { $0.map { TransactionHistoryKind.local($0) } }
+        
+        let transactionHistoryKinds = Driver.combineLatest(localHistoryKinds, latestHistoryKinds) { $0 + $1 }
+        let latestTransactionHistories = transactionHistoryKinds.map { kinds -> [TransactionHistory] in
+            return kinds
+                // display only five elements
                 .prefix(5)
-                .map { TransactionHistory(transaction: $0, myAddress: myAddress) }
+                .map { TransactionHistory(kind: $0, myAddress: myAddress) }
         }
         
         return Output(
-            latestTransactions: latestTransactions,
+            latestTransactionHistories: latestTransactionHistories,
             isFetching: refreshTransactionAction.isExecuting,
             error: getTransactionsAction.error
         )

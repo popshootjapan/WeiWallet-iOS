@@ -41,4 +41,11 @@ final class KeychainStore {
             KeychainStore.keychain(forService: service)[environment.appGroupID] = newValue
         }
     }
+    
+    func clearKeychain() {
+        self[.seed] = nil
+        self[.mnemonic] = nil
+        self[.accessToken] = nil
+        self[.isAlreadyBackup] = nil
+    }
 }

@@ -65,7 +65,7 @@ final class TransactionHistoryViewModel: InjectableViewModel {
         let cachedTransactions = cache.load(type: [Transaction].self, for: .transactionHistory).asDriver(onErrorJustReturn: [])
         
         let transactionHistories = Driver.merge(getTransactionsAction.elements, cachedTransactions)
-            .map { $0.map { TransactionHistory(transaction: $0, myAddress: myAddress) }}
+            .map { $0.map { TransactionHistory(kind: TransactionHistoryKind.remote($0), myAddress: myAddress) } }
         
         return Output(
             transactionHistories: transactionHistories,

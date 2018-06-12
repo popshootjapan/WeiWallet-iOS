@@ -8,7 +8,12 @@
 
 import EthereumKit
 
+enum TransactionHistoryKind {
+    case local(LocalTransaction)
+    case remote(Transaction)
+}
+
 struct TransactionHistory {
-    let transaction: Transaction
+    let kind: TransactionHistoryKind
     let myAddress: String
 }

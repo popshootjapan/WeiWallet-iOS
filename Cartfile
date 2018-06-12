@@ -1,3 +1,4 @@
+github "realm/realm-cocoa"
 github "pinterest/PINCache"
 github "ishkawa/APIKit"
 github "Swinject/Swinject"
