@@ -105,6 +105,7 @@ final class LatestTransactionListViewModel: InjectableViewModel {
                     .map { TransactionHistoryKind.local($0) }
                 },
                 transactions.map { $0.elements
+                    // filters transactions executed more than a day ago
                     .filter { $0.isExecutedLessThanDay }
                     .reversed()
                     .map { TransactionHistoryKind.remote($0) }
