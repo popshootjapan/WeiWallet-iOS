@@ -68,7 +68,8 @@ final class ViewModelAssembly: Assembly {
             return LatestTransactionListViewModel(dependency: (
                 resolver.resolve(WalletManagerProtocol.self)!,
                 resolver.resolve(GethRepositoryProtocol.self)!,
-                resolver.resolve(UpdaterProtocol.self)!
+                resolver.resolve(UpdaterProtocol.self)!,
+                resolver.resolve(CacheProtocol.self)!
             ))
         }
         
@@ -131,7 +132,8 @@ final class ViewModelAssembly: Assembly {
         container.register(TransactionHistoryViewModel.self) { (resolver) in
             return TransactionHistoryViewModel(dependency: (
                 resolver.resolve(GethRepositoryProtocol.self)!,
-                resolver.resolve(WalletManagerProtocol.self)!
+                resolver.resolve(WalletManagerProtocol.self)!,
+                resolver.resolve(CacheProtocol.self)!
             ))
         }
         

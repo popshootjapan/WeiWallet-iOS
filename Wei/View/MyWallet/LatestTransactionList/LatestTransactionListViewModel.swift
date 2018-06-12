@@ -16,15 +16,17 @@ final class LatestTransactionListViewModel: InjectableViewModel {
     typealias Dependency = (
         WalletManagerProtocol,
         GethRepositoryProtocol,
-        UpdaterProtocol
+        UpdaterProtocol,
+        CacheProtocol
     )
     
     private let walletManager: WalletManagerProtocol
     private let gethRepository: GethRepositoryProtocol
     private let updater: UpdaterProtocol
+    private let cache: CacheProtocol
     
     init(dependency: Dependency) {
-        (walletManager, gethRepository, updater) = dependency
+        (walletManager, gethRepository, updater, cache) = dependency
     }
     
     struct Input {
@@ -45,8 +47,8 @@ final class LatestTransactionListViewModel: InjectableViewModel {
         // Represents initial get transaction action. emits only when view will appear and updater.refreshTransactions.
         // the reason why initial and refresh actions are separated is to prevent a refresh control to be animated
         let getTransactionAction = Driver.merge(input.viewWillAppear, updater.refreshTransactions.asDriver(onErrorDriveWith: .empty()))
-            .flatMap { _ -> Driver<Action<Transactions>> in
-                let source = geth.getTransactions(address: myAddress)
+            .flatMap { _ -> Driver<Action<[Transaction]>> in
+                let source = geth.getTransactions(address: myAddress).map { $0.elements }
                 return Action.makeDriver(source)
             }
         
@@ -57,32 +59,28 @@ final class LatestTransactionListViewModel: InjectableViewModel {
                 self?.updater.refreshRate.onNext(())
             })
         
-        let refreshTransactionAction = refreshControlDidRefresh.flatMap { _ -> Driver<Action<Transactions>> in
-            let source = geth.getTransactions(address: myAddress)
+        let refreshTransactionAction = refreshControlDidRefresh.flatMap { _ -> Driver<Action<[Transaction]>> in
+            let source = geth.getTransactions(address: myAddress).map { $0.elements }
             return Action.makeDriver(source)
         }
         
         let getTransactionsAction = Driver.merge(getTransactionAction, refreshTransactionAction)
         
-        let (latestTransactions, error) = (
-            getTransactionsAction.elements.map { response -> [TransactionHistory] in
-                return response.elements
-                    // filters transactions executed more than a day ago,
-                    // and shows only the first 5th.
-                    .filter { $0.isExecutedLessThanDay }
-                    .reversed()
-                    .prefix(5)
-                    .map { TransactionHistory(transaction: $0, myAddress: myAddress) }
-            },
-            getTransactionsAction.error
-        )
-        
-        let isFetching = refreshTransactionAction.isExecuting
+        let cachedTransactions = cache.load(type: [Transaction].self, for: .transactionHistory).asDriver(onErrorJustReturn: [])
+        let latestTransactions = Driver.merge(getTransactionsAction.elements, cachedTransactions).map { elements -> [TransactionHistory] in
+            return elements
+                // filters transactions executed more than a day ago,
+                // and shows only the first 5th.
+                .filter { $0.isExecutedLessThanDay }
+                .reversed()
+                .prefix(5)
+                .map { TransactionHistory(transaction: $0, myAddress: myAddress) }
+        }
         
         return Output(
             latestTransactions: latestTransactions,
-            isFetching: isFetching,
-            error: error
+            isFetching: refreshTransactionAction.isExecuting,
+            error: getTransactionsAction.error
         )
     }
 }
