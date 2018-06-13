@@ -17,12 +17,20 @@ enum Locale {
         guard let preferred = Foundation.Locale.preferredLanguages[0].split(separator: "-").first else {
             return .en
         }
-        
         switch preferred {
         case "ja":
             return .ja
         default:
             return .en
+        }
+    }
+    
+    func currency() -> Currency {
+        switch self {
+        case .ja:
+            return Currency.jpy
+        case .en:
+            return Currency.usd
         }
     }
 }

@@ -10,6 +10,11 @@ import RxSwift
 import RxCocoa
 
 protocol CurrencyManagerProtocol {
+    /// Represents user's currency
+    var currency: Driver<Currency> { get }
+    
+    /// Updates user's currency
+    var updateCurrency: PublishSubject<Currency> { get }
 }
 
 final class CurrencyManager: CurrencyManagerProtocol, Injectable {
@@ -18,7 +23,14 @@ final class CurrencyManager: CurrencyManagerProtocol, Injectable {
         ApplicationStoreProtocol
     )
     
+    let updateCurrency = PublishSubject<Currency>()
+    let currency: Driver<Currency>
+    
     init(dependency: Dependency) {
+        var userDefaulsStore = dependency
         
+        currency = updateCurrency.asDriver(onErrorDriveWith: .empty())
+            .do(onNext: { userDefaulsStore.currency = $0 })
+            .startWith(userDefaulsStore.currency ?? Locale.preferred().currency())
     }
 }
