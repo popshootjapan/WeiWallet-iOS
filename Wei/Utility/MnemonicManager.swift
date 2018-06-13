@@ -18,10 +18,10 @@ final class MnemonicManager: MnemonicManagerProtocol {
     private let language: WordList
     
     init() {
-        switch Locale.preferredLanguages[0] {
-        case "ja-JP":
+        switch Locale.preferred() {
+        case .ja:
             self.language = .japanese
-        default:
+        case .en:
             self.language = .english
         }
     }
