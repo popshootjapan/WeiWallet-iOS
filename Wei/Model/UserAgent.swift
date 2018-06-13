@@ -24,7 +24,7 @@ struct UserAgent {
     }
     
     private static var locale: String {
-        return Locale.preferredLanguages[0]
+        return Foundation.Locale.preferredLanguages[0]
     }
     
     private static var version: String {
