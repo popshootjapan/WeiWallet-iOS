@@ -39,7 +39,8 @@ final class UtilityAssembly: Assembly {
                 return RateStore(dependency: (
                     resolver.resolve(CacheProtocol.self)!,
                     resolver.resolve(RateRepositoryProtocol.self)!,
-                    resolver.resolve(UpdaterProtocol.self)!
+                    resolver.resolve(UpdaterProtocol.self)!,
+                    resolver.resolve(CurrencyManagerProtocol.self)!
                 ))
             }
             .inObjectScope(.container)
