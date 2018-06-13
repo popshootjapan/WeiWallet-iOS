@@ -75,6 +75,16 @@ final class UtilityAssembly: Assembly {
             }
             .inObjectScope(.container)
         
+        // CurrencyManager
+        
+        container
+            .register(CurrencyManagerProtocol.self) { resolver in
+                return CurrencyManager(dependency: (
+                    resolver.resolve(ApplicationStoreProtocol.self)!
+                ))
+            }
+            .inObjectScope(.container)
+        
         // APIClient
         
         container

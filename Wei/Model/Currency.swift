@@ -8,4 +8,5 @@
 
 enum Currency: String {
     case jpy = "JPY"
+    case usd = "USD"
 }
