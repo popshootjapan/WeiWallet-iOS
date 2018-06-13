@@ -9,6 +9,11 @@
 import Foundation
 
 protocol UserDefaultsStoreProtocol {
+    
+    /// Represents a user's currency
+    var currency: String? { get set }
+    
+    /// Removes all data in user defaults
     func removeAll()
 }
 
@@ -26,7 +31,16 @@ final class UserDefaultsStore: UserDefaultsStoreProtocol {
     }
     
     enum Key: String {
-        case sample
+        case currency
+    }
+    
+    var currency: String? {
+        get {
+            return value(for: .currency)
+        }
+        set {
+            setValue(newValue, for: .currency)
+        }
     }
     
     func removeAll() {
