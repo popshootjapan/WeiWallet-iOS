@@ -22,22 +22,28 @@ final class BalanceStore: Injectable, BalanceStoreProtocol {
         GethRepositoryProtocol,
         WalletManagerProtocol,
         UpdaterProtocol,
-        RateStoreProtocol
+        RateStoreProtocol,
+        CacheProtocol
     )
     
     let etherBalance: Observable<Balance>
     let fiatBalance: Observable<String>
     
     init(dependency: Dependency) {
-        let (geth, wallet, updater, rateStore) = dependency
+        let (geth, wallet, updater, rateStore, cache) = dependency
         
         let tick = NotificationCenter.default.rx.notification(Notification.Name.UIApplicationWillEnterForeground)
             .map { _ in }
             .startWith(())
 
-        etherBalance = Observable.merge(tick, updater.refreshBalance).flatMap { _ -> Observable<Balance> in
+        let fetchedBalance = Observable.merge(tick, updater.refreshBalance).flatMap { _ -> Observable<Balance> in
             return geth.getBalance(address: wallet.address(), blockParameter: .pending).asObservable()
+                .do(onNext: { cache.save($0, for: .transactionHistory) })
         }
+        
+        let cachedBalance = cache.load(type: Balance.self, for: .transactionHistory).asObservable()
+        
+        etherBalance = Observable.merge(cachedBalance, fetchedBalance)
         
         fiatBalance = Observable
             .combineLatest(etherBalance, rateStore.currentRate) { $0.calculateFiatBalance(rate: $1)}
