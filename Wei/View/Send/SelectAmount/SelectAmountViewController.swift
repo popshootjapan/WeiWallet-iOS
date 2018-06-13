@@ -59,7 +59,14 @@ final class SelectAmountViewController: UIViewController {
             .disposed(by: disposeBag)
         
         output
-            .fiatAmount
+            .availableFiatBalance
+            .drive(onNext: { [weak self] balance in
+                self?.balanceAccessoryView.apply(input: .availableBalance(balance))
+            })
+            .disposed(by: disposeBag)
+        
+        output
+            .inputFiatAmount
             .map(String.init)
             .drive(amountTextField.rx.text)
             .disposed(by: disposeBag)
