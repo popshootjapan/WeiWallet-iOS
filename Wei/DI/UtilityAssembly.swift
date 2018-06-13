@@ -51,7 +51,8 @@ final class UtilityAssembly: Assembly {
                     resolver.resolve(GethRepositoryProtocol.self)!,
                     resolver.resolve(WalletManagerProtocol.self)!,
                     resolver.resolve(UpdaterProtocol.self)!,
-                    resolver.resolve(RateStoreProtocol.self)!
+                    resolver.resolve(RateStoreProtocol.self)!,
+                    resolver.resolve(CacheProtocol.self)!
                 ))
             }
             .inObjectScope(.container)
