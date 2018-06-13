@@ -57,6 +57,12 @@ final class UtilityAssembly: Assembly {
             }
             .inObjectScope(.container)
         
+        // UserDefaultsStore
+        
+        container.register(UserDefaultsStoreProtocol.self) { resolver in
+            return UserDefaultsStore(environment: Environment.current)
+        }
+        
         // WalletManager
         
         container
