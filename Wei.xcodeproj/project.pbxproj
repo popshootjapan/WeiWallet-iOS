@@ -94,7 +94,7 @@
 		AE3F7306207E791100482502 /* SwipableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE3F7305207E791100482502 /* SwipableViewController.storyboard */; };
 		AE3F7309207F7ECA00482502 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3F7308207F7ECA00482502 /* Currency.swift */; };
 		AE3F730B207F7F6300482502 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3F730A207F7F6300482502 /* Price.swift */; };
-		AE43C3A220D0E45A0050BDDE /* Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE43C3A120D0E45A0050BDDE /* Locale.swift */; };
+		AE43C3A220D0E45A0050BDDE /* LocaleLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE43C3A120D0E45A0050BDDE /* LocaleLanguage.swift */; };
 		AE6146622087149900A9E77A /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6146612087149900A9E77A /* RegistrationService.swift */; };
 		AE6146642087154800A9E77A /* RegistrationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6146632087154800A9E77A /* RegistrationRepository.swift */; };
 		AE61466820871B5600A9E77A /* DeviceChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE61466720871B5600A9E77A /* DeviceChecker.swift */; };
@@ -275,7 +275,7 @@
 		AE3F7305207E791100482502 /* SwipableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SwipableViewController.storyboard; sourceTree = "<group>"; };
 		AE3F7308207F7ECA00482502 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		AE3F730A207F7F6300482502 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
-		AE43C3A120D0E45A0050BDDE /* Locale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locale.swift; sourceTree = "<group>"; };
+		AE43C3A120D0E45A0050BDDE /* LocaleLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleLanguage.swift; sourceTree = "<group>"; };
 		AE6146612087149900A9E77A /* RegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
 		AE6146632087154800A9E77A /* RegistrationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRepository.swift; sourceTree = "<group>"; };
 		AE61466720871B5600A9E77A /* DeviceChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceChecker.swift; sourceTree = "<group>"; };
@@ -414,7 +414,7 @@
 				AE3EB5FE20A83A9000D61CE6 /* Gas.swift */,
 				DE9133C520AEFE78003CDE67 /* MnemonicWord.swift */,
 				AEC36AE020C58A9800FE4737 /* LocalTransaction.swift */,
-				AE43C3A120D0E45A0050BDDE /* Locale.swift */,
+				AE43C3A120D0E45A0050BDDE /* LocaleLanguage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1167,7 +1167,7 @@
 				AED6F491205525DC004A280F /* RootViewController.swift in Sources */,
 				DE91338E20A03B39003CDE67 /* UIDevice+WeiExtension.swift in Sources */,
 				1A798C162081F23600812D80 /* DateFormatter.swift in Sources */,
-				AE43C3A220D0E45A0050BDDE /* Locale.swift in Sources */,
+				AE43C3A220D0E45A0050BDDE /* LocaleLanguage.swift in Sources */,
 				1A798C032081DE7200812D80 /* LatestTransactionListViewCell.swift in Sources */,
 				AE1F8C252090B3F10088A043 /* AlertConvertable.swift in Sources */,
 				1A3BD8FD205C0FBF00FE485D /* WalletManager.swift in Sources */,

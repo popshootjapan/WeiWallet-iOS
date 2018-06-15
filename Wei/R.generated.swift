@@ -429,47 +429,71 @@ struct R: Rswift.Validatable {
     
     /// This `R.string.localizable` struct is generated, and contains static references to 6 localization keys.
     struct localizable {
-      /// Value: システムエラーです
-      static let error_title_about_system = Rswift.StringResource(key: "error_title_about_system", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: 一度アプリを再起動してください
-      static let error_message_about_fatal = Rswift.StringResource(key: "error_message_about_fatal", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: 予期せぬエラーが発生しました
-      static let error_title_about_fatal = Rswift.StringResource(key: "error_title_about_fatal", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: 時間を空けて再度お試しください
-      static let error_message_about_system = Rswift.StringResource(key: "error_message_about_system", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: 通信ができません
-      static let error_title_no_connection = Rswift.StringResource(key: "error_title_no_connection", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: 電波の良い場所で再度お試しください
-      static let error_message_no_connection = Rswift.StringResource(key: "error_message_no_connection", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// en translation: Please leave enough time and try again
+      /// 
+      /// Locales: en, ja
+      static let error_message_about_system = Rswift.StringResource(key: "error_message_about_system", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Please restart the application once
+      /// 
+      /// Locales: en, ja
+      static let error_message_about_fatal = Rswift.StringResource(key: "error_message_about_fatal", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Please try again in a good network location
+      /// 
+      /// Locales: en, ja
+      static let error_message_no_connection = Rswift.StringResource(key: "error_message_no_connection", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: fatal error
+      /// 
+      /// Locales: en, ja
+      static let error_title_about_fatal = Rswift.StringResource(key: "error_title_about_fatal", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: no network
+      /// 
+      /// Locales: en, ja
+      static let error_title_no_connection = Rswift.StringResource(key: "error_title_no_connection", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: system error
+      /// 
+      /// Locales: en, ja
+      static let error_title_about_system = Rswift.StringResource(key: "error_title_about_system", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       
-      /// Value: システムエラーです
-      static func error_title_about_system(_: Void = ()) -> String {
-        return NSLocalizedString("error_title_about_system", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// Value: 一度アプリを再起動してください
-      static func error_message_about_fatal(_: Void = ()) -> String {
-        return NSLocalizedString("error_message_about_fatal", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// Value: 予期せぬエラーが発生しました
-      static func error_title_about_fatal(_: Void = ()) -> String {
-        return NSLocalizedString("error_title_about_fatal", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// Value: 時間を空けて再度お試しください
+      /// en translation: Please leave enough time and try again
+      /// 
+      /// Locales: en, ja
       static func error_message_about_system(_: Void = ()) -> String {
         return NSLocalizedString("error_message_about_system", bundle: R.hostingBundle, comment: "")
       }
       
-      /// Value: 通信ができません
+      /// en translation: Please restart the application once
+      /// 
+      /// Locales: en, ja
+      static func error_message_about_fatal(_: Void = ()) -> String {
+        return NSLocalizedString("error_message_about_fatal", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Please try again in a good network location
+      /// 
+      /// Locales: en, ja
+      static func error_message_no_connection(_: Void = ()) -> String {
+        return NSLocalizedString("error_message_no_connection", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: fatal error
+      /// 
+      /// Locales: en, ja
+      static func error_title_about_fatal(_: Void = ()) -> String {
+        return NSLocalizedString("error_title_about_fatal", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: no network
+      /// 
+      /// Locales: en, ja
       static func error_title_no_connection(_: Void = ()) -> String {
         return NSLocalizedString("error_title_no_connection", bundle: R.hostingBundle, comment: "")
       }
       
-      /// Value: 電波の良い場所で再度お試しください
-      static func error_message_no_connection(_: Void = ()) -> String {
-        return NSLocalizedString("error_message_no_connection", bundle: R.hostingBundle, comment: "")
+      /// en translation: system error
+      /// 
+      /// Locales: en, ja
+      static func error_title_about_system(_: Void = ()) -> String {
+        return NSLocalizedString("error_title_about_system", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}

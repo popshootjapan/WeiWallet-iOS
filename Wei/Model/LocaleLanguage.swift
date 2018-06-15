@@ -1,5 +1,5 @@
 //
-//  Locale.swift
+//  LocaleLanguage.swift
 //  Wei
 //
 //  Created by Ryo Fukuda on 2018/06/13.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-enum Locale {
+enum LocaleLanguage {
     case ja
     case en
     
-    static func preferred() -> Locale {
+    static func preferred() -> LocaleLanguage {
         // NOTE: Locale.preferredLanguages() returns ja, ja-JP, or ja-US.
         guard let preferred = Foundation.Locale.preferredLanguages[0].split(separator: "-").first else {
             return .en

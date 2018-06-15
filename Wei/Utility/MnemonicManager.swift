@@ -18,7 +18,7 @@ final class MnemonicManager: MnemonicManagerProtocol {
     private let language: WordList
     
     init() {
-        switch Locale.preferred() {
+        switch LocaleLanguage.preferred() {
         case .ja:
             self.language = .japanese
         case .en:
