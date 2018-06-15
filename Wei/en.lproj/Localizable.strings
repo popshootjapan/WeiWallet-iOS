@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Wei
+
+  Created by omatty198 on 2018/06/15.
+  Copyright © 2018年 yz. All rights reserved.
+*/
+
+"error_title_no_connection" = "no network";
+"error_title_about_system" = "system error";
+"error_title_about_fatal" = "fatal error";
+
+"error_message_no_connection" = "Please try again in a good network location";
+"error_message_about_system" = "Please leave enough time and try again";
+"error_message_about_fatal" = "Please restart the application once";

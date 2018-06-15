@@ -13,18 +13,18 @@ extension APIClientError: AlertConvertable {
     var title: String? {
         switch self {
         case .connectionError:
-            return "通信ができません"
+            return R.string.localizable.error_title_no_connection()
         case .systemError:
-            return "システムエラーです"
+            return R.string.localizable.error_title_about_system()
         }
     }
     
     var message: String? {
         switch self {
         case .connectionError:
-            return "電波の良い場所で再度お試しください"
+            return R.string.localizable.error_message_no_connection()
         case .systemError:
-            return "時間を空けて再度お試しください"
+            return R.string.localizable.error_message_about_system()
         }
     }
 }
@@ -33,12 +33,12 @@ extension EthereumKitError: AlertConvertable {
     var title: String? {
         switch self {
         case .cryptoError, .requestError:
-            return "予期せぬエラーが発生しました"
+            return R.string.localizable.error_title_about_fatal()
             
         case .responseError(let error):
             switch error {
             case .connectionError:
-                return "通信ができません"
+                return R.string.localizable.error_title_no_connection()
             
             case .jsonrpcError(let error):
                 switch error {
@@ -46,11 +46,11 @@ extension EthereumKitError: AlertConvertable {
                     return message
                     
                 default:
-                    return "システムエラーです"
+                    return R.string.localizable.error_title_about_system()
                 }
                 
             default:
-                return "システムエラーです"
+                return R.string.localizable.error_title_about_system()
             }
         }
     }
@@ -58,15 +58,15 @@ extension EthereumKitError: AlertConvertable {
     var message: String? {
         switch self {
         case .cryptoError, .requestError:
-            return "一度アプリを再起動してください"
+            return R.string.localizable.error_message_about_fatal()
             
         case .responseError(let error):
             switch error {
             case .connectionError:
-                return "電波の良い場所で再度お試しください"
+                return R.string.localizable.error_message_no_connection()
                 
             default:
-                return "時間を空けて再度お試しください"
+                return R.string.localizable.error_message_about_system()
             }
         }
     }
