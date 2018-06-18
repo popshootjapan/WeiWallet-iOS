@@ -32,6 +32,6 @@ final class CurrencyManager: CurrencyManagerProtocol, Injectable {
         
         currency = updateCurrency
             .do(onNext: { userDefaultsStore.currency = $0 })
-            .startWith(userDefaultsStore.currency ?? Locale.preferred().currency())
+            .startWith(userDefaultsStore.currency ?? LocaleLanguage.preferred().currency())
     }
 }
