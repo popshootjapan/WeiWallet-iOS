@@ -15,15 +15,17 @@ final class MyWalletViewModel: InjectableViewModel {
     typealias Dependency = (
         ApplicationStoreProtocol,
         BalanceStoreProtocol,
-        UpdaterProtocol
+        UpdaterProtocol,
+        CurrencyManagerProtocol
     )
     
     private let applicationStore: ApplicationStoreProtocol
     private let balanceStore: BalanceStoreProtocol
     private let updater: UpdaterProtocol
+    private let currencyManager: CurrencyManagerProtocol
     
     init(dependency: Dependency) {
-        (applicationStore, balanceStore, updater) = dependency
+        (applicationStore, balanceStore, updater, currencyManager) = dependency
     }
     
     struct Input {
@@ -34,8 +36,9 @@ final class MyWalletViewModel: InjectableViewModel {
     
     struct Output {
         let etherBalance: Driver<Balance>
-        let fiatBalance: Driver<String>
+        let fiatBalance: Driver<Double>
         let error: Driver<Error>
+        let currency: Driver<Currency>
         let presentSendViewController: Driver<Void>
         let pushTransactionHistoryViewController: Driver<Void>
         let presentSuggestBackupViewController: Driver<Void>
@@ -43,23 +46,27 @@ final class MyWalletViewModel: InjectableViewModel {
     
     func build(input: Input) -> Output {
         let applicationStore = self.applicationStore
+        let currency = currencyManager.currency.asDriver(onErrorDriveWith: .empty())
         
         let getEtherBalanceAction = Action.makeDriver(balanceStore.etherBalance)
         let etherBalance = getEtherBalanceAction.elements
         
         let getFiatBalanceAction = Action.makeDriver(balanceStore.fiatBalance)
         let fiatBalance = getFiatBalanceAction.elements
+            .map { Double($0) ?? 0 }
         
         let suggestBackup = input.viewWillAppear
             .filter { !applicationStore.isAlreadyBackup }
             .flatMap { fiatBalance.asObservable().take(1).asDriver(onErrorDriveWith: .empty()) }
-            .filter { Int($0) ?? 0 >= 3000 }
+            .withLatestFrom(currency) { $0 >= $1.showBackupPopupAmount }
+            .filter { $0 }
             .map { _ in }
         
         return Output(
             etherBalance: etherBalance,
             fiatBalance: fiatBalance,
             error: getEtherBalanceAction.error,
+            currency: currency,
             presentSendViewController: input.sendButtonDidTap,
             pushTransactionHistoryViewController: input.historyButtonDidTap,
             presentSuggestBackupViewController: suggestBackup

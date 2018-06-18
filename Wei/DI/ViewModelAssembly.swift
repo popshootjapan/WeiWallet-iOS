@@ -58,7 +58,8 @@ final class ViewModelAssembly: Assembly {
             return MyWalletViewModel(dependency: (
                 resolver.resolve(ApplicationStoreProtocol.self)!,
                 resolver.resolve(BalanceStoreProtocol.self)!,
-                resolver.resolve(UpdaterProtocol.self)!
+                resolver.resolve(UpdaterProtocol.self)!,
+                resolver.resolve(CurrencyManagerProtocol.self)!
             ))
         }
         

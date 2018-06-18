@@ -15,7 +15,18 @@ struct Formatter {
         return formatter
     }()
     
+    private static var priceFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        return formatter
+    }()
+    
     static func decimalString(from number: NSNumber) -> String? {
         return decimalFormatter.string(from: number)
+    }
+    
+    static func priceString(from price: Double, currency: Currency) -> String? {
+        priceFormatter.currencyCode = currency.rawValue
+        return priceFormatter.string(from: NSNumber(value: price))
     }
 }

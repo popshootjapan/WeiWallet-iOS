@@ -21,7 +21,6 @@ final class MyWalletViewController: UIViewController {
     @IBOutlet private weak var etherBalanceLabel: UILabel!
     @IBOutlet private weak var fiatBalanceTitleLabel: UILabel!
     @IBOutlet private weak var fiatBalanceLabel: UILabel!
-    @IBOutlet private weak var fiatUnitLabel: UILabel!
     @IBOutlet private weak var transactionHistoryTitleLabel: UILabel!
     @IBOutlet private weak var transactionListContainer: UIView!
     
@@ -42,6 +41,13 @@ final class MyWalletViewController: UIViewController {
 
         let output = viewModel.build(input: input)
 
+        Driver
+            .combineLatest(output.fiatBalance, output.currency)
+            .drive(onNext: { [weak self] balance, currency in
+                self?.fiatBalanceLabel.text = Formatter.priceString(from: balance, currency: currency)
+            })
+            .disposed(by: disposeBag)
+        
         output
             .etherBalance
             .drive(onNext: { [weak self] balance in
@@ -50,8 +56,10 @@ final class MyWalletViewController: UIViewController {
             .disposed(by: disposeBag)
         
         output
-            .fiatBalance
-            .drive(fiatBalanceLabel.rx.text)
+            .currency
+            .drive(onNext: { [weak self] currency in
+                self?.fiatBalanceTitleLabel.text = currency.balanceTitleName
+            })
             .disposed(by: disposeBag)
 
         output
