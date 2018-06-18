@@ -8,4 +8,23 @@
 
 enum Currency: String {
     case jpy = "JPY"
+    case usd = "USD"
+    
+    var balanceTitleName: String {
+        switch self {
+        case .jpy:
+            return "日本円"
+        case .usd:
+            return "US Dollar"
+        }
+    }
+    
+    var showBackupPopupAmount: Double {
+        switch self {
+        case .jpy:
+            return 3000
+        case .usd:
+            return 30
+        }
+    }
 }

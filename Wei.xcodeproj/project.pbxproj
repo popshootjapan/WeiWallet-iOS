@@ -95,6 +95,8 @@
 		AE3F7309207F7ECA00482502 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3F7308207F7ECA00482502 /* Currency.swift */; };
 		AE3F730B207F7F6300482502 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3F730A207F7F6300482502 /* Price.swift */; };
 		AE43C3A220D0E45A0050BDDE /* Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE43C3A120D0E45A0050BDDE /* Locale.swift */; };
+		AE43C3A620D10D620050BDDE /* CurrencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE43C3A520D10D620050BDDE /* CurrencyManager.swift */; };
+		AE43C3A820D10E880050BDDE /* UserDefaultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE43C3A720D10E880050BDDE /* UserDefaultsStore.swift */; };
 		AE6146622087149900A9E77A /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6146612087149900A9E77A /* RegistrationService.swift */; };
 		AE6146642087154800A9E77A /* RegistrationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6146632087154800A9E77A /* RegistrationRepository.swift */; };
 		AE61466820871B5600A9E77A /* DeviceChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE61466720871B5600A9E77A /* DeviceChecker.swift */; };
@@ -274,6 +276,8 @@
 		AE3F7308207F7ECA00482502 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		AE3F730A207F7F6300482502 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		AE43C3A120D0E45A0050BDDE /* Locale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locale.swift; sourceTree = "<group>"; };
+		AE43C3A520D10D620050BDDE /* CurrencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyManager.swift; sourceTree = "<group>"; };
+		AE43C3A720D10E880050BDDE /* UserDefaultsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStore.swift; sourceTree = "<group>"; };
 		AE6146612087149900A9E77A /* RegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
 		AE6146632087154800A9E77A /* RegistrationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRepository.swift; sourceTree = "<group>"; };
 		AE61466720871B5600A9E77A /* DeviceChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceChecker.swift; sourceTree = "<group>"; };
@@ -552,6 +556,8 @@
 				AEC36ADC20C5851E00FE4737 /* LocalTransactionRepository.swift */,
 				AEC36ADE20C5855600FE4737 /* RealmManager.swift */,
 				AEFE581120C7C07B00CE47F8 /* NonceManager.swift */,
+				AE43C3A520D10D620050BDDE /* CurrencyManager.swift */,
+				AE43C3A720D10E880050BDDE /* UserDefaultsStore.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -1109,6 +1115,7 @@
 				AE14A62F20712221003A63FF /* MyWalletViewController.swift in Sources */,
 				DE624F8F207247EA00840B06 /* SelectAmountViewModel.swift in Sources */,
 				DEF040C720692E4200DFE35A /* Wei+Extension.swift in Sources */,
+				AE43C3A620D10D620050BDDE /* CurrencyManager.swift in Sources */,
 				1A798BFF2081D8C400812D80 /* EthereumKit+Extension.swift in Sources */,
 				AE3F7309207F7ECA00482502 /* Currency.swift in Sources */,
 				DE318DE520916626008FA01E /* Formatter.swift in Sources */,
@@ -1157,6 +1164,7 @@
 				AE6146642087154800A9E77A /* RegistrationRepository.swift in Sources */,
 				AE14A6282070D2F7003A63FF /* HomeViewController.swift in Sources */,
 				AE1F8C272090B4270088A043 /* APIClientError.swift in Sources */,
+				AE43C3A820D10E880050BDDE /* UserDefaultsStore.swift in Sources */,
 				1AEA0A86205967460068C2E1 /* InjectableViewModel.swift in Sources */,
 				1AB9224220764EA300DEF52B /* PresentationController.swift in Sources */,
 				1AB430BF209718B300109A06 /* UIScrollView+Rx.swift in Sources */,

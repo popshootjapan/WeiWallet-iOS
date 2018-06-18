@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fvH-K1-ugq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fvH-K1-ugq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -108,17 +108,11 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="E5u-HJ-aFM">
-                                                <rect key="frame" x="16" y="170" width="28.5" height="24"/>
+                                                <rect key="frame" x="16" y="170" width="9.5" height="24"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxf-E0-Vfh">
                                                         <rect key="frame" x="0.0" y="0.0" width="9.5" height="24"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVf-Je-wK4">
-                                                        <rect key="frame" x="13.5" y="6" width="15" height="15"/>
-                                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -230,7 +224,6 @@
                         <outlet property="etherBalanceTitleLabel" destination="TvR-in-SFD" id="8Fb-Xm-8wR"/>
                         <outlet property="fiatBalanceLabel" destination="Kxf-E0-Vfh" id="2vU-7F-fAA"/>
                         <outlet property="fiatBalanceTitleLabel" destination="NJR-Cw-yUx" id="TNu-gC-Gva"/>
-                        <outlet property="fiatUnitLabel" destination="XVf-Je-wK4" id="mdJ-Qk-tYO"/>
                         <outlet property="historyButton" destination="Ygz-iB-tEG" id="ah4-lF-RC6"/>
                         <outlet property="sendButton" destination="VBG-2y-KkV" id="6ep-gj-Mhp"/>
                         <outlet property="titleLabel" destination="3LR-Vn-2Os" id="AAH-iv-FY6"/>

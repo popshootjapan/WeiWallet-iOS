@@ -22,7 +22,7 @@ extension Balance {
     
     func calculateFiatBalance(rate: Price) -> String {
         let fiatBalance = ether * BDouble(rate.price)!
-        return fiatBalance.rounded().asString(withBase: 10)
+        return fiatBalance.decimalExpansion(precisionAfterComma: 2)
     }
 }
 

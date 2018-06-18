@@ -46,6 +46,6 @@ final class BalanceStore: Injectable, BalanceStoreProtocol {
         etherBalance = Observable.merge(cachedBalance, fetchedBalance)
         
         fiatBalance = Observable
-            .combineLatest(etherBalance, rateStore.currentRate) { $0.calculateFiatBalance(rate: $1)}
+            .combineLatest(etherBalance, rateStore.currentRate) { $0.calculateFiatBalance(rate: $1) }
     }
 }
