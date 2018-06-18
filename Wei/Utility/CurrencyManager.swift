@@ -28,10 +28,10 @@ final class CurrencyManager: CurrencyManagerProtocol, Injectable {
     let currency: Observable<Currency>
     
     init(dependency: Dependency) {
-        var userDefaulsStore = dependency
+        var userDefaultsStore = dependency
         
         currency = updateCurrency
-            .do(onNext: { userDefaulsStore.currency = $0 })
-            .startWith(userDefaulsStore.currency ?? Locale.preferred().currency())
+            .do(onNext: { userDefaultsStore.currency = $0 })
+            .startWith(userDefaultsStore.currency ?? Locale.preferred().currency())
     }
 }
