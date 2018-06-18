@@ -17,11 +17,14 @@ final class CreateWalletViewController: UIViewController {
     @IBOutlet private weak var createWalletButton: UIButton!
     @IBOutlet private weak var restoreButton: UIButton!
     @IBOutlet private weak var showServiceTermsButton: UIButton!
+    @IBOutlet private weak var titleLabel: UILabel! {
+        didSet {
+            hideIfNeccesary(titleLabel)
+        }
+    }
     @IBOutlet private weak var textView: UITextView! {
         didSet {
-            if UIDevice.wei.is3_5Inch() || UIDevice.wei.is4Inch() || UIDevice.wei.isPad() {
-                textView.isHidden = true
-            }
+            hideIfNeccesary(textView)
         }
     }
     
@@ -70,6 +73,12 @@ final class CreateWalletViewController: UIViewController {
         output.error
             .drive(rx.showError)
             .disposed(by: disposeBag)
+    }
+    
+    private func hideIfNeccesary(_ view: UIView) {
+        if UIDevice.wei.is3_5Inch() || UIDevice.wei.is4Inch() || UIDevice.wei.isPad() {
+            view.isHidden = true
+        }
     }
     
     private func presentAgreeTermsViewController() {

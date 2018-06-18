@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Eoa-k9-vee">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Eoa-k9-vee">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -109,6 +109,7 @@
                         <outlet property="restoreButton" destination="QvX-qs-kRG" id="wwY-A9-KiY"/>
                         <outlet property="showServiceTermsButton" destination="7a0-6L-X5V" id="b6B-HI-Of0"/>
                         <outlet property="textView" destination="El0-Tc-t1K" id="2Hf-Fo-Igv"/>
+                        <outlet property="titleLabel" destination="ysB-vy-zik" id="9eF-A8-peM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Thu-GT-xAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
