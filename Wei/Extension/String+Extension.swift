@@ -9,7 +9,7 @@
 import Foundation
 
 extension String {
-    func stripeEthereumPrefix() -> String {
+    func stripEthereumPrefix() -> String {
         let address: String
         let prefix = "ethereum:"
         if hasPrefix(prefix) {

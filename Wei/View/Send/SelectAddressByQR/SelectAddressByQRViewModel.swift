@@ -22,7 +22,7 @@ final class SelectAddressByQRViewModel: ViewModel {
     
     func build(input: Input) -> Output {
         let transactionContext = input.address
-            .map { TransactionContext(address: $0.stripeEthereumPrefix()) }
+            .map { TransactionContext(address: $0.stripEthereumPrefix()) }
             .throttle(1.0, latest: false)
             
         let pushSelectAmountViewController = transactionContext
