@@ -14,9 +14,17 @@ extension Balance {
         return (try? ether()) ?? Decimal(0)
     }
     
-    func calculateFiatBalance(rate: Price) -> String {
-        let fiatBalance = ether * Decimal(string: rate.price)!
-        return fiatBalance.round(scale: 2).string
+    /// Calculate fiat balance by the provided rate.
+    /// if fiatRate parameter is a JPY, it returns fiat balance in JPY
+    /// if USD, then it returns one in USD
+    func calculateFiatBalance(fiatRate: Fiat) -> Fiat {
+        let fiatBalance = (ether * fiatRate.value).round(scale: 2)
+        switch fiatRate {
+        case .jpy:
+            return Fiat.jpy(fiatBalance.toInt64())
+        case .usd:
+            return Fiat.usd(fiatBalance)
+        }
     }
 }
 

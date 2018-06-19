@@ -18,19 +18,20 @@ final class BalanceAccessoryView: UIView, InputAppliable {
     @IBOutlet private weak var txFeeLabel: UILabel!
 
     enum Input {
-        case availableBalance(Int64)
-        case balance(Int64)
-        case txFee(Int64)
+        case availableBalance(Fiat)
+        case balance(Fiat)
+        case txFee(Fiat)
     }
     
     func apply(input: Input) {
+        // TODO: fix currency code
         switch input {
         case .availableBalance(let amount):
-            availableBalanceLabel.text = String(amount)
+            availableBalanceLabel.text = String(amount.value.description)
         case .balance(let amount):
-            balanceLabel.text = String(amount)
+            balanceLabel.text = String(amount.value.description)
         case .txFee(let amount):
-            txFeeLabel.text = String(amount)
+            txFeeLabel.text = String(amount.value.description)
         }
     }
 }

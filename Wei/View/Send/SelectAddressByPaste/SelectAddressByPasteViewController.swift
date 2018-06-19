@@ -40,8 +40,8 @@ private extension SelectAddressByPasteViewController {
     
         output
             .pushSelectAmountViewController
-            .drive(onNext: { [weak self] transactionContext in
-                self?.pushSelectAmountViewController(with: transactionContext)
+            .drive(onNext: { [weak self] address in
+                self?.pushSelectAmountViewController(with: address)
             })
             .disposed(by: disposeBag)
         
@@ -61,11 +61,11 @@ private extension SelectAddressByPasteViewController {
             .disposed(by: disposeBag)
     }
     
-    func pushSelectAmountViewController(with transactionContext: TransactionContext) {
-        handleAddressLabel(with: transactionContext.address)
+    func pushSelectAmountViewController(with address: String) {
+        handleAddressLabel(with: address)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: { [weak self] in
-            let selectAmountViewController = SelectAmountViewController.make(transactionContext)
+            let selectAmountViewController = SelectAmountViewController.make(address: address)
             self?.navigationController?.pushViewController(selectAmountViewController, animated: true)
         })
     }

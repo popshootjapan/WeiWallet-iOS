@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 protocol RateStoreProtocol {
-    var currentRate: Observable<Price> { get }
+    var currentRate: Observable<Fiat> { get }
 }
 
 final class RateStore: Injectable, RateStoreProtocol {
@@ -23,12 +23,13 @@ final class RateStore: Injectable, RateStoreProtocol {
         CurrencyManagerProtocol
     )
     
-    let currentRate: Observable<Price>
+    let currentRate: Observable<Fiat>
     
     init(dependency: Dependency) {
         let (cache, repository, updater, currencyManager) = dependency
+        let currency = currencyManager.currency
         
-        let cachedRate = currencyManager.currency.flatMap { currency -> Observable<Price> in
+        let cachedRate = currency.flatMap { currency -> Observable<Price> in
             return cache.load(for: RateService.GetCurrentRate(currency: currency)).asObservable()
         }
         
@@ -38,11 +39,25 @@ final class RateStore: Injectable, RateStoreProtocol {
         
         let updatedRate = Observable
             .merge(tick, updater.refreshRate)
-            .withLatestFrom(currencyManager.currency)
+            .withLatestFrom(currency)
             .flatMap { currency -> Observable<Price> in
                 return repository.getCurrentRate(currency: currency).asObservable()
             }
         
-        currentRate = Observable.merge(cachedRate, updatedRate)
+        currentRate = Observable
+            .combineLatest(Observable.merge(cachedRate, updatedRate), currency)
+            .flatMap { rate, currency -> Observable<Fiat> in
+                guard let doubleValue = Double(rate.price) else {
+                    return Observable.empty()
+                }
+                
+                switch currency {
+                case .jpy:
+                    return Observable.just(Fiat.jpy(Int64(doubleValue)))
+                case .usd:
+                    return Observable.just(Fiat.usd(Decimal(doubleValue)))
+                }
+            }
+            .distinctUntilChanged()
     }
 }

@@ -17,19 +17,19 @@ final class SelectAddressByQRViewModel: ViewModel {
     
     struct Output {
         let isAddressValid: Driver<Void>
-        let pushSelectAmountViewController: Driver<TransactionContext>
+        let pushSelectAmountViewController: Driver<String>
     }
     
     func build(input: Input) -> Output {
-        let transactionContext = input.address
-            .map { TransactionContext(address: $0.stripEthereumPrefix()) }
+        let address = input.address
+            .map { $0.stripEthereumPrefix() }
             .throttle(1.0, latest: false)
             
-        let pushSelectAmountViewController = transactionContext
-            .filter { $0.isAddressValid }
+        let pushSelectAmountViewController = address
+            .filter { AddressValidator(address: $0).validate() }
         
-        let isAddressValid = transactionContext
-            .filter { !$0.isAddressValid }
+        let isAddressValid = address
+            .filter { !AddressValidator(address: $0).validate() }
             .map { _ in }
         
         return Output(

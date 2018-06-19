@@ -18,21 +18,20 @@ final class SelectAddressByPasteViewModel: ViewModel {
     
     struct Output {
         let isAddressValid: Driver<Bool>
-        let pushSelectAmountViewController: Driver<TransactionContext>
+        let pushSelectAmountViewController: Driver<String>
     }
     
     func build(input: Input) -> Output {
         let pasteByClipboardButtonDidTap = input.pasteByClipboardButtonDidTap
         
-        let transactionContext = pasteByClipboardButtonDidTap
+        let address = pasteByClipboardButtonDidTap
             .flatMap { Driver.from(optional: UIPasteboard.general.string) }
-            .map { TransactionContext(address: $0) }
         
-        let pushSelectAmountViewController = transactionContext
-            .filter { $0.isAddressValid }
+        let pushSelectAmountViewController = address
+            .filter { AddressValidator(address: $0).validate() }
         
-        let isAddressValid = transactionContext
-            .map { $0.isAddressValid }
+        let isAddressValid = address
+            .map { AddressValidator(address: $0).validate() }
         
         return Output(
             isAddressValid: isAddressValid,

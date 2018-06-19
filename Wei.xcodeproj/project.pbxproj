@@ -107,6 +107,8 @@
 		AE8C9FC8209EF87300C616E1 /* DebugListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */; };
 		AE979E8020D7B6F5009B353F /* Decimal+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */; };
 		AE979E8220D8BD8F009B353F /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E8120D8BD8F009B353F /* Amount.swift */; };
+		AE979E8420D8D009009B353F /* Fiat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E8320D8D009009B353F /* Fiat.swift */; };
+		AE979E8620D8DE73009B353F /* AddressValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E8520D8DE73009B353F /* AddressValidator.swift */; };
 		AEC36ADA20C538EF00FE4737 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC36AD820C538EF00FE4737 /* RealmSwift.framework */; };
 		AEC36ADB20C538EF00FE4737 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC36AD920C538EF00FE4737 /* Realm.framework */; };
 		AEC36ADD20C5851E00FE4737 /* LocalTransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC36ADC20C5851E00FE4737 /* LocalTransactionRepository.swift */; };
@@ -292,6 +294,8 @@
 		AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DebugListViewController.storyboard; sourceTree = "<group>"; };
 		AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extension.swift"; sourceTree = "<group>"; };
 		AE979E8120D8BD8F009B353F /* Amount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amount.swift; sourceTree = "<group>"; };
+		AE979E8320D8D009009B353F /* Fiat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fiat.swift; sourceTree = "<group>"; };
+		AE979E8520D8DE73009B353F /* AddressValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressValidator.swift; sourceTree = "<group>"; };
 		AEC36AD820C538EF00FE4737 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		AEC36AD920C538EF00FE4737 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		AEC36ADC20C5851E00FE4737 /* LocalTransactionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTransactionRepository.swift; sourceTree = "<group>"; };
@@ -424,6 +428,8 @@
 				AEC36AE020C58A9800FE4737 /* LocalTransaction.swift */,
 				AE43C3A120D0E45A0050BDDE /* LocaleLanguage.swift */,
 				AE979E8120D8BD8F009B353F /* Amount.swift */,
+				AE979E8320D8D009009B353F /* Fiat.swift */,
+				AE979E8520D8DE73009B353F /* AddressValidator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1185,6 +1191,7 @@
 				1A798C032081DE7200812D80 /* LatestTransactionListViewCell.swift in Sources */,
 				AE1F8C252090B3F10088A043 /* AlertConvertable.swift in Sources */,
 				1A3BD8FD205C0FBF00FE485D /* WalletManager.swift in Sources */,
+				AE979E8420D8D009009B353F /* Fiat.swift in Sources */,
 				AE1F8C23208CE28D0088A043 /* APIClient.swift in Sources */,
 				1AB92244207652A700DEF52B /* RateRepository.swift in Sources */,
 				AE14A6222070A689003A63FF /* MnemonicManager.swift in Sources */,
@@ -1255,6 +1262,7 @@
 				AE3EB60120AC7D1800D61CE6 /* String+Extension.swift in Sources */,
 				DE3A3882208636C800AB44B0 /* URL+WeiExtension.swift in Sources */,
 				DE318DE320915BAD008FA01E /* BalanceStore.swift in Sources */,
+				AE979E8620D8DE73009B353F /* AddressValidator.swift in Sources */,
 				1AB430BB2096FCC800109A06 /* PageControl.swift in Sources */,
 				AE14A6152070A1E3003A63FF /* CreateWalletViewController.swift in Sources */,
 				DEC5772B2074D79200DC3923 /* ReceiveViewModel.swift in Sources */,

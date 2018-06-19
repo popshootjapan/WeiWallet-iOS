@@ -13,7 +13,7 @@ import RxCocoa
 
 protocol BalanceStoreProtocol {
     var etherBalance: Observable<Balance> { get }
-    var fiatBalance: Observable<String> { get }
+    var fiatBalance: Observable<Fiat> { get }
 }
 
 final class BalanceStore: Injectable, BalanceStoreProtocol {
@@ -27,7 +27,7 @@ final class BalanceStore: Injectable, BalanceStoreProtocol {
     )
     
     let etherBalance: Observable<Balance>
-    let fiatBalance: Observable<String>
+    let fiatBalance: Observable<Fiat>
     
     init(dependency: Dependency) {
         let (geth, wallet, updater, rateStore, cache) = dependency
@@ -46,6 +46,6 @@ final class BalanceStore: Injectable, BalanceStoreProtocol {
         etherBalance = Observable.merge(cachedBalance, fetchedBalance)
         
         fiatBalance = Observable
-            .combineLatest(etherBalance, rateStore.currentRate) { $0.calculateFiatBalance(rate: $1) }
+            .combineLatest(etherBalance, rateStore.currentRate) { $0.calculateFiatBalance(fiatRate: $1) }
     }
 }

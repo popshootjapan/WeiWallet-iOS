@@ -15,10 +15,7 @@ struct TransactionContext {
     let fiatFee: Amount
     
     var isAddressValid: Bool {
-        let isAddressNotEmpty = !address.isEmpty
-        let isValidLength = address.count == 42
-        let isStartWith0x = address.hasPrefix("0x")
-        return isAddressNotEmpty && isValidLength && isStartWith0x
+        return AddressValidator(address: address).validate()
     }
     
     var isAmountValid: Bool {
@@ -31,14 +28,5 @@ struct TransactionContext {
     
     var isContextValid: Bool {
         return isAddressValid && isAmountValid && isFeeValid
-    }
-}
-
-extension TransactionContext {
-    init(address: String) {
-        self.address = address
-        self.etherAmount = .ether(0)
-        self.fiatAmount = .fiat(0)
-        self.fiatFee = .fiat(0)
     }
 }
