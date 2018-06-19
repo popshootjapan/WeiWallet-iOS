@@ -44,13 +44,6 @@ final class SelectAmountViewController: UIViewController {
         
         let output = viewModel.build(input: input)
         
-        output
-            .showSendConfirmationViewController
-            .drive(onNext: { [weak self] tansactionContext in
-                self?.pushSendConfirmationViewController(with: tansactionContext)
-            })
-            .disposed(by: disposeBag)
-        
         Driver
             .combineLatest(output.fiatBalance, output.currency)
             .drive(onNext: { [weak self] balance, currency in
@@ -87,6 +80,25 @@ final class SelectAmountViewController: UIViewController {
         output
             .error
             .drive(rx.showError)
+            .disposed(by: disposeBag)
+        
+        output
+            .currency
+            .drive(onNext: { [weak self] currency in
+                switch currency {
+                case .jpy:
+                    self?.amountTextField.keyboardType = .numberPad
+                case .usd:
+                    self?.amountTextField.keyboardType = .decimalPad
+                }
+            })
+            .disposed(by: disposeBag)
+        
+        output
+            .showSendConfirmationViewController
+            .drive(onNext: { [weak self] tansactionContext in
+                self?.pushSendConfirmationViewController(with: tansactionContext)
+            })
             .disposed(by: disposeBag)
     }
     
