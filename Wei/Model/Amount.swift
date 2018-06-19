@@ -30,12 +30,12 @@ enum Amount {
         }
     }
     
-    func fiat() -> Int64 {
+    func fiat() -> Decimal {
         switch self {
         case .ether(_):
             fatalError("needs acquired from amountInFiat")
         case .fiat(let fiat):
-            return fiat.value.toInt64()
+            return fiat.value
         }
     }
 }
