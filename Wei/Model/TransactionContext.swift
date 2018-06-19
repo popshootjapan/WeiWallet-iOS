@@ -42,12 +42,10 @@ enum Amount {
 }
 
 struct TransactionContext {
-    
-    var address: String
-    var fiatAmount: Amount
-    var etherAmount: Amount
-    var fiatFee: Amount
-    var etherFee: Amount
+    let address: String
+    let etherAmount: Amount
+    let fiatAmount: Amount
+    let fiatFee: Amount
     
     var isAddressValid: Bool {
         let isAddressNotEmpty = !address.isEmpty
@@ -61,7 +59,7 @@ struct TransactionContext {
     }
     
     var isFeeValid: Bool {
-        return fiatFee.valid() && etherFee.valid()
+        return fiatFee.valid()
     }
     
     var isContextValid: Bool {
@@ -70,11 +68,10 @@ struct TransactionContext {
 }
 
 extension TransactionContext {
-    init(_ address: String, fiatAmount: Amount = .fiat(0), etherAmount: Amount = .ether(0), fiatFee: Amount = .fiat(0), etherFee: Amount = .ether(0)) {
+    init(address: String) {
         self.address = address
-        self.fiatAmount = fiatAmount
-        self.etherAmount = etherAmount
-        self.fiatFee = fiatFee
-        self.etherFee = etherFee
+        self.etherAmount = .ether(0)
+        self.fiatAmount = .fiat(0)
+        self.fiatFee = .fiat(0)
     }
 }

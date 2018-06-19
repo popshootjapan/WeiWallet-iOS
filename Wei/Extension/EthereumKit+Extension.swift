@@ -9,41 +9,20 @@
 import Foundation
 import EthereumKit
 
-extension Converter {
-    static func toYen(ether: Ether, rate: BDouble) -> BDouble {
-        return rate * ether
-    }
-}
-
 extension Balance {
-    func yen(rate: BDouble) -> BDouble {
-        return Converter.toYen(ether: ether, rate: rate)
+    var ether: Ether {
+        return (try? ether()) ?? Decimal(0)
     }
     
     func calculateFiatBalance(rate: Price) -> String {
-        let fiatBalance = ether * BDouble(rate.price)!
-        return fiatBalance.decimalExpansion(precisionAfterComma: 2)
+        let fiatBalance = ether * Decimal(string: rate.price)!
+        return fiatBalance.round(scale: 2).string
     }
 }
 
 extension Ether {
     var string: String {
-        // caluculating with decimalExpansion(precisionAfterComma: 6) returns incorrect value sometimes.
-        // use 18 precision to caluculate and remove padding zeros after
-        // we support the precision of 6 degits.
-        let values = decimalExpansion(precisionAfterComma: 18).split(separator: ".")
-        return stripePaddingZeros("\(values[0]).\(values[1].prefix(6))")
-    }
-    
-    /// stripe padding zeros. if the last character is . after striping, remote . as well.
-    /// caution: do not stripe all if the string is 0.
-    private func stripePaddingZeros(_ string: String) -> String {
-        let degits = string.split(separator: ".").first?.count ?? 1
-        var string = string
-        while (string.last == "0" || string.last == ".") && string.count > degits {
-            string = String(string.dropLast())
-        }
-        return string
+        return round(scale: 6).description
     }
 }
 

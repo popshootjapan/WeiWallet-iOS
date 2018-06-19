@@ -27,8 +27,14 @@ final class TransactionHistoryViewCell: UITableViewCell, InputAppliable {
             return
         }
         
+        if let etherAmount = Wei(transaction.value).flatMap({ try? Converter.toEther(wei: $0) })?.string {
+            etherAmountLabel.text = etherAmount
+        } else {
+            // TODO: localize
+            etherAmountLabel.text = "Failed to convert"
+        }
+        
         timestampLabel.text = DateFormatter.fullDateString(from: Date(timeIntervalSince1970: TimeInterval(transaction.timeStamp)!))
-        etherAmountLabel.text = Converter.toEther(wei: Wei(transaction.value)!).string
         
         let isReceiveTransaction = transaction.isReceiveTransaction(myAddress: address)
         let transactionTypeText = isReceiveTransaction ? "From" : "To"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wNw-0e-HDK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wNw-0e-HDK">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -121,29 +121,6 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Akr-Bo-QMA">
-                                <rect key="frame" x="132" y="363" width="56" height="18"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="= " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpv-Av-CoZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="13.5" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.63137254899999995" green="0.66274509800000003" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRi-DY-Xoy">
-                                        <rect key="frame" x="13.5" y="0.0" width="9.5" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.63137254899999995" green="0.66274509800000003" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" ETH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9b6-cK-qRT">
-                                        <rect key="frame" x="23" y="0.0" width="33" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.63137254899999995" green="0.66274509800000003" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手数料" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImU-9n-bhE">
                                 <rect key="frame" x="137.5" y="314" width="45" height="15"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
@@ -180,7 +157,6 @@
                             <constraint firstItem="A4G-ca-63W" firstAttribute="top" secondItem="8vg-Fw-a7s" secondAttribute="bottom" constant="8" id="9qR-pG-GYQ"/>
                             <constraint firstItem="XAz-kW-HeF" firstAttribute="bottom" secondItem="i0w-x9-bDH" secondAttribute="bottom" constant="16" id="9z7-ag-lC5"/>
                             <constraint firstItem="XAz-kW-HeF" firstAttribute="trailing" secondItem="i0w-x9-bDH" secondAttribute="trailing" constant="16" id="AIM-SD-I9L"/>
-                            <constraint firstItem="Akr-Bo-QMA" firstAttribute="centerX" secondItem="XAz-kW-HeF" secondAttribute="centerX" id="AhG-nH-HLB"/>
                             <constraint firstItem="XAz-kW-HeF" firstAttribute="trailing" secondItem="zwG-CD-wOg" secondAttribute="trailing" constant="16" id="BKk-24-LKR"/>
                             <constraint firstItem="LVv-vp-VAG" firstAttribute="centerX" secondItem="XAz-kW-HeF" secondAttribute="centerX" id="CL3-tn-ej8"/>
                             <constraint firstItem="8vg-Fw-a7s" firstAttribute="centerX" secondItem="XAz-kW-HeF" secondAttribute="centerX" id="CsA-xM-Ev0"/>
@@ -195,7 +171,6 @@
                             <constraint firstItem="ImU-9n-bhE" firstAttribute="centerX" secondItem="XAz-kW-HeF" secondAttribute="centerX" id="rrp-vn-Q4Y"/>
                             <constraint firstItem="zwG-CD-wOg" firstAttribute="leading" secondItem="XAz-kW-HeF" secondAttribute="leading" constant="16" id="s7V-AM-Ubj"/>
                             <constraint firstItem="r4k-33-iuE" firstAttribute="centerY" secondItem="i0w-x9-bDH" secondAttribute="centerY" id="vd6-H5-Gfp"/>
-                            <constraint firstItem="Akr-Bo-QMA" firstAttribute="top" secondItem="Ko4-j8-D6B" secondAttribute="bottom" constant="8" id="vtQ-Kv-sWq"/>
                             <constraint firstItem="r4k-33-iuE" firstAttribute="leading" secondItem="XAz-kW-HeF" secondAttribute="leading" constant="16" id="w2h-rO-35I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XAz-kW-HeF"/>
@@ -217,7 +192,6 @@
                         <outlet property="addressLabel" destination="rZY-NZ-D5R" id="2gc-c4-ULm"/>
                         <outlet property="comfirmButton" destination="wCd-0n-bQ1" id="qNc-BS-b9g"/>
                         <outlet property="etherAmountLabel" destination="1mx-7Q-M2M" id="H8N-re-YEc"/>
-                        <outlet property="etherFeeLabel" destination="wRi-DY-Xoy" id="AXa-YX-QVJ"/>
                         <outlet property="fiatAmountLabel" destination="A4G-ca-63W" id="OrE-zx-11V"/>
                         <outlet property="fiatFeeLabel" destination="Pyp-BL-9rK" id="EwJ-o8-lig"/>
                         <outlet property="reselectAddressButton" destination="i0w-x9-bDH" id="Ocs-YQ-eKj"/>
