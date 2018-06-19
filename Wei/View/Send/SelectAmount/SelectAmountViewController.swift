@@ -51,17 +51,24 @@ final class SelectAmountViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
-        output
-            .fiatBalance
-            .drive(onNext: { [weak self] balance in
-                self?.balanceAccessoryView.apply(input: .balance(balance))
+        Driver
+            .combineLatest(output.fiatBalance, output.currency)
+            .drive(onNext: { [weak self] balance, currency in
+                self?.balanceAccessoryView.apply(input: .balance(balance, currency))
             })
             .disposed(by: disposeBag)
         
-        output
-            .availableFiatBalance
-            .drive(onNext: { [weak self] balance in
-                self?.balanceAccessoryView.apply(input: .availableBalance(balance))
+        Driver
+            .combineLatest(output.availableFiatBalance, output.currency)
+            .drive(onNext: { [weak self] balance, currency in
+                self?.balanceAccessoryView.apply(input: .availableBalance(balance, currency))
+            })
+            .disposed(by: disposeBag)
+        
+        Driver
+            .combineLatest(output.txFee, output.currency)
+            .drive(onNext: { [weak self] txFee, currency in
+                self?.balanceAccessoryView.apply(input: .txFee(txFee, currency))
             })
             .disposed(by: disposeBag)
         
@@ -75,13 +82,6 @@ final class SelectAmountViewController: UIViewController {
             .etherAmount
             .map { $0.string }
             .drive(etherAmountLabel.rx.text)
-            .disposed(by: disposeBag)
-        
-        output
-            .txFee
-            .drive(onNext: { [weak self] txFee in
-                self?.balanceAccessoryView.apply(input: .txFee(txFee))
-            })
             .disposed(by: disposeBag)
         
         output

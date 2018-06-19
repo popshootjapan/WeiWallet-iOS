@@ -37,6 +37,7 @@ final class SelectAmountViewModel: InjectableViewModel {
     
     struct Output {
         let showSendConfirmationViewController: Driver<TransactionContext>
+        let currency: Driver<Currency>
         let fiatBalance: Driver<Fiat>
         let availableFiatBalance: Driver<Fiat>
         let inputFiatAmount: Driver<Fiat>
@@ -153,6 +154,7 @@ final class SelectAmountViewModel: InjectableViewModel {
         
         return Output(
             showSendConfirmationViewController: showSendConfirmationWithTransactionContext,
+            currency: currency,
             fiatBalance: fiatBalance,
             availableFiatBalance: availableBalance,
             inputFiatAmount: inputFiatAmount,
