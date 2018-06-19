@@ -19,7 +19,6 @@ final class SendConfirmationViewController: UIViewController {
     @IBOutlet private weak var fiatAmountLabel: UILabel!
     @IBOutlet private weak var etherAmountLabel: UILabel!
     @IBOutlet private weak var fiatFeeLabel: UILabel!
-    @IBOutlet private weak var etherFeeLabel: UILabel!
     @IBOutlet private weak var comfirmButton: UIButton!
     @IBOutlet private weak var reselectAddressButton: UIButton!
     @IBOutlet private weak var retryButton: UIButton!
@@ -48,7 +47,6 @@ private extension SendConfirmationViewController {
         fiatAmountLabel.text = String(output.transactionContext.fiatAmount.fiat())
         etherAmountLabel.text = output.transactionContext.etherAmount.ether().string
         fiatFeeLabel.text = String(output.transactionContext.fiatFee.fiat())
-        etherFeeLabel.text = output.transactionContext.etherFee.ether().string
         
         output
             .sentTransaction

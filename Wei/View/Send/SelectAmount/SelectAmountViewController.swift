@@ -73,6 +73,7 @@ final class SelectAmountViewController: UIViewController {
         
         output
             .etherAmount
+            .map { $0.string }
             .drive(etherAmountLabel.rx.text)
             .disposed(by: disposeBag)
         

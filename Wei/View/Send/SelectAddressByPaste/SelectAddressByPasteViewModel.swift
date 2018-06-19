@@ -26,7 +26,7 @@ final class SelectAddressByPasteViewModel: ViewModel {
         
         let transactionContext = pasteByClipboardButtonDidTap
             .flatMap { Driver.from(optional: UIPasteboard.general.string) }
-            .map { TransactionContext($0) }
+            .map { TransactionContext(address: $0) }
         
         let pushSelectAmountViewController = transactionContext
             .filter { $0.isAddressValid }

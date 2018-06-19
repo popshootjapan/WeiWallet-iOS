@@ -38,7 +38,7 @@ final class SelectAmountViewModel: InjectableViewModel {
         let fiatBalance: Driver<Int64>
         let availableFiatBalance: Driver<Int64>
         let inputFiatAmount: Driver<Int64>
-        let etherAmount: Driver<String>
+        let etherAmount: Driver<Ether>
         let txFee: Driver<Int64>
         let error: Driver<Error>
     }
@@ -104,17 +104,23 @@ final class SelectAmountViewModel: InjectableViewModel {
         }
         
         let etherAmount = convertToEtherAction.elements
-            .map { $0.price }
+            .flatMap { price -> Driver<Ether> in
+                guard let ether = Ether(string: price.price) else {
+                    return Driver.empty()
+                }
+                return Driver.just(ether)
+            }
         
         let showSendConfirmationWithTransactionContext = input.confirmButtonDidTap
             .withLatestFrom(Driver.combineLatest(inputFiatAmount, etherAmount, fiatTxFee))
-            .map { TransactionContext(
-                transactionContext.address,
-                fiatAmount: .fiat($0),
-                etherAmount: .ether(Ether($1)!),
-                fiatFee: .fiat($2),
-                etherFee: .ether(Converter.toEther(wei: txFee))
-            )}
+            .flatMap { fiatAmount, etherAmount, fee -> Driver<TransactionContext> in
+                return Driver.just(TransactionContext(
+                    address: transactionContext.address,
+                    etherAmount: .ether(etherAmount),
+                    fiatAmount: .fiat(fiatAmount),
+                    fiatFee: .fiat(fee)
+                ))
+            }
         
         let errors = Driver.merge(
             convertToEtherAction.error,

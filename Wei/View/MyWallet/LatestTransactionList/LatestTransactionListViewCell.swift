@@ -23,15 +23,26 @@ final class LatestTransactionListViewCell: UITableViewCell, InputAppliable {
         
         switch kind {
         case .local(let localTransaction):
-            timestampLabel.text = DateFormatter.fullDateString(from: Date(timeIntervalSince1970: TimeInterval(localTransaction.date)))
-            etherAmountLabel.text = Converter.toEther(wei: Wei(localTransaction.value)!).string
+            if let etherAmount = Wei(localTransaction.value).flatMap({ try? Converter.toEther(wei: $0) })?.string {
+                etherAmountLabel.text = etherAmount
+            } else {
+                // TODO: localize
+                etherAmountLabel.text = "Failed to convert"
+            }
             
+            timestampLabel.text = DateFormatter.fullDateString(from: Date(timeIntervalSince1970: TimeInterval(localTransaction.date)))
             transactionStatusLabel.text = "送金中"
             transactionStatusImageViewView.image = #imageLiteral(resourceName: "icon_card_waiting")
             
         case .remote(let transaction):
+            if let etherAmount = Wei(transaction.value).flatMap({ try? Converter.toEther(wei: $0) })?.string {
+                etherAmountLabel.text = etherAmount
+            } else {
+                // TODO: localize
+                etherAmountLabel.text = "Failed to convert"
+            }
+            
             timestampLabel.text = DateFormatter.fullDateString(from: Date(timeIntervalSince1970: TimeInterval(Int64(transaction.timeStamp)!)))
-            etherAmountLabel.text = Converter.toEther(wei: Wei(transaction.value)!).string
             
             let isReceiveTransaction = transaction.isReceiveTransaction(myAddress: address)
             if transaction.isPending {

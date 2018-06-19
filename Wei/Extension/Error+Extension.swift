@@ -52,6 +52,9 @@ extension EthereumKitError: AlertConvertable {
             default:
                 return R.string.localizable.error_title_about_system()
             }
+            
+        case .contractError, .convertError:
+            fatalError("EthereumKit.ContractError should not be thrown in Wei wallet")
         }
     }
     
@@ -68,6 +71,9 @@ extension EthereumKitError: AlertConvertable {
             default:
                 return R.string.localizable.error_message_about_system()
             }
+            
+        case .contractError, .convertError:
+            fatalError("EthereumKit.ContractError should not be thrown in Wei wallet")
         }
     }
 }
