@@ -106,6 +106,7 @@
 		AE8C9FC6209EF85F00C616E1 /* DebugListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */; };
 		AE8C9FC8209EF87300C616E1 /* DebugListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */; };
 		AE979E8020D7B6F5009B353F /* Decimal+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */; };
+		AE979E8220D8BD8F009B353F /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E8120D8BD8F009B353F /* Amount.swift */; };
 		AEC36ADA20C538EF00FE4737 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC36AD820C538EF00FE4737 /* RealmSwift.framework */; };
 		AEC36ADB20C538EF00FE4737 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC36AD920C538EF00FE4737 /* Realm.framework */; };
 		AEC36ADD20C5851E00FE4737 /* LocalTransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC36ADC20C5851E00FE4737 /* LocalTransactionRepository.swift */; };
@@ -290,6 +291,7 @@
 		AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugListViewController.swift; sourceTree = "<group>"; };
 		AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DebugListViewController.storyboard; sourceTree = "<group>"; };
 		AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extension.swift"; sourceTree = "<group>"; };
+		AE979E8120D8BD8F009B353F /* Amount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amount.swift; sourceTree = "<group>"; };
 		AEC36AD820C538EF00FE4737 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		AEC36AD920C538EF00FE4737 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		AEC36ADC20C5851E00FE4737 /* LocalTransactionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTransactionRepository.swift; sourceTree = "<group>"; };
@@ -421,6 +423,7 @@
 				DE9133C520AEFE78003CDE67 /* MnemonicWord.swift */,
 				AEC36AE020C58A9800FE4737 /* LocalTransaction.swift */,
 				AE43C3A120D0E45A0050BDDE /* LocaleLanguage.swift */,
+				AE979E8120D8BD8F009B353F /* Amount.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1163,6 +1166,7 @@
 				DE624F8F207247EA00840B06 /* SelectAmountViewModel.swift in Sources */,
 				DEF040C720692E4200DFE35A /* Wei+Extension.swift in Sources */,
 				AE43C3A620D10D620050BDDE /* CurrencyManager.swift in Sources */,
+				AE979E8220D8BD8F009B353F /* Amount.swift in Sources */,
 				1A798BFF2081D8C400812D80 /* EthereumKit+Extension.swift in Sources */,
 				AE3F7309207F7ECA00482502 /* Currency.swift in Sources */,
 				DE318DE520916626008FA01E /* Formatter.swift in Sources */,
