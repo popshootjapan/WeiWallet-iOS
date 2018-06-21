@@ -65,11 +65,10 @@ final class SelectAmountViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
-//        output
-//            .inputFiatAmount
-//            .map { $0}
-//            .drive(amountTextField.rx.text)
-//            .disposed(by: disposeBag)
+        output
+            .inputAmount
+            .drive(amountTextField.rx.text)
+            .disposed(by: disposeBag)
         
         output
             .etherAmount

@@ -40,7 +40,7 @@ final class SelectAmountViewModel: InjectableViewModel {
         let currency: Driver<Currency>
         let fiatBalance: Driver<Fiat>
         let availableFiatBalance: Driver<Fiat>
-        let inputFiatAmount: Driver<Fiat>
+        let inputAmount: Driver<String>
         let etherAmount: Driver<Ether>
         let txFee: Driver<Fiat>
         let error: Driver<Error>
@@ -101,18 +101,43 @@ final class SelectAmountViewModel: InjectableViewModel {
             }
         }
         
+        // inputAmount will be used to manage input text field text. it will prevents the text field from having
+        // invalid string value(which cannot be converted to Decimal).
+        let inputAmount = Driver
+            .combineLatest(input.amountTextFieldDidInput, availableBalance)
+            .map { inputAmount, availableBalance -> String in
+                
+                // If input text has more than one ".", then return the string with last letter dropped.
+                // eg, 12.9. -> 12.9
+                guard inputAmount.filter({ $0 == "." }).count <= 1 else {
+                    return String(inputAmount.dropLast())
+                }
+                
+                // If input text has more than 2 decimal points, return the string with last letter dropped
+                // eg, 1.324 -> 1.32
+                guard let subString = inputAmount.split(separator: ".").last, String(subString).count <= 2 else {
+                    return String(inputAmount.dropLast())
+                }
+                
+                // If input cannot be converted to Decimal type, then return the string with last letter dropped
+                // eg, 1.32a -> 1.32
+                guard let amount = Decimal(string: inputAmount) else {
+                    return String(inputAmount.dropLast())
+                }
+                
+                return amount <= availableBalance.value ?
+                    inputAmount : availableBalance.value.description
+            }
+        
         // fiatAmount represents an amount user gives as an input in text field.
         // if user's input is larger than user's fiat balance, it returns user's total balance.
         let inputFiatAmount = Driver
-            .combineLatest(input.amountTextFieldDidInput, availableBalance)
-            .map { inputAmount, balance -> Fiat in
-                let decimal = Decimal(string: inputAmount) ?? 0
-                let amount = decimal <= balance.value ? decimal : balance.value
-                
-                switch balance {
+            .combineLatest(inputAmount, currency)
+            .map { amountText, currency -> Fiat in
+                let amount = Decimal(string: amountText) ?? 0
+                switch currency {
                 case .jpy:
                     return Fiat.jpy(amount.toInt64())
-                
                 case .usd:
                     return Fiat.usd(amount)
                 }
@@ -157,7 +182,7 @@ final class SelectAmountViewModel: InjectableViewModel {
             currency: currency,
             fiatBalance: fiatBalance,
             availableFiatBalance: availableBalance,
-            inputFiatAmount: inputFiatAmount,
+            inputAmount: inputAmount,
             etherAmount: etherAmount,
             txFee: fiatTxFee,
             error: errors
