@@ -97,6 +97,8 @@
 		AE43C3A220D0E45A0050BDDE /* LocaleLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE43C3A120D0E45A0050BDDE /* LocaleLanguage.swift */; };
 		AE43C3A620D10D620050BDDE /* CurrencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE43C3A520D10D620050BDDE /* CurrencyManager.swift */; };
 		AE43C3A820D10E880050BDDE /* UserDefaultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE43C3A720D10E880050BDDE /* UserDefaultsStore.swift */; };
+		AE5EE9B520DB7458007F9D72 /* Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5EE9B420DB7458007F9D72 /* Fixture.swift */; };
+		AE5EE9B720DB746B007F9D72 /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5EE9B620DB746B007F9D72 /* MockAPIClient.swift */; };
 		AE6146622087149900A9E77A /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6146612087149900A9E77A /* RegistrationService.swift */; };
 		AE6146642087154800A9E77A /* RegistrationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6146632087154800A9E77A /* RegistrationRepository.swift */; };
 		AE61466820871B5600A9E77A /* DeviceChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE61466720871B5600A9E77A /* DeviceChecker.swift */; };
@@ -282,6 +284,8 @@
 		AE43C3A120D0E45A0050BDDE /* LocaleLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleLanguage.swift; sourceTree = "<group>"; };
 		AE43C3A520D10D620050BDDE /* CurrencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyManager.swift; sourceTree = "<group>"; };
 		AE43C3A720D10E880050BDDE /* UserDefaultsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStore.swift; sourceTree = "<group>"; };
+		AE5EE9B420DB7458007F9D72 /* Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixture.swift; sourceTree = "<group>"; };
+		AE5EE9B620DB746B007F9D72 /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
 		AE6146612087149900A9E77A /* RegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
 		AE6146632087154800A9E77A /* RegistrationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRepository.swift; sourceTree = "<group>"; };
 		AE61466720871B5600A9E77A /* DeviceChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceChecker.swift; sourceTree = "<group>"; };
@@ -679,6 +683,23 @@
 			path = SwipableView;
 			sourceTree = "<group>";
 		};
+		AE5EE9B820DB77BC007F9D72 /* Fixture */ = {
+			isa = PBXGroup;
+			children = (
+				AE5EE9B420DB7458007F9D72 /* Fixture.swift */,
+			);
+			path = Fixture;
+			sourceTree = "<group>";
+		};
+		AE5EE9B920DB77C8007F9D72 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				AE5EE9B620DB746B007F9D72 /* MockAPIClient.swift */,
+				AE5EE9B820DB77BC007F9D72 /* Fixture */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
 		AE8C9FC9209EF87800C616E1 /* Debug */ = {
 			isa = PBXGroup;
 			children = (
@@ -735,6 +756,7 @@
 			children = (
 				AE3EB62720AF05D900D61CE6 /* KeychainStoreTests.swift */,
 				AEFE581520C7CBC200CE47F8 /* NonceManagerTests.swift */,
+				AE5EE9B920DB77C8007F9D72 /* APIClient */,
 				AED6F45B205514BB004A280F /* Info.plist */,
 			);
 			path = WeiTests;
@@ -1289,7 +1311,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE3EB62820AF05D900D61CE6 /* KeychainStoreTests.swift in Sources */,
+				AE5EE9B720DB746B007F9D72 /* MockAPIClient.swift in Sources */,
 				AEFE581620C7CBC200CE47F8 /* NonceManagerTests.swift in Sources */,
+				AE5EE9B520DB7458007F9D72 /* Fixture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
