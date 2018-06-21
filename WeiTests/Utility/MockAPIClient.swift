@@ -14,7 +14,7 @@ final class MockAPIClient: APIClientProtocol {
     
     enum MockRequest: String, Fixture {
         // RawValueの値は送るリクエストと同一である必要があるので注意
-        case sample
+        case GetAppStatus
         
         var resourceName: String {
             return rawValue
