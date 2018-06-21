@@ -15,6 +15,7 @@ final class SelectAmountViewController: UIViewController {
     var viewModel: SelectAmountViewModel!
 
     @IBOutlet private weak var amountTextField: UITextField!
+    @IBOutlet private weak var currencyCodeLabel: UILabel!
     @IBOutlet private weak var etherAmountLabel: UILabel!
     @IBOutlet private weak var confirmButton: UIButton!
     
@@ -86,8 +87,10 @@ final class SelectAmountViewController: UIViewController {
             .drive(onNext: { [weak self] currency in
                 switch currency {
                 case .jpy:
+                    self?.currencyCodeLabel.text = "日本円 (￥)"
                     self?.amountTextField.keyboardType = .numberPad
                 case .usd:
+                    self?.currencyCodeLabel.text = "USD ($)"
                     self?.amountTextField.keyboardType = .decimalPad
                 }
             })
