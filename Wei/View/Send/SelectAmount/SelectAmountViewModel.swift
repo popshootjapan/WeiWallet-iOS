@@ -75,8 +75,8 @@ final class SelectAmountViewModel: InjectableViewModel {
             
             switch currency {
             case .jpy:
-                // stripe the decimal amount from tx fee.
-                // only use number before the decimal poin.
+                // strip the decimal amount from tx fee.
+                // only use number before the decimal point.
                 // for example 2 for 1.2345
                 return Driver.just(Fiat.jpy(Int64(ceil(doubleValue))))
             
