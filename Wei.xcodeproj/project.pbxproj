@@ -124,6 +124,9 @@
 		AED6F491205525DC004A280F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6F490205525DC004A280F /* RootViewController.swift */; };
 		AED6F497205527EF004A280F /* Container+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6F496205527EF004A280F /* Container+Extension.swift */; };
 		AED6F4992055283E004A280F /* ViewControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6F4982055283E004A280F /* ViewControllerAssembly.swift */; };
+		AEE6C05220DCA6080003581D /* MockApplicationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE6C05120DCA6080003581D /* MockApplicationStore.swift */; };
+		AEE6C05420DCA7020003581D /* MockApplicationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE6C05320DCA7020003581D /* MockApplicationStoreTests.swift */; };
+		AEE6C05620DCBFD40003581D /* CurrencyManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE6C05520DCBFD40003581D /* CurrencyManagerTests.swift */; };
 		AEFA44FB20B318C100844D4A /* RestoreWalletViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEFA44FA20B318C100844D4A /* RestoreWalletViewController.storyboard */; };
 		AEFA44FD20B318D100844D4A /* RestoreWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFA44FC20B318D100844D4A /* RestoreWalletViewController.swift */; };
 		AEFA450020B31BE500844D4A /* RestoreWalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFA44FF20B31BE500844D4A /* RestoreWalletViewModel.swift */; };
@@ -319,6 +322,9 @@
 		AED6F490205525DC004A280F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		AED6F496205527EF004A280F /* Container+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+Extension.swift"; sourceTree = "<group>"; };
 		AED6F4982055283E004A280F /* ViewControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAssembly.swift; sourceTree = "<group>"; };
+		AEE6C05120DCA6080003581D /* MockApplicationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApplicationStore.swift; sourceTree = "<group>"; };
+		AEE6C05320DCA7020003581D /* MockApplicationStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApplicationStoreTests.swift; sourceTree = "<group>"; };
+		AEE6C05520DCBFD40003581D /* CurrencyManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyManagerTests.swift; sourceTree = "<group>"; };
 		AEFA44FA20B318C100844D4A /* RestoreWalletViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RestoreWalletViewController.storyboard; sourceTree = "<group>"; };
 		AEFA44FC20B318D100844D4A /* RestoreWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreWalletViewController.swift; sourceTree = "<group>"; };
 		AEFA44FF20B31BE500844D4A /* RestoreWalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreWalletViewModel.swift; sourceTree = "<group>"; };
@@ -706,6 +712,7 @@
 				AE5EE9B820DB77BC007F9D72 /* Fixture */,
 				AE5EE9B620DB746B007F9D72 /* MockAPIClient.swift */,
 				AE5EE9BA20DB7FE1007F9D72 /* MockGethRepository.swift */,
+				AEE6C05120DCA6080003581D /* MockApplicationStore.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -766,8 +773,10 @@
 			children = (
 				AE3EB62720AF05D900D61CE6 /* KeychainStoreTests.swift */,
 				AEFE581520C7CBC200CE47F8 /* NonceManagerTests.swift */,
+				AEE6C05520DCBFD40003581D /* CurrencyManagerTests.swift */,
 				AE5EE9CA20DB9645007F9D72 /* MockAPIClientTests.swift */,
 				AE5EE9C620DB8A6A007F9D72 /* MockGethRepositoryTests.swift */,
+				AEE6C05320DCA7020003581D /* MockApplicationStoreTests.swift */,
 				AE5EE9B920DB77C8007F9D72 /* Utility */,
 				AED6F45B205514BB004A280F /* Info.plist */,
 			);
@@ -1323,12 +1332,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEE6C05620DCBFD40003581D /* CurrencyManagerTests.swift in Sources */,
+				AEE6C05220DCA6080003581D /* MockApplicationStore.swift in Sources */,
 				AE5EE9BB20DB7FE1007F9D72 /* MockGethRepository.swift in Sources */,
 				AE3EB62820AF05D900D61CE6 /* KeychainStoreTests.swift in Sources */,
 				AE5EE9B720DB746B007F9D72 /* MockAPIClient.swift in Sources */,
 				AE5EE9C720DB8A6A007F9D72 /* MockGethRepositoryTests.swift in Sources */,
 				AEFE581620C7CBC200CE47F8 /* NonceManagerTests.swift in Sources */,
 				AE5EE9CB20DB9645007F9D72 /* MockAPIClientTests.swift in Sources */,
+				AEE6C05420DCA7020003581D /* MockApplicationStoreTests.swift in Sources */,
 				AE5EE9B520DB7458007F9D72 /* Fixture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
