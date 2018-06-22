@@ -54,17 +54,24 @@ final class KeychainStoreTests: QuickSpec {
             }
         }
         
+        var storedSeed: String!
+        var storedMnemonic: String!
+        var storedAccessToken: String!
+        
         beforeEach {
+            storedSeed = seed
             seed = nil
+            storedMnemonic = mnemonic
             mnemonic = nil
+            storedAccessToken = accessToken
             accessToken = nil
             isAlreadyBackup = false
         }
         
         afterEach {
-            seed = nil
-            mnemonic = nil
-            accessToken = nil
+            seed = storedSeed
+            mnemonic = storedMnemonic
+            accessToken = storedAccessToken
             isAlreadyBackup = false
         }
         
