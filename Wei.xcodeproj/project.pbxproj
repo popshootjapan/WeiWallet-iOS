@@ -129,6 +129,7 @@
 		AEE6C05220DCA6080003581D /* MockApplicationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE6C05120DCA6080003581D /* MockApplicationStore.swift */; };
 		AEE6C05420DCA7020003581D /* MockApplicationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE6C05320DCA7020003581D /* MockApplicationStoreTests.swift */; };
 		AEE6C05620DCBFD40003581D /* CurrencyManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE6C05520DCBFD40003581D /* CurrencyManagerTests.swift */; };
+		AEE6C05820DCC7550003581D /* SelectAddressByQRViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE6C05720DCC7550003581D /* SelectAddressByQRViewModelTests.swift */; };
 		AEFA44FB20B318C100844D4A /* RestoreWalletViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEFA44FA20B318C100844D4A /* RestoreWalletViewController.storyboard */; };
 		AEFA44FD20B318D100844D4A /* RestoreWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFA44FC20B318D100844D4A /* RestoreWalletViewController.swift */; };
 		AEFA450020B31BE500844D4A /* RestoreWalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFA44FF20B31BE500844D4A /* RestoreWalletViewModel.swift */; };
@@ -329,6 +330,7 @@
 		AEE6C05120DCA6080003581D /* MockApplicationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApplicationStore.swift; sourceTree = "<group>"; };
 		AEE6C05320DCA7020003581D /* MockApplicationStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApplicationStoreTests.swift; sourceTree = "<group>"; };
 		AEE6C05520DCBFD40003581D /* CurrencyManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyManagerTests.swift; sourceTree = "<group>"; };
+		AEE6C05720DCC7550003581D /* SelectAddressByQRViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressByQRViewModelTests.swift; sourceTree = "<group>"; };
 		AEFA44FA20B318C100844D4A /* RestoreWalletViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RestoreWalletViewController.storyboard; sourceTree = "<group>"; };
 		AEFA44FC20B318D100844D4A /* RestoreWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreWalletViewController.swift; sourceTree = "<group>"; };
 		AEFA44FF20B31BE500844D4A /* RestoreWalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreWalletViewModel.swift; sourceTree = "<group>"; };
@@ -783,6 +785,7 @@
 				AE5EE9CA20DB9645007F9D72 /* MockAPIClientTests.swift */,
 				AE5EE9C620DB8A6A007F9D72 /* MockGethRepositoryTests.swift */,
 				AEE6C05320DCA7020003581D /* MockApplicationStoreTests.swift */,
+				AEE6C05720DCC7550003581D /* SelectAddressByQRViewModelTests.swift */,
 				AE5EE9B920DB77C8007F9D72 /* Utility */,
 				AED6F45B205514BB004A280F /* Info.plist */,
 			);
@@ -1349,6 +1352,7 @@
 				AEFE581620C7CBC200CE47F8 /* NonceManagerTests.swift in Sources */,
 				AE5EE9CB20DB9645007F9D72 /* MockAPIClientTests.swift in Sources */,
 				AEE6C05420DCA7020003581D /* MockApplicationStoreTests.swift in Sources */,
+				AEE6C05820DCC7550003581D /* SelectAddressByQRViewModelTests.swift in Sources */,
 				AE5EE9B520DB7458007F9D72 /* Fixture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
