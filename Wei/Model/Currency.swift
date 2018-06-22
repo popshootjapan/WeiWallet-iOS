@@ -6,6 +6,8 @@
 //  Copyright © 2018 popshoot All rights reserved.
 //
 
+import Foundation
+
 enum Currency: String {
     case jpy = "JPY"
     case usd = "USD"
@@ -19,7 +21,7 @@ enum Currency: String {
         }
     }
     
-    var showBackupPopupAmount: Double {
+    var showBackupPopupAmount: Decimal {
         switch self {
         case .jpy:
             return 3000

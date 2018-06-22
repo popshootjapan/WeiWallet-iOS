@@ -36,7 +36,7 @@ final class MyWalletViewModel: InjectableViewModel {
     
     struct Output {
         let etherBalance: Driver<Balance>
-        let fiatBalance: Driver<Double>
+        let fiatBalance: Driver<Fiat>
         let error: Driver<Error>
         let currency: Driver<Currency>
         let presentSendViewController: Driver<Void>
@@ -53,12 +53,11 @@ final class MyWalletViewModel: InjectableViewModel {
         
         let getFiatBalanceAction = Action.makeDriver(balanceStore.fiatBalance)
         let fiatBalance = getFiatBalanceAction.elements
-            .map { Double($0) ?? 0 }
         
         let suggestBackup = input.viewWillAppear
             .filter { !applicationStore.isAlreadyBackup }
             .flatMap { fiatBalance.asObservable().take(1).asDriver(onErrorDriveWith: .empty()) }
-            .withLatestFrom(currency) { $0 >= $1.showBackupPopupAmount }
+            .withLatestFrom(currency) { $0.value >= $1.showBackupPopupAmount }
             .filter { $0 }
             .map { _ in }
         

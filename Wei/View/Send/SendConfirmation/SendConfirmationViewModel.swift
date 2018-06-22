@@ -18,6 +18,7 @@ final class SendConfirmationViewModel: InjectableViewModel {
         WalletManagerProtocol,
         UpdaterProtocol,
         LocalTransactionRepositoryProtocol,
+        CurrencyManagerProtocol,
         TransactionContext
     )
     
@@ -25,10 +26,11 @@ final class SendConfirmationViewModel: InjectableViewModel {
     private let walletManager: WalletManagerProtocol
     private let updater: UpdaterProtocol
     private let localTransactionRepository: LocalTransactionRepositoryProtocol
+    private let currencyManager: CurrencyManagerProtocol
     private let transactionContext: TransactionContext
     
     init(dependency: Dependency) {
-        (gethRepository, walletManager, updater, localTransactionRepository, transactionContext) = dependency
+        (gethRepository, walletManager, updater, localTransactionRepository, currencyManager, transactionContext) = dependency
     }
     
     struct Input {
@@ -38,11 +40,12 @@ final class SendConfirmationViewModel: InjectableViewModel {
     }
     
     struct Output {
-        let popToRootViewController: Driver<Void>
-        let transactionContext: TransactionContext
+        let transactionContext: Driver<TransactionContext>
+        let currency: Driver<Currency>
         let sentTransaction: Driver<SentTransaction>
         let isFetching: Driver<Bool>
         let error: Driver<Error>
+        let popToRootViewController: Driver<Void>
     }
     
     func build(input: Input) -> Output {
@@ -110,11 +113,12 @@ final class SendConfirmationViewModel: InjectableViewModel {
         )
 
         return Output(
-            popToRootViewController: input.reselectAddressButtonDidTap,
-            transactionContext: transactionContext,
+            transactionContext: Driver.just(transactionContext),
+            currency: currencyManager.currency.asDriver(onErrorDriveWith: .empty()),
             sentTransaction: sentTransaction,
             isFetching: isFetching,
-            error: error
+            error: error,
+            popToRootViewController: input.reselectAddressButtonDidTap
         )
     }
 }

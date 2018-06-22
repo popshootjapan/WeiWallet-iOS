@@ -48,8 +48,8 @@ final class SelectAddressByQRViewController: UIViewController {
         
         output
             .pushSelectAmountViewController
-            .drive(onNext: { [weak self] transactionContext in
-                self?.pushSelectAmountViewController(with: transactionContext)
+            .drive(onNext: { [weak self] address in
+                self?.pushSelectAmountViewController(with: address)
             })
             .disposed(by: disposeBag)
         
@@ -101,8 +101,8 @@ final class SelectAddressByQRViewController: UIViewController {
         navigationController?.pushViewController(viewController, animated: true)
     }
     
-    private func pushSelectAmountViewController(with transactionContext: TransactionContext) {
-        let selectAmountViewController = SelectAmountViewController.make(transactionContext)
+    private func pushSelectAmountViewController(with address: String) {
+        let selectAmountViewController = SelectAmountViewController.make(address: address)
         navigationController?.pushViewController(selectAmountViewController, animated: true)
     }
 }

@@ -9,6 +9,12 @@
 import Foundation
 
 extension Decimal {
+    func toInt64() -> Int64 {
+        return NSDecimalNumber(decimal: self).int64Value
+    }
+}
+
+extension Decimal {
     func round(scale: Int = 0) -> Decimal {
         var original: Decimal = self
         var rounded: Decimal = 0

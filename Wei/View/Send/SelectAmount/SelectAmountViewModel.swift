@@ -13,18 +13,20 @@ import RxCocoa
 
 final class SelectAmountViewModel: InjectableViewModel {
     
+    var toAddress: String!
+    
     typealias Dependency = (
         BalanceStoreProtocol,
         RateRepositoryProtocol,
-        TransactionContext
+        CurrencyManagerProtocol
     )
     
     private let balanceStore: BalanceStoreProtocol
     private let rateRepository: RateRepositoryProtocol
-    private let transactionContext: TransactionContext
+    private let currencyManager: CurrencyManagerProtocol
 
     init(dependency: Dependency) {
-        (balanceStore, rateRepository, transactionContext) = dependency
+        (balanceStore, rateRepository, currencyManager) = dependency
     }
     
     struct Input {
@@ -35,72 +37,124 @@ final class SelectAmountViewModel: InjectableViewModel {
     
     struct Output {
         let showSendConfirmationViewController: Driver<TransactionContext>
-        let fiatBalance: Driver<Int64>
-        let availableFiatBalance: Driver<Int64>
-        let inputFiatAmount: Driver<Int64>
+        let currency: Driver<Currency>
+        let fiatBalance: Driver<Fiat>
+        let availableFiatBalance: Driver<Fiat>
+        let inputAmount: Driver<String>
         let etherAmount: Driver<Ether>
-        let txFee: Driver<Int64>
+        let txFee: Driver<Fiat>
         let error: Driver<Error>
     }
     
     func build(input: Input) -> Output {
-        let transactionContext = self.transactionContext
+        let address = self.toAddress!
+        let currency = currencyManager.currency.asDriver(onErrorDriveWith: .empty())
         
         // NOTE: Deal with fixed tx fee
         let txFee = Wei(Gas.safeLow.gasLimit * Gas.safeLow.gasPrice)
         
         // fiatTxFeeAction converts specified tx fee to fiat price.
-        let fiatTxFeeAction = input.viewWillAppear.flatMap { [weak self] _ -> Driver<Action<Price>> in
-            guard let weakSelf = self else {
-                return Driver.just(Action.succeeded(Price(price: "0", currency: nil)))
+        let fiatTxFeeAction = input.viewWillAppear
+            .withLatestFrom(currency)
+            .flatMap { [weak self] currency -> Driver<Action<(Price, Currency)>> in
+                guard let weakSelf = self else {
+                    return Driver.just(Action.succeeded((Price(price: "0", currency: nil), currency)))
+                }
+                
+                let source = weakSelf.rateRepository.convertToFiat(from: txFee.description, to: currency)
+                    .map { ($0, currency) }
+                
+                return Action.makeDriver(source)
             }
-            let source = weakSelf.rateRepository.convertToFiat(from: txFee.description).asObservable()
-            return Action.makeDriver(source)
-        }
         
-        // stripe the decimal amount from tx fee.
-        // only use number before the decimal poin.
-        // for example 2 for 1.2345
-        let fiatTxFee = fiatTxFeeAction.elements.flatMap { price -> Driver<Int64> in
+        // fiatTxFee returns current fiat value in Fiat structure.
+        let fiatTxFee = fiatTxFeeAction.elements.flatMap { price, currency -> Driver<Fiat> in
             guard let doubleValue = Double(price.price) else {
                 return .empty()
             }
-            return Driver.just(Int64(ceil(doubleValue)))
+            
+            switch currency {
+            case .jpy:
+                // strip the decimal amount from tx fee.
+                // only use number before the decimal point.
+                // for example 2 for 1.2345
+                return Driver.just(Fiat.jpy(Int64(ceil(doubleValue))))
+            
+            case .usd:
+                return Driver.just(Fiat.usd(Decimal(doubleValue)))
+            }
         }
         
         // User's total fiat balance
-        let fiatBalance = balanceStore.fiatBalance.asDriver(onErrorDriveWith: .empty()).flatMap { balanceString -> Driver<Int64> in
-            return Driver.just(Int64(balanceString) ?? 0)
-        }
+        let fiatBalance = balanceStore.fiatBalance.asDriver(onErrorDriveWith: .empty())
         
         // User's usable fiat balance (totalBalance - txFee)
-        let availableBalance = Driver.combineLatest(fiatBalance, fiatTxFee) { balance, txFee -> Int64 in
-            let availableBalance = balance - txFee
+        let availableBalance = Driver.combineLatest(fiatBalance, fiatTxFee) { balance, txFee -> Fiat in
+            let availableBalance = balance.value - txFee.value
             // do not return negative value here.
-            return availableBalance > 0 ? availableBalance : 0
+            assert(availableBalance >= 0)
+            switch balance {
+            case .jpy:
+                return Fiat.jpy(availableBalance.toInt64())
+            case .usd:
+                return Fiat.usd(availableBalance)
+            }
         }
+        
+        // inputAmount will be used to manage input text field text. it will prevents the text field from having
+        // invalid string value(which cannot be converted to Decimal).
+        let inputAmount = Driver
+            .combineLatest(input.amountTextFieldDidInput, availableBalance)
+            .map { inputAmount, availableBalance -> String in
+                
+                // If input text has more than one ".", then return the string with last letter dropped.
+                // eg, 12.9. -> 12.9
+                guard inputAmount.filter({ $0 == "." }).count <= 1 else {
+                    return String(inputAmount.dropLast())
+                }
+                
+                // If input text has more than 2 decimal points, return the string with last letter dropped
+                // eg, 1.324 -> 1.32
+                guard let subString = inputAmount.split(separator: ".").last, String(subString).count <= 2 else {
+                    return String(inputAmount.dropLast())
+                }
+                
+                // If input cannot be converted to Decimal type, then return the string with last letter dropped
+                // eg, 1.32a -> 1.32
+                guard let amount = Decimal(string: inputAmount) else {
+                    return String(inputAmount.dropLast())
+                }
+                
+                return amount <= availableBalance.value ?
+                    inputAmount : availableBalance.value.description
+            }
         
         // fiatAmount represents an amount user gives as an input in text field.
         // if user's input is larger than user's fiat balance, it returns user's total balance.
         let inputFiatAmount = Driver
-            .combineLatest(input.amountTextFieldDidInput, availableBalance)
-            .map { inputAmount, balance -> Int64 in
-                guard let amount = Int64(inputAmount) else {
-                    return 0
+            .combineLatest(inputAmount, currency)
+            .map { amountText, currency -> Fiat in
+                let amount = Decimal(string: amountText) ?? 0
+                switch currency {
+                case .jpy:
+                    return Fiat.jpy(amount.toInt64())
+                case .usd:
+                    return Fiat.usd(amount)
                 }
-                return amount <= balance ? amount : balance
             }
         
         // in convertToEtherAction fiatAmount is converted to ether unit
         // if fiatAmount is empty, or 0, it will return the price of 0.
-        let convertToEtherAction = inputFiatAmount.flatMapLatest { [weak self] fiatAmount -> Driver<Action<Price>> in
-            guard let weakSelf = self, fiatAmount > 0 else {
-                // NOTE: Returns price of 0 if the fiatAmount is empty and/or fiatAmount is 0
-                return Driver.just(Action.succeeded(Price(price: "0", currency: nil)))
-            }
-            
-            let source = weakSelf.rateRepository.convertToEther(from: String(fiatAmount))
-            return Action.makeDriver(source)
+        let convertToEtherAction = inputFiatAmount
+            .withLatestFrom(currency) { ($0, $1) }
+            .flatMapLatest { [weak self] fiatAmount, currency -> Driver<Action<Price>> in
+                guard let weakSelf = self, fiatAmount.value > 0 else {
+                    // NOTE: Returns price of 0 if the fiatAmount is empty and/or fiatAmount is 0
+                    return Driver.just(Action.succeeded(Price(price: "0", currency: nil)))
+                }
+                
+                let source = weakSelf.rateRepository.convertToEther(from: fiatAmount.value.description, to: currency)
+                return Action.makeDriver(source)
         }
         
         let etherAmount = convertToEtherAction.elements
@@ -111,16 +165,12 @@ final class SelectAmountViewModel: InjectableViewModel {
                 return Driver.just(ether)
             }
         
+        let transactionContext = Driver.combineLatest(etherAmount, inputFiatAmount, fiatTxFee) {
+            return TransactionContext(address: address, etherAmount: Amount.ether($0), fiatAmount: Amount.fiat($1), fiatFee: Amount.fiat($2))
+        }
+        
         let showSendConfirmationWithTransactionContext = input.confirmButtonDidTap
-            .withLatestFrom(Driver.combineLatest(inputFiatAmount, etherAmount, fiatTxFee))
-            .flatMap { fiatAmount, etherAmount, fee -> Driver<TransactionContext> in
-                return Driver.just(TransactionContext(
-                    address: transactionContext.address,
-                    etherAmount: .ether(etherAmount),
-                    fiatAmount: .fiat(fiatAmount),
-                    fiatFee: .fiat(fee)
-                ))
-            }
+            .withLatestFrom(transactionContext)
         
         let errors = Driver.merge(
             convertToEtherAction.error,
@@ -129,9 +179,10 @@ final class SelectAmountViewModel: InjectableViewModel {
         
         return Output(
             showSendConfirmationViewController: showSendConfirmationWithTransactionContext,
+            currency: currency,
             fiatBalance: fiatBalance,
             availableFiatBalance: availableBalance,
-            inputFiatAmount: inputFiatAmount,
+            inputAmount: inputAmount,
             etherAmount: etherAmount,
             txFee: fiatTxFee,
             error: errors

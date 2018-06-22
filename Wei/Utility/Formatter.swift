@@ -25,8 +25,8 @@ struct Formatter {
         return decimalFormatter.string(from: number)
     }
     
-    static func priceString(from price: Double, currency: Currency) -> String? {
+    static func priceString(from price: NSNumber, currency: Currency) -> String? {
         priceFormatter.currencyCode = currency.rawValue
-        return priceFormatter.string(from: NSNumber(value: price))
+        return priceFormatter.string(from: price)
     }
 }

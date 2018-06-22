@@ -43,10 +43,23 @@ private extension SendConfirmationViewController {
         
         let output = viewModel.build(input: input)
         
-        addressLabel.text = output.transactionContext.address
-        fiatAmountLabel.text = String(output.transactionContext.fiatAmount.fiat())
-        etherAmountLabel.text = output.transactionContext.etherAmount.ether().string
-        fiatFeeLabel.text = String(output.transactionContext.fiatFee.fiat())
+        Driver
+            .combineLatest(output.transactionContext, output.currency)
+            .drive(onNext: { [weak self] transactionContext, currency in
+                self?.addressLabel.text = transactionContext.address
+                self?.etherAmountLabel.text = transactionContext.etherAmount.ether().string
+                
+                self?.fiatAmountLabel.text = Formatter.priceString(
+                    from: transactionContext.fiatAmount.fiat() as NSDecimalNumber,
+                    currency: currency
+                )
+                
+                self?.fiatFeeLabel.text = Formatter.priceString(
+                    from: transactionContext.fiatFee.fiat() as NSDecimalNumber,
+                    currency: currency
+                )
+            })
+            .disposed(by: disposeBag)
         
         output
             .sentTransaction

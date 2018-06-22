@@ -101,9 +101,9 @@ final class ViewControllerAssembly: Assembly {
         
         // MARK: - SelectAmountViewController
         
-        container.register(SelectAmountViewController.self) { (resolver, context: TransactionContext) in
+        container.register(SelectAmountViewController.self) { (resolver, address: String) in
             let viewController = UIStoryboard.instantiateViewController(of: SelectAmountViewController.self)
-            viewController.viewModel = resolver.resolve(SelectAmountViewModel.self, argument: context)!
+            viewController.viewModel = resolver.resolve(SelectAmountViewModel.self, argument: address)!
             return viewController
         }
         

@@ -55,12 +55,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUU-tl-k35">
-                                <rect key="frame" x="170" y="246" width="32" height="16"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zwG-CD-wOg">
                                 <rect key="frame" x="16" y="115" width="288" height="60"/>
                                 <subviews>
@@ -92,8 +86,8 @@
                                 <color key="textColor" red="0.1764705882352941" green="0.18823529411764706" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vg-Fw-a7s">
-                                <rect key="frame" x="145" y="191" width="30" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="送金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vg-Fw-a7s">
+                                <rect key="frame" x="137.5" y="191" width="45" height="15"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
                                 <color key="textColor" red="0.1764705882" green="0.18823529410000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -128,16 +122,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ko4-j8-D6B">
-                                <rect key="frame" x="146" y="337" width="29" height="18"/>
+                                <rect key="frame" x="156" y="337" width="9.5" height="18"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pyp-BL-9rK">
                                         <rect key="frame" x="0.0" y="0.0" width="9.5" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.63137254899999995" green="0.66274509800000003" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1k1-pN-zV5">
-                                        <rect key="frame" x="9.5" y="0.0" width="19.5" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.63137254899999995" green="0.66274509800000003" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -148,8 +136,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="K5i-3K-OWR" firstAttribute="centerX" secondItem="XAz-kW-HeF" secondAttribute="centerX" id="2h9-O5-Yd2"/>
-                            <constraint firstItem="CUU-tl-k35" firstAttribute="leading" secondItem="A4G-ca-63W" secondAttribute="trailing" constant="5.5" id="4Io-Vx-ckq"/>
-                            <constraint firstItem="CUU-tl-k35" firstAttribute="baseline" secondItem="A4G-ca-63W" secondAttribute="baseline" id="5Mt-ai-fLc"/>
                             <constraint firstItem="zwG-CD-wOg" firstAttribute="top" secondItem="CVP-hL-XMW" secondAttribute="bottom" constant="12" id="6hy-Gv-xbi"/>
                             <constraint firstItem="Ko4-j8-D6B" firstAttribute="centerX" secondItem="XAz-kW-HeF" secondAttribute="centerX" id="7MT-CC-dBY"/>
                             <constraint firstItem="CVP-hL-XMW" firstAttribute="centerX" secondItem="XAz-kW-HeF" secondAttribute="centerX" id="8gh-II-cRy"/>

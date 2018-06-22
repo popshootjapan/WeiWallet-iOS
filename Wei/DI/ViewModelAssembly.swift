@@ -95,12 +95,15 @@ final class ViewModelAssembly: Assembly {
         
         // MARK: - SelectAmountViewModel
         
-        container.register(SelectAmountViewModel.self) { (resolver, context: TransactionContext) in
-            return SelectAmountViewModel(dependency: (
+        container.register(SelectAmountViewModel.self) { (resolver, address: String) in
+            let viewModel = SelectAmountViewModel(dependency: (
                 resolver.resolve(BalanceStoreProtocol.self)!,
                 resolver.resolve(RateRepositoryProtocol.self)!,
-                context
+                resolver.resolve(CurrencyManagerProtocol.self)!
             ))
+            
+            viewModel.toAddress = address
+            return viewModel
         }
         
         // MARK: - SendConfirmationViewModel
@@ -111,6 +114,7 @@ final class ViewModelAssembly: Assembly {
                 resolver.resolve(WalletManagerProtocol.self)!,
                 resolver.resolve(UpdaterProtocol.self)!,
                 resolver.resolve(LocalTransactionRepositoryProtocol.self)!,
+                resolver.resolve(CurrencyManagerProtocol.self)!,
                 context
             ))
         }

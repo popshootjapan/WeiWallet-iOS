@@ -15,6 +15,7 @@ final class SelectAmountViewController: UIViewController {
     var viewModel: SelectAmountViewModel!
 
     @IBOutlet private weak var amountTextField: UITextField!
+    @IBOutlet private weak var currencyCodeLabel: UILabel!
     @IBOutlet private weak var etherAmountLabel: UILabel!
     @IBOutlet private weak var confirmButton: UIButton!
     
@@ -44,30 +45,29 @@ final class SelectAmountViewController: UIViewController {
         
         let output = viewModel.build(input: input)
         
-        output
-            .showSendConfirmationViewController
-            .drive(onNext: { [weak self] tansactionContext in
-                self?.pushSendConfirmationViewController(with: tansactionContext)
+        Driver
+            .combineLatest(output.fiatBalance, output.currency)
+            .drive(onNext: { [weak self] balance, currency in
+                self?.balanceAccessoryView.apply(input: .balance(balance, currency))
+            })
+            .disposed(by: disposeBag)
+        
+        Driver
+            .combineLatest(output.availableFiatBalance, output.currency)
+            .drive(onNext: { [weak self] balance, currency in
+                self?.balanceAccessoryView.apply(input: .availableBalance(balance, currency))
+            })
+            .disposed(by: disposeBag)
+        
+        Driver
+            .combineLatest(output.txFee, output.currency)
+            .drive(onNext: { [weak self] txFee, currency in
+                self?.balanceAccessoryView.apply(input: .txFee(txFee, currency))
             })
             .disposed(by: disposeBag)
         
         output
-            .fiatBalance
-            .drive(onNext: { [weak self] balance in
-                self?.balanceAccessoryView.apply(input: .balance(balance))
-            })
-            .disposed(by: disposeBag)
-        
-        output
-            .availableFiatBalance
-            .drive(onNext: { [weak self] balance in
-                self?.balanceAccessoryView.apply(input: .availableBalance(balance))
-            })
-            .disposed(by: disposeBag)
-        
-        output
-            .inputFiatAmount
-            .map(String.init)
+            .inputAmount
             .drive(amountTextField.rx.text)
             .disposed(by: disposeBag)
         
@@ -78,15 +78,29 @@ final class SelectAmountViewController: UIViewController {
             .disposed(by: disposeBag)
         
         output
-            .txFee
-            .drive(onNext: { [weak self] txFee in
-                self?.balanceAccessoryView.apply(input: .txFee(txFee))
+            .error
+            .drive(rx.showError)
+            .disposed(by: disposeBag)
+        
+        output
+            .currency
+            .drive(onNext: { [weak self] currency in
+                switch currency {
+                case .jpy:
+                    self?.currencyCodeLabel.text = "日本円 (￥)"
+                    self?.amountTextField.keyboardType = .numberPad
+                case .usd:
+                    self?.currencyCodeLabel.text = "USD ($)"
+                    self?.amountTextField.keyboardType = .decimalPad
+                }
             })
             .disposed(by: disposeBag)
         
         output
-            .error
-            .drive(rx.showError)
+            .showSendConfirmationViewController
+            .drive(onNext: { [weak self] tansactionContext in
+                self?.pushSendConfirmationViewController(with: tansactionContext)
+            })
             .disposed(by: disposeBag)
     }
     

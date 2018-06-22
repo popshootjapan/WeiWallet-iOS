@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6pO-Tc-Kci">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6pO-Tc-Kci">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,23 +18,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="right" minimumFontSize="48" translatesAutoresizingMaskIntoConstraints="NO" id="cM4-TR-2dR">
-                                <rect key="frame" x="87" y="144" width="200" height="60"/>
+                                <rect key="frame" x="104.5" y="144" width="228.5" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="kEV-7s-fwS"/>
                                     <constraint firstAttribute="height" constant="60" id="yu5-23-ADC"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日本円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12O-9v-IOm">
-                                <rect key="frame" x="29" y="166.5" width="45" height="15"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3x-5q-Niu">
-                                <rect key="frame" x="303" y="166.5" width="30" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD ($)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12O-9v-IOm">
+                                <rect key="frame" x="29" y="166.5" width="63.5" height="15"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -68,10 +60,9 @@
                         <constraints>
                             <constraint firstItem="cM4-TR-2dR" firstAttribute="top" secondItem="NNg-F6-NT0" secondAttribute="top" constant="80" id="24C-gH-E0O"/>
                             <constraint firstItem="12O-9v-IOm" firstAttribute="leading" secondItem="NNg-F6-NT0" secondAttribute="leading" constant="29" id="7Nt-Tu-cRb"/>
-                            <constraint firstItem="W3x-5q-Niu" firstAttribute="centerY" secondItem="cM4-TR-2dR" secondAttribute="centerY" id="7O3-53-X1f"/>
+                            <constraint firstItem="cM4-TR-2dR" firstAttribute="leading" secondItem="12O-9v-IOm" secondAttribute="trailing" constant="12" id="ATu-Ro-rbA"/>
                             <constraint firstItem="XwG-H5-NyR" firstAttribute="top" secondItem="cM4-TR-2dR" secondAttribute="bottom" constant="8" id="JN1-wX-YR0"/>
-                            <constraint firstItem="NNg-F6-NT0" firstAttribute="trailing" secondItem="W3x-5q-Niu" secondAttribute="trailing" constant="42" id="TZQ-pF-ouE"/>
-                            <constraint firstItem="W3x-5q-Niu" firstAttribute="leading" secondItem="cM4-TR-2dR" secondAttribute="trailing" constant="16" id="VLS-Mi-uYe"/>
+                            <constraint firstItem="NNg-F6-NT0" firstAttribute="trailing" secondItem="cM4-TR-2dR" secondAttribute="trailing" constant="42" id="bMx-oO-7qW"/>
                             <constraint firstItem="12O-9v-IOm" firstAttribute="centerY" secondItem="cM4-TR-2dR" secondAttribute="centerY" id="ok3-io-8qg"/>
                             <constraint firstItem="XwG-H5-NyR" firstAttribute="centerX" secondItem="Uuc-N6-zEr" secondAttribute="centerX" id="s4n-7y-c4M"/>
                         </constraints>
@@ -93,6 +84,7 @@
                     <connections>
                         <outlet property="amountTextField" destination="cM4-TR-2dR" id="v3D-VD-Sth"/>
                         <outlet property="confirmButton" destination="q7b-JQ-5w1" id="AQS-R3-3NZ"/>
+                        <outlet property="currencyCodeLabel" destination="12O-9v-IOm" id="LTB-0S-ZtV"/>
                         <outlet property="etherAmountLabel" destination="DQe-Rm-xA8" id="YGM-QF-2mg"/>
                     </connections>
                 </viewController>

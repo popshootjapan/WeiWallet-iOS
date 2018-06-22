@@ -10,8 +10,8 @@ import RxSwift
 import RxCocoa
 
 protocol RateRepositoryProtocol {
-    func convertToFiat(from wei: String) -> Single<Price>
-    func convertToEther(from fiatAmount: String) -> Single<Price>
+    func convertToFiat(from wei: String, to currency: Currency) -> Single<Price>
+    func convertToEther(from fiatAmount: String, to currency: Currency) -> Single<Price>
     func getCurrentRate(currency: Currency) -> Single<Price>
 }
 
@@ -27,13 +27,13 @@ final class RateRepository: Injectable, RateRepositoryProtocol {
         apiClient = dependency
     }
     
-    func convertToFiat(from wei: String) -> Single<Price> {
-        let request = RateService.ConvertToFiat(currency: .jpy, wei: wei)
+    func convertToFiat(from wei: String, to currency: Currency) -> Single<Price> {
+        let request = RateService.ConvertToFiat(currency: currency, wei: wei)
         return apiClient.response(from: request)
     }
     
-    func convertToEther(from fiatAmount: String) -> Single<Price> {
-        let request = RateService.ConvertToEther(currency: .jpy, fiatAmount: fiatAmount)
+    func convertToEther(from fiatAmount: String, to currency: Currency) -> Single<Price> {
+        let request = RateService.ConvertToEther(currency: currency, fiatAmount: fiatAmount)
         return apiClient.response(from: request)
     }
     

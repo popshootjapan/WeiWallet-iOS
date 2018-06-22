@@ -44,7 +44,7 @@ final class MyWalletViewController: UIViewController {
         Driver
             .combineLatest(output.fiatBalance, output.currency)
             .drive(onNext: { [weak self] balance, currency in
-                self?.fiatBalanceLabel.text = Formatter.priceString(from: balance, currency: currency)
+                self?.fiatBalanceLabel.text = Formatter.priceString(from: balance.value as NSDecimalNumber, currency: currency)
             })
             .disposed(by: disposeBag)
         

@@ -10,14 +10,14 @@ import EthereumKit
 
 enum Amount {
     case ether(Ether)
-    case fiat(Int64)
+    case fiat(Fiat)
     
     func valid() -> Bool {
         switch self {
         case .ether(let value):
             return value > 0
-        case .fiat(let value):
-            return value > 0
+        case .fiat(let fiat):
+            return fiat.value > 0
         }
     }
     
@@ -30,12 +30,12 @@ enum Amount {
         }
     }
     
-    func fiat() -> Int64 {
+    func fiat() -> Decimal {
         switch self {
         case .ether(_):
             fatalError("needs acquired from amountInFiat")
-        case .fiat(let value):
-            return value
+        case .fiat(let fiat):
+            return fiat.value
         }
     }
 }
