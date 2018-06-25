@@ -110,6 +110,8 @@
 		AE61468D2088F98400A9E77A /* ModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE61468C2088F98400A9E77A /* ModalPresentationController.swift */; };
 		AE61468F2088FA3E00A9E77A /* DialogPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE61468E2088FA3E00A9E77A /* DialogPresentationController.swift */; };
 		AE69C84920E0B68300EB1293 /* MockUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69C84820E0B68300EB1293 /* MockUpdater.swift */; };
+		AE69C84B20E0BD8C00EB1293 /* SelectAmountViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69C84A20E0BD8C00EB1293 /* SelectAmountViewModelTests.swift */; };
+		AE69C84D20E0BE9500EB1293 /* RateStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69C84C20E0BE9500EB1293 /* RateStoreTests.swift */; };
 		AE8C9FC6209EF85F00C616E1 /* DebugListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */; };
 		AE8C9FC8209EF87300C616E1 /* DebugListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */; };
 		AE979E8020D7B6F5009B353F /* Decimal+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */; };
@@ -311,6 +313,8 @@
 		AE61468C2088F98400A9E77A /* ModalPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalPresentationController.swift; sourceTree = "<group>"; };
 		AE61468E2088FA3E00A9E77A /* DialogPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogPresentationController.swift; sourceTree = "<group>"; };
 		AE69C84820E0B68300EB1293 /* MockUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUpdater.swift; sourceTree = "<group>"; };
+		AE69C84A20E0BD8C00EB1293 /* SelectAmountViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAmountViewModelTests.swift; sourceTree = "<group>"; };
+		AE69C84C20E0BE9500EB1293 /* RateStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateStoreTests.swift; sourceTree = "<group>"; };
 		AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugListViewController.swift; sourceTree = "<group>"; };
 		AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DebugListViewController.storyboard; sourceTree = "<group>"; };
 		AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extension.swift"; sourceTree = "<group>"; };
@@ -753,6 +757,7 @@
 				AE3EB62720AF05D900D61CE6 /* KeychainStoreTests.swift */,
 				AEFE581520C7CBC200CE47F8 /* NonceManagerTests.swift */,
 				AEE6C05520DCBFD40003581D /* CurrencyManagerTests.swift */,
+				AE69C84C20E0BE9500EB1293 /* RateStoreTests.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -859,6 +864,7 @@
 			children = (
 				AEE6C05720DCC7550003581D /* SelectAddressByQRViewModelTests.swift */,
 				AEE6C05A20DCCC060003581D /* SelectAddressByPasteViewModelTests.swift */,
+				AE69C84A20E0BD8C00EB1293 /* SelectAmountViewModelTests.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1390,7 +1396,9 @@
 				AE5EE9C720DB8A6A007F9D72 /* MockGethRepositoryTests.swift in Sources */,
 				AEFE581620C7CBC200CE47F8 /* NonceManagerTests.swift in Sources */,
 				AE5EE9CB20DB9645007F9D72 /* MockAPIClientTests.swift in Sources */,
+				AE69C84D20E0BE9500EB1293 /* RateStoreTests.swift in Sources */,
 				AEE6C05B20DCCC060003581D /* SelectAddressByPasteViewModelTests.swift in Sources */,
+				AE69C84B20E0BD8C00EB1293 /* SelectAmountViewModelTests.swift in Sources */,
 				AEE6C05420DCA7020003581D /* MockApplicationStoreTests.swift in Sources */,
 				AEE6C05820DCC7550003581D /* SelectAddressByQRViewModelTests.swift in Sources */,
 				AE5EE9B520DB7458007F9D72 /* Fixture.swift in Sources */,
