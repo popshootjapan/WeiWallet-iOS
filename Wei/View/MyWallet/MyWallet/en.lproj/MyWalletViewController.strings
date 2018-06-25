@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "イーサリアム"; ObjectID = "3LR-Vn-2Os"; */
+"3LR-Vn-2Os.text" = "Ethereum";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "Iwt-dl-246"; */
+"Iwt-dl-246.text" = "-";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "Kxf-E0-Vfh"; */
+"Kxf-E0-Vfh.text" = "-";
+
+/* Class = "UILabel"; text = "日本円"; ObjectID = "NJR-Cw-yUx"; */
+"NJR-Cw-yUx.text" = "USD";
+
+/* Class = "UILabel"; text = "直近のやりとり"; ObjectID = "S07-RD-wPz"; */
+"S07-RD-wPz.text" = "Latest Transaction";
+
+/* Class = "UILabel"; text = "残高"; ObjectID = "TvR-in-SFD"; */
+"TvR-in-SFD.text" = "Your ETH";
+
+/* Class = "UIButton"; normalTitle = "送る"; ObjectID = "VBG-2y-KkV"; */
+"VBG-2y-KkV.normalTitle" = "Send";
+
+/* Class = "UIButton"; normalTitle = "履歴を見る"; ObjectID = "Ygz-iB-tEG"; */
+"Ygz-iB-tEG.normalTitle" = "See more";
+
+/* Class = "UILabel"; text = "ETH"; ObjectID = "sNE-hM-bnl"; */
+"sNE-hM-bnl.text" = "ETH";
