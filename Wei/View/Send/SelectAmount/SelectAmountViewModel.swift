@@ -121,12 +121,14 @@ final class SelectAmountViewModel: InjectableViewModel {
                 
                 // If input cannot be converted to Decimal type, then return the string with last letter dropped
                 // eg, 1.32a -> 1.32
-                guard let amount = Decimal(string: inputAmount) else {
+                guard let amount = Decimal(string: inputAmount)?.round(scale: 2) else {
                     return String(inputAmount.dropLast())
                 }
                 
-                return amount <= availableBalance.value ?
-                    inputAmount : availableBalance.value.description
+                let availableAmount = availableBalance.value.round(scale: 2)
+                
+                return amount <= availableAmount ?
+                    inputAmount : availableAmount.description
             }
         
         // fiatAmount represents an amount user gives as an input in text field.
