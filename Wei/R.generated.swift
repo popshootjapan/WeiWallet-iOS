@@ -420,7 +420,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 2 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 3 localization tables.
   struct string {
     /// This `R.string.launchScreen` struct is generated, and contains static references to 0 localization keys.
     struct launchScreen {
@@ -494,6 +494,111 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func error_title_about_system(_: Void = ()) -> String {
         return NSLocalizedString("error_title_about_system", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.myWalletViewController` struct is generated, and contains static references to 9 localization keys.
+    struct myWalletViewController {
+      /// en translation: -
+      /// 
+      /// Locales: en, ja
+      static let iwtDl246Text = Rswift.StringResource(key: "Iwt-dl-246.text", tableName: "MyWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: -
+      /// 
+      /// Locales: en, ja
+      static let kxfE0VfhText = Rswift.StringResource(key: "Kxf-E0-Vfh.text", tableName: "MyWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: ETH
+      /// 
+      /// Locales: en, ja
+      static let sNEHMBnlText = Rswift.StringResource(key: "sNE-hM-bnl.text", tableName: "MyWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Ethereum
+      /// 
+      /// Locales: en, ja
+      static let lrVn2OsText = Rswift.StringResource(key: "3LR-Vn-2Os.text", tableName: "MyWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Latest Transaction
+      /// 
+      /// Locales: en, ja
+      static let s07RDWPzText = Rswift.StringResource(key: "S07-RD-wPz.text", tableName: "MyWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: See more
+      /// 
+      /// Locales: en, ja
+      static let ygzIBTEGNormalTitle = Rswift.StringResource(key: "Ygz-iB-tEG.normalTitle", tableName: "MyWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Send
+      /// 
+      /// Locales: en, ja
+      static let vbg2yKkVNormalTitle = Rswift.StringResource(key: "VBG-2y-KkV.normalTitle", tableName: "MyWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: USD
+      /// 
+      /// Locales: en, ja
+      static let njrCwYUxText = Rswift.StringResource(key: "NJR-Cw-yUx.text", tableName: "MyWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Your ETH
+      /// 
+      /// Locales: en, ja
+      static let tvRInSFDText = Rswift.StringResource(key: "TvR-in-SFD.text", tableName: "MyWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation: -
+      /// 
+      /// Locales: en, ja
+      static func iwtDl246Text(_: Void = ()) -> String {
+        return NSLocalizedString("Iwt-dl-246.text", tableName: "MyWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: -
+      /// 
+      /// Locales: en, ja
+      static func kxfE0VfhText(_: Void = ()) -> String {
+        return NSLocalizedString("Kxf-E0-Vfh.text", tableName: "MyWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: ETH
+      /// 
+      /// Locales: en, ja
+      static func sNEHMBnlText(_: Void = ()) -> String {
+        return NSLocalizedString("sNE-hM-bnl.text", tableName: "MyWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Ethereum
+      /// 
+      /// Locales: en, ja
+      static func lrVn2OsText(_: Void = ()) -> String {
+        return NSLocalizedString("3LR-Vn-2Os.text", tableName: "MyWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Latest Transaction
+      /// 
+      /// Locales: en, ja
+      static func s07RDWPzText(_: Void = ()) -> String {
+        return NSLocalizedString("S07-RD-wPz.text", tableName: "MyWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: See more
+      /// 
+      /// Locales: en, ja
+      static func ygzIBTEGNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("Ygz-iB-tEG.normalTitle", tableName: "MyWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Send
+      /// 
+      /// Locales: en, ja
+      static func vbg2yKkVNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("VBG-2y-KkV.normalTitle", tableName: "MyWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: USD
+      /// 
+      /// Locales: en, ja
+      static func njrCwYUxText(_: Void = ()) -> String {
+        return NSLocalizedString("NJR-Cw-yUx.text", tableName: "MyWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Your ETH
+      /// 
+      /// Locales: en, ja
+      static func tvRInSFDText(_: Void = ()) -> String {
+        return NSLocalizedString("TvR-in-SFD.text", tableName: "MyWalletViewController", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
