@@ -420,8 +420,36 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 3 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 4 localization tables.
   struct string {
+    /// This `R.string.homeViewController` struct is generated, and contains static references to 2 localization keys.
+    struct homeViewController {
+      /// en translation:  Receive
+      /// 
+      /// Locales: en, ja
+      static let hAW4A71NormalTitle = Rswift.StringResource(key: "8hA-w4-a71.normalTitle", tableName: "HomeViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: My Wallet
+      /// 
+      /// Locales: en, ja
+      static let oPJVcJOeText = Rswift.StringResource(key: "oPJ-vc-JOe.text", tableName: "HomeViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation:  Receive
+      /// 
+      /// Locales: en, ja
+      static func hAW4A71NormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("8hA-w4-a71.normalTitle", tableName: "HomeViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: My Wallet
+      /// 
+      /// Locales: en, ja
+      static func oPJVcJOeText(_: Void = ()) -> String {
+        return NSLocalizedString("oPJ-vc-JOe.text", tableName: "HomeViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
     /// This `R.string.launchScreen` struct is generated, and contains static references to 0 localization keys.
     struct launchScreen {
       fileprivate init() {}
@@ -657,10 +685,10 @@ struct _R: Rswift.Validatable {
       try createWalletViewController.validate()
       try suggestBackupViewController.validate()
       try launchScreen.validate()
-      try homeViewController.validate()
       try latestTransactionListViewController.validate()
       try sendConfirmationViewController.validate()
       try maintenanceViewController.validate()
+      try homeViewController.validate()
     }
     
     struct agreeServiceTermsViewController: Rswift.StoryboardResourceWithInitialControllerType {
