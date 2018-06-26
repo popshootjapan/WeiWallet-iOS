@@ -3,7 +3,7 @@
 "6dX-Cn-ZZI.text" = "Following is a full list of your back up words. Please make sure to kepp these 12 words in order.";
 
 /* Class = "UINavigationItem"; title = "バックアップキーの記録"; ObjectID = "A4s-ne-pRG"; */
-"A4s-ne-pRG.title" = "Write down backup words";
+"A4s-ne-pRG.title" = "Keep them safe";
 
 /* Class = "UIBarButtonItem"; title = "確認"; ObjectID = "CZX-ag-fFv"; */
 "CZX-ag-fFv.title" = "Confirm";
