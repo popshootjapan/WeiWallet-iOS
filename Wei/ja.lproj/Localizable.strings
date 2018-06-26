@@ -6,10 +6,10 @@
   Copyright © 2018年 yz. All rights reserved.
 */
 
-"error_title_no_connection" = "通信ができません";
-"error_title_about_system" = "システムエラーです";
-"error_title_about_fatal" = "予期せぬエラーが発生しました";
+"Error.Title.NoConnection" = "通信ができません";
+"Error.Title.SystemError" = "システムエラーです";
+"Error.Title.Unexpected" = "予期せぬエラーが発生しました";
 
-"error_message_no_connection" = "電波の良い場所で再度お試しください";
-"error_message_about_system" = "時間を空けて再度お試しください";
-"error_message_about_fatal" = "一度アプリを再起動してください";
+"Error.Message.NoConnection" = "電波の良い場所で再度お試しください";
+"Error.Message.SystemError" = "時間を空けて再度お試しください";
+"Error.Message.Unexpected" = "一度アプリを再起動してください";

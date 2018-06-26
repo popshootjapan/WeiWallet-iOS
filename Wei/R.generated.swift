@@ -712,71 +712,71 @@ struct R: Rswift.Validatable {
     
     /// This `R.string.localizable` struct is generated, and contains static references to 6 localization keys.
     struct localizable {
-      /// en translation: Please leave enough time and try again
+      /// en translation: Bad Connection :(
       /// 
       /// Locales: en, ja
-      static let error_message_about_system = Rswift.StringResource(key: "error_message_about_system", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: Please restart the application once
+      static let errorTitleNoConnection = Rswift.StringResource(key: "Error.Title.NoConnection", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Please try again later
       /// 
       /// Locales: en, ja
-      static let error_message_about_fatal = Rswift.StringResource(key: "error_message_about_fatal", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: Please try again in a good network location
+      static let errorMessageNoConnection = Rswift.StringResource(key: "Error.Message.NoConnection", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Please try again later
       /// 
       /// Locales: en, ja
-      static let error_message_no_connection = Rswift.StringResource(key: "error_message_no_connection", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: fatal error
+      static let errorMessageSystemError = Rswift.StringResource(key: "Error.Message.SystemError", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Please try again later
       /// 
       /// Locales: en, ja
-      static let error_title_about_fatal = Rswift.StringResource(key: "error_title_about_fatal", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: no network
+      static let errorMessageUnexpected = Rswift.StringResource(key: "Error.Message.Unexpected", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Something went wrong :(
       /// 
       /// Locales: en, ja
-      static let error_title_no_connection = Rswift.StringResource(key: "error_title_no_connection", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: system error
+      static let errorTitleUnexpected = Rswift.StringResource(key: "Error.Title.Unexpected", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: System Error
       /// 
       /// Locales: en, ja
-      static let error_title_about_system = Rswift.StringResource(key: "error_title_about_system", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      static let errorTitleSystemError = Rswift.StringResource(key: "Error.Title.SystemError", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       
-      /// en translation: Please leave enough time and try again
+      /// en translation: Bad Connection :(
       /// 
       /// Locales: en, ja
-      static func error_message_about_system(_: Void = ()) -> String {
-        return NSLocalizedString("error_message_about_system", bundle: R.hostingBundle, comment: "")
+      static func errorTitleNoConnection(_: Void = ()) -> String {
+        return NSLocalizedString("Error.Title.NoConnection", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Please restart the application once
+      /// en translation: Please try again later
       /// 
       /// Locales: en, ja
-      static func error_message_about_fatal(_: Void = ()) -> String {
-        return NSLocalizedString("error_message_about_fatal", bundle: R.hostingBundle, comment: "")
+      static func errorMessageNoConnection(_: Void = ()) -> String {
+        return NSLocalizedString("Error.Message.NoConnection", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Please try again in a good network location
+      /// en translation: Please try again later
       /// 
       /// Locales: en, ja
-      static func error_message_no_connection(_: Void = ()) -> String {
-        return NSLocalizedString("error_message_no_connection", bundle: R.hostingBundle, comment: "")
+      static func errorMessageSystemError(_: Void = ()) -> String {
+        return NSLocalizedString("Error.Message.SystemError", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: fatal error
+      /// en translation: Please try again later
       /// 
       /// Locales: en, ja
-      static func error_title_about_fatal(_: Void = ()) -> String {
-        return NSLocalizedString("error_title_about_fatal", bundle: R.hostingBundle, comment: "")
+      static func errorMessageUnexpected(_: Void = ()) -> String {
+        return NSLocalizedString("Error.Message.Unexpected", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: no network
+      /// en translation: Something went wrong :(
       /// 
       /// Locales: en, ja
-      static func error_title_no_connection(_: Void = ()) -> String {
-        return NSLocalizedString("error_title_no_connection", bundle: R.hostingBundle, comment: "")
+      static func errorTitleUnexpected(_: Void = ()) -> String {
+        return NSLocalizedString("Error.Title.Unexpected", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: system error
+      /// en translation: System Error
       /// 
       /// Locales: en, ja
-      static func error_title_about_system(_: Void = ()) -> String {
-        return NSLocalizedString("error_title_about_system", bundle: R.hostingBundle, comment: "")
+      static func errorTitleSystemError(_: Void = ()) -> String {
+        return NSLocalizedString("Error.Title.SystemError", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
