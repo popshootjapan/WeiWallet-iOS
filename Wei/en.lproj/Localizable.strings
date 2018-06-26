@@ -6,10 +6,18 @@
   Copyright © 2018年 yz. All rights reserved.
 */
 
+// MARK:- Error
 "Error.Title.NoConnection" = "Bad Connection :(";
 "Error.Title.SystemError" = "System Error";
 "Error.Title.Unexpected" = "Something went wrong :(";
+"Error.Ether.FailedToConvert" = "Failed to fetch value";
 
 "Error.Message.NoConnection" = "Please try again later";
 "Error.Message.SystemError" = "Please try again later";
 "Error.Message.Unexpected" = "Please try again later";
+
+// MARK: - Transaction History and Latest Transaction
+"Transaction.WatingForReceive" = "Receiving";
+"Transaction.WaitingForSend" = "Sending";
+"Transaction.Received" = "Received";
+"Transaction.Sent" = "Sent";

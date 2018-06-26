@@ -26,31 +26,29 @@ final class LatestTransactionListViewCell: UITableViewCell, InputAppliable {
             if let etherAmount = Wei(localTransaction.value).flatMap({ try? Converter.toEther(wei: $0) })?.string {
                 etherAmountLabel.text = etherAmount
             } else {
-                // TODO: localize
-                etherAmountLabel.text = "Failed to convert"
+                etherAmountLabel.text = R.string.localizable.errorEtherFailedToConvert()
             }
             
             timestampLabel.text = DateFormatter.fullDateString(from: Date(timeIntervalSince1970: TimeInterval(localTransaction.date)))
-            transactionStatusLabel.text = "送金中"
+            transactionStatusLabel.text = R.string.localizable.transactionWaitingForSend()
             transactionStatusImageViewView.image = #imageLiteral(resourceName: "icon_card_waiting")
             
         case .remote(let transaction):
             if let etherAmount = Wei(transaction.value).flatMap({ try? Converter.toEther(wei: $0) })?.string {
                 etherAmountLabel.text = etherAmount
             } else {
-                // TODO: localize
-                etherAmountLabel.text = "Failed to convert"
+                etherAmountLabel.text = R.string.localizable.errorEtherFailedToConvert()
             }
             
             timestampLabel.text = DateFormatter.fullDateString(from: Date(timeIntervalSince1970: TimeInterval(Int64(transaction.timeStamp)!)))
             
             let isReceiveTransaction = transaction.isReceiveTransaction(myAddress: address)
             if transaction.isPending {
-                let text = isReceiveTransaction ? "受け取り中" : "送金中"
+                let text = isReceiveTransaction ? R.string.localizable.transactionWatingForReceive() : R.string.localizable.transactionWaitingForSend()
                 transactionStatusLabel.text = text
                 transactionStatusImageViewView.image = #imageLiteral(resourceName: "icon_card_waiting")
             } else {
-                let text = isReceiveTransaction ? "受け取り済み" : "送金済み"
+                let text = isReceiveTransaction ? R.string.localizable.transactionReceived() : R.string.localizable.transactionSent()
                 transactionStatusLabel.text = text
                 
                 let icon = isReceiveTransaction ? #imageLiteral(resourceName: "icon_card_receive") : #imageLiteral(resourceName: "icon_card_send")

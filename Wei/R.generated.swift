@@ -710,12 +710,16 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 6 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 11 localization keys.
     struct localizable {
       /// en translation: Bad Connection :(
       /// 
       /// Locales: en, ja
       static let errorTitleNoConnection = Rswift.StringResource(key: "Error.Title.NoConnection", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Failed to fetch value
+      /// 
+      /// Locales: en, ja
+      static let errorEtherFailedToConvert = Rswift.StringResource(key: "Error.Ether.FailedToConvert", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Please try again later
       /// 
       /// Locales: en, ja
@@ -728,6 +732,22 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let errorMessageUnexpected = Rswift.StringResource(key: "Error.Message.Unexpected", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Received
+      /// 
+      /// Locales: en, ja
+      static let transactionReceived = Rswift.StringResource(key: "Transaction.Received", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Receiving
+      /// 
+      /// Locales: en, ja
+      static let transactionWatingForReceive = Rswift.StringResource(key: "Transaction.WatingForReceive", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Sending
+      /// 
+      /// Locales: en, ja
+      static let transactionWaitingForSend = Rswift.StringResource(key: "Transaction.WaitingForSend", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Sent
+      /// 
+      /// Locales: en, ja
+      static let transactionSent = Rswift.StringResource(key: "Transaction.Sent", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Something went wrong :(
       /// 
       /// Locales: en, ja
@@ -742,6 +762,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func errorTitleNoConnection(_: Void = ()) -> String {
         return NSLocalizedString("Error.Title.NoConnection", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Failed to fetch value
+      /// 
+      /// Locales: en, ja
+      static func errorEtherFailedToConvert(_: Void = ()) -> String {
+        return NSLocalizedString("Error.Ether.FailedToConvert", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Please try again later
@@ -763,6 +790,34 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func errorMessageUnexpected(_: Void = ()) -> String {
         return NSLocalizedString("Error.Message.Unexpected", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Received
+      /// 
+      /// Locales: en, ja
+      static func transactionReceived(_: Void = ()) -> String {
+        return NSLocalizedString("Transaction.Received", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Receiving
+      /// 
+      /// Locales: en, ja
+      static func transactionWatingForReceive(_: Void = ()) -> String {
+        return NSLocalizedString("Transaction.WatingForReceive", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Sending
+      /// 
+      /// Locales: en, ja
+      static func transactionWaitingForSend(_: Void = ()) -> String {
+        return NSLocalizedString("Transaction.WaitingForSend", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Sent
+      /// 
+      /// Locales: en, ja
+      static func transactionSent(_: Void = ()) -> String {
+        return NSLocalizedString("Transaction.Sent", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Something went wrong :(

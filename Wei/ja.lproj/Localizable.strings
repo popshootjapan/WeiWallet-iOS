@@ -6,10 +6,18 @@
   Copyright © 2018年 yz. All rights reserved.
 */
 
+// MARK:- Error
 "Error.Title.NoConnection" = "通信ができません";
 "Error.Title.SystemError" = "システムエラーです";
 "Error.Title.Unexpected" = "予期せぬエラーが発生しました";
+"Error.Ether.FailedToConvert" = "値の取得に失敗しました。";
 
 "Error.Message.NoConnection" = "電波の良い場所で再度お試しください";
 "Error.Message.SystemError" = "時間を空けて再度お試しください";
 "Error.Message.Unexpected" = "一度アプリを再起動してください";
+
+// MARK: - Transaction History and Latest Transaction
+"Transaction.WatingForReceive" = "受け取り中";
+"Transaction.WaitingForSend" = "送金中";
+"Transaction.Received" = "受け取り済み";
+"Transaction.Sent" = "送金済み";
