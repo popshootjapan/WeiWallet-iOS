@@ -420,7 +420,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 14 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 16 localization tables.
   struct string {
     /// This `R.string.agreeServiceTermsViewController` struct is generated, and contains static references to 3 localization keys.
     struct agreeServiceTermsViewController {
@@ -517,6 +517,100 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func a4sNePRGTitle(_: Void = ()) -> String {
         return NSLocalizedString("A4s-ne-pRG.title", tableName: "BackupViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.balanceAccessoryView` struct is generated, and contains static references to 8 localization keys.
+    struct balanceAccessoryView {
+      /// en translation:  
+      /// 
+      /// Locales: en, ja
+      static let fSy4XC8LText = Rswift.StringResource(key: "fSy-4X-C8L.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation:  
+      /// 
+      /// Locales: en, ja
+      static let x0SKU9YText = Rswift.StringResource(key: "3x0-sK-u9Y.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation:   
+      /// 
+      /// Locales: en, ja
+      static let h8DMkElXText = Rswift.StringResource(key: "H8D-mk-elX.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: (
+      /// 
+      /// Locales: en, ja
+      static let aAj6ABk2Text = Rswift.StringResource(key: "AAj-6A-Bk2.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: )
+      /// 
+      /// Locales: en, ja
+      static let fwi7UTAhText = Rswift.StringResource(key: "Fwi-7U-tAh.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Fee
+      /// 
+      /// Locales: en, ja
+      static let c5VUF3Text = Rswift.StringResource(key: "79C-5V-UF3.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Sendable balance
+      /// 
+      /// Locales: en, ja
+      static let kbQVhLcMText = Rswift.StringResource(key: "kbQ-vh-lcM.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: ー
+      /// 
+      /// Locales: en, ja
+      static let sEpMOEqGText = Rswift.StringResource(key: "SEp-MO-eqG.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation:  
+      /// 
+      /// Locales: en, ja
+      static func fSy4XC8LText(_: Void = ()) -> String {
+        return NSLocalizedString("fSy-4X-C8L.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation:  
+      /// 
+      /// Locales: en, ja
+      static func x0SKU9YText(_: Void = ()) -> String {
+        return NSLocalizedString("3x0-sK-u9Y.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation:   
+      /// 
+      /// Locales: en, ja
+      static func h8DMkElXText(_: Void = ()) -> String {
+        return NSLocalizedString("H8D-mk-elX.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: (
+      /// 
+      /// Locales: en, ja
+      static func aAj6ABk2Text(_: Void = ()) -> String {
+        return NSLocalizedString("AAj-6A-Bk2.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: )
+      /// 
+      /// Locales: en, ja
+      static func fwi7UTAhText(_: Void = ()) -> String {
+        return NSLocalizedString("Fwi-7U-tAh.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Fee
+      /// 
+      /// Locales: en, ja
+      static func c5VUF3Text(_: Void = ()) -> String {
+        return NSLocalizedString("79C-5V-UF3.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Sendable balance
+      /// 
+      /// Locales: en, ja
+      static func kbQVhLcMText(_: Void = ()) -> String {
+        return NSLocalizedString("kbQ-vh-lcM.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: ー
+      /// 
+      /// Locales: en, ja
+      static func sEpMOEqGText(_: Void = ()) -> String {
+        return NSLocalizedString("SEp-MO-eqG.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
@@ -1098,6 +1192,89 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func qhu2h3kKText(_: Void = ()) -> String {
         return NSLocalizedString("Qhu-2h-3kK.text", tableName: "SelectAddressByQRViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.selectAmountViewController` struct is generated, and contains static references to 7 localization keys.
+    struct selectAmountViewController {
+      /// en translation:  = 
+      /// 
+      /// Locales: en, ja
+      static let e6mQ1XGOText = Rswift.StringResource(key: "e6m-q1-xGO.text", tableName: "SelectAmountViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation:  ETH
+      /// 
+      /// Locales: en, ja
+      static let t4GDTDuTText = Rswift.StringResource(key: "t4G-dT-duT.text", tableName: "SelectAmountViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 0
+      /// 
+      /// Locales: en, ja
+      static let cM4TR2dRPlaceholder = Rswift.StringResource(key: "cM4-TR-2dR.placeholder", tableName: "SelectAmountViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 0
+      /// 
+      /// Locales: en, ja
+      static let dQeRmXA8Text = Rswift.StringResource(key: "DQe-Rm-xA8.text", tableName: "SelectAmountViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Confirm
+      /// 
+      /// Locales: en, ja
+      static let q7bJQ5w1NormalTitle = Rswift.StringResource(key: "q7b-JQ-5w1.normalTitle", tableName: "SelectAmountViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Enter the amount
+      /// 
+      /// Locales: en, ja
+      static let pQuI9Q5fTitle = Rswift.StringResource(key: "pQu-i9-Q5f.title", tableName: "SelectAmountViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: USD ($)
+      /// 
+      /// Locales: en, ja
+      static let o9vIOmText = Rswift.StringResource(key: "12O-9v-IOm.text", tableName: "SelectAmountViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation:  = 
+      /// 
+      /// Locales: en, ja
+      static func e6mQ1XGOText(_: Void = ()) -> String {
+        return NSLocalizedString("e6m-q1-xGO.text", tableName: "SelectAmountViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation:  ETH
+      /// 
+      /// Locales: en, ja
+      static func t4GDTDuTText(_: Void = ()) -> String {
+        return NSLocalizedString("t4G-dT-duT.text", tableName: "SelectAmountViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 0
+      /// 
+      /// Locales: en, ja
+      static func cM4TR2dRPlaceholder(_: Void = ()) -> String {
+        return NSLocalizedString("cM4-TR-2dR.placeholder", tableName: "SelectAmountViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 0
+      /// 
+      /// Locales: en, ja
+      static func dQeRmXA8Text(_: Void = ()) -> String {
+        return NSLocalizedString("DQe-Rm-xA8.text", tableName: "SelectAmountViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Confirm
+      /// 
+      /// Locales: en, ja
+      static func q7bJQ5w1NormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("q7b-JQ-5w1.normalTitle", tableName: "SelectAmountViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Enter the amount
+      /// 
+      /// Locales: en, ja
+      static func pQuI9Q5fTitle(_: Void = ()) -> String {
+        return NSLocalizedString("pQu-i9-Q5f.title", tableName: "SelectAmountViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: USD ($)
+      /// 
+      /// Locales: en, ja
+      static func o9vIOmText(_: Void = ()) -> String {
+        return NSLocalizedString("12O-9v-IOm.text", tableName: "SelectAmountViewController", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
