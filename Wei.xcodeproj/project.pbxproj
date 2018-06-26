@@ -41,7 +41,6 @@
 		8B99D35DC2E642873E38F347 /* Pods_WeiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 936EB0ECDF22CD12056CAE75 /* Pods_WeiTests.framework */; };
 		A7AF3D52759E96BE87D5E7DE /* Pods_Wei.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4060799F17C5BBE080440E1 /* Pods_Wei.framework */; };
 		AE14A6152070A1E3003A63FF /* CreateWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE14A6142070A1E3003A63FF /* CreateWalletViewController.swift */; };
-		AE14A6172070A1E8003A63FF /* CreateWalletViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE14A6162070A1E8003A63FF /* CreateWalletViewController.storyboard */; };
 		AE14A61A2070A20E003A63FF /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE14A6192070A20E003A63FF /* NavigationController.swift */; };
 		AE14A61C2070A3E7003A63FF /* ControllableNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE14A61B2070A3E7003A63FF /* ControllableNavigationBar.swift */; };
 		AE14A6202070A560003A63FF /* CreateWalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE14A61F2070A560003A63FF /* CreateWalletViewModel.swift */; };
@@ -51,7 +50,6 @@
 		AE14A62F20712221003A63FF /* MyWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE14A62E20712221003A63FF /* MyWalletViewController.swift */; };
 		AE14A6342071226F003A63FF /* MyWalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE14A6332071226F003A63FF /* MyWalletViewModel.swift */; };
 		AE14A63620712352003A63FF /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE14A63520712352003A63FF /* UIViewController+Extension.swift */; };
-		AE14A6472078984C003A63FF /* SendBaseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE14A6462078984C003A63FF /* SendBaseViewController.storyboard */; };
 		AE14A64920789851003A63FF /* SendBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE14A64820789851003A63FF /* SendBaseViewController.swift */; };
 		AE171AFC207F977100212494 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE171AFB207F977100212494 /* Cache.swift */; };
 		AE171B00207FA41C00212494 /* RateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE171AFF207FA41C00212494 /* RateStore.swift */; };
@@ -60,7 +58,6 @@
 		AE1F8C13208B79CD0088A043 /* TransactionHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1F8C12208B79CD0088A043 /* TransactionHistory.swift */; };
 		AE1F8C1A208B8E3B0088A043 /* HUD+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1F8C19208B8E3B0088A043 /* HUD+Rx.swift */; };
 		AE1F8C1C208B94210088A043 /* AgreeServiceTermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1F8C1B208B94210088A043 /* AgreeServiceTermsViewController.swift */; };
-		AE1F8C1E208B94260088A043 /* AgreeServiceTermsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE1F8C1D208B94260088A043 /* AgreeServiceTermsViewController.storyboard */; };
 		AE1F8C23208CE28D0088A043 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1F8C22208CE28D0088A043 /* APIClient.swift */; };
 		AE1F8C252090B3F10088A043 /* AlertConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1F8C242090B3F10088A043 /* AlertConvertable.swift */; };
 		AE1F8C272090B4270088A043 /* APIClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1F8C262090B4270088A043 /* APIClientError.swift */; };
@@ -111,6 +108,19 @@
 		AE69C84D20E0BE9500EB1293 /* RateStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69C84C20E0BE9500EB1293 /* RateStoreTests.swift */; };
 		AE69C84E20E0E25600EB1293 /* MyWalletViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE69C85020E0E25600EB1293 /* MyWalletViewController.storyboard */; };
 		AE69C85520E0E32600EB1293 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE69C85720E0E32600EB1293 /* HomeViewController.storyboard */; };
+		AE6D4CB420E20492007CF3C5 /* CreateWalletViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4CB620E20492007CF3C5 /* CreateWalletViewController.storyboard */; };
+		AE6D4CBB20E20618007CF3C5 /* AgreeServiceTermsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4CBD20E20618007CF3C5 /* AgreeServiceTermsViewController.storyboard */; };
+		AE6D4CC220E20679007CF3C5 /* SuggestBackupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4CC420E20679007CF3C5 /* SuggestBackupViewController.storyboard */; };
+		AE6D4CC920E20723007CF3C5 /* BackupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4CCB20E20723007CF3C5 /* BackupViewController.storyboard */; };
+		AE6D4CD020E20898007CF3C5 /* TutorialViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4CD220E20898007CF3C5 /* TutorialViewController.storyboard */; };
+		AE6D4CD720E208D0007CF3C5 /* ReceiveViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4CD920E208D0007CF3C5 /* ReceiveViewController.storyboard */; };
+		AE6D4CDE20E20963007CF3C5 /* RestoreWalletViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4CE020E20963007CF3C5 /* RestoreWalletViewController.storyboard */; };
+		AE6D4CE520E20AA6007CF3C5 /* SendBaseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4CE720E20AA6007CF3C5 /* SendBaseViewController.storyboard */; };
+		AE6D4CEC20E20AEA007CF3C5 /* SelectAddressByPasteViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4CEE20E20AEA007CF3C5 /* SelectAddressByPasteViewController.storyboard */; };
+		AE6D4CF320E20BD8007CF3C5 /* SelectAddressByQRViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4CF520E20BD8007CF3C5 /* SelectAddressByQRViewController.storyboard */; };
+		AE6D4CFA20E20DBD007CF3C5 /* SelectAmountViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4CFC20E20DBD007CF3C5 /* SelectAmountViewController.storyboard */; };
+		AE6D4D0120E20E62007CF3C5 /* BalanceAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4D0320E20E62007CF3C5 /* BalanceAccessoryView.xib */; };
+		AE6D4D0820E215F2007CF3C5 /* SendConfirmationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4D0A20E215F2007CF3C5 /* SendConfirmationViewController.storyboard */; };
 		AE8C9FC6209EF85F00C616E1 /* DebugListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */; };
 		AE8C9FC8209EF87300C616E1 /* DebugListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */; };
 		AE979E8020D7B6F5009B353F /* Decimal+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */; };
@@ -135,7 +145,6 @@
 		AEE6C05B20DCCC060003581D /* SelectAddressByPasteViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE6C05A20DCCC060003581D /* SelectAddressByPasteViewModelTests.swift */; };
 		AEE6C05D20DCD1220003581D /* MockRateRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE6C05C20DCD1220003581D /* MockRateRepository.swift */; };
 		AEE6C05F20DCD1BC0003581D /* MockRateRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE6C05E20DCD1BC0003581D /* MockRateRepositoryTests.swift */; };
-		AEFA44FB20B318C100844D4A /* RestoreWalletViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEFA44FA20B318C100844D4A /* RestoreWalletViewController.storyboard */; };
 		AEFA44FD20B318D100844D4A /* RestoreWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFA44FC20B318D100844D4A /* RestoreWalletViewController.swift */; };
 		AEFA450020B31BE500844D4A /* RestoreWalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFA44FF20B31BE500844D4A /* RestoreWalletViewModel.swift */; };
 		AEFE581220C7C07B00CE47F8 /* NonceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE581120C7C07B00CE47F8 /* NonceManager.swift */; };
@@ -150,19 +159,14 @@
 		DE318DE320915BAD008FA01E /* BalanceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE318DE220915BAD008FA01E /* BalanceStore.swift */; };
 		DE318DE520916626008FA01E /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE318DE420916626008FA01E /* Formatter.swift */; };
 		DE3A38392084969A00AB44B0 /* BalanceAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3A38372084969900AB44B0 /* BalanceAccessoryView.swift */; };
-		DE3A383A2084969A00AB44B0 /* BalanceAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE3A38382084969A00AB44B0 /* BalanceAccessoryView.xib */; };
 		DE3A3882208636C800AB44B0 /* URL+WeiExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3A3881208636C800AB44B0 /* URL+WeiExtension.swift */; };
 		DE624F7C2072452D00840B06 /* SelectAddressByQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE624F7B2072452D00840B06 /* SelectAddressByQRViewController.swift */; };
-		DE624F7E2072459B00840B06 /* SelectAddressByQRViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE624F7D2072459B00840B06 /* SelectAddressByQRViewController.storyboard */; };
 		DE624F80207245C500840B06 /* SelectAddressByQRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE624F7F207245C500840B06 /* SelectAddressByQRViewModel.swift */; };
 		DE624F85207246F700840B06 /* SelectAddressByPasteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE624F84207246F700840B06 /* SelectAddressByPasteViewController.swift */; };
-		DE624F872072477000840B06 /* SelectAddressByPasteViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE624F862072477000840B06 /* SelectAddressByPasteViewController.storyboard */; };
 		DE624F892072478600840B06 /* SelectAddressByPasteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE624F882072478600840B06 /* SelectAddressByPasteViewModel.swift */; };
 		DE624F8B207247AF00840B06 /* SelectAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE624F8A207247AF00840B06 /* SelectAmountViewController.swift */; };
-		DE624F8D207247D200840B06 /* SelectAmountViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE624F8C207247D200840B06 /* SelectAmountViewController.storyboard */; };
 		DE624F8F207247EA00840B06 /* SelectAmountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE624F8E207247EA00840B06 /* SelectAmountViewModel.swift */; };
 		DE624F912072482800840B06 /* SendConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE624F902072482800840B06 /* SendConfirmationViewController.swift */; };
-		DE624F932072485500840B06 /* SendConfirmationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE624F922072485500840B06 /* SendConfirmationViewController.storyboard */; };
 		DE624F952072486B00840B06 /* SendConfirmationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE624F942072486B00840B06 /* SendConfirmationViewModel.swift */; };
 		DE7682CF207B4526004094BA /* TransactionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7682CE207B4526004094BA /* TransactionContext.swift */; };
 		DE7682DC207F3C28004094BA /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7682DB207F3C28004094BA /* SettingViewController.swift */; };
@@ -172,21 +176,17 @@
 		DE7682EC207F4B1E004094BA /* TransactionHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7682EB207F4B1E004094BA /* TransactionHistoryViewModel.swift */; };
 		DE7682EE207F4B32004094BA /* TransactionHistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE7682ED207F4B32004094BA /* TransactionHistoryViewController.storyboard */; };
 		DE91338E20A03B39003CDE67 /* UIDevice+WeiExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE91338D20A03B39003CDE67 /* UIDevice+WeiExtension.swift */; };
-		DE9133AF20A82EA2003CDE67 /* BackupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE9133AE20A82EA2003CDE67 /* BackupViewController.storyboard */; };
 		DE9133B120A82EB1003CDE67 /* BackupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9133B020A82EB1003CDE67 /* BackupViewController.swift */; };
 		DE9133B320A82F1A003CDE67 /* BackupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9133B220A82F1A003CDE67 /* BackupViewModel.swift */; };
 		DE9133B620A98DB8003CDE67 /* SuggestBackupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9133B520A98DB8003CDE67 /* SuggestBackupViewController.swift */; };
 		DE9133B820A98DCD003CDE67 /* SuggestBackupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9133B720A98DCD003CDE67 /* SuggestBackupViewModel.swift */; };
-		DE9133BA20A993C6003CDE67 /* SuggestBackupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE9133B920A993C6003CDE67 /* SuggestBackupViewController.storyboard */; };
 		DE9133C620AEFE78003CDE67 /* MnemonicWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9133C520AEFE78003CDE67 /* MnemonicWord.swift */; };
 		DE9133C820B2DE12003CDE67 /* MnemonicWordViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9133C720B2DE12003CDE67 /* MnemonicWordViewCell.swift */; };
 		DE9272C2208ACF4E00E03AB9 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9272C1208ACF4E00E03AB9 /* TutorialViewController.swift */; };
-		DE9272C4208ACF5800E03AB9 /* TutorialViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE9272C3208ACF5800E03AB9 /* TutorialViewController.storyboard */; };
 		DE9272C6208AD54700E03AB9 /* TutorialTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9272C5208AD54700E03AB9 /* TutorialTopView.swift */; };
 		DE9272C8208AD55000E03AB9 /* TutorialTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE9272C7208AD55000E03AB9 /* TutorialTopView.xib */; };
 		DE9272CA208B19B500E03AB9 /* TutorialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9272C9208B19B500E03AB9 /* TutorialViewModel.swift */; };
 		DEC577272074D74E00DC3923 /* ReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC577262074D74E00DC3923 /* ReceiveViewController.swift */; };
-		DEC577292074D76E00DC3923 /* ReceiveViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC577282074D76E00DC3923 /* ReceiveViewController.storyboard */; };
 		DEC5772B2074D79200DC3923 /* ReceiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC5772A2074D79200DC3923 /* ReceiveViewModel.swift */; };
 		DEC5772D2075F51700DC3923 /* QRCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC5772C2075F51700DC3923 /* QRCoder.swift */; };
 		DEF040C720692E4200DFE35A /* Wei+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF040C620692E4200DFE35A /* Wei+Extension.swift */; };
@@ -244,7 +244,6 @@
 		936EB0ECDF22CD12056CAE75 /* Pods_WeiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A12D119CABBC62F1D4268257 /* Pods-Wei.inhouse.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wei.inhouse.xcconfig"; path = "Pods/Target Support Files/Pods-Wei/Pods-Wei.inhouse.xcconfig"; sourceTree = "<group>"; };
 		AE14A6142070A1E3003A63FF /* CreateWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWalletViewController.swift; sourceTree = "<group>"; };
-		AE14A6162070A1E8003A63FF /* CreateWalletViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateWalletViewController.storyboard; sourceTree = "<group>"; };
 		AE14A6192070A20E003A63FF /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		AE14A61B2070A3E7003A63FF /* ControllableNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllableNavigationBar.swift; sourceTree = "<group>"; };
 		AE14A61F2070A560003A63FF /* CreateWalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWalletViewModel.swift; sourceTree = "<group>"; };
@@ -254,7 +253,6 @@
 		AE14A62E20712221003A63FF /* MyWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletViewController.swift; sourceTree = "<group>"; };
 		AE14A6332071226F003A63FF /* MyWalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletViewModel.swift; sourceTree = "<group>"; };
 		AE14A63520712352003A63FF /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		AE14A6462078984C003A63FF /* SendBaseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SendBaseViewController.storyboard; sourceTree = "<group>"; };
 		AE14A64820789851003A63FF /* SendBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendBaseViewController.swift; sourceTree = "<group>"; };
 		AE171AFB207F977100212494 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		AE171AFF207FA41C00212494 /* RateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateStore.swift; sourceTree = "<group>"; };
@@ -263,7 +261,6 @@
 		AE1F8C12208B79CD0088A043 /* TransactionHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistory.swift; sourceTree = "<group>"; };
 		AE1F8C19208B8E3B0088A043 /* HUD+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HUD+Rx.swift"; sourceTree = "<group>"; };
 		AE1F8C1B208B94210088A043 /* AgreeServiceTermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreeServiceTermsViewController.swift; sourceTree = "<group>"; };
-		AE1F8C1D208B94260088A043 /* AgreeServiceTermsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AgreeServiceTermsViewController.storyboard; sourceTree = "<group>"; };
 		AE1F8C22208CE28D0088A043 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		AE1F8C242090B3F10088A043 /* AlertConvertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertConvertable.swift; sourceTree = "<group>"; };
 		AE1F8C262090B4270088A043 /* APIClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientError.swift; sourceTree = "<group>"; };
@@ -317,6 +314,45 @@
 		AE69C85620E0E32600EB1293 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeViewController.storyboard; sourceTree = "<group>"; };
 		AE69C85920E0E32800EB1293 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/HomeViewController.strings; sourceTree = "<group>"; };
 		AE69C85B20E0E32900EB1293 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/HomeViewController.strings; sourceTree = "<group>"; };
+		AE6D4CB520E20492007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CreateWalletViewController.storyboard; sourceTree = "<group>"; };
+		AE6D4CB820E20494007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/CreateWalletViewController.strings; sourceTree = "<group>"; };
+		AE6D4CBA20E20495007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/CreateWalletViewController.strings; sourceTree = "<group>"; };
+		AE6D4CBC20E20618007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AgreeServiceTermsViewController.storyboard; sourceTree = "<group>"; };
+		AE6D4CBF20E2061E007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AgreeServiceTermsViewController.strings; sourceTree = "<group>"; };
+		AE6D4CC120E2061F007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/AgreeServiceTermsViewController.strings; sourceTree = "<group>"; };
+		AE6D4CC320E20679007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SuggestBackupViewController.storyboard; sourceTree = "<group>"; };
+		AE6D4CC620E2067A007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SuggestBackupViewController.strings; sourceTree = "<group>"; };
+		AE6D4CC820E2067B007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SuggestBackupViewController.strings; sourceTree = "<group>"; };
+		AE6D4CCA20E20723007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BackupViewController.storyboard; sourceTree = "<group>"; };
+		AE6D4CCD20E20725007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BackupViewController.strings; sourceTree = "<group>"; };
+		AE6D4CCF20E20726007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/BackupViewController.strings; sourceTree = "<group>"; };
+		AE6D4CD120E20898007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TutorialViewController.storyboard; sourceTree = "<group>"; };
+		AE6D4CD420E2089A007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TutorialViewController.strings; sourceTree = "<group>"; };
+		AE6D4CD620E2089B007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/TutorialViewController.strings; sourceTree = "<group>"; };
+		AE6D4CD820E208D0007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ReceiveViewController.storyboard; sourceTree = "<group>"; };
+		AE6D4CDB20E208D2007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ReceiveViewController.strings; sourceTree = "<group>"; };
+		AE6D4CDD20E208D4007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/ReceiveViewController.strings; sourceTree = "<group>"; };
+		AE6D4CDF20E20963007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RestoreWalletViewController.storyboard; sourceTree = "<group>"; };
+		AE6D4CE220E20965007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/RestoreWalletViewController.strings; sourceTree = "<group>"; };
+		AE6D4CE420E20966007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/RestoreWalletViewController.strings; sourceTree = "<group>"; };
+		AE6D4CE620E20AA6007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SendBaseViewController.storyboard; sourceTree = "<group>"; };
+		AE6D4CE920E20AA8007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SendBaseViewController.strings; sourceTree = "<group>"; };
+		AE6D4CEB20E20AA9007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SendBaseViewController.strings; sourceTree = "<group>"; };
+		AE6D4CED20E20AEA007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SelectAddressByPasteViewController.storyboard; sourceTree = "<group>"; };
+		AE6D4CF020E20AEC007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SelectAddressByPasteViewController.strings; sourceTree = "<group>"; };
+		AE6D4CF220E20AED007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SelectAddressByPasteViewController.strings; sourceTree = "<group>"; };
+		AE6D4CF420E20BD8007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SelectAddressByQRViewController.storyboard; sourceTree = "<group>"; };
+		AE6D4CF720E20BDA007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SelectAddressByQRViewController.strings; sourceTree = "<group>"; };
+		AE6D4CF920E20BDB007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SelectAddressByQRViewController.strings; sourceTree = "<group>"; };
+		AE6D4CFB20E20DBD007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SelectAmountViewController.storyboard; sourceTree = "<group>"; };
+		AE6D4CFE20E20DBF007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SelectAmountViewController.strings; sourceTree = "<group>"; };
+		AE6D4D0020E20DC0007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SelectAmountViewController.strings; sourceTree = "<group>"; };
+		AE6D4D0220E20E62007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BalanceAccessoryView.xib; sourceTree = "<group>"; };
+		AE6D4D0520E20E63007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BalanceAccessoryView.strings; sourceTree = "<group>"; };
+		AE6D4D0720E20E64007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/BalanceAccessoryView.strings; sourceTree = "<group>"; };
+		AE6D4D0920E215F2007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SendConfirmationViewController.storyboard; sourceTree = "<group>"; };
+		AE6D4D0C20E215F6007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SendConfirmationViewController.strings; sourceTree = "<group>"; };
+		AE6D4D0E20E215F7007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SendConfirmationViewController.strings; sourceTree = "<group>"; };
 		AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugListViewController.swift; sourceTree = "<group>"; };
 		AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DebugListViewController.storyboard; sourceTree = "<group>"; };
 		AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extension.swift"; sourceTree = "<group>"; };
@@ -345,7 +381,6 @@
 		AEE6C05A20DCCC060003581D /* SelectAddressByPasteViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressByPasteViewModelTests.swift; sourceTree = "<group>"; };
 		AEE6C05C20DCD1220003581D /* MockRateRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRateRepository.swift; sourceTree = "<group>"; };
 		AEE6C05E20DCD1BC0003581D /* MockRateRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRateRepositoryTests.swift; sourceTree = "<group>"; };
-		AEFA44FA20B318C100844D4A /* RestoreWalletViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RestoreWalletViewController.storyboard; sourceTree = "<group>"; };
 		AEFA44FC20B318D100844D4A /* RestoreWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreWalletViewController.swift; sourceTree = "<group>"; };
 		AEFA44FF20B31BE500844D4A /* RestoreWalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreWalletViewModel.swift; sourceTree = "<group>"; };
 		AEFE581120C7C07B00CE47F8 /* NonceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonceManager.swift; sourceTree = "<group>"; };
@@ -363,19 +398,14 @@
 		DE318DE220915BAD008FA01E /* BalanceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceStore.swift; sourceTree = "<group>"; };
 		DE318DE420916626008FA01E /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		DE3A38372084969900AB44B0 /* BalanceAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceAccessoryView.swift; sourceTree = "<group>"; };
-		DE3A38382084969A00AB44B0 /* BalanceAccessoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BalanceAccessoryView.xib; sourceTree = "<group>"; };
 		DE3A3881208636C800AB44B0 /* URL+WeiExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+WeiExtension.swift"; sourceTree = "<group>"; };
 		DE624F7B2072452D00840B06 /* SelectAddressByQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressByQRViewController.swift; sourceTree = "<group>"; };
-		DE624F7D2072459B00840B06 /* SelectAddressByQRViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectAddressByQRViewController.storyboard; sourceTree = "<group>"; };
 		DE624F7F207245C500840B06 /* SelectAddressByQRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressByQRViewModel.swift; sourceTree = "<group>"; };
 		DE624F84207246F700840B06 /* SelectAddressByPasteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressByPasteViewController.swift; sourceTree = "<group>"; };
-		DE624F862072477000840B06 /* SelectAddressByPasteViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectAddressByPasteViewController.storyboard; sourceTree = "<group>"; };
 		DE624F882072478600840B06 /* SelectAddressByPasteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressByPasteViewModel.swift; sourceTree = "<group>"; };
 		DE624F8A207247AF00840B06 /* SelectAmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAmountViewController.swift; sourceTree = "<group>"; };
-		DE624F8C207247D200840B06 /* SelectAmountViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectAmountViewController.storyboard; sourceTree = "<group>"; };
 		DE624F8E207247EA00840B06 /* SelectAmountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAmountViewModel.swift; sourceTree = "<group>"; };
 		DE624F902072482800840B06 /* SendConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendConfirmationViewController.swift; sourceTree = "<group>"; };
-		DE624F922072485500840B06 /* SendConfirmationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SendConfirmationViewController.storyboard; sourceTree = "<group>"; };
 		DE624F942072486B00840B06 /* SendConfirmationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendConfirmationViewModel.swift; sourceTree = "<group>"; };
 		DE7682CE207B4526004094BA /* TransactionContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionContext.swift; sourceTree = "<group>"; };
 		DE7682DB207F3C28004094BA /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -385,21 +415,17 @@
 		DE7682EB207F4B1E004094BA /* TransactionHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryViewModel.swift; sourceTree = "<group>"; };
 		DE7682ED207F4B32004094BA /* TransactionHistoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransactionHistoryViewController.storyboard; sourceTree = "<group>"; };
 		DE91338D20A03B39003CDE67 /* UIDevice+WeiExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+WeiExtension.swift"; sourceTree = "<group>"; };
-		DE9133AE20A82EA2003CDE67 /* BackupViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BackupViewController.storyboard; sourceTree = "<group>"; };
 		DE9133B020A82EB1003CDE67 /* BackupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupViewController.swift; sourceTree = "<group>"; };
 		DE9133B220A82F1A003CDE67 /* BackupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupViewModel.swift; sourceTree = "<group>"; };
 		DE9133B520A98DB8003CDE67 /* SuggestBackupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestBackupViewController.swift; sourceTree = "<group>"; };
 		DE9133B720A98DCD003CDE67 /* SuggestBackupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestBackupViewModel.swift; sourceTree = "<group>"; };
-		DE9133B920A993C6003CDE67 /* SuggestBackupViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SuggestBackupViewController.storyboard; sourceTree = "<group>"; };
 		DE9133C520AEFE78003CDE67 /* MnemonicWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MnemonicWord.swift; sourceTree = "<group>"; };
 		DE9133C720B2DE12003CDE67 /* MnemonicWordViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MnemonicWordViewCell.swift; sourceTree = "<group>"; };
 		DE9272C1208ACF4E00E03AB9 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
-		DE9272C3208ACF5800E03AB9 /* TutorialViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TutorialViewController.storyboard; sourceTree = "<group>"; };
 		DE9272C5208AD54700E03AB9 /* TutorialTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialTopView.swift; sourceTree = "<group>"; };
 		DE9272C7208AD55000E03AB9 /* TutorialTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TutorialTopView.xib; sourceTree = "<group>"; };
 		DE9272C9208B19B500E03AB9 /* TutorialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewModel.swift; sourceTree = "<group>"; };
 		DEC577262074D74E00DC3923 /* ReceiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveViewController.swift; sourceTree = "<group>"; };
-		DEC577282074D76E00DC3923 /* ReceiveViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReceiveViewController.storyboard; sourceTree = "<group>"; };
 		DEC5772A2074D79200DC3923 /* ReceiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveViewModel.swift; sourceTree = "<group>"; };
 		DEC5772C2075F51700DC3923 /* QRCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCoder.swift; sourceTree = "<group>"; };
 		DEF040C620692E4200DFE35A /* Wei+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wei+Extension.swift"; sourceTree = "<group>"; };
@@ -639,7 +665,7 @@
 		AE14A6182070A1F6003A63FF /* CreateWallet */ = {
 			isa = PBXGroup;
 			children = (
-				AE14A6162070A1E8003A63FF /* CreateWalletViewController.storyboard */,
+				AE6D4CB620E20492007CF3C5 /* CreateWalletViewController.storyboard */,
 				AE14A6142070A1E3003A63FF /* CreateWalletViewController.swift */,
 				AE14A61F2070A560003A63FF /* CreateWalletViewModel.swift */,
 			);
@@ -694,7 +720,7 @@
 		AE14A64A20789862003A63FF /* SendBase */ = {
 			isa = PBXGroup;
 			children = (
-				AE14A6462078984C003A63FF /* SendBaseViewController.storyboard */,
+				AE6D4CE720E20AA6007CF3C5 /* SendBaseViewController.storyboard */,
 				AE14A64820789851003A63FF /* SendBaseViewController.swift */,
 				DE0DDCF3207F977200735C3C /* SendBaseViewModel.swift */,
 			);
@@ -704,7 +730,7 @@
 		AE1F8C1F208B94310088A043 /* AgreeServiceTerms */ = {
 			isa = PBXGroup;
 			children = (
-				AE1F8C1D208B94260088A043 /* AgreeServiceTermsViewController.storyboard */,
+				AE6D4CBD20E20618007CF3C5 /* AgreeServiceTermsViewController.storyboard */,
 				AE1F8C1B208B94210088A043 /* AgreeServiceTermsViewController.swift */,
 			);
 			path = AgreeServiceTerms;
@@ -873,7 +899,7 @@
 		AEFA44FE20B318F600844D4A /* RestoreWallet */ = {
 			isa = PBXGroup;
 			children = (
-				AEFA44FA20B318C100844D4A /* RestoreWalletViewController.storyboard */,
+				AE6D4CE020E20963007CF3C5 /* RestoreWalletViewController.storyboard */,
 				AEFA44FC20B318D100844D4A /* RestoreWalletViewController.swift */,
 				AEFA44FF20B31BE500844D4A /* RestoreWalletViewModel.swift */,
 			);
@@ -892,7 +918,7 @@
 		DE624F7A207244F500840B06 /* SelectAddressByQR */ = {
 			isa = PBXGroup;
 			children = (
-				DE624F7D2072459B00840B06 /* SelectAddressByQRViewController.storyboard */,
+				AE6D4CF520E20BD8007CF3C5 /* SelectAddressByQRViewController.storyboard */,
 				DE624F7B2072452D00840B06 /* SelectAddressByQRViewController.swift */,
 				DE624F7F207245C500840B06 /* SelectAddressByQRViewModel.swift */,
 			);
@@ -902,7 +928,7 @@
 		DE624F81207246B800840B06 /* SelectAddressByPaste */ = {
 			isa = PBXGroup;
 			children = (
-				DE624F862072477000840B06 /* SelectAddressByPasteViewController.storyboard */,
+				AE6D4CEE20E20AEA007CF3C5 /* SelectAddressByPasteViewController.storyboard */,
 				DE624F84207246F700840B06 /* SelectAddressByPasteViewController.swift */,
 				DE624F882072478600840B06 /* SelectAddressByPasteViewModel.swift */,
 			);
@@ -912,10 +938,10 @@
 		DE624F82207246CA00840B06 /* SelectAmount */ = {
 			isa = PBXGroup;
 			children = (
-				DE624F8C207247D200840B06 /* SelectAmountViewController.storyboard */,
+				AE6D4CFC20E20DBD007CF3C5 /* SelectAmountViewController.storyboard */,
 				DE624F8A207247AF00840B06 /* SelectAmountViewController.swift */,
 				DE624F8E207247EA00840B06 /* SelectAmountViewModel.swift */,
-				DE3A38382084969A00AB44B0 /* BalanceAccessoryView.xib */,
+				AE6D4D0320E20E62007CF3C5 /* BalanceAccessoryView.xib */,
 				DE3A38372084969900AB44B0 /* BalanceAccessoryView.swift */,
 			);
 			path = SelectAmount;
@@ -924,7 +950,7 @@
 		DE624F83207246DA00840B06 /* SendConfirmation */ = {
 			isa = PBXGroup;
 			children = (
-				DE624F922072485500840B06 /* SendConfirmationViewController.storyboard */,
+				AE6D4D0A20E215F2007CF3C5 /* SendConfirmationViewController.storyboard */,
 				DE624F902072482800840B06 /* SendConfirmationViewController.swift */,
 				DE624F942072486B00840B06 /* SendConfirmationViewModel.swift */,
 			);
@@ -955,7 +981,7 @@
 		DE9133AD20A82E85003CDE67 /* Backup */ = {
 			isa = PBXGroup;
 			children = (
-				DE9133AE20A82EA2003CDE67 /* BackupViewController.storyboard */,
+				AE6D4CCB20E20723007CF3C5 /* BackupViewController.storyboard */,
 				DE9133B020A82EB1003CDE67 /* BackupViewController.swift */,
 				DE9133B220A82F1A003CDE67 /* BackupViewModel.swift */,
 				DE9133C720B2DE12003CDE67 /* MnemonicWordViewCell.swift */,
@@ -966,7 +992,7 @@
 		DE9133B420A98D9D003CDE67 /* SuggestBackup */ = {
 			isa = PBXGroup;
 			children = (
-				DE9133B920A993C6003CDE67 /* SuggestBackupViewController.storyboard */,
+				AE6D4CC420E20679007CF3C5 /* SuggestBackupViewController.storyboard */,
 				DE9133B520A98DB8003CDE67 /* SuggestBackupViewController.swift */,
 				DE9133B720A98DCD003CDE67 /* SuggestBackupViewModel.swift */,
 			);
@@ -976,7 +1002,7 @@
 		DE9272C0208ACF3A00E03AB9 /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				DE9272C3208ACF5800E03AB9 /* TutorialViewController.storyboard */,
+				AE6D4CD220E20898007CF3C5 /* TutorialViewController.storyboard */,
 				DE9272C1208ACF4E00E03AB9 /* TutorialViewController.swift */,
 				DE9272C5208AD54700E03AB9 /* TutorialTopView.swift */,
 				DE9272C7208AD55000E03AB9 /* TutorialTopView.xib */,
@@ -988,7 +1014,7 @@
 		DEC577252074D72600DC3923 /* Receive */ = {
 			isa = PBXGroup;
 			children = (
-				DEC577282074D76E00DC3923 /* ReceiveViewController.storyboard */,
+				AE6D4CD920E208D0007CF3C5 /* ReceiveViewController.storyboard */,
 				DEC577262074D74E00DC3923 /* ReceiveViewController.swift */,
 				DEC5772A2074D79200DC3923 /* ReceiveViewModel.swift */,
 			);
@@ -1094,29 +1120,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE3A383A2084969A00AB44B0 /* BalanceAccessoryView.xib in Resources */,
-				AE14A6472078984C003A63FF /* SendBaseViewController.storyboard in Resources */,
+				AE6D4D0120E20E62007CF3C5 /* BalanceAccessoryView.xib in Resources */,
+				AE6D4CE520E20AA6007CF3C5 /* SendBaseViewController.storyboard in Resources */,
 				AE3F7306207E791100482502 /* SwipableViewController.storyboard in Resources */,
-				DE624F872072477000840B06 /* SelectAddressByPasteViewController.storyboard in Resources */,
-				DE9133AF20A82EA2003CDE67 /* BackupViewController.storyboard in Resources */,
-				AE1F8C1E208B94260088A043 /* AgreeServiceTermsViewController.storyboard in Resources */,
+				AE6D4CEC20E20AEA007CF3C5 /* SelectAddressByPasteViewController.storyboard in Resources */,
+				AE6D4CC920E20723007CF3C5 /* BackupViewController.storyboard in Resources */,
+				AE6D4CBB20E20618007CF3C5 /* AgreeServiceTermsViewController.storyboard in Resources */,
 				1A798C0B2081DF9800812D80 /* LatestTransactionListViewController.storyboard in Resources */,
 				AE69C85520E0E32600EB1293 /* HomeViewController.storyboard in Resources */,
-				DEC577292074D76E00DC3923 /* ReceiveViewController.storyboard in Resources */,
+				AE6D4CD720E208D0007CF3C5 /* ReceiveViewController.storyboard in Resources */,
 				DE052D4E20D4016B00ACFA49 /* Localizable.strings in Resources */,
-				DE9272C4208ACF5800E03AB9 /* TutorialViewController.storyboard in Resources */,
+				AE6D4CD020E20898007CF3C5 /* TutorialViewController.storyboard in Resources */,
 				AED6F44F205514BB004A280F /* LaunchScreen.storyboard in Resources */,
-				DE624F932072485500840B06 /* SendConfirmationViewController.storyboard in Resources */,
-				AEFA44FB20B318C100844D4A /* RestoreWalletViewController.storyboard in Resources */,
-				DE624F7E2072459B00840B06 /* SelectAddressByQRViewController.storyboard in Resources */,
+				AE6D4D0820E215F2007CF3C5 /* SendConfirmationViewController.storyboard in Resources */,
+				AE6D4CDE20E20963007CF3C5 /* RestoreWalletViewController.storyboard in Resources */,
+				AE6D4CF320E20BD8007CF3C5 /* SelectAddressByQRViewController.storyboard in Resources */,
 				DE7682DE207F3C63004094BA /* SettingViewController.storyboard in Resources */,
-				AE14A6172070A1E8003A63FF /* CreateWalletViewController.storyboard in Resources */,
+				AE6D4CB420E20492007CF3C5 /* CreateWalletViewController.storyboard in Resources */,
 				DE9272C8208AD55000E03AB9 /* TutorialTopView.xib in Resources */,
 				AE69C84E20E0E25600EB1293 /* MyWalletViewController.storyboard in Resources */,
 				AED6F44C205514BB004A280F /* Assets.xcassets in Resources */,
-				DE624F8D207247D200840B06 /* SelectAmountViewController.storyboard in Resources */,
+				AE6D4CFA20E20DBD007CF3C5 /* SelectAmountViewController.storyboard in Resources */,
 				DE02317F2091711900508B5B /* MaintenanceViewController.storyboard in Resources */,
-				DE9133BA20A993C6003CDE67 /* SuggestBackupViewController.storyboard in Resources */,
+				AE6D4CC220E20679007CF3C5 /* SuggestBackupViewController.storyboard in Resources */,
 				079A5EFA20851C21009067A2 /* Settings.bundle in Resources */,
 				DE7682EE207F4B32004094BA /* TransactionHistoryViewController.storyboard in Resources */,
 				AE8C9FC8209EF87300C616E1 /* DebugListViewController.storyboard in Resources */,
@@ -1434,6 +1460,136 @@
 				AE69C85B20E0E32900EB1293 /* ja */,
 			);
 			name = HomeViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		AE6D4CB620E20492007CF3C5 /* CreateWalletViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE6D4CB520E20492007CF3C5 /* Base */,
+				AE6D4CB820E20494007CF3C5 /* en */,
+				AE6D4CBA20E20495007CF3C5 /* ja */,
+			);
+			name = CreateWalletViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		AE6D4CBD20E20618007CF3C5 /* AgreeServiceTermsViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE6D4CBC20E20618007CF3C5 /* Base */,
+				AE6D4CBF20E2061E007CF3C5 /* en */,
+				AE6D4CC120E2061F007CF3C5 /* ja */,
+			);
+			name = AgreeServiceTermsViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		AE6D4CC420E20679007CF3C5 /* SuggestBackupViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE6D4CC320E20679007CF3C5 /* Base */,
+				AE6D4CC620E2067A007CF3C5 /* en */,
+				AE6D4CC820E2067B007CF3C5 /* ja */,
+			);
+			name = SuggestBackupViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		AE6D4CCB20E20723007CF3C5 /* BackupViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE6D4CCA20E20723007CF3C5 /* Base */,
+				AE6D4CCD20E20725007CF3C5 /* en */,
+				AE6D4CCF20E20726007CF3C5 /* ja */,
+			);
+			name = BackupViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		AE6D4CD220E20898007CF3C5 /* TutorialViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE6D4CD120E20898007CF3C5 /* Base */,
+				AE6D4CD420E2089A007CF3C5 /* en */,
+				AE6D4CD620E2089B007CF3C5 /* ja */,
+			);
+			name = TutorialViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		AE6D4CD920E208D0007CF3C5 /* ReceiveViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE6D4CD820E208D0007CF3C5 /* Base */,
+				AE6D4CDB20E208D2007CF3C5 /* en */,
+				AE6D4CDD20E208D4007CF3C5 /* ja */,
+			);
+			name = ReceiveViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		AE6D4CE020E20963007CF3C5 /* RestoreWalletViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE6D4CDF20E20963007CF3C5 /* Base */,
+				AE6D4CE220E20965007CF3C5 /* en */,
+				AE6D4CE420E20966007CF3C5 /* ja */,
+			);
+			name = RestoreWalletViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		AE6D4CE720E20AA6007CF3C5 /* SendBaseViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE6D4CE620E20AA6007CF3C5 /* Base */,
+				AE6D4CE920E20AA8007CF3C5 /* en */,
+				AE6D4CEB20E20AA9007CF3C5 /* ja */,
+			);
+			name = SendBaseViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		AE6D4CEE20E20AEA007CF3C5 /* SelectAddressByPasteViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE6D4CED20E20AEA007CF3C5 /* Base */,
+				AE6D4CF020E20AEC007CF3C5 /* en */,
+				AE6D4CF220E20AED007CF3C5 /* ja */,
+			);
+			name = SelectAddressByPasteViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		AE6D4CF520E20BD8007CF3C5 /* SelectAddressByQRViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE6D4CF420E20BD8007CF3C5 /* Base */,
+				AE6D4CF720E20BDA007CF3C5 /* en */,
+				AE6D4CF920E20BDB007CF3C5 /* ja */,
+			);
+			name = SelectAddressByQRViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		AE6D4CFC20E20DBD007CF3C5 /* SelectAmountViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE6D4CFB20E20DBD007CF3C5 /* Base */,
+				AE6D4CFE20E20DBF007CF3C5 /* en */,
+				AE6D4D0020E20DC0007CF3C5 /* ja */,
+			);
+			name = SelectAmountViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		AE6D4D0320E20E62007CF3C5 /* BalanceAccessoryView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE6D4D0220E20E62007CF3C5 /* Base */,
+				AE6D4D0520E20E63007CF3C5 /* en */,
+				AE6D4D0720E20E64007CF3C5 /* ja */,
+			);
+			name = BalanceAccessoryView.xib;
+			sourceTree = "<group>";
+		};
+		AE6D4D0A20E215F2007CF3C5 /* SendConfirmationViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE6D4D0920E215F2007CF3C5 /* Base */,
+				AE6D4D0C20E215F6007CF3C5 /* en */,
+				AE6D4D0E20E215F7007CF3C5 /* ja */,
+			);
+			name = SendConfirmationViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		AED6F44D205514BB004A280F /* LaunchScreen.storyboard */ = {

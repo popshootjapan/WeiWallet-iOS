@@ -1,0 +1,42 @@
+
+/* Class = "UILabel"; text = "0"; ObjectID = "1mx-7Q-M2M"; */
+"1mx-7Q-M2M.text" = "0";
+
+/* Class = "UILabel"; text = "送金額"; ObjectID = "8vg-Fw-a7s"; */
+"8vg-Fw-a7s.text" = "送金額";
+
+/* Class = "UILabel"; text = " "; ObjectID = "A4G-ca-63W"; */
+"A4G-ca-63W.text" = " ";
+
+/* Class = "UILabel"; text = "宛先"; ObjectID = "CVP-hL-XMW"; */
+"CVP-hL-XMW.text" = "宛先";
+
+/* Class = "UILabel"; text = "手数料"; ObjectID = "ImU-9n-bhE"; */
+"ImU-9n-bhE.text" = "手数料";
+
+/* Class = "UILabel"; text = "送金完了"; ObjectID = "K5i-3K-OWR"; */
+"K5i-3K-OWR.text" = "送金完了";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "Pyp-BL-9rK"; */
+"Pyp-BL-9rK.text" = "0";
+
+/* Class = "UINavigationItem"; title = "送金内容確認"; ObjectID = "XIC-71-DEE"; */
+"XIC-71-DEE.title" = "送金内容確認";
+
+/* Class = "UILabel"; text = " ETH"; ObjectID = "XqB-XB-ml0"; */
+"XqB-XB-ml0.text" = " ETH";
+
+/* Class = "UIButton"; normalTitle = "宛先を再選択する"; ObjectID = "i0w-x9-bDH"; */
+"i0w-x9-bDH.normalTitle" = "宛先を再選択する";
+
+/* Class = "UIButton"; normalTitle = "送金をやりなおす"; ObjectID = "r4k-33-iuE"; */
+"r4k-33-iuE.normalTitle" = "送金をやりなおす";
+
+/* Class = "UILabel"; text = "= "; ObjectID = "rDK-ts-GlL"; */
+"rDK-ts-GlL.text" = "= ";
+
+/* Class = "UILabel"; text = " "; ObjectID = "rZY-NZ-D5R"; */
+"rZY-NZ-D5R.text" = " ";
+
+/* Class = "UIButton"; normalTitle = "確定する"; ObjectID = "wCd-0n-bQ1"; */
+"wCd-0n-bQ1.normalTitle" = "確定する";

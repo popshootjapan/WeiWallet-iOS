@@ -91,8 +91,6 @@ final class SelectAmountViewModel: InjectableViewModel {
         // User's usable fiat balance (totalBalance - txFee)
         let availableBalance = Driver.combineLatest(fiatBalance, fiatTxFee) { balance, txFee -> Fiat in
             let availableBalance = balance.value - txFee.value
-            // do not return negative value here.
-            assert(availableBalance >= 0)
             switch balance {
             case .jpy:
                 return Fiat.jpy(availableBalance.toInt64())

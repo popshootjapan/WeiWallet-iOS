@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "USD ($)"; ObjectID = "12O-9v-IOm"; */
+"12O-9v-IOm.text" = "USD ($)";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "DQe-Rm-xA8"; */
+"DQe-Rm-xA8.text" = "0";
+
+/* Class = "UITextField"; placeholder = "0"; ObjectID = "cM4-TR-2dR"; */
+"cM4-TR-2dR.placeholder" = "0";
+
+/* Class = "UILabel"; text = " = "; ObjectID = "e6m-q1-xGO"; */
+"e6m-q1-xGO.text" = " = ";
+
+/* Class = "UINavigationItem"; title = "金額入力"; ObjectID = "pQu-i9-Q5f"; */
+"pQu-i9-Q5f.title" = "金額入力";
+
+/* Class = "UIButton"; normalTitle = "決定する"; ObjectID = "q7b-JQ-5w1"; */
+"q7b-JQ-5w1.normalTitle" = "決定する";
+
+/* Class = "UILabel"; text = " ETH"; ObjectID = "t4G-dT-duT"; */
+"t4G-dT-duT.text" = " ETH";

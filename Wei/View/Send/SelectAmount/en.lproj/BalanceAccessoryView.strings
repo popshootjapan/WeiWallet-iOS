@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = " "; ObjectID = "3x0-sK-u9Y"; */
+"3x0-sK-u9Y.text" = " ";
+
+/* Class = "UILabel"; text = "手数料"; ObjectID = "79C-5V-UF3"; */
+"79C-5V-UF3.text" = "Fee";
+
+/* Class = "UILabel"; text = "("; ObjectID = "AAj-6A-Bk2"; */
+"AAj-6A-Bk2.text" = "(";
+
+/* Class = "UILabel"; text = ")"; ObjectID = "Fwi-7U-tAh"; */
+"Fwi-7U-tAh.text" = ")";
+
+/* Class = "UILabel"; text = "  "; ObjectID = "H8D-mk-elX"; */
+"H8D-mk-elX.text" = "  ";
+
+/* Class = "UILabel"; text = "ー"; ObjectID = "SEp-MO-eqG"; */
+"SEp-MO-eqG.text" = "ー";
+
+/* Class = "UILabel"; text = " "; ObjectID = "fSy-4X-C8L"; */
+"fSy-4X-C8L.text" = " ";
+
+/* Class = "UILabel"; text = "送金可能額"; ObjectID = "kbQ-vh-lcM"; */
+"kbQ-vh-lcM.text" = "Sendable Balance";

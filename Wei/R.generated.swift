@@ -420,8 +420,263 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 4 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 17 localization tables.
   struct string {
+    /// This `R.string.agreeServiceTermsViewController` struct is generated, and contains static references to 3 localization keys.
+    struct agreeServiceTermsViewController {
+      /// en translation: Close
+      /// 
+      /// Locales: en, ja
+      static let sTXE3AWLNormalTitle = Rswift.StringResource(key: "sTX-e3-aWL.normalTitle", tableName: "AgreeServiceTermsViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Service Term
+      /// 
+      /// Locales: en, ja
+      static let rNgOADjyTitle = Rswift.StringResource(key: "RNg-OA-Djy.title", tableName: "AgreeServiceTermsViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Wei Wallet利用規約（以下「本規約」といいます。）は、株式会社Popshoot（以下「当社」といいます。）が運営する、仮想通貨ウォレットサービス「Wei Wallet」（以下「本サービス」といいます。）を通じて提供する各サービスの利用条件を定めるものです。 本サービスをご利用いただくにあたっては、本規約の全文をお読みいただいたうえで、本規約の全ての条項について同意いただく必要があります。  第１条（総則・適用） 	•	本規約は、本利用者（第２条に定義）と当社との間の本サービス（第２条に定義）の利用に関わる一切の権利義務関係を定めることを目的とし、本利用者と当社との間の本サービスの利用に関わる一切の関係に適用されるものとします。 	•	当社が本サービス上で掲載する本サービスの利用に関するルール、ガイドライン、ポリシー、注意事項、説明書その他の規定は、本規約の一部を構成するものとします。ただし、本規約の内容と本規約以外の本サービスに関する規定の内容が矛盾・抵触する場合は、当該規定を優先させる旨の特段の定めがない限り、本規約の規定が優先して適用されるものとします。 	•	本サービスをご利用いただいた場合、本利用者が本規約の内容を理解しており、かつ、本規約の全ての条項について同意したものとみなします。  第２条（用語の定義） 	•	「本サービス」とは、当社が運営する仮想通貨ウォレットサービス「Wei Wallet」を通じて提供する各サービスを意味します。 	•	「本利用者」とは、本サービスを利用する全ての個人または法人を意味します。 	•	「仮想通貨」とは、資金決済に関する法律（平成２１年法律第５９号）第２条第５項各号に定められたもののうち、当社が取り扱うものを意味します。 	•	「ニモニックワード」とは、ニモニックコードともいい、無作為に抽出された単語の羅列によって、バックアップデータを引き出すバックアップキーとなるものを意味します。 	•	「知的財産権」とは、以下の各号の権利を意味します。 	•	特許法（昭和３４年法律第１２１号）、実用新案法（昭和３４年法律第１２３号）、意匠法（昭和３４年法律第１２５号）、商標法（昭和３４年法律第１２７号）、著作権法（昭和４５年法律第４８号）に規定する各権利及び外国における上記各権利に相当する権利（これらの権利を取得し、またはその登録等を出願する権利を含みます。） 	•	当社またはその関連会社が開発または提供する各種 API 等で取得可能な取引価格等を含むデータ、当社E メール等の内容を含む文書、本サービスの構成、当社の保有するアイデア、ノウハウ、データベース、ウェブサイト、グラフィック、デザイン、ソフトウェア、アプリケーション、プログラム、ソースコード等に関連するすべての権利 	•	秘匿することが可能な技術情報であって、財産的価値のあるもののうち当社が特に指定するもの  第３条（本サービスの利用） 	•	本利用者は、当社の定める方法に従い、本規約の目的の範囲内で、自己の責任に基づき本サービスを利用するものとします。 	•	本利用者は、その利用する端末機器に当社所定のアプリケーションソフトウェアをインストールし、本サービスを利用するものとします。 	•	本利用者は、本サービスにおいて、当社が取り扱うトークン（以下「当社取扱いトークン」といいます。）を管理でき、以下の各号のサービスを利用することができます。 	•	当社取扱いトークンの管理 	•	当社取扱いトークンについて本利用者が有する資産の現在価格の確認 	•	ニモニックワードに基づくバックアップデータの保存 	•	本利用者の有するアドレスにつき、保存されたバックアップデータからの復元 	•	当社取扱いトークンの送金及び受取 	•	マトリックス型二次元コード（QRコード）による当社取扱いトークンの送金及び受取 	•	当社取扱いトークンの各アドレスによる送金及び受取 	•	履歴の確認 	•	当社取扱いトークンの送金及び受取等の取引履歴の確認 	•	前項第２号における当社取扱いトークンの送金及び受取は、本利用者間において、それぞれの責任のもと自由に行われ、当社は当該取引を何ら仲介、媒介、促進等するものではありません。 	•	本利用者は、本サービスの提供を受けるために必要なコンピューター、ソフトウェアその他の機器、通信回線その他の通信環境等を、本利用者の費用と責任において準備及び維持するものとします。 	•	本利用者は、自己の本サービスの利用環境に応じて、コンピューター・ウィルスの感染の防止、不正アクセス及び情報漏洩の防止等のセキュリティ対策を自らの費用と責任において講じるものとします。  第４条（バックアップキー及びバックアップデータの管理・保存） 	•	本利用者は、本サービスの利用を開始するにあたり、ウォレットを作成した場合、無作為に抽出されたニモニックワードをバックアップキーとして、バックアップデータを保存するものとします。 	•	当社は、当社取扱いトークンの送金または受取に使用できる暗号の秘密鍵と公開鍵のペアを生成して格納します。秘密鍵は本利用者の作成したウォレットアドレスに一意に一致し、前項のニモニックワードはウォレットアドレス及び秘密鍵を含むバックアップデータに紐づくバックアップキーとして機能します。 	•	本利用者は、バックアップキーの管理及び保存の責任を負うものとし、当該バックアップキーを第三者に知られるような態様で管理してはならないものとします。この義務を怠ったことにより損害が生じた場合であっても、当社は、一切の責任を負いません。 	•	当社は、本利用者のバックアップデータを管理することができず、バックアップデータは本利用者の責任において管理されるものとします。 	•	当社は、本利用者のバックアップキーの使用、管理及び保存における過誤及び不徹底等並びに紛失及び忘却等に基づく損害について、一切の責任を負いません。  第５条（利用料金及び支払い方法） 	•	本利用者は、本サービスを無料で利用することができます。ただし、ブロックチェーンにトランザクションを送るための手数料は、当該トランザクションが滞りなく成功するために必要な手数料のうち妥当と判断される金額が自動的に設定され、これを本利用者が負担するものとします。 	•	本利用者は、前項の手数料を、当社指定の方法で支払うものとし、これを遅滞した場合には、本利用者は年１４．６％の割合による遅延損害金を当社に支払うものとします。 	•	第１項の手数料は、本利用者に対する事前の通知なく、変更することがあります。 	•	当社は、本サービスの今後の機能の追加等に基づき、別途追加料金等を規定することがあります。  第６条（個人情報の取扱い） 	•	当社は、本利用者が本サービスを通じて当社に提供したすべての個人情報（以下、単に「個人情報」といいます。）を本サービスの「プライバシーポリシー」に基づき、適切に取り扱うものとします。 	•	当社は、本サービスを通じて得た情報や本利用者から提供または入力された情報（これらの情報には、個人または法人を特定する情報を除く等匿名化の処理を行ったうえでのアンケート情報等を含みます。）を、情報の分析や評価をし、第三者への情報提供等のために利用することがあり、本利用者はこれに予め同意したものとします。  第７条（知的財産権） 	•	本サービス及び本サービスに関するすべての知的財産権は、当社または当社にライセンスを許諾している者に帰属します。 	•	本利用者は、当社の事前の承諾を得た場合を除いて、本サービス及び本サービスに含まれる内容を複製、公開、譲渡、貸与、翻訳、転売、転送、翻訳、使用許諾、再利用等してはならないものとします。 	•	本利用者が本条に違反する行為を行った場合、当該本利用者がこれらの行為によって受けた損害に関し、当社は、一切の保証をしないと同時に、当該本利用者がこれらの行為によって得た利益相当額について、損害賠償請求を行う場合があります。  第８条（禁止行為） 	•	本利用者は、本サービスの利用にあたり、自己または第三者を利用して以下の各号のいずれかに該当する行為をしてはなりません。 	•	犯罪行為に関連する行為または公序良俗に反する行為 	•	本サービスを不正な賭博、詐欺、マネーロンダリング、またはテロ支援活動に利用する行為 	•	法令、本規約または関連する規定に違反する行為 	•	他の本利用者のウォレットを許可なく使用するか、使用しようとする行為 	•	当社または第三者の知的財産権、肖像権、プライバシー権、名誉その他の権利または利益を侵害する行為（かかる侵害を直接または間接に惹起する行為を含みます。） 	•	当社の提供するAPIを利用して自動トランザクションを送る、または受け取る行為 	•	当社の保有するデータ等を取得するために、当社が提供していないロボット、スパイダー、クローラー、スクレイパーその他の自動的手段またはインターフェースを使用する行為 	•	本サービスに関連するまたは当社が管理するシステム、サーバー、ネットワーク等のエラー、バグ、セキュリティホールその他の瑕疵を利用する行為 	•	コンピューター・ウィルスその他の有害なコンピューター・プログラムを含む情報を送信する行為 	•	当社の管理するシステム、サーバー、ネットワークその他の機能を破壊もしくは妨害し、または、不必要に過度の負担をかける行為 	•	本サービスの利用に関する情報を改ざんする行為 	•	当社の事前の書面による同意なしに当社のサービスと相互作用する第三者のアプリケーションを開発する行為 	•	暴力的な要求行為 	•	当社が定める一定のデータ容量以上のデータを本サービスを通じて送信する行為 	•	当社による本サービスの運営を妨害するおそれのある行為 	•	その他当社が不適切と判断する行為 	•	当社は、本利用者が前項各号の一に該当する場合、当該本利用者に対して事前に通知することなく、当該本利用者による本サービスの利用を禁止する等の適切な措置をとることができ、当該本利用者は、当社に対して負う債務の一切について当然に期限の利益を失うものとします。なお、当社は当該措置を行った理由について、当該本利用者に開示する義務を負いません。 	•	当社は、本条に基づき当社が行った行為により本利用者に生じた損害について、一切の責任を負いません。  第９条（本サービスの停止等） 	•	当社は、以下のいずれかに該当する場合には、本利用者に事前に通知することなく、全てまたは一部の本利用者による本サービスの利用の全部または一部を停止または中断することができるものとします。 	•	本サービスに係るコンピューター・システムの点検または保守作業を定期的または緊急に行う場合 	•	コンピューター、通信回線等が事故または第三者の故意に基づく行為により停止した場合 	•	火災、停電、天災地変、戦争、政変、ストライキ、法令・規則等の変更、法定通貨または仮想通貨事情の急変などの不可抗力により本サービスの運営ができなくなった場合 	•	ハッキングその他の方法により当社資産が盗難される等の場合 	•	本サービス提供に必要なシステムに異常が生じた場合 	•	アカウントの不正利用等につき調査を行う場合 	•	法律、政令、規則、命令、通達、条例、ガイドライン（業界団体の自主規制ガイドラインその他のルール事項を含みます。）その他の規制（以下「法令等」といいます。）または当社規則等に基づき調査が必要であると当社が判断する場合 	•	本利用者が所属する業界団体の内部規則、当社規則等に基づき調査を行うことが必要と当社が判断する場合 	•	本利用者が本サービスに関し使用または保管する金銭または仮想通貨が犯罪収益に関するものまたはその疑いがあると当社が判断する場合 	•	本サービスのアプリケーションソフトウェアをインストールするためのサードパーティプラットフォームが、利用規約や価格設定を変更し、当社が本サービスの提供を停止または中断すべきであると判断する場合 	•	仮想通貨の流動性が著しく低下した場合 	•	ハードフォーク等のブロックチェーン分岐その他仮想通貨の仕様の変更等が行われた結果、当社が仮想通貨またはそれに関連するサービスの全部または一部を取り扱わないと判断する場合 	•	法令、政策及び社会情勢の変化等により、サービス提供の継続が不可能または著しく困難であると当社が判断する場合 	•	その他当社が停止または中断を必要と判断する場合 	•	当社は、当社の都合により、本サービスの提供を終了することができます。この場合、当社は本利用者に事前に通知するものとします。 	•	当社は、本条に基づき当社が行った措置に基づき本利用者に生じた損害について一切の責任を負いません。  第１０条（免責） 	•	当社は、仮想通貨の保管、送金、受取サービスその他の関連サービス並びに仮想通貨の価値、機能、安定性及び用途等につきいかなる保証を行うものではなく、いかなる責任も負うものではありません。 	•	当社は、仮想通貨の保管に関するサービス及び本利用者間で仮想通貨を送金し、または受け取る場を提供するサービスを行うものであって、本利用者間の仮想通貨の送金または受取を仲介、媒介または促進させる義務を負うものではありません。 	•	当社は、本利用者が当社から直接または間接に本サービスまたは他の本利用者に関する情報を得た場合であっても、本利用者に対し、本規約の規定内容を超えていかなる保証も行うものではありません。 	•	本利用者は、本サービスを利用することが、本利用者に適用のある法令、業界団体の内部規則等（自主規制ガイドラインを含みます。）に違反するか否かを自己の責任と費用に基づいて調査するものとし、当社は、本利用者による本サービスの利用が、本利用者に適用のある法令、業界団体の内部規則等に適合することを何ら保証するものではありません。 	•	本サービスに関連して本利用者間または本利用者と第三者との間において生じた仮想通貨の送金、受取、連絡、紛争等については、当該本利用者の責任において処理及び解決するものとし、当社は一切責任を負いません。 	•	当社は、本利用者のコンピューター機器及び環境に対する本サービスの妥当性または互換性を保証しません。 	•	当社は、当社による本サービスの提供の中断、停止、終了、利用不能または変更、本サービスの利用によるデータの消失または機器の故障もしくは損傷その他本サービスに関連して本利用者が被った損害につき、賠償する責任を一切負わないものとします。 	•	当社は、当社のシステムの不具合及び本利用者の端末機器、ウェブブラウザその他の動作環境の不具合または本規約の範囲外の操作により、本サービスにおける仮想通貨の保有量の表示及び送金スピード等に影響が及ぶ可能性がありますが、当社は、これらの場合に、本サービスに関連して本利用者が被った損害につき、賠償する責任を一切負わないものとします。 	•	当社は、火災、停電、天災地変、戦争、政変、ストライキ、法令・規則等の変更、法定通貨または仮想通貨事情の急変などの不可抗力により本規約に基づく債務の全部または一部が履行遅滞、履行不能または不完全履行に陥ったとしても、それによって本利用者が被った損害につき、賠償する責任を一切負わないものとします。 	•	当社は、法令等または税制の将来の変更により本利用者に損害が発生した場合であっても、賠償する責任を一切負わないものとします。 	•	当社は、仮想通貨に対する法令等もしくは税制の将来の変更が過去に遡及した場合に、これにより本利用者に損害が発生した場合であっても、過去に遡って賠償する責任を一切負わないものとします。 	•	当社は、仮想通貨の価格が変動したことにより本利用者に損失が発生した場合であっても、本利用者に対して、賠償する責任を一切負わないものとします。  第１１条（損害賠償） 	•	本利用者は、本利用者が法令または本規約に違反して本サービスを利用したことに起因して、当社が直接的もしくは間接的に何らかの損害、損失または費用負担（弁護士費用の負担を含みますが、これに限りません。）を被った場合、当社の請求にしたがって直ちにこれを賠償または補償しなければならないものとします。 	•	当社は、本サービスに関連して本利用者が被った損害について、一切賠償の責任を負いません。なお、消費者契約法の適用その他の理由により、本項その他当社の損害賠償責任を免責する規定にかかわらず当社が本利用者に対して損害賠償責任を負う場合においても、当社の賠償責任は、損害の事由が生じた時点から遡って過去１ヶ月の期間に本利用者から現実に受領した本サービスの手数料の総額を上限とします。  第１２条（秘密保持） 	•	本利用者は、本規約または本サービスに関連して、当社より提供もしくは開示（口頭、書面、データ等の形式、記録媒体及び手段のいかんを問いません。）されまたは知り得た、当社の技術上、営業上、財務上、組織上の情報その他一切の情報（以下「秘密情報」といいます。）を本サービスの利用の目的のみに利用するとともに、当社の書面による承諾なしに第三者に当社の秘密情報を提供、開示または漏洩しないものとします。ただし、以下の各号に定める情報は、秘密情報には含まれないものとします。 	•	当社から提供もしくは開示がなされたときまたは知得したときに、既に一般に公知となっていた、または既に知得していたもの 	•	当社から提供もしくは開示または知得した後、自己の責めに帰せざる事由により刊行物その他により公知となったもの 	•	提供または開示の権限のある第三者から秘密保持義務を負わされることなく適法に取得したもの 	•	秘密情報によることなく独自に開発したもの 	•	当社から秘密情報として取り扱わない旨を書面で確認されたもの 	•	前項の規定にもかかわらず、本利用者は、法令、行政機関、司法機関その他の公的機関より情報開示者から受領した秘密情報の開示を要求された場合には、遅滞なく当社に通知した上、当該秘密情報を開示することができます。ただし、本利用者は、当該秘密情報のうち、適法に開示が要求されている部分についてのみ開示しなければなりません。 	•	本利用者は、当社から求められた場合にはいつでも、遅滞なく、当社の指示に従い、秘密情報を記載した書面その他の記録媒体物及びその全ての複製物を返却または廃棄しなければなりません。   第１３条（本サービス及び本規約の変更） 	•	当社は、本サービスの内容を自由に変更できるものとします。 	•	当社は、本規約（本サービス上に掲載する本サービスの利用に関するルール、ガイドライン、ポリシーその他の規定を含みます。以下本条及び次条において同じ。）の内容を変更する場合には、当該変更の旨を当社が適当と判断する方法で本利用者に通知するものとし、その後本利用者が本サービスを利用した場合には、本利用者は、本規約の変更に同意したものとみなします。  第１４条（地位の譲渡等） 	•	本利用者は、当社の書面による事前の承諾なく、本規約に基づく地位、権利及び義務について、第三者に対し、譲渡、移転、担保設定その他の処分をすることはできません。 	•	当社は、本サービスにかかる事業を他社に譲渡（会社分割、株式譲渡に伴う事業の実質的譲渡その他の方式を含みます。）した場合には、当該事業譲渡に伴い本規約に基づく地位、権利及び義務並びに本利用者が本サービスの利用に関して当社に提供した情報の一部または全部を当該事業譲渡の譲受人に譲渡することができるものとし、本利用者は、かかる譲渡につき本項において予め同意したものとします。なお、本項に定める事業譲渡には、通常の事業譲渡のみならず、会社分割その他事業が移転するあらゆる場合を含むものとします。  第１５条（反社会的勢力への不関与） 	•	本利用者は、自身が暴力団、暴力団員、暴力団関係企業、総会屋、社会運動標ぼうゴロ、政治運動標ぼうゴロ、特殊知能暴力集団、その他反社会的勢力（以下｢暴力団等反社会的勢力｣といいます。）に所属または該当せず、かつ、暴力団等反社会的勢力と関与していないことを表明し、将来にわたっても所属もしくは該当、または関与しないことを確約するものとします。 	•	当社は、本利用者が暴力団等反社会的勢力に所属もしくは該当する、または正当な理由なく関与していると判断した場合、当該本利用者に事前に通知等を行うことなく、当該本利用者の本サービスの利用を禁止する等の措置を講じることがあります。 	•	当社は、前項の措置による本利用者の損害を賠償する責任を一切負わないものとします。  第１６条（分離可能性） 	•	本規約のいずれかの条項またはその一部が、消費者契約法その他の法令等により無効または執行不能と判断された場合であっても、本規約の他の条項、及び一部が無効または執行不能と判断された条項の残りの部分は、継続して完全にその効力を有するものとします。 	•	当社及び本利用者は、当該無効または執行不能と判断された条項またはその一部を適法とし、執行力を保持するために必要な範囲で修正し、法律的及び経済的に同等の効果を確保できるように努めるものとします。  第１７条（存続） 第５条第２項、第６条から第１２条、第１４条第２項、第１５条から第１９条の規定は、利用者が本サービスの利用を終了した後も有効に存続するものとします。  第１８条（準拠法及び管轄裁判所） 	•	本規約は、日本国法に準拠し、解釈されるものとします。 	•	本規約に関する一切の紛争については、東京地方裁判所を第一審の専属的合意管轄裁判所とします。  第１９条（協議解決） 当社及び本利用者は、本規約に定めのない事項または本規約の解釈に疑義が生じた場合には、互いに信義誠実の原則に従って協議するものとします。  2018年4月22日 制定
+      /// 
+      /// Locales: en, ja
+      static let pG7oOLqText = Rswift.StringResource(key: "4pG-7o-OLq.text", tableName: "AgreeServiceTermsViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation: Close
+      /// 
+      /// Locales: en, ja
+      static func sTXE3AWLNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("sTX-e3-aWL.normalTitle", tableName: "AgreeServiceTermsViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Service Term
+      /// 
+      /// Locales: en, ja
+      static func rNgOADjyTitle(_: Void = ()) -> String {
+        return NSLocalizedString("RNg-OA-Djy.title", tableName: "AgreeServiceTermsViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Wei Wallet利用規約（以下「本規約」といいます。）は、株式会社Popshoot（以下「当社」といいます。）が運営する、仮想通貨ウォレットサービス「Wei Wallet」（以下「本サービス」といいます。）を通じて提供する各サービスの利用条件を定めるものです。 本サービスをご利用いただくにあたっては、本規約の全文をお読みいただいたうえで、本規約の全ての条項について同意いただく必要があります。  第１条（総則・適用） 	•	本規約は、本利用者（第２条に定義）と当社との間の本サービス（第２条に定義）の利用に関わる一切の権利義務関係を定めることを目的とし、本利用者と当社との間の本サービスの利用に関わる一切の関係に適用されるものとします。 	•	当社が本サービス上で掲載する本サービスの利用に関するルール、ガイドライン、ポリシー、注意事項、説明書その他の規定は、本規約の一部を構成するものとします。ただし、本規約の内容と本規約以外の本サービスに関する規定の内容が矛盾・抵触する場合は、当該規定を優先させる旨の特段の定めがない限り、本規約の規定が優先して適用されるものとします。 	•	本サービスをご利用いただいた場合、本利用者が本規約の内容を理解しており、かつ、本規約の全ての条項について同意したものとみなします。  第２条（用語の定義） 	•	「本サービス」とは、当社が運営する仮想通貨ウォレットサービス「Wei Wallet」を通じて提供する各サービスを意味します。 	•	「本利用者」とは、本サービスを利用する全ての個人または法人を意味します。 	•	「仮想通貨」とは、資金決済に関する法律（平成２１年法律第５９号）第２条第５項各号に定められたもののうち、当社が取り扱うものを意味します。 	•	「ニモニックワード」とは、ニモニックコードともいい、無作為に抽出された単語の羅列によって、バックアップデータを引き出すバックアップキーとなるものを意味します。 	•	「知的財産権」とは、以下の各号の権利を意味します。 	•	特許法（昭和３４年法律第１２１号）、実用新案法（昭和３４年法律第１２３号）、意匠法（昭和３４年法律第１２５号）、商標法（昭和３４年法律第１２７号）、著作権法（昭和４５年法律第４８号）に規定する各権利及び外国における上記各権利に相当する権利（これらの権利を取得し、またはその登録等を出願する権利を含みます。） 	•	当社またはその関連会社が開発または提供する各種 API 等で取得可能な取引価格等を含むデータ、当社E メール等の内容を含む文書、本サービスの構成、当社の保有するアイデア、ノウハウ、データベース、ウェブサイト、グラフィック、デザイン、ソフトウェア、アプリケーション、プログラム、ソースコード等に関連するすべての権利 	•	秘匿することが可能な技術情報であって、財産的価値のあるもののうち当社が特に指定するもの  第３条（本サービスの利用） 	•	本利用者は、当社の定める方法に従い、本規約の目的の範囲内で、自己の責任に基づき本サービスを利用するものとします。 	•	本利用者は、その利用する端末機器に当社所定のアプリケーションソフトウェアをインストールし、本サービスを利用するものとします。 	•	本利用者は、本サービスにおいて、当社が取り扱うトークン（以下「当社取扱いトークン」といいます。）を管理でき、以下の各号のサービスを利用することができます。 	•	当社取扱いトークンの管理 	•	当社取扱いトークンについて本利用者が有する資産の現在価格の確認 	•	ニモニックワードに基づくバックアップデータの保存 	•	本利用者の有するアドレスにつき、保存されたバックアップデータからの復元 	•	当社取扱いトークンの送金及び受取 	•	マトリックス型二次元コード（QRコード）による当社取扱いトークンの送金及び受取 	•	当社取扱いトークンの各アドレスによる送金及び受取 	•	履歴の確認 	•	当社取扱いトークンの送金及び受取等の取引履歴の確認 	•	前項第２号における当社取扱いトークンの送金及び受取は、本利用者間において、それぞれの責任のもと自由に行われ、当社は当該取引を何ら仲介、媒介、促進等するものではありません。 	•	本利用者は、本サービスの提供を受けるために必要なコンピューター、ソフトウェアその他の機器、通信回線その他の通信環境等を、本利用者の費用と責任において準備及び維持するものとします。 	•	本利用者は、自己の本サービスの利用環境に応じて、コンピューター・ウィルスの感染の防止、不正アクセス及び情報漏洩の防止等のセキュリティ対策を自らの費用と責任において講じるものとします。  第４条（バックアップキー及びバックアップデータの管理・保存） 	•	本利用者は、本サービスの利用を開始するにあたり、ウォレットを作成した場合、無作為に抽出されたニモニックワードをバックアップキーとして、バックアップデータを保存するものとします。 	•	当社は、当社取扱いトークンの送金または受取に使用できる暗号の秘密鍵と公開鍵のペアを生成して格納します。秘密鍵は本利用者の作成したウォレットアドレスに一意に一致し、前項のニモニックワードはウォレットアドレス及び秘密鍵を含むバックアップデータに紐づくバックアップキーとして機能します。 	•	本利用者は、バックアップキーの管理及び保存の責任を負うものとし、当該バックアップキーを第三者に知られるような態様で管理してはならないものとします。この義務を怠ったことにより損害が生じた場合であっても、当社は、一切の責任を負いません。 	•	当社は、本利用者のバックアップデータを管理することができず、バックアップデータは本利用者の責任において管理されるものとします。 	•	当社は、本利用者のバックアップキーの使用、管理及び保存における過誤及び不徹底等並びに紛失及び忘却等に基づく損害について、一切の責任を負いません。  第５条（利用料金及び支払い方法） 	•	本利用者は、本サービスを無料で利用することができます。ただし、ブロックチェーンにトランザクションを送るための手数料は、当該トランザクションが滞りなく成功するために必要な手数料のうち妥当と判断される金額が自動的に設定され、これを本利用者が負担するものとします。 	•	本利用者は、前項の手数料を、当社指定の方法で支払うものとし、これを遅滞した場合には、本利用者は年１４．６％の割合による遅延損害金を当社に支払うものとします。 	•	第１項の手数料は、本利用者に対する事前の通知なく、変更することがあります。 	•	当社は、本サービスの今後の機能の追加等に基づき、別途追加料金等を規定することがあります。  第６条（個人情報の取扱い） 	•	当社は、本利用者が本サービスを通じて当社に提供したすべての個人情報（以下、単に「個人情報」といいます。）を本サービスの「プライバシーポリシー」に基づき、適切に取り扱うものとします。 	•	当社は、本サービスを通じて得た情報や本利用者から提供または入力された情報（これらの情報には、個人または法人を特定する情報を除く等匿名化の処理を行ったうえでのアンケート情報等を含みます。）を、情報の分析や評価をし、第三者への情報提供等のために利用することがあり、本利用者はこれに予め同意したものとします。  第７条（知的財産権） 	•	本サービス及び本サービスに関するすべての知的財産権は、当社または当社にライセンスを許諾している者に帰属します。 	•	本利用者は、当社の事前の承諾を得た場合を除いて、本サービス及び本サービスに含まれる内容を複製、公開、譲渡、貸与、翻訳、転売、転送、翻訳、使用許諾、再利用等してはならないものとします。 	•	本利用者が本条に違反する行為を行った場合、当該本利用者がこれらの行為によって受けた損害に関し、当社は、一切の保証をしないと同時に、当該本利用者がこれらの行為によって得た利益相当額について、損害賠償請求を行う場合があります。  第８条（禁止行為） 	•	本利用者は、本サービスの利用にあたり、自己または第三者を利用して以下の各号のいずれかに該当する行為をしてはなりません。 	•	犯罪行為に関連する行為または公序良俗に反する行為 	•	本サービスを不正な賭博、詐欺、マネーロンダリング、またはテロ支援活動に利用する行為 	•	法令、本規約または関連する規定に違反する行為 	•	他の本利用者のウォレットを許可なく使用するか、使用しようとする行為 	•	当社または第三者の知的財産権、肖像権、プライバシー権、名誉その他の権利または利益を侵害する行為（かかる侵害を直接または間接に惹起する行為を含みます。） 	•	当社の提供するAPIを利用して自動トランザクションを送る、または受け取る行為 	•	当社の保有するデータ等を取得するために、当社が提供していないロボット、スパイダー、クローラー、スクレイパーその他の自動的手段またはインターフェースを使用する行為 	•	本サービスに関連するまたは当社が管理するシステム、サーバー、ネットワーク等のエラー、バグ、セキュリティホールその他の瑕疵を利用する行為 	•	コンピューター・ウィルスその他の有害なコンピューター・プログラムを含む情報を送信する行為 	•	当社の管理するシステム、サーバー、ネットワークその他の機能を破壊もしくは妨害し、または、不必要に過度の負担をかける行為 	•	本サービスの利用に関する情報を改ざんする行為 	•	当社の事前の書面による同意なしに当社のサービスと相互作用する第三者のアプリケーションを開発する行為 	•	暴力的な要求行為 	•	当社が定める一定のデータ容量以上のデータを本サービスを通じて送信する行為 	•	当社による本サービスの運営を妨害するおそれのある行為 	•	その他当社が不適切と判断する行為 	•	当社は、本利用者が前項各号の一に該当する場合、当該本利用者に対して事前に通知することなく、当該本利用者による本サービスの利用を禁止する等の適切な措置をとることができ、当該本利用者は、当社に対して負う債務の一切について当然に期限の利益を失うものとします。なお、当社は当該措置を行った理由について、当該本利用者に開示する義務を負いません。 	•	当社は、本条に基づき当社が行った行為により本利用者に生じた損害について、一切の責任を負いません。  第９条（本サービスの停止等） 	•	当社は、以下のいずれかに該当する場合には、本利用者に事前に通知することなく、全てまたは一部の本利用者による本サービスの利用の全部または一部を停止または中断することができるものとします。 	•	本サービスに係るコンピューター・システムの点検または保守作業を定期的または緊急に行う場合 	•	コンピューター、通信回線等が事故または第三者の故意に基づく行為により停止した場合 	•	火災、停電、天災地変、戦争、政変、ストライキ、法令・規則等の変更、法定通貨または仮想通貨事情の急変などの不可抗力により本サービスの運営ができなくなった場合 	•	ハッキングその他の方法により当社資産が盗難される等の場合 	•	本サービス提供に必要なシステムに異常が生じた場合 	•	アカウントの不正利用等につき調査を行う場合 	•	法律、政令、規則、命令、通達、条例、ガイドライン（業界団体の自主規制ガイドラインその他のルール事項を含みます。）その他の規制（以下「法令等」といいます。）または当社規則等に基づき調査が必要であると当社が判断する場合 	•	本利用者が所属する業界団体の内部規則、当社規則等に基づき調査を行うことが必要と当社が判断する場合 	•	本利用者が本サービスに関し使用または保管する金銭または仮想通貨が犯罪収益に関するものまたはその疑いがあると当社が判断する場合 	•	本サービスのアプリケーションソフトウェアをインストールするためのサードパーティプラットフォームが、利用規約や価格設定を変更し、当社が本サービスの提供を停止または中断すべきであると判断する場合 	•	仮想通貨の流動性が著しく低下した場合 	•	ハードフォーク等のブロックチェーン分岐その他仮想通貨の仕様の変更等が行われた結果、当社が仮想通貨またはそれに関連するサービスの全部または一部を取り扱わないと判断する場合 	•	法令、政策及び社会情勢の変化等により、サービス提供の継続が不可能または著しく困難であると当社が判断する場合 	•	その他当社が停止または中断を必要と判断する場合 	•	当社は、当社の都合により、本サービスの提供を終了することができます。この場合、当社は本利用者に事前に通知するものとします。 	•	当社は、本条に基づき当社が行った措置に基づき本利用者に生じた損害について一切の責任を負いません。  第１０条（免責） 	•	当社は、仮想通貨の保管、送金、受取サービスその他の関連サービス並びに仮想通貨の価値、機能、安定性及び用途等につきいかなる保証を行うものではなく、いかなる責任も負うものではありません。 	•	当社は、仮想通貨の保管に関するサービス及び本利用者間で仮想通貨を送金し、または受け取る場を提供するサービスを行うものであって、本利用者間の仮想通貨の送金または受取を仲介、媒介または促進させる義務を負うものではありません。 	•	当社は、本利用者が当社から直接または間接に本サービスまたは他の本利用者に関する情報を得た場合であっても、本利用者に対し、本規約の規定内容を超えていかなる保証も行うものではありません。 	•	本利用者は、本サービスを利用することが、本利用者に適用のある法令、業界団体の内部規則等（自主規制ガイドラインを含みます。）に違反するか否かを自己の責任と費用に基づいて調査するものとし、当社は、本利用者による本サービスの利用が、本利用者に適用のある法令、業界団体の内部規則等に適合することを何ら保証するものではありません。 	•	本サービスに関連して本利用者間または本利用者と第三者との間において生じた仮想通貨の送金、受取、連絡、紛争等については、当該本利用者の責任において処理及び解決するものとし、当社は一切責任を負いません。 	•	当社は、本利用者のコンピューター機器及び環境に対する本サービスの妥当性または互換性を保証しません。 	•	当社は、当社による本サービスの提供の中断、停止、終了、利用不能または変更、本サービスの利用によるデータの消失または機器の故障もしくは損傷その他本サービスに関連して本利用者が被った損害につき、賠償する責任を一切負わないものとします。 	•	当社は、当社のシステムの不具合及び本利用者の端末機器、ウェブブラウザその他の動作環境の不具合または本規約の範囲外の操作により、本サービスにおける仮想通貨の保有量の表示及び送金スピード等に影響が及ぶ可能性がありますが、当社は、これらの場合に、本サービスに関連して本利用者が被った損害につき、賠償する責任を一切負わないものとします。 	•	当社は、火災、停電、天災地変、戦争、政変、ストライキ、法令・規則等の変更、法定通貨または仮想通貨事情の急変などの不可抗力により本規約に基づく債務の全部または一部が履行遅滞、履行不能または不完全履行に陥ったとしても、それによって本利用者が被った損害につき、賠償する責任を一切負わないものとします。 	•	当社は、法令等または税制の将来の変更により本利用者に損害が発生した場合であっても、賠償する責任を一切負わないものとします。 	•	当社は、仮想通貨に対する法令等もしくは税制の将来の変更が過去に遡及した場合に、これにより本利用者に損害が発生した場合であっても、過去に遡って賠償する責任を一切負わないものとします。 	•	当社は、仮想通貨の価格が変動したことにより本利用者に損失が発生した場合であっても、本利用者に対して、賠償する責任を一切負わないものとします。  第１１条（損害賠償） 	•	本利用者は、本利用者が法令または本規約に違反して本サービスを利用したことに起因して、当社が直接的もしくは間接的に何らかの損害、損失または費用負担（弁護士費用の負担を含みますが、これに限りません。）を被った場合、当社の請求にしたがって直ちにこれを賠償または補償しなければならないものとします。 	•	当社は、本サービスに関連して本利用者が被った損害について、一切賠償の責任を負いません。なお、消費者契約法の適用その他の理由により、本項その他当社の損害賠償責任を免責する規定にかかわらず当社が本利用者に対して損害賠償責任を負う場合においても、当社の賠償責任は、損害の事由が生じた時点から遡って過去１ヶ月の期間に本利用者から現実に受領した本サービスの手数料の総額を上限とします。  第１２条（秘密保持） 	•	本利用者は、本規約または本サービスに関連して、当社より提供もしくは開示（口頭、書面、データ等の形式、記録媒体及び手段のいかんを問いません。）されまたは知り得た、当社の技術上、営業上、財務上、組織上の情報その他一切の情報（以下「秘密情報」といいます。）を本サービスの利用の目的のみに利用するとともに、当社の書面による承諾なしに第三者に当社の秘密情報を提供、開示または漏洩しないものとします。ただし、以下の各号に定める情報は、秘密情報には含まれないものとします。 	•	当社から提供もしくは開示がなされたときまたは知得したときに、既に一般に公知となっていた、または既に知得していたもの 	•	当社から提供もしくは開示または知得した後、自己の責めに帰せざる事由により刊行物その他により公知となったもの 	•	提供または開示の権限のある第三者から秘密保持義務を負わされることなく適法に取得したもの 	•	秘密情報によることなく独自に開発したもの 	•	当社から秘密情報として取り扱わない旨を書面で確認されたもの 	•	前項の規定にもかかわらず、本利用者は、法令、行政機関、司法機関その他の公的機関より情報開示者から受領した秘密情報の開示を要求された場合には、遅滞なく当社に通知した上、当該秘密情報を開示することができます。ただし、本利用者は、当該秘密情報のうち、適法に開示が要求されている部分についてのみ開示しなければなりません。 	•	本利用者は、当社から求められた場合にはいつでも、遅滞なく、当社の指示に従い、秘密情報を記載した書面その他の記録媒体物及びその全ての複製物を返却または廃棄しなければなりません。   第１３条（本サービス及び本規約の変更） 	•	当社は、本サービスの内容を自由に変更できるものとします。 	•	当社は、本規約（本サービス上に掲載する本サービスの利用に関するルール、ガイドライン、ポリシーその他の規定を含みます。以下本条及び次条において同じ。）の内容を変更する場合には、当該変更の旨を当社が適当と判断する方法で本利用者に通知するものとし、その後本利用者が本サービスを利用した場合には、本利用者は、本規約の変更に同意したものとみなします。  第１４条（地位の譲渡等） 	•	本利用者は、当社の書面による事前の承諾なく、本規約に基づく地位、権利及び義務について、第三者に対し、譲渡、移転、担保設定その他の処分をすることはできません。 	•	当社は、本サービスにかかる事業を他社に譲渡（会社分割、株式譲渡に伴う事業の実質的譲渡その他の方式を含みます。）した場合には、当該事業譲渡に伴い本規約に基づく地位、権利及び義務並びに本利用者が本サービスの利用に関して当社に提供した情報の一部または全部を当該事業譲渡の譲受人に譲渡することができるものとし、本利用者は、かかる譲渡につき本項において予め同意したものとします。なお、本項に定める事業譲渡には、通常の事業譲渡のみならず、会社分割その他事業が移転するあらゆる場合を含むものとします。  第１５条（反社会的勢力への不関与） 	•	本利用者は、自身が暴力団、暴力団員、暴力団関係企業、総会屋、社会運動標ぼうゴロ、政治運動標ぼうゴロ、特殊知能暴力集団、その他反社会的勢力（以下｢暴力団等反社会的勢力｣といいます。）に所属または該当せず、かつ、暴力団等反社会的勢力と関与していないことを表明し、将来にわたっても所属もしくは該当、または関与しないことを確約するものとします。 	•	当社は、本利用者が暴力団等反社会的勢力に所属もしくは該当する、または正当な理由なく関与していると判断した場合、当該本利用者に事前に通知等を行うことなく、当該本利用者の本サービスの利用を禁止する等の措置を講じることがあります。 	•	当社は、前項の措置による本利用者の損害を賠償する責任を一切負わないものとします。  第１６条（分離可能性） 	•	本規約のいずれかの条項またはその一部が、消費者契約法その他の法令等により無効または執行不能と判断された場合であっても、本規約の他の条項、及び一部が無効または執行不能と判断された条項の残りの部分は、継続して完全にその効力を有するものとします。 	•	当社及び本利用者は、当該無効または執行不能と判断された条項またはその一部を適法とし、執行力を保持するために必要な範囲で修正し、法律的及び経済的に同等の効果を確保できるように努めるものとします。  第１７条（存続） 第５条第２項、第６条から第１２条、第１４条第２項、第１５条から第１９条の規定は、利用者が本サービスの利用を終了した後も有効に存続するものとします。  第１８条（準拠法及び管轄裁判所） 	•	本規約は、日本国法に準拠し、解釈されるものとします。 	•	本規約に関する一切の紛争については、東京地方裁判所を第一審の専属的合意管轄裁判所とします。  第１９条（協議解決） 当社及び本利用者は、本規約に定めのない事項または本規約の解釈に疑義が生じた場合には、互いに信義誠実の原則に従って協議するものとします。  2018年4月22日 制定
+      /// 
+      /// Locales: en, ja
+      static func pG7oOLqText(_: Void = ()) -> String {
+        return NSLocalizedString("4pG-7o-OLq.text", tableName: "AgreeServiceTermsViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.backupViewController` struct is generated, and contains static references to 5 localization keys.
+    struct backupViewController {
+      /// en translation:  
+      /// 
+      /// Locales: en, ja
+      static let bTaTeLyZText = Rswift.StringResource(key: "bTa-Te-LyZ.text", tableName: "BackupViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation:  
+      /// 
+      /// Locales: en, ja
+      static let h6QALToxText = Rswift.StringResource(key: "H6Q-AL-Tox.text", tableName: "BackupViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Confirm
+      /// 
+      /// Locales: en, ja
+      static let czxAgFFvTitle = Rswift.StringResource(key: "CZX-ag-fFv.title", tableName: "BackupViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Following is a full list of your back up words. Please make sure to kepp these 12 words in order.
+      /// 
+      /// Locales: en, ja
+      static let dXCnZZIText = Rswift.StringResource(key: "6dX-Cn-ZZI.text", tableName: "BackupViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Write down backup words
+      /// 
+      /// Locales: en, ja
+      static let a4sNePRGTitle = Rswift.StringResource(key: "A4s-ne-pRG.title", tableName: "BackupViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation:  
+      /// 
+      /// Locales: en, ja
+      static func bTaTeLyZText(_: Void = ()) -> String {
+        return NSLocalizedString("bTa-Te-LyZ.text", tableName: "BackupViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation:  
+      /// 
+      /// Locales: en, ja
+      static func h6QALToxText(_: Void = ()) -> String {
+        return NSLocalizedString("H6Q-AL-Tox.text", tableName: "BackupViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Confirm
+      /// 
+      /// Locales: en, ja
+      static func czxAgFFvTitle(_: Void = ()) -> String {
+        return NSLocalizedString("CZX-ag-fFv.title", tableName: "BackupViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Following is a full list of your back up words. Please make sure to kepp these 12 words in order.
+      /// 
+      /// Locales: en, ja
+      static func dXCnZZIText(_: Void = ()) -> String {
+        return NSLocalizedString("6dX-Cn-ZZI.text", tableName: "BackupViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Write down backup words
+      /// 
+      /// Locales: en, ja
+      static func a4sNePRGTitle(_: Void = ()) -> String {
+        return NSLocalizedString("A4s-ne-pRG.title", tableName: "BackupViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.balanceAccessoryView` struct is generated, and contains static references to 8 localization keys.
+    struct balanceAccessoryView {
+      /// en translation:  
+      /// 
+      /// Locales: en, ja
+      static let fSy4XC8LText = Rswift.StringResource(key: "fSy-4X-C8L.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation:  
+      /// 
+      /// Locales: en, ja
+      static let x0SKU9YText = Rswift.StringResource(key: "3x0-sK-u9Y.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation:   
+      /// 
+      /// Locales: en, ja
+      static let h8DMkElXText = Rswift.StringResource(key: "H8D-mk-elX.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: (
+      /// 
+      /// Locales: en, ja
+      static let aAj6ABk2Text = Rswift.StringResource(key: "AAj-6A-Bk2.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: )
+      /// 
+      /// Locales: en, ja
+      static let fwi7UTAhText = Rswift.StringResource(key: "Fwi-7U-tAh.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Fee
+      /// 
+      /// Locales: en, ja
+      static let c5VUF3Text = Rswift.StringResource(key: "79C-5V-UF3.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Sendable Balance
+      /// 
+      /// Locales: en, ja
+      static let kbQVhLcMText = Rswift.StringResource(key: "kbQ-vh-lcM.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: ー
+      /// 
+      /// Locales: en, ja
+      static let sEpMOEqGText = Rswift.StringResource(key: "SEp-MO-eqG.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation:  
+      /// 
+      /// Locales: en, ja
+      static func fSy4XC8LText(_: Void = ()) -> String {
+        return NSLocalizedString("fSy-4X-C8L.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation:  
+      /// 
+      /// Locales: en, ja
+      static func x0SKU9YText(_: Void = ()) -> String {
+        return NSLocalizedString("3x0-sK-u9Y.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation:   
+      /// 
+      /// Locales: en, ja
+      static func h8DMkElXText(_: Void = ()) -> String {
+        return NSLocalizedString("H8D-mk-elX.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: (
+      /// 
+      /// Locales: en, ja
+      static func aAj6ABk2Text(_: Void = ()) -> String {
+        return NSLocalizedString("AAj-6A-Bk2.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: )
+      /// 
+      /// Locales: en, ja
+      static func fwi7UTAhText(_: Void = ()) -> String {
+        return NSLocalizedString("Fwi-7U-tAh.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Fee
+      /// 
+      /// Locales: en, ja
+      static func c5VUF3Text(_: Void = ()) -> String {
+        return NSLocalizedString("79C-5V-UF3.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Sendable Balance
+      /// 
+      /// Locales: en, ja
+      static func kbQVhLcMText(_: Void = ()) -> String {
+        return NSLocalizedString("kbQ-vh-lcM.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: ー
+      /// 
+      /// Locales: en, ja
+      static func sEpMOEqGText(_: Void = ()) -> String {
+        return NSLocalizedString("SEp-MO-eqG.text", tableName: "BalanceAccessoryView", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.createWalletViewController` struct is generated, and contains static references to 5 localization keys.
+    struct createWalletViewController {
+      /// en translation: Create Wallet
+      /// 
+      /// Locales: en, ja
+      static let tn6Qa4iJNormalTitle = Rswift.StringResource(key: "TN6-qa-4iJ.normalTitle", tableName: "CreateWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Go out with your ethereum
+      /// 
+      /// Locales: en, ja
+      static let ysBVyZikText = Rswift.StringResource(key: "ysB-vy-zik.text", tableName: "CreateWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Recover
+      /// 
+      /// Locales: en, ja
+      static let qvXQsKRGNormalTitle = Rswift.StringResource(key: "QvX-qs-kRG.normalTitle", tableName: "CreateWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Service Terms
+      /// 
+      /// Locales: en, ja
+      static let a06LX5VNormalTitle = Rswift.StringResource(key: "7a0-6L-X5V.normalTitle", tableName: "CreateWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Wei Wallet(ウェイウォレット)は すべての人のための、もっともシンプルな イーサリアムウォレットです。
+      /// 
+      /// Locales: en, ja
+      static let el0TcT1KText = Rswift.StringResource(key: "El0-Tc-t1K.text", tableName: "CreateWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation: Create Wallet
+      /// 
+      /// Locales: en, ja
+      static func tn6Qa4iJNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("TN6-qa-4iJ.normalTitle", tableName: "CreateWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Go out with your ethereum
+      /// 
+      /// Locales: en, ja
+      static func ysBVyZikText(_: Void = ()) -> String {
+        return NSLocalizedString("ysB-vy-zik.text", tableName: "CreateWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Recover
+      /// 
+      /// Locales: en, ja
+      static func qvXQsKRGNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("QvX-qs-kRG.normalTitle", tableName: "CreateWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Service Terms
+      /// 
+      /// Locales: en, ja
+      static func a06LX5VNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("7a0-6L-X5V.normalTitle", tableName: "CreateWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Wei Wallet(ウェイウォレット)は すべての人のための、もっともシンプルな イーサリアムウォレットです。
+      /// 
+      /// Locales: en, ja
+      static func el0TcT1KText(_: Void = ()) -> String {
+        return NSLocalizedString("El0-Tc-t1K.text", tableName: "CreateWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
     /// This `R.string.homeViewController` struct is generated, and contains static references to 2 localization keys.
     struct homeViewController {
       /// en translation:  Receive
@@ -632,6 +887,665 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
+    /// This `R.string.receiveViewController` struct is generated, and contains static references to 7 localization keys.
+    struct receiveViewController {
+      /// en translation:  
+      /// 
+      /// Locales: en, ja
+      static let e7OSR4JdText = Rswift.StringResource(key: "e7O-SR-4Jd.text", tableName: "ReceiveViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Close
+      /// 
+      /// Locales: en, ja
+      static let jbuOlHbxNormalTitle = Rswift.StringResource(key: "jbu-ol-Hbx.normalTitle", tableName: "ReceiveViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Copied!
+      /// 
+      /// Locales: en, ja
+      static let ixdC7G7UText = Rswift.StringResource(key: "Ixd-C7-G7U.text", tableName: "ReceiveViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Copy
+      /// 
+      /// Locales: en, ja
+      static let bXdEqPazNormalTitle = Rswift.StringResource(key: "bXd-Eq-paz.normalTitle", tableName: "ReceiveViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Receive
+      /// 
+      /// Locales: en, ja
+      static let baLMqKRETitle = Rswift.StringResource(key: "baL-mq-kRE.title", tableName: "ReceiveViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Receive
+      /// 
+      /// Locales: en, ja
+      static let ihN5FElSText = Rswift.StringResource(key: "IhN-5F-ElS.text", tableName: "ReceiveViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Receive Address
+      /// 
+      /// Locales: en, ja
+      static let zEvRGUtyText = Rswift.StringResource(key: "zEv-RG-uty.text", tableName: "ReceiveViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation:  
+      /// 
+      /// Locales: en, ja
+      static func e7OSR4JdText(_: Void = ()) -> String {
+        return NSLocalizedString("e7O-SR-4Jd.text", tableName: "ReceiveViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Close
+      /// 
+      /// Locales: en, ja
+      static func jbuOlHbxNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("jbu-ol-Hbx.normalTitle", tableName: "ReceiveViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Copied!
+      /// 
+      /// Locales: en, ja
+      static func ixdC7G7UText(_: Void = ()) -> String {
+        return NSLocalizedString("Ixd-C7-G7U.text", tableName: "ReceiveViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Copy
+      /// 
+      /// Locales: en, ja
+      static func bXdEqPazNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("bXd-Eq-paz.normalTitle", tableName: "ReceiveViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Receive
+      /// 
+      /// Locales: en, ja
+      static func baLMqKRETitle(_: Void = ()) -> String {
+        return NSLocalizedString("baL-mq-kRE.title", tableName: "ReceiveViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Receive
+      /// 
+      /// Locales: en, ja
+      static func ihN5FElSText(_: Void = ()) -> String {
+        return NSLocalizedString("IhN-5F-ElS.text", tableName: "ReceiveViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Receive Address
+      /// 
+      /// Locales: en, ja
+      static func zEvRGUtyText(_: Void = ()) -> String {
+        return NSLocalizedString("zEv-RG-uty.text", tableName: "ReceiveViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.restoreWalletViewController` struct is generated, and contains static references to 14 localization keys.
+    struct restoreWalletViewController {
+      /// en translation: 1
+      /// 
+      /// Locales: en, ja
+      static let r7aJIHHWText = Rswift.StringResource(key: "r7a-JI-hHW.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 10
+      /// 
+      /// Locales: en, ja
+      static let uzi3QM6lText = Rswift.StringResource(key: "uzi-3Q-m6l.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 11
+      /// 
+      /// Locales: en, ja
+      static let aIiXIG0yText = Rswift.StringResource(key: "AIi-XI-g0y.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 12
+      /// 
+      /// Locales: en, ja
+      static let bt0Od5m6Text = Rswift.StringResource(key: "Bt0-Od-5m6.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 2
+      /// 
+      /// Locales: en, ja
+      static let kkvJ8YdOText = Rswift.StringResource(key: "Kkv-J8-YdO.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 3
+      /// 
+      /// Locales: en, ja
+      static let k1oEfQ7mText = Rswift.StringResource(key: "k1o-ef-Q7m.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 4
+      /// 
+      /// Locales: en, ja
+      static let yl4EKFlxText = Rswift.StringResource(key: "Yl4-eK-flx.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 5
+      /// 
+      /// Locales: en, ja
+      static let tnrZaVDhText = Rswift.StringResource(key: "tnr-Za-VDh.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 6
+      /// 
+      /// Locales: en, ja
+      static let k6kCiPLmText = Rswift.StringResource(key: "K6k-ci-pLm.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 7
+      /// 
+      /// Locales: en, ja
+      static let prNWsGJvText = Rswift.StringResource(key: "prN-ws-GJv.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 8
+      /// 
+      /// Locales: en, ja
+      static let y9gPoSSeText = Rswift.StringResource(key: "Y9g-Po-sSe.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 9
+      /// 
+      /// Locales: en, ja
+      static let z99SiOcpText = Rswift.StringResource(key: "Z99-Si-Ocp.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Confirm
+      /// 
+      /// Locales: en, ja
+      static let dz7P3XC4Title = Rswift.StringResource(key: "Dz7-p3-XC4.title", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Restore your wallet
+      /// 
+      /// Locales: en, ja
+      static let q6fOHGNUTitle = Rswift.StringResource(key: "q6f-oH-gNU.title", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation: 1
+      /// 
+      /// Locales: en, ja
+      static func r7aJIHHWText(_: Void = ()) -> String {
+        return NSLocalizedString("r7a-JI-hHW.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 10
+      /// 
+      /// Locales: en, ja
+      static func uzi3QM6lText(_: Void = ()) -> String {
+        return NSLocalizedString("uzi-3Q-m6l.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 11
+      /// 
+      /// Locales: en, ja
+      static func aIiXIG0yText(_: Void = ()) -> String {
+        return NSLocalizedString("AIi-XI-g0y.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 12
+      /// 
+      /// Locales: en, ja
+      static func bt0Od5m6Text(_: Void = ()) -> String {
+        return NSLocalizedString("Bt0-Od-5m6.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 2
+      /// 
+      /// Locales: en, ja
+      static func kkvJ8YdOText(_: Void = ()) -> String {
+        return NSLocalizedString("Kkv-J8-YdO.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 3
+      /// 
+      /// Locales: en, ja
+      static func k1oEfQ7mText(_: Void = ()) -> String {
+        return NSLocalizedString("k1o-ef-Q7m.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 4
+      /// 
+      /// Locales: en, ja
+      static func yl4EKFlxText(_: Void = ()) -> String {
+        return NSLocalizedString("Yl4-eK-flx.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 5
+      /// 
+      /// Locales: en, ja
+      static func tnrZaVDhText(_: Void = ()) -> String {
+        return NSLocalizedString("tnr-Za-VDh.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 6
+      /// 
+      /// Locales: en, ja
+      static func k6kCiPLmText(_: Void = ()) -> String {
+        return NSLocalizedString("K6k-ci-pLm.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 7
+      /// 
+      /// Locales: en, ja
+      static func prNWsGJvText(_: Void = ()) -> String {
+        return NSLocalizedString("prN-ws-GJv.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 8
+      /// 
+      /// Locales: en, ja
+      static func y9gPoSSeText(_: Void = ()) -> String {
+        return NSLocalizedString("Y9g-Po-sSe.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 9
+      /// 
+      /// Locales: en, ja
+      static func z99SiOcpText(_: Void = ()) -> String {
+        return NSLocalizedString("Z99-Si-Ocp.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Confirm
+      /// 
+      /// Locales: en, ja
+      static func dz7P3XC4Title(_: Void = ()) -> String {
+        return NSLocalizedString("Dz7-p3-XC4.title", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Restore your wallet
+      /// 
+      /// Locales: en, ja
+      static func q6fOHGNUTitle(_: Void = ()) -> String {
+        return NSLocalizedString("q6f-oH-gNU.title", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.selectAddressByPasteViewController` struct is generated, and contains static references to 4 localization keys.
+    struct selectAddressByPasteViewController {
+      /// en translation:  
+      /// 
+      /// Locales: en, ja
+      static let uCsWyXXzText = Rswift.StringResource(key: "UCs-wy-xXz.text", tableName: "SelectAddressByPasteViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Invalid address format :(
+      /// 
+      /// Locales: en, ja
+      static let mxCVQgnText = Rswift.StringResource(key: "7mx-cV-qgn.text", tableName: "SelectAddressByPasteViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Paste from my clipboard
+      /// 
+      /// Locales: en, ja
+      static let qrGLMGHnNormalTitle = Rswift.StringResource(key: "QrG-lM-GHn.normalTitle", tableName: "SelectAddressByPasteViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Sending address
+      /// 
+      /// Locales: en, ja
+      static let ydQDbEI3Text = Rswift.StringResource(key: "YdQ-db-eI3.text", tableName: "SelectAddressByPasteViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation:  
+      /// 
+      /// Locales: en, ja
+      static func uCsWyXXzText(_: Void = ()) -> String {
+        return NSLocalizedString("UCs-wy-xXz.text", tableName: "SelectAddressByPasteViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Invalid address format :(
+      /// 
+      /// Locales: en, ja
+      static func mxCVQgnText(_: Void = ()) -> String {
+        return NSLocalizedString("7mx-cV-qgn.text", tableName: "SelectAddressByPasteViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Paste from my clipboard
+      /// 
+      /// Locales: en, ja
+      static func qrGLMGHnNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("QrG-lM-GHn.normalTitle", tableName: "SelectAddressByPasteViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Sending address
+      /// 
+      /// Locales: en, ja
+      static func ydQDbEI3Text(_: Void = ()) -> String {
+        return NSLocalizedString("YdQ-db-eI3.text", tableName: "SelectAddressByPasteViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.selectAddressByQRViewController` struct is generated, and contains static references to 1 localization keys.
+    struct selectAddressByQRViewController {
+      /// en translation: Scan a QR code、 or paste an address
+      /// 
+      /// Locales: en, ja
+      static let qhu2h3kKText = Rswift.StringResource(key: "Qhu-2h-3kK.text", tableName: "SelectAddressByQRViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation: Scan a QR code、 or paste an address
+      /// 
+      /// Locales: en, ja
+      static func qhu2h3kKText(_: Void = ()) -> String {
+        return NSLocalizedString("Qhu-2h-3kK.text", tableName: "SelectAddressByQRViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.selectAmountViewController` struct is generated, and contains static references to 7 localization keys.
+    struct selectAmountViewController {
+      /// en translation:  = 
+      /// 
+      /// Locales: en, ja
+      static let e6mQ1XGOText = Rswift.StringResource(key: "e6m-q1-xGO.text", tableName: "SelectAmountViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation:  ETH
+      /// 
+      /// Locales: en, ja
+      static let t4GDTDuTText = Rswift.StringResource(key: "t4G-dT-duT.text", tableName: "SelectAmountViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 0
+      /// 
+      /// Locales: en, ja
+      static let cM4TR2dRPlaceholder = Rswift.StringResource(key: "cM4-TR-2dR.placeholder", tableName: "SelectAmountViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 0
+      /// 
+      /// Locales: en, ja
+      static let dQeRmXA8Text = Rswift.StringResource(key: "DQe-Rm-xA8.text", tableName: "SelectAmountViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Confirm
+      /// 
+      /// Locales: en, ja
+      static let q7bJQ5w1NormalTitle = Rswift.StringResource(key: "q7b-JQ-5w1.normalTitle", tableName: "SelectAmountViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Enter the amount
+      /// 
+      /// Locales: en, ja
+      static let pQuI9Q5fTitle = Rswift.StringResource(key: "pQu-i9-Q5f.title", tableName: "SelectAmountViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: USD ($)
+      /// 
+      /// Locales: en, ja
+      static let o9vIOmText = Rswift.StringResource(key: "12O-9v-IOm.text", tableName: "SelectAmountViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation:  = 
+      /// 
+      /// Locales: en, ja
+      static func e6mQ1XGOText(_: Void = ()) -> String {
+        return NSLocalizedString("e6m-q1-xGO.text", tableName: "SelectAmountViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation:  ETH
+      /// 
+      /// Locales: en, ja
+      static func t4GDTDuTText(_: Void = ()) -> String {
+        return NSLocalizedString("t4G-dT-duT.text", tableName: "SelectAmountViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 0
+      /// 
+      /// Locales: en, ja
+      static func cM4TR2dRPlaceholder(_: Void = ()) -> String {
+        return NSLocalizedString("cM4-TR-2dR.placeholder", tableName: "SelectAmountViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 0
+      /// 
+      /// Locales: en, ja
+      static func dQeRmXA8Text(_: Void = ()) -> String {
+        return NSLocalizedString("DQe-Rm-xA8.text", tableName: "SelectAmountViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Confirm
+      /// 
+      /// Locales: en, ja
+      static func q7bJQ5w1NormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("q7b-JQ-5w1.normalTitle", tableName: "SelectAmountViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Enter the amount
+      /// 
+      /// Locales: en, ja
+      static func pQuI9Q5fTitle(_: Void = ()) -> String {
+        return NSLocalizedString("pQu-i9-Q5f.title", tableName: "SelectAmountViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: USD ($)
+      /// 
+      /// Locales: en, ja
+      static func o9vIOmText(_: Void = ()) -> String {
+        return NSLocalizedString("12O-9v-IOm.text", tableName: "SelectAmountViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.sendBaseViewController` struct is generated, and contains static references to 2 localization keys.
+    struct sendBaseViewController {
+      /// en translation: Cancel
+      /// 
+      /// Locales: en, ja
+      static let z1fGbAVVNormalTitle = Rswift.StringResource(key: "z1f-gb-AVV.normalTitle", tableName: "SendBaseViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Who to send?
+      /// 
+      /// Locales: en, ja
+      static let hNyY6KRiTitle = Rswift.StringResource(key: "HNy-y6-kRi.title", tableName: "SendBaseViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation: Cancel
+      /// 
+      /// Locales: en, ja
+      static func z1fGbAVVNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("z1f-gb-AVV.normalTitle", tableName: "SendBaseViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Who to send?
+      /// 
+      /// Locales: en, ja
+      static func hNyY6KRiTitle(_: Void = ()) -> String {
+        return NSLocalizedString("HNy-y6-kRi.title", tableName: "SendBaseViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.sendConfirmationViewController` struct is generated, and contains static references to 14 localization keys.
+    struct sendConfirmationViewController {
+      /// en translation:  
+      /// 
+      /// Locales: en, ja
+      static let a4GCa63WText = Rswift.StringResource(key: "A4G-ca-63W.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation:  
+      /// 
+      /// Locales: en, ja
+      static let rZYNZD5RText = Rswift.StringResource(key: "rZY-NZ-D5R.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation:  ETH
+      /// 
+      /// Locales: en, ja
+      static let xqBXBMl0Text = Rswift.StringResource(key: "XqB-XB-ml0.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 0
+      /// 
+      /// Locales: en, ja
+      static let mx7QM2MText = Rswift.StringResource(key: "1mx-7Q-M2M.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 0
+      /// 
+      /// Locales: en, ja
+      static let pypBL9rKText = Rswift.StringResource(key: "Pyp-BL-9rK.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: = 
+      /// 
+      /// Locales: en, ja
+      static let rDKTsGlLText = Rswift.StringResource(key: "rDK-ts-GlL.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Confirm
+      /// 
+      /// Locales: en, ja
+      static let wCd0nBQ1NormalTitle = Rswift.StringResource(key: "wCd-0n-bQ1.normalTitle", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Confirm the detail
+      /// 
+      /// Locales: en, ja
+      static let xic71DEETitle = Rswift.StringResource(key: "XIC-71-DEE.title", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Fee
+      /// 
+      /// Locales: en, ja
+      static let imU9nBhEText = Rswift.StringResource(key: "ImU-9n-bhE.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Send to other address
+      /// 
+      /// Locales: en, ja
+      static let i0wX9BDHNormalTitle = Rswift.StringResource(key: "i0w-x9-bDH.normalTitle", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Sending address
+      /// 
+      /// Locales: en, ja
+      static let cvphlxmwText = Rswift.StringResource(key: "CVP-hL-XMW.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Sending amount
+      /// 
+      /// Locales: en, ja
+      static let vgFwA7sText = Rswift.StringResource(key: "8vg-Fw-a7s.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Sent
+      /// 
+      /// Locales: en, ja
+      static let k5i3KOWRText = Rswift.StringResource(key: "K5i-3K-OWR.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Try again!
+      /// 
+      /// Locales: en, ja
+      static let r4k33IuENormalTitle = Rswift.StringResource(key: "r4k-33-iuE.normalTitle", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation:  
+      /// 
+      /// Locales: en, ja
+      static func a4GCa63WText(_: Void = ()) -> String {
+        return NSLocalizedString("A4G-ca-63W.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation:  
+      /// 
+      /// Locales: en, ja
+      static func rZYNZD5RText(_: Void = ()) -> String {
+        return NSLocalizedString("rZY-NZ-D5R.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation:  ETH
+      /// 
+      /// Locales: en, ja
+      static func xqBXBMl0Text(_: Void = ()) -> String {
+        return NSLocalizedString("XqB-XB-ml0.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 0
+      /// 
+      /// Locales: en, ja
+      static func mx7QM2MText(_: Void = ()) -> String {
+        return NSLocalizedString("1mx-7Q-M2M.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 0
+      /// 
+      /// Locales: en, ja
+      static func pypBL9rKText(_: Void = ()) -> String {
+        return NSLocalizedString("Pyp-BL-9rK.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: = 
+      /// 
+      /// Locales: en, ja
+      static func rDKTsGlLText(_: Void = ()) -> String {
+        return NSLocalizedString("rDK-ts-GlL.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Confirm
+      /// 
+      /// Locales: en, ja
+      static func wCd0nBQ1NormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("wCd-0n-bQ1.normalTitle", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Confirm the detail
+      /// 
+      /// Locales: en, ja
+      static func xic71DEETitle(_: Void = ()) -> String {
+        return NSLocalizedString("XIC-71-DEE.title", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Fee
+      /// 
+      /// Locales: en, ja
+      static func imU9nBhEText(_: Void = ()) -> String {
+        return NSLocalizedString("ImU-9n-bhE.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Send to other address
+      /// 
+      /// Locales: en, ja
+      static func i0wX9BDHNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("i0w-x9-bDH.normalTitle", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Sending address
+      /// 
+      /// Locales: en, ja
+      static func cvphlxmwText(_: Void = ()) -> String {
+        return NSLocalizedString("CVP-hL-XMW.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Sending amount
+      /// 
+      /// Locales: en, ja
+      static func vgFwA7sText(_: Void = ()) -> String {
+        return NSLocalizedString("8vg-Fw-a7s.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Sent
+      /// 
+      /// Locales: en, ja
+      static func k5i3KOWRText(_: Void = ()) -> String {
+        return NSLocalizedString("K5i-3K-OWR.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Try again!
+      /// 
+      /// Locales: en, ja
+      static func r4k33IuENormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("r4k-33-iuE.normalTitle", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.suggestBackupViewController` struct is generated, and contains static references to 4 localization keys.
+    struct suggestBackupViewController {
+      /// en translation: Backup
+      /// 
+      /// Locales: en, ja
+      static let mVJAKCRONormalTitle = Rswift.StringResource(key: "mVJ-aK-cRO.normalTitle", tableName: "SuggestBackupViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Close
+      /// 
+      /// Locales: en, ja
+      static let gnoWOQ4MNormalTitle = Rswift.StringResource(key: "gno-wO-Q4M.normalTitle", tableName: "SuggestBackupViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Let's backup your wallet!
+      /// 
+      /// Locales: en, ja
+      static let vp6I49TOText = Rswift.StringResource(key: "vp6-I4-9TO.text", tableName: "SuggestBackupViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: You can recover your wallet anytime anywhere by backing it up
+      /// 
+      /// Locales: en, ja
+      static let snQSCDXuText = Rswift.StringResource(key: "SnQ-SC-dXu.text", tableName: "SuggestBackupViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation: Backup
+      /// 
+      /// Locales: en, ja
+      static func mVJAKCRONormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("mVJ-aK-cRO.normalTitle", tableName: "SuggestBackupViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Close
+      /// 
+      /// Locales: en, ja
+      static func gnoWOQ4MNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("gno-wO-Q4M.normalTitle", tableName: "SuggestBackupViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Let's backup your wallet!
+      /// 
+      /// Locales: en, ja
+      static func vp6I49TOText(_: Void = ()) -> String {
+        return NSLocalizedString("vp6-I4-9TO.text", tableName: "SuggestBackupViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: You can recover your wallet anytime anywhere by backing it up
+      /// 
+      /// Locales: en, ja
+      static func snQSCDXuText(_: Void = ()) -> String {
+        return NSLocalizedString("SnQ-SC-dXu.text", tableName: "SuggestBackupViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.tutorialViewController` struct is generated, and contains static references to 2 localization keys.
+    struct tutorialViewController {
+      /// en translation: Next
+      /// 
+      /// Locales: en, ja
+      static let zs56IFqqNormalTitle = Rswift.StringResource(key: "ZS5-6I-fqq.normalTitle", tableName: "TutorialViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Start
+      /// 
+      /// Locales: en, ja
+      static let qgs4YJasNormalTitle = Rswift.StringResource(key: "Qgs-4Y-jas.normalTitle", tableName: "TutorialViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation: Next
+      /// 
+      /// Locales: en, ja
+      static func zs56IFqqNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("ZS5-6I-fqq.normalTitle", tableName: "TutorialViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Start
+      /// 
+      /// Locales: en, ja
+      static func qgs4YJasNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("Qgs-4Y-jas.normalTitle", tableName: "TutorialViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
     fileprivate init() {}
   }
   
@@ -685,10 +1599,10 @@ struct _R: Rswift.Validatable {
       try createWalletViewController.validate()
       try suggestBackupViewController.validate()
       try launchScreen.validate()
-      try latestTransactionListViewController.validate()
-      try sendConfirmationViewController.validate()
-      try maintenanceViewController.validate()
       try homeViewController.validate()
+      try latestTransactionListViewController.validate()
+      try maintenanceViewController.validate()
+      try sendConfirmationViewController.validate()
     }
     
     struct agreeServiceTermsViewController: Rswift.StoryboardResourceWithInitialControllerType {
