@@ -25,3 +25,6 @@
 // MARK: - Send View Pager
 "Page.QRCode" = "QRコードを撮影";
 "Page.CopyAddress" = "アドレスコピー";
+
+// MARK: - Suggest Backup
+"SuggestBackup.Message" = "バックアップを取ることであなたの保有しているイーサリアムは復元することができます";

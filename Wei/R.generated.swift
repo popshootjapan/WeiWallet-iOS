@@ -710,7 +710,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 13 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 14 localization keys.
     struct localizable {
       /// en translation: Bad Connection :(
       /// 
@@ -764,6 +764,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let errorTitleSystemError = Rswift.StringResource(key: "Error.Title.SystemError", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: You can recover your wallet anytime anywhere by backing it up
+      /// 
+      /// Locales: en, ja
+      static let suggestBackupMessage = Rswift.StringResource(key: "SuggestBackup.Message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       
       /// en translation: Bad Connection :(
       /// 
@@ -854,6 +858,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func errorTitleSystemError(_: Void = ()) -> String {
         return NSLocalizedString("Error.Title.SystemError", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: You can recover your wallet anytime anywhere by backing it up
+      /// 
+      /// Locales: en, ja
+      static func suggestBackupMessage(_: Void = ()) -> String {
+        return NSLocalizedString("SuggestBackup.Message", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}

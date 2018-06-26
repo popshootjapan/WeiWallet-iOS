@@ -25,3 +25,6 @@
 // MARK: - Send View Pager
 "Page.QRCode" = "Scan QR";
 "Page.CopyAddress" = "Copy Address";
+
+// MARK: - Suggest Backup
+"SuggestBackup.Message" = "You can recover your wallet anytime anywhere by backing it up";
