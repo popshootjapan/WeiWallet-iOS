@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "12個の単語の並びがお客様のバックアップキーです。順番通りに記録して大事に保管してください。"; ObjectID = "6dX-Cn-ZZI"; */
+"6dX-Cn-ZZI.text" = "12個の単語の並びがお客様のバックアップキーです。順番通りに記録して大事に保管してください。";
+
+/* Class = "UINavigationItem"; title = "バックアップキーの記録"; ObjectID = "A4s-ne-pRG"; */
+"A4s-ne-pRG.title" = "バックアップキーの記録";
+
+/* Class = "UIBarButtonItem"; title = "確認"; ObjectID = "CZX-ag-fFv"; */
+"CZX-ag-fFv.title" = "確認";
+
+/* Class = "UILabel"; text = " "; ObjectID = "H6Q-AL-Tox"; */
+"H6Q-AL-Tox.text" = " ";
+
+/* Class = "UILabel"; text = " "; ObjectID = "bTa-Te-LyZ"; */
+"bTa-Te-LyZ.text" = " ";
