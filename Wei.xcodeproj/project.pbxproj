@@ -113,6 +113,7 @@
 		AE6D4CBB20E20618007CF3C5 /* AgreeServiceTermsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4CBD20E20618007CF3C5 /* AgreeServiceTermsViewController.storyboard */; };
 		AE6D4CC220E20679007CF3C5 /* SuggestBackupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4CC420E20679007CF3C5 /* SuggestBackupViewController.storyboard */; };
 		AE6D4CC920E20723007CF3C5 /* BackupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4CCB20E20723007CF3C5 /* BackupViewController.storyboard */; };
+		AE6D4CD020E20898007CF3C5 /* TutorialViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4CD220E20898007CF3C5 /* TutorialViewController.storyboard */; };
 		AE8C9FC6209EF85F00C616E1 /* DebugListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */; };
 		AE8C9FC8209EF87300C616E1 /* DebugListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */; };
 		AE979E8020D7B6F5009B353F /* Decimal+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */; };
@@ -181,7 +182,6 @@
 		DE9133C620AEFE78003CDE67 /* MnemonicWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9133C520AEFE78003CDE67 /* MnemonicWord.swift */; };
 		DE9133C820B2DE12003CDE67 /* MnemonicWordViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9133C720B2DE12003CDE67 /* MnemonicWordViewCell.swift */; };
 		DE9272C2208ACF4E00E03AB9 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9272C1208ACF4E00E03AB9 /* TutorialViewController.swift */; };
-		DE9272C4208ACF5800E03AB9 /* TutorialViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE9272C3208ACF5800E03AB9 /* TutorialViewController.storyboard */; };
 		DE9272C6208AD54700E03AB9 /* TutorialTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9272C5208AD54700E03AB9 /* TutorialTopView.swift */; };
 		DE9272C8208AD55000E03AB9 /* TutorialTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE9272C7208AD55000E03AB9 /* TutorialTopView.xib */; };
 		DE9272CA208B19B500E03AB9 /* TutorialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9272C9208B19B500E03AB9 /* TutorialViewModel.swift */; };
@@ -327,6 +327,9 @@
 		AE6D4CCA20E20723007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BackupViewController.storyboard; sourceTree = "<group>"; };
 		AE6D4CCD20E20725007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BackupViewController.strings; sourceTree = "<group>"; };
 		AE6D4CCF20E20726007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/BackupViewController.strings; sourceTree = "<group>"; };
+		AE6D4CD120E20898007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TutorialViewController.storyboard; sourceTree = "<group>"; };
+		AE6D4CD420E2089A007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TutorialViewController.strings; sourceTree = "<group>"; };
+		AE6D4CD620E2089B007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/TutorialViewController.strings; sourceTree = "<group>"; };
 		AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugListViewController.swift; sourceTree = "<group>"; };
 		AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DebugListViewController.storyboard; sourceTree = "<group>"; };
 		AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extension.swift"; sourceTree = "<group>"; };
@@ -402,7 +405,6 @@
 		DE9133C520AEFE78003CDE67 /* MnemonicWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MnemonicWord.swift; sourceTree = "<group>"; };
 		DE9133C720B2DE12003CDE67 /* MnemonicWordViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MnemonicWordViewCell.swift; sourceTree = "<group>"; };
 		DE9272C1208ACF4E00E03AB9 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
-		DE9272C3208ACF5800E03AB9 /* TutorialViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TutorialViewController.storyboard; sourceTree = "<group>"; };
 		DE9272C5208AD54700E03AB9 /* TutorialTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialTopView.swift; sourceTree = "<group>"; };
 		DE9272C7208AD55000E03AB9 /* TutorialTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TutorialTopView.xib; sourceTree = "<group>"; };
 		DE9272C9208B19B500E03AB9 /* TutorialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewModel.swift; sourceTree = "<group>"; };
@@ -984,7 +986,7 @@
 		DE9272C0208ACF3A00E03AB9 /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				DE9272C3208ACF5800E03AB9 /* TutorialViewController.storyboard */,
+				AE6D4CD220E20898007CF3C5 /* TutorialViewController.storyboard */,
 				DE9272C1208ACF4E00E03AB9 /* TutorialViewController.swift */,
 				DE9272C5208AD54700E03AB9 /* TutorialTopView.swift */,
 				DE9272C7208AD55000E03AB9 /* TutorialTopView.xib */,
@@ -1112,7 +1114,7 @@
 				AE69C85520E0E32600EB1293 /* HomeViewController.storyboard in Resources */,
 				DEC577292074D76E00DC3923 /* ReceiveViewController.storyboard in Resources */,
 				DE052D4E20D4016B00ACFA49 /* Localizable.strings in Resources */,
-				DE9272C4208ACF5800E03AB9 /* TutorialViewController.storyboard in Resources */,
+				AE6D4CD020E20898007CF3C5 /* TutorialViewController.storyboard in Resources */,
 				AED6F44F205514BB004A280F /* LaunchScreen.storyboard in Resources */,
 				DE624F932072485500840B06 /* SendConfirmationViewController.storyboard in Resources */,
 				AEFA44FB20B318C100844D4A /* RestoreWalletViewController.storyboard in Resources */,
@@ -1482,6 +1484,16 @@
 				AE6D4CCF20E20726007CF3C5 /* ja */,
 			);
 			name = BackupViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		AE6D4CD220E20898007CF3C5 /* TutorialViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE6D4CD120E20898007CF3C5 /* Base */,
+				AE6D4CD420E2089A007CF3C5 /* en */,
+				AE6D4CD620E2089B007CF3C5 /* ja */,
+			);
+			name = TutorialViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		AED6F44D205514BB004A280F /* LaunchScreen.storyboard */ = {
