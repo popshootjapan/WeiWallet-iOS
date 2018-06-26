@@ -28,3 +28,9 @@
 
 // MARK: - Suggest Backup
 "SuggestBackup.Message" = "バックアップを取ることであなたの保有しているイーサリアムは復元することができます";
+
+// MARK: - Backup
+"Backup.Message" = "12個の単語の並びがお客様のバックアップキーです。順番通りに記録して大事に保管してください。";
+
+// MARK: - Common
+"Common.Close" = "閉じる";

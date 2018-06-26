@@ -121,6 +121,7 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="backupMessageLabel" destination="6dX-Cn-ZZI" id="19L-DD-slf"/>
                         <outlet property="collectionView" destination="ifm-qs-5hp" id="s6N-LL-B5G"/>
                         <outlet property="confirmButton" destination="CZX-ag-fFv" id="gtX-FN-c1g"/>
                     </connections>

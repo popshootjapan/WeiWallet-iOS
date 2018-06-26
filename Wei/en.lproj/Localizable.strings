@@ -28,3 +28,9 @@
 
 // MARK: - Suggest Backup
 "SuggestBackup.Message" = "You can recover your wallet anytime anywhere by backing it up";
+
+// MARK: - Backup
+"Backup.Message" = "Following is a full list of your back up words. Please make sure to kepp these 12 words in order.";
+
+// MARK: - Common
+"Common.Close" = "Close";

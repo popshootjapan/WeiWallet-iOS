@@ -710,12 +710,16 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 14 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 16 localization keys.
     struct localizable {
       /// en translation: Bad Connection :(
       /// 
       /// Locales: en, ja
       static let errorTitleNoConnection = Rswift.StringResource(key: "Error.Title.NoConnection", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Close
+      /// 
+      /// Locales: en, ja
+      static let commonClose = Rswift.StringResource(key: "Common.Close", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Copy Address
       /// 
       /// Locales: en, ja
@@ -724,6 +728,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let errorEtherFailedToConvert = Rswift.StringResource(key: "Error.Ether.FailedToConvert", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Following is a full list of your back up words. Please make sure to kepp these 12 words in order.
+      /// 
+      /// Locales: en, ja
+      static let backupMessage = Rswift.StringResource(key: "Backup.Message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Please try again later
       /// 
       /// Locales: en, ja
@@ -776,6 +784,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("Error.Title.NoConnection", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Close
+      /// 
+      /// Locales: en, ja
+      static func commonClose(_: Void = ()) -> String {
+        return NSLocalizedString("Common.Close", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Copy Address
       /// 
       /// Locales: en, ja
@@ -788,6 +803,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func errorEtherFailedToConvert(_: Void = ()) -> String {
         return NSLocalizedString("Error.Ether.FailedToConvert", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Following is a full list of your back up words. Please make sure to kepp these 12 words in order.
+      /// 
+      /// Locales: en, ja
+      static func backupMessage(_: Void = ()) -> String {
+        return NSLocalizedString("Backup.Message", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Please try again later
