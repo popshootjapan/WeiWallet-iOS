@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "アドレスの形式に誤りがあります"; ObjectID = "7mx-cV-qgn"; */
+"7mx-cV-qgn.text" = "アドレスの形式に誤りがあります";
+
+/* Class = "UIButton"; normalTitle = "クリップボードからペーストする"; ObjectID = "QrG-lM-GHn"; */
+"QrG-lM-GHn.normalTitle" = "クリップボードからペーストする";
+
+/* Class = "UILabel"; text = " "; ObjectID = "UCs-wy-xXz"; */
+"UCs-wy-xXz.text" = " ";
+
+/* Class = "UILabel"; text = "宛先アドレス"; ObjectID = "YdQ-db-eI3"; */
+"YdQ-db-eI3.text" = "宛先アドレス";

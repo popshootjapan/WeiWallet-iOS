@@ -420,7 +420,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 11 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 14 localization tables.
   struct string {
     /// This `R.string.agreeServiceTermsViewController` struct is generated, and contains static references to 3 localization keys.
     struct agreeServiceTermsViewController {
@@ -471,14 +471,14 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let h6QALToxText = Rswift.StringResource(key: "H6Q-AL-Tox.text", tableName: "BackupViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: 12個の単語の並びがお客様のバックアップキーです。順番通りに記録して大事に保管してください。
-      /// 
-      /// Locales: en, ja
-      static let dXCnZZIText = Rswift.StringResource(key: "6dX-Cn-ZZI.text", tableName: "BackupViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Confirm
       /// 
       /// Locales: en, ja
       static let czxAgFFvTitle = Rswift.StringResource(key: "CZX-ag-fFv.title", tableName: "BackupViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Following is a full list of your back up words. Please make sure to kepp these 12 words in order.
+      /// 
+      /// Locales: en, ja
+      static let dXCnZZIText = Rswift.StringResource(key: "6dX-Cn-ZZI.text", tableName: "BackupViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Write down backup words
       /// 
       /// Locales: en, ja
@@ -498,18 +498,18 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("H6Q-AL-Tox.text", tableName: "BackupViewController", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: 12個の単語の並びがお客様のバックアップキーです。順番通りに記録して大事に保管してください。
-      /// 
-      /// Locales: en, ja
-      static func dXCnZZIText(_: Void = ()) -> String {
-        return NSLocalizedString("6dX-Cn-ZZI.text", tableName: "BackupViewController", bundle: R.hostingBundle, comment: "")
-      }
-      
       /// en translation: Confirm
       /// 
       /// Locales: en, ja
       static func czxAgFFvTitle(_: Void = ()) -> String {
         return NSLocalizedString("CZX-ag-fFv.title", tableName: "BackupViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Following is a full list of your back up words. Please make sure to kepp these 12 words in order.
+      /// 
+      /// Locales: en, ja
+      static func dXCnZZIText(_: Void = ()) -> String {
+        return NSLocalizedString("6dX-Cn-ZZI.text", tableName: "BackupViewController", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Write down backup words
@@ -930,7 +930,7 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let dz7P3XC4Title = Rswift.StringResource(key: "Dz7-p3-XC4.title", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: Enter your backup words
+      /// en translation: Restore your wallet
       /// 
       /// Locales: en, ja
       static let q6fOHGNUTitle = Rswift.StringResource(key: "q6f-oH-gNU.title", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
@@ -1026,11 +1026,106 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("Dz7-p3-XC4.title", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Enter your backup words
+      /// en translation: Restore your wallet
       /// 
       /// Locales: en, ja
       static func q6fOHGNUTitle(_: Void = ()) -> String {
         return NSLocalizedString("q6f-oH-gNU.title", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.selectAddressByPasteViewController` struct is generated, and contains static references to 4 localization keys.
+    struct selectAddressByPasteViewController {
+      /// en translation:  
+      /// 
+      /// Locales: en, ja
+      static let uCsWyXXzText = Rswift.StringResource(key: "UCs-wy-xXz.text", tableName: "SelectAddressByPasteViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Invalid address format :(
+      /// 
+      /// Locales: en, ja
+      static let mxCVQgnText = Rswift.StringResource(key: "7mx-cV-qgn.text", tableName: "SelectAddressByPasteViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Paste from my clipboard
+      /// 
+      /// Locales: en, ja
+      static let qrGLMGHnNormalTitle = Rswift.StringResource(key: "QrG-lM-GHn.normalTitle", tableName: "SelectAddressByPasteViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Receiver address
+      /// 
+      /// Locales: en, ja
+      static let ydQDbEI3Text = Rswift.StringResource(key: "YdQ-db-eI3.text", tableName: "SelectAddressByPasteViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation:  
+      /// 
+      /// Locales: en, ja
+      static func uCsWyXXzText(_: Void = ()) -> String {
+        return NSLocalizedString("UCs-wy-xXz.text", tableName: "SelectAddressByPasteViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Invalid address format :(
+      /// 
+      /// Locales: en, ja
+      static func mxCVQgnText(_: Void = ()) -> String {
+        return NSLocalizedString("7mx-cV-qgn.text", tableName: "SelectAddressByPasteViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Paste from my clipboard
+      /// 
+      /// Locales: en, ja
+      static func qrGLMGHnNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("QrG-lM-GHn.normalTitle", tableName: "SelectAddressByPasteViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Receiver address
+      /// 
+      /// Locales: en, ja
+      static func ydQDbEI3Text(_: Void = ()) -> String {
+        return NSLocalizedString("YdQ-db-eI3.text", tableName: "SelectAddressByPasteViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.selectAddressByQRViewController` struct is generated, and contains static references to 1 localization keys.
+    struct selectAddressByQRViewController {
+      /// en translation: Scan a QR code、 or paste an address
+      /// 
+      /// Locales: en, ja
+      static let qhu2h3kKText = Rswift.StringResource(key: "Qhu-2h-3kK.text", tableName: "SelectAddressByQRViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation: Scan a QR code、 or paste an address
+      /// 
+      /// Locales: en, ja
+      static func qhu2h3kKText(_: Void = ()) -> String {
+        return NSLocalizedString("Qhu-2h-3kK.text", tableName: "SelectAddressByQRViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.sendBaseViewController` struct is generated, and contains static references to 2 localization keys.
+    struct sendBaseViewController {
+      /// en translation: Cancel
+      /// 
+      /// Locales: en, ja
+      static let z1fGbAVVNormalTitle = Rswift.StringResource(key: "z1f-gb-AVV.normalTitle", tableName: "SendBaseViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Who to send?
+      /// 
+      /// Locales: en, ja
+      static let hNyY6KRiTitle = Rswift.StringResource(key: "HNy-y6-kRi.title", tableName: "SendBaseViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation: Cancel
+      /// 
+      /// Locales: en, ja
+      static func z1fGbAVVNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("z1f-gb-AVV.normalTitle", tableName: "SendBaseViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Who to send?
+      /// 
+      /// Locales: en, ja
+      static func hNyY6KRiTitle(_: Void = ()) -> String {
+        return NSLocalizedString("HNy-y6-kRi.title", tableName: "SendBaseViewController", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}

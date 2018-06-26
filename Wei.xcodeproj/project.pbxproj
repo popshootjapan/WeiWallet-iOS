@@ -50,7 +50,6 @@
 		AE14A62F20712221003A63FF /* MyWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE14A62E20712221003A63FF /* MyWalletViewController.swift */; };
 		AE14A6342071226F003A63FF /* MyWalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE14A6332071226F003A63FF /* MyWalletViewModel.swift */; };
 		AE14A63620712352003A63FF /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE14A63520712352003A63FF /* UIViewController+Extension.swift */; };
-		AE14A6472078984C003A63FF /* SendBaseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE14A6462078984C003A63FF /* SendBaseViewController.storyboard */; };
 		AE14A64920789851003A63FF /* SendBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE14A64820789851003A63FF /* SendBaseViewController.swift */; };
 		AE171AFC207F977100212494 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE171AFB207F977100212494 /* Cache.swift */; };
 		AE171B00207FA41C00212494 /* RateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE171AFF207FA41C00212494 /* RateStore.swift */; };
@@ -116,6 +115,9 @@
 		AE6D4CD020E20898007CF3C5 /* TutorialViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4CD220E20898007CF3C5 /* TutorialViewController.storyboard */; };
 		AE6D4CD720E208D0007CF3C5 /* ReceiveViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4CD920E208D0007CF3C5 /* ReceiveViewController.storyboard */; };
 		AE6D4CDE20E20963007CF3C5 /* RestoreWalletViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4CE020E20963007CF3C5 /* RestoreWalletViewController.storyboard */; };
+		AE6D4CE520E20AA6007CF3C5 /* SendBaseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4CE720E20AA6007CF3C5 /* SendBaseViewController.storyboard */; };
+		AE6D4CEC20E20AEA007CF3C5 /* SelectAddressByPasteViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4CEE20E20AEA007CF3C5 /* SelectAddressByPasteViewController.storyboard */; };
+		AE6D4CF320E20BD8007CF3C5 /* SelectAddressByQRViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4CF520E20BD8007CF3C5 /* SelectAddressByQRViewController.storyboard */; };
 		AE8C9FC6209EF85F00C616E1 /* DebugListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */; };
 		AE8C9FC8209EF87300C616E1 /* DebugListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */; };
 		AE979E8020D7B6F5009B353F /* Decimal+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */; };
@@ -157,10 +159,8 @@
 		DE3A383A2084969A00AB44B0 /* BalanceAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE3A38382084969A00AB44B0 /* BalanceAccessoryView.xib */; };
 		DE3A3882208636C800AB44B0 /* URL+WeiExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3A3881208636C800AB44B0 /* URL+WeiExtension.swift */; };
 		DE624F7C2072452D00840B06 /* SelectAddressByQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE624F7B2072452D00840B06 /* SelectAddressByQRViewController.swift */; };
-		DE624F7E2072459B00840B06 /* SelectAddressByQRViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE624F7D2072459B00840B06 /* SelectAddressByQRViewController.storyboard */; };
 		DE624F80207245C500840B06 /* SelectAddressByQRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE624F7F207245C500840B06 /* SelectAddressByQRViewModel.swift */; };
 		DE624F85207246F700840B06 /* SelectAddressByPasteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE624F84207246F700840B06 /* SelectAddressByPasteViewController.swift */; };
-		DE624F872072477000840B06 /* SelectAddressByPasteViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE624F862072477000840B06 /* SelectAddressByPasteViewController.storyboard */; };
 		DE624F892072478600840B06 /* SelectAddressByPasteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE624F882072478600840B06 /* SelectAddressByPasteViewModel.swift */; };
 		DE624F8B207247AF00840B06 /* SelectAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE624F8A207247AF00840B06 /* SelectAmountViewController.swift */; };
 		DE624F8D207247D200840B06 /* SelectAmountViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE624F8C207247D200840B06 /* SelectAmountViewController.storyboard */; };
@@ -253,7 +253,6 @@
 		AE14A62E20712221003A63FF /* MyWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletViewController.swift; sourceTree = "<group>"; };
 		AE14A6332071226F003A63FF /* MyWalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletViewModel.swift; sourceTree = "<group>"; };
 		AE14A63520712352003A63FF /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		AE14A6462078984C003A63FF /* SendBaseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SendBaseViewController.storyboard; sourceTree = "<group>"; };
 		AE14A64820789851003A63FF /* SendBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendBaseViewController.swift; sourceTree = "<group>"; };
 		AE171AFB207F977100212494 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		AE171AFF207FA41C00212494 /* RateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateStore.swift; sourceTree = "<group>"; };
@@ -336,6 +335,15 @@
 		AE6D4CDF20E20963007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RestoreWalletViewController.storyboard; sourceTree = "<group>"; };
 		AE6D4CE220E20965007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/RestoreWalletViewController.strings; sourceTree = "<group>"; };
 		AE6D4CE420E20966007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/RestoreWalletViewController.strings; sourceTree = "<group>"; };
+		AE6D4CE620E20AA6007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SendBaseViewController.storyboard; sourceTree = "<group>"; };
+		AE6D4CE920E20AA8007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SendBaseViewController.strings; sourceTree = "<group>"; };
+		AE6D4CEB20E20AA9007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SendBaseViewController.strings; sourceTree = "<group>"; };
+		AE6D4CED20E20AEA007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SelectAddressByPasteViewController.storyboard; sourceTree = "<group>"; };
+		AE6D4CF020E20AEC007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SelectAddressByPasteViewController.strings; sourceTree = "<group>"; };
+		AE6D4CF220E20AED007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SelectAddressByPasteViewController.strings; sourceTree = "<group>"; };
+		AE6D4CF420E20BD8007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SelectAddressByQRViewController.storyboard; sourceTree = "<group>"; };
+		AE6D4CF720E20BDA007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SelectAddressByQRViewController.strings; sourceTree = "<group>"; };
+		AE6D4CF920E20BDB007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SelectAddressByQRViewController.strings; sourceTree = "<group>"; };
 		AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugListViewController.swift; sourceTree = "<group>"; };
 		AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DebugListViewController.storyboard; sourceTree = "<group>"; };
 		AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extension.swift"; sourceTree = "<group>"; };
@@ -384,10 +392,8 @@
 		DE3A38382084969A00AB44B0 /* BalanceAccessoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BalanceAccessoryView.xib; sourceTree = "<group>"; };
 		DE3A3881208636C800AB44B0 /* URL+WeiExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+WeiExtension.swift"; sourceTree = "<group>"; };
 		DE624F7B2072452D00840B06 /* SelectAddressByQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressByQRViewController.swift; sourceTree = "<group>"; };
-		DE624F7D2072459B00840B06 /* SelectAddressByQRViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectAddressByQRViewController.storyboard; sourceTree = "<group>"; };
 		DE624F7F207245C500840B06 /* SelectAddressByQRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressByQRViewModel.swift; sourceTree = "<group>"; };
 		DE624F84207246F700840B06 /* SelectAddressByPasteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressByPasteViewController.swift; sourceTree = "<group>"; };
-		DE624F862072477000840B06 /* SelectAddressByPasteViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectAddressByPasteViewController.storyboard; sourceTree = "<group>"; };
 		DE624F882072478600840B06 /* SelectAddressByPasteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressByPasteViewModel.swift; sourceTree = "<group>"; };
 		DE624F8A207247AF00840B06 /* SelectAmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAmountViewController.swift; sourceTree = "<group>"; };
 		DE624F8C207247D200840B06 /* SelectAmountViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectAmountViewController.storyboard; sourceTree = "<group>"; };
@@ -708,7 +714,7 @@
 		AE14A64A20789862003A63FF /* SendBase */ = {
 			isa = PBXGroup;
 			children = (
-				AE14A6462078984C003A63FF /* SendBaseViewController.storyboard */,
+				AE6D4CE720E20AA6007CF3C5 /* SendBaseViewController.storyboard */,
 				AE14A64820789851003A63FF /* SendBaseViewController.swift */,
 				DE0DDCF3207F977200735C3C /* SendBaseViewModel.swift */,
 			);
@@ -906,7 +912,7 @@
 		DE624F7A207244F500840B06 /* SelectAddressByQR */ = {
 			isa = PBXGroup;
 			children = (
-				DE624F7D2072459B00840B06 /* SelectAddressByQRViewController.storyboard */,
+				AE6D4CF520E20BD8007CF3C5 /* SelectAddressByQRViewController.storyboard */,
 				DE624F7B2072452D00840B06 /* SelectAddressByQRViewController.swift */,
 				DE624F7F207245C500840B06 /* SelectAddressByQRViewModel.swift */,
 			);
@@ -916,7 +922,7 @@
 		DE624F81207246B800840B06 /* SelectAddressByPaste */ = {
 			isa = PBXGroup;
 			children = (
-				DE624F862072477000840B06 /* SelectAddressByPasteViewController.storyboard */,
+				AE6D4CEE20E20AEA007CF3C5 /* SelectAddressByPasteViewController.storyboard */,
 				DE624F84207246F700840B06 /* SelectAddressByPasteViewController.swift */,
 				DE624F882072478600840B06 /* SelectAddressByPasteViewModel.swift */,
 			);
@@ -1109,9 +1115,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE3A383A2084969A00AB44B0 /* BalanceAccessoryView.xib in Resources */,
-				AE14A6472078984C003A63FF /* SendBaseViewController.storyboard in Resources */,
+				AE6D4CE520E20AA6007CF3C5 /* SendBaseViewController.storyboard in Resources */,
 				AE3F7306207E791100482502 /* SwipableViewController.storyboard in Resources */,
-				DE624F872072477000840B06 /* SelectAddressByPasteViewController.storyboard in Resources */,
+				AE6D4CEC20E20AEA007CF3C5 /* SelectAddressByPasteViewController.storyboard in Resources */,
 				AE6D4CC920E20723007CF3C5 /* BackupViewController.storyboard in Resources */,
 				AE6D4CBB20E20618007CF3C5 /* AgreeServiceTermsViewController.storyboard in Resources */,
 				1A798C0B2081DF9800812D80 /* LatestTransactionListViewController.storyboard in Resources */,
@@ -1122,7 +1128,7 @@
 				AED6F44F205514BB004A280F /* LaunchScreen.storyboard in Resources */,
 				DE624F932072485500840B06 /* SendConfirmationViewController.storyboard in Resources */,
 				AE6D4CDE20E20963007CF3C5 /* RestoreWalletViewController.storyboard in Resources */,
-				DE624F7E2072459B00840B06 /* SelectAddressByQRViewController.storyboard in Resources */,
+				AE6D4CF320E20BD8007CF3C5 /* SelectAddressByQRViewController.storyboard in Resources */,
 				DE7682DE207F3C63004094BA /* SettingViewController.storyboard in Resources */,
 				AE6D4CB420E20492007CF3C5 /* CreateWalletViewController.storyboard in Resources */,
 				DE9272C8208AD55000E03AB9 /* TutorialTopView.xib in Resources */,
@@ -1518,6 +1524,36 @@
 				AE6D4CE420E20966007CF3C5 /* ja */,
 			);
 			name = RestoreWalletViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		AE6D4CE720E20AA6007CF3C5 /* SendBaseViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE6D4CE620E20AA6007CF3C5 /* Base */,
+				AE6D4CE920E20AA8007CF3C5 /* en */,
+				AE6D4CEB20E20AA9007CF3C5 /* ja */,
+			);
+			name = SendBaseViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		AE6D4CEE20E20AEA007CF3C5 /* SelectAddressByPasteViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE6D4CED20E20AEA007CF3C5 /* Base */,
+				AE6D4CF020E20AEC007CF3C5 /* en */,
+				AE6D4CF220E20AED007CF3C5 /* ja */,
+			);
+			name = SelectAddressByPasteViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		AE6D4CF520E20BD8007CF3C5 /* SelectAddressByQRViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE6D4CF420E20BD8007CF3C5 /* Base */,
+				AE6D4CF720E20BDA007CF3C5 /* en */,
+				AE6D4CF920E20BDB007CF3C5 /* ja */,
+			);
+			name = SelectAddressByQRViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		AED6F44D205514BB004A280F /* LaunchScreen.storyboard */ = {
