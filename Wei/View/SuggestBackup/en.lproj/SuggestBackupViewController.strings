@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "バックアップを取ることであなたの保有しているイーサリアムは復元することができます"; ObjectID = "SnQ-SC-dXu"; */
+"SnQ-SC-dXu.text" = "You can recover your wallet anytime anywhere by backing it up";
+
+/* Class = "UIButton"; normalTitle = "閉じる"; ObjectID = "gno-wO-Q4M"; */
+"gno-wO-Q4M.normalTitle" = "Close";
+
+/* Class = "UIButton"; normalTitle = "バックアップを取る"; ObjectID = "mVJ-aK-cRO"; */
+"mVJ-aK-cRO.normalTitle" = "Backup";
+
+/* Class = "UILabel"; text = "バックアップを取りましょう"; ObjectID = "vp6-I4-9TO"; */
+"vp6-I4-9TO.text" = "Let's backup your wallet!";

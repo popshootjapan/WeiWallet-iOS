@@ -420,7 +420,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 6 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 7 localization tables.
   struct string {
     /// This `R.string.agreeServiceTermsViewController` struct is generated, and contains static references to 3 localization keys.
     struct agreeServiceTermsViewController {
@@ -727,6 +727,56 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func tvRInSFDText(_: Void = ()) -> String {
         return NSLocalizedString("TvR-in-SFD.text", tableName: "MyWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.suggestBackupViewController` struct is generated, and contains static references to 4 localization keys.
+    struct suggestBackupViewController {
+      /// en translation: Backup
+      /// 
+      /// Locales: en, ja
+      static let mVJAKCRONormalTitle = Rswift.StringResource(key: "mVJ-aK-cRO.normalTitle", tableName: "SuggestBackupViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Close
+      /// 
+      /// Locales: en, ja
+      static let gnoWOQ4MNormalTitle = Rswift.StringResource(key: "gno-wO-Q4M.normalTitle", tableName: "SuggestBackupViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Let's backup your wallet!
+      /// 
+      /// Locales: en, ja
+      static let vp6I49TOText = Rswift.StringResource(key: "vp6-I4-9TO.text", tableName: "SuggestBackupViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: You can recover your wallet anytime anywhere by backing it up
+      /// 
+      /// Locales: en, ja
+      static let snQSCDXuText = Rswift.StringResource(key: "SnQ-SC-dXu.text", tableName: "SuggestBackupViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation: Backup
+      /// 
+      /// Locales: en, ja
+      static func mVJAKCRONormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("mVJ-aK-cRO.normalTitle", tableName: "SuggestBackupViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Close
+      /// 
+      /// Locales: en, ja
+      static func gnoWOQ4MNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("gno-wO-Q4M.normalTitle", tableName: "SuggestBackupViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Let's backup your wallet!
+      /// 
+      /// Locales: en, ja
+      static func vp6I49TOText(_: Void = ()) -> String {
+        return NSLocalizedString("vp6-I4-9TO.text", tableName: "SuggestBackupViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: You can recover your wallet anytime anywhere by backing it up
+      /// 
+      /// Locales: en, ja
+      static func snQSCDXuText(_: Void = ()) -> String {
+        return NSLocalizedString("SnQ-SC-dXu.text", tableName: "SuggestBackupViewController", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
