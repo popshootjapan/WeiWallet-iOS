@@ -16,8 +16,10 @@ final class BackupViewController: UIViewController {
     
     @IBOutlet private var collectionView: UICollectionView!
     @IBOutlet private var confirmButton: UIBarButtonItem!
+    @IBOutlet private var backupMessageLabel: UILabel!
+    
     private lazy var closeButton: UIBarButtonItem = {
-        return UIBarButtonItem(title: "閉じる", style: .plain, target: nil, action: nil)
+        return UIBarButtonItem(title: R.string.localizable.commonClose(), style: .plain, target: nil, action: nil)
     }()
     
     private let backupTrigger = PublishSubject<Void>()
@@ -25,6 +27,7 @@ final class BackupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        backupMessageLabel.text = R.string.localizable.backupMessage()
         addCloseButtonWhenExistPresentingViewController()
         bindViewModel()
     }
@@ -74,8 +77,8 @@ final class BackupViewController: UIViewController {
     
     private func showConfirmAlert() {
         showAlertController(
-            title: "バックアップキーを大切に保管してください",
-            message: "復元する際に必要になります。\n無くさないように気をつけてください。",
+            title: R.string.localizable.alertBackupTitle(),
+            message: R.string.localizable.alertBackupMessage(),
             actionTitle: "OK",
             handler: { [weak self] _ in
                 self?.backupTrigger.onNext(())

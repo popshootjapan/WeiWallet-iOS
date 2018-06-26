@@ -29,6 +29,7 @@ final class SendConfirmationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        sentLabel.text = R.string.localizable.commonSent()
         bindViewModel()
     }
 }
@@ -101,7 +102,7 @@ private extension SendConfirmationViewController {
         sentImageView.image = success ? #imageLiteral(resourceName: "icon_send_success") : #imageLiteral(resourceName: "icon_send_failed")
         
         sentLabel.isHidden = false
-        sentLabel.text = success ? "送金完了" : "送金失敗"
+        sentLabel.text = success ? R.string.localizable.commonSent() : R.string.localizable.commonSendFailed()
         sentLabel.textColor = success ? UIColor.wei.success : UIColor.wei.failed
         
         retryButton.isHidden = success

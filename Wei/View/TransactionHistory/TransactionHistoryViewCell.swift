@@ -30,8 +30,7 @@ final class TransactionHistoryViewCell: UITableViewCell, InputAppliable {
         if let etherAmount = Wei(transaction.value).flatMap({ try? Converter.toEther(wei: $0) })?.string {
             etherAmountLabel.text = etherAmount
         } else {
-            // TODO: localize
-            etherAmountLabel.text = "Failed to convert"
+            etherAmountLabel.text = R.string.localizable.errorEtherFailedToConvert()
         }
         
         timestampLabel.text = DateFormatter.fullDateString(from: Date(timeIntervalSince1970: TimeInterval(transaction.timeStamp)!))
@@ -42,11 +41,11 @@ final class TransactionHistoryViewCell: UITableViewCell, InputAppliable {
         addressLabel.text = isReceiveTransaction ? transaction.from : transaction.to
         
         if transaction.isPending {
-            let text = isReceiveTransaction ? "受け取り中" : "送金中"
+            let text = isReceiveTransaction ? R.string.localizable.transactionWatingForReceive() : R.string.localizable.transactionWaitingForSend()
             transactionStatusLabel.text = text
             transactionStatusImageView.image = #imageLiteral(resourceName: "icon_history_waiting")
         } else {
-            let text = isReceiveTransaction ? "受け取り済み" : "送金済み"
+            let text = isReceiveTransaction ? R.string.localizable.transactionReceived() : R.string.localizable.transactionSent()
             transactionStatusLabel.text = text
             
             let icon = isReceiveTransaction ? #imageLiteral(resourceName: "icon_history_receive") : #imageLiteral(resourceName: "icon_history_send")

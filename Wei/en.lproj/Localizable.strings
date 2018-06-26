@@ -6,10 +6,46 @@
   Copyright © 2018年 yz. All rights reserved.
 */
 
-"error_title_no_connection" = "no network";
-"error_title_about_system" = "system error";
-"error_title_about_fatal" = "fatal error";
+// MARK:- Error
+"Error.Title.NoConnection" = "Bad Connection :(";
+"Error.Title.SystemError" = "System Error";
+"Error.Title.Unexpected" = "Something went wrong :(";
+"Error.Ether.FailedToConvert" = "Failed to fetch value";
 
-"error_message_no_connection" = "Please try again in a good network location";
-"error_message_about_system" = "Please leave enough time and try again";
-"error_message_about_fatal" = "Please restart the application once";
+"Error.Message.NoConnection" = "Please try again later";
+"Error.Message.SystemError" = "Please try again later";
+"Error.Message.Unexpected" = "Please try again later";
+
+// MARK: - Transaction History and Latest Transaction
+"Transaction.WatingForReceive" = "Receiving";
+"Transaction.WaitingForSend" = "Sending";
+"Transaction.Received" = "Received";
+"Transaction.Sent" = "Sent";
+
+// MARK: - Send View Pager
+"Page.QRCode" = "Scan QR";
+"Page.CopyAddress" = "Copy Address";
+
+// MARK: - SelectAddressByQR
+"SelectAddress.Warning.Text" = "Scan a QR code,\nor paste an address";
+
+// MARK: - Suggest Backup
+"SuggestBackup.Message" = "You can recover your wallet anytime anywhere by backing it up";
+
+// MARK: - Backup
+"Backup.Message" = "Following is a full list of your back up words. Please make sure to kepp these 12 words in order.";
+
+// MARK: - Common
+"Common.Close" = "Close";
+"Common.Sent" = "Sent";
+"Common.SendFailed" = "Failed";
+"Common.CameraAccess.Title" = "“WeiWallet” is requesting a camera access";
+"Common.CameraAccess.Description" = "You can scan QR codes by allowing";
+"Common.CameraAccess.Cancel" = "Reject";
+
+// MARK: - Alert
+"Alert.Backup.Title" = "Keep backup words safe!";
+"Alert.Backup.Message" = "You will need them when you recover. \nBe carefull not to lose them";
+"Alert.SelectAddressByQR.InvalidAddress.Title" = "Invalid Address";
+"Alert.SelectAddressByQR.InvalidAddress.Message" = "Try again with a different QR code";
+

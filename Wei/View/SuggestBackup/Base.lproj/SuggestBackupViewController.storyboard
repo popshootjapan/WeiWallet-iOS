@@ -34,33 +34,23 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnQ-SC-dXu">
-                                <rect key="frame" x="16" y="317" width="284" height="55"/>
+                                <rect key="frame" x="16" y="313" width="284" height="67"/>
                                 <attributedString key="attributedText">
                                     <fragment content="バックアップを取ることであなたの保有しているイーサリアムは復元することができます">
                                         <attributes>
                                             <color key="NSColor" red="0.1764705882352941" green="0.18431372549019609" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="15" name="HiraginoSans-W3"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gno-wO-Q4M">
-                                <rect key="frame" x="16" y="465" width="284" height="15"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="65t-f8-q1N"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
-                                <state key="normal" title="閉じる">
-                                    <color key="titleColor" red="0.63137254901960782" green="0.65490196078431373" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVJ-aK-cRO">
-                                <rect key="frame" x="16" y="401" width="284" height="56"/>
+                                <rect key="frame" x="16" y="396" width="284" height="42"/>
                                 <color key="backgroundColor" red="0.086274509803921567" green="0.32549019607843138" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="rRL-Pc-1os"/>
+                                    <constraint firstAttribute="height" constant="42" id="6jp-G8-2J6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
                                 <state key="normal" title="バックアップを取る">
@@ -68,30 +58,39 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="28"/>
+                                        <real key="value" value="21"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gno-wO-Q4M">
+                                <rect key="frame" x="16" y="446" width="284" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="zzj-MN-9sd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
+                                <state key="normal" title="閉じる">
+                                    <color key="titleColor" red="0.63137254901960782" green="0.65490196078431373" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vp6-I4-9TO" firstAttribute="top" secondItem="Q5O-np-zWE" secondAttribute="bottom" constant="24" id="1BB-F5-6vJ"/>
-                            <constraint firstItem="mVJ-aK-cRO" firstAttribute="centerX" secondItem="52x-zb-59h" secondAttribute="centerX" id="36p-v2-Y6F"/>
                             <constraint firstItem="vp6-I4-9TO" firstAttribute="centerX" secondItem="52x-zb-59h" secondAttribute="centerX" id="3CA-kD-eOh"/>
-                            <constraint firstItem="gno-wO-Q4M" firstAttribute="centerX" secondItem="52x-zb-59h" secondAttribute="centerX" id="81e-lq-Xvx"/>
-                            <constraint firstItem="52x-zb-59h" firstAttribute="trailing" secondItem="mVJ-aK-cRO" secondAttribute="trailing" constant="16" id="86s-AG-1wY"/>
-                            <constraint firstItem="SnQ-SC-dXu" firstAttribute="top" secondItem="vp6-I4-9TO" secondAttribute="bottom" constant="16" id="8HQ-ps-nHe"/>
-                            <constraint firstItem="gno-wO-Q4M" firstAttribute="top" secondItem="mVJ-aK-cRO" secondAttribute="bottom" constant="8" id="9wm-xY-GJ2"/>
+                            <constraint firstItem="SnQ-SC-dXu" firstAttribute="top" secondItem="vp6-I4-9TO" secondAttribute="bottom" constant="12" id="8HQ-ps-nHe"/>
                             <constraint firstItem="SnQ-SC-dXu" firstAttribute="centerX" secondItem="52x-zb-59h" secondAttribute="centerX" id="AZQ-JZ-zJh"/>
-                            <constraint firstItem="52x-zb-59h" firstAttribute="trailing" secondItem="gno-wO-Q4M" secondAttribute="trailing" constant="16" id="H8m-Dj-XGw"/>
-                            <constraint firstItem="52x-zb-59h" firstAttribute="bottom" secondItem="gno-wO-Q4M" secondAttribute="bottom" constant="20" id="LIi-DX-yk3"/>
-                            <constraint firstItem="mVJ-aK-cRO" firstAttribute="leading" secondItem="52x-zb-59h" secondAttribute="leading" constant="16" id="OOd-r3-LHI"/>
-                            <constraint firstItem="gno-wO-Q4M" firstAttribute="leading" secondItem="52x-zb-59h" secondAttribute="leading" constant="16" id="QOm-DR-w0m"/>
+                            <constraint firstItem="52x-zb-59h" firstAttribute="trailing" secondItem="mVJ-aK-cRO" secondAttribute="trailing" constant="16" id="GmU-oQ-uwh"/>
+                            <constraint firstItem="mVJ-aK-cRO" firstAttribute="leading" secondItem="52x-zb-59h" secondAttribute="leading" constant="16" id="MXW-5E-9pF"/>
                             <constraint firstItem="52x-zb-59h" firstAttribute="trailing" secondItem="Q5O-np-zWE" secondAttribute="trailing" id="Usl-b0-Bi7"/>
                             <constraint firstItem="52x-zb-59h" firstAttribute="trailing" secondItem="SnQ-SC-dXu" secondAttribute="trailing" constant="16" id="Vgh-qs-q5n"/>
+                            <constraint firstItem="gno-wO-Q4M" firstAttribute="leading" secondItem="52x-zb-59h" secondAttribute="leading" constant="16" id="Whf-Wf-nYI"/>
+                            <constraint firstItem="52x-zb-59h" firstAttribute="bottom" secondItem="gno-wO-Q4M" secondAttribute="bottom" constant="12" id="WyO-YD-qMv"/>
+                            <constraint firstItem="gno-wO-Q4M" firstAttribute="top" secondItem="mVJ-aK-cRO" secondAttribute="bottom" constant="8" id="d9H-Gt-Bub"/>
+                            <constraint firstItem="mVJ-aK-cRO" firstAttribute="top" secondItem="SnQ-SC-dXu" secondAttribute="bottom" constant="16" id="dnm-az-agy"/>
                             <constraint firstItem="52x-zb-59h" firstAttribute="top" secondItem="Q5O-np-zWE" secondAttribute="top" constant="20" id="nhP-SN-VwR"/>
                             <constraint firstItem="Q5O-np-zWE" firstAttribute="leading" secondItem="52x-zb-59h" secondAttribute="leading" id="njB-68-ijI"/>
                             <constraint firstItem="SnQ-SC-dXu" firstAttribute="leading" secondItem="52x-zb-59h" secondAttribute="leading" constant="16" id="wGd-aS-R5p"/>
+                            <constraint firstItem="52x-zb-59h" firstAttribute="trailing" secondItem="gno-wO-Q4M" secondAttribute="trailing" constant="16" id="z2s-51-F8f"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="52x-zb-59h"/>
                     </view>
@@ -100,6 +99,7 @@
                     <connections>
                         <outlet property="backupButton" destination="mVJ-aK-cRO" id="32r-Wu-GqK"/>
                         <outlet property="closeButton" destination="gno-wO-Q4M" id="H8E-Xr-oXg"/>
+                        <outlet property="messageLabel" destination="SnQ-SC-dXu" id="G2m-er-fXH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wkv-Ln-89N" userLabel="First Responder" sceneMemberID="firstResponder"/>

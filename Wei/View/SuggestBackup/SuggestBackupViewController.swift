@@ -16,6 +16,7 @@ final class SuggestBackupViewController: UIViewController {
     
     @IBOutlet private weak var backupButton: UIButton!
     @IBOutlet private weak var closeButton: UIButton!
+    @IBOutlet private weak var messageLabel: UILabel!
     
     private let disposeBag = DisposeBag()
     
@@ -31,6 +32,7 @@ final class SuggestBackupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        messageLabel.text = R.string.localizable.suggestBackupMessage()
         bindViewModel()
     }
     

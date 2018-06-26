@@ -6,10 +6,45 @@
   Copyright © 2018年 yz. All rights reserved.
 */
 
-"error_title_no_connection" = "通信ができません";
-"error_title_about_system" = "システムエラーです";
-"error_title_about_fatal" = "予期せぬエラーが発生しました";
+// MARK:- Error
+"Error.Title.NoConnection" = "通信ができません";
+"Error.Title.SystemError" = "システムエラーです";
+"Error.Title.Unexpected" = "予期せぬエラーが発生しました";
+"Error.Ether.FailedToConvert" = "値の取得に失敗しました。";
 
-"error_message_no_connection" = "電波の良い場所で再度お試しください";
-"error_message_about_system" = "時間を空けて再度お試しください";
-"error_message_about_fatal" = "一度アプリを再起動してください";
+"Error.Message.NoConnection" = "電波の良い場所で再度お試しください";
+"Error.Message.SystemError" = "時間を空けて再度お試しください";
+"Error.Message.Unexpected" = "一度アプリを再起動してください";
+
+// MARK: - Transaction History and Latest Transaction
+"Transaction.WatingForReceive" = "受け取り中";
+"Transaction.WaitingForSend" = "送金中";
+"Transaction.Received" = "受け取り済み";
+"Transaction.Sent" = "送金済み";
+
+// MARK: - Send View Pager
+"Page.QRCode" = "QRコードを撮影";
+"Page.CopyAddress" = "アドレスコピー";
+
+// MARK: - SelectAddressByQR
+"SelectAddress.Warning.Text" = "相手のQRコードを撮影するか、\nアドレスを入力してください";
+
+// MARK: - Suggest Backup
+"SuggestBackup.Message" = "バックアップを取ることであなたの保有しているイーサリアムは復元することができます";
+
+// MARK: - Backup
+"Backup.Message" = "12個の単語の並びがお客様のバックアップキーです。順番通りに記録して大事に保管してください。";
+
+// MARK: - Common
+"Common.Close" = "閉じる";
+"Common.Sent" = "送金完了";
+"Common.SendFailed" = "送金失敗";
+"Common.CameraAccess.Title" = "“WeiWallet”がカメラへのアクセスを求めています";
+"Common.CameraAccess.Description" = "これによりQRコードを撮影してアドレスを読み込むことができます";
+"Common.CameraAccess.Cancel" = "許可しない";
+
+// MARK: - Alert
+"Alert.Backup.Title" = "バックアップキーを大切に保管してください";
+"Alert.Backup.Message" = "復元する際に必要になります。\n無くさないように気をつけてください。";
+"Alert.SelectAddressByQR.InvalidAddress.Title" = "アドレスが間違っています";
+"Alert.SelectAddressByQR.InvalidAddress.Message" = "QRコードを確認して再度お試しください。";

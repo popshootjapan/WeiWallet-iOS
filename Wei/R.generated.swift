@@ -420,7 +420,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 17 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 19 localization tables.
   struct string {
     /// This `R.string.agreeServiceTermsViewController` struct is generated, and contains static references to 3 localization keys.
     struct agreeServiceTermsViewController {
@@ -710,73 +710,321 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 6 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 26 localization keys.
     struct localizable {
-      /// en translation: Please leave enough time and try again
+      /// en translation: Bad Connection :(
       /// 
       /// Locales: en, ja
-      static let error_message_about_system = Rswift.StringResource(key: "error_message_about_system", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: Please restart the application once
+      static let errorTitleNoConnection = Rswift.StringResource(key: "Error.Title.NoConnection", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Close
       /// 
       /// Locales: en, ja
-      static let error_message_about_fatal = Rswift.StringResource(key: "error_message_about_fatal", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: Please try again in a good network location
+      static let commonClose = Rswift.StringResource(key: "Common.Close", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Copy Address
       /// 
       /// Locales: en, ja
-      static let error_message_no_connection = Rswift.StringResource(key: "error_message_no_connection", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: fatal error
+      static let pageCopyAddress = Rswift.StringResource(key: "Page.CopyAddress", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Failed
       /// 
       /// Locales: en, ja
-      static let error_title_about_fatal = Rswift.StringResource(key: "error_title_about_fatal", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: no network
+      static let commonSendFailed = Rswift.StringResource(key: "Common.SendFailed", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Failed to fetch value
       /// 
       /// Locales: en, ja
-      static let error_title_no_connection = Rswift.StringResource(key: "error_title_no_connection", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: system error
+      static let errorEtherFailedToConvert = Rswift.StringResource(key: "Error.Ether.FailedToConvert", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Following is a full list of your back up words. Please make sure to kepp these 12 words in order.
       /// 
       /// Locales: en, ja
-      static let error_title_about_system = Rswift.StringResource(key: "error_title_about_system", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      static let backupMessage = Rswift.StringResource(key: "Backup.Message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Invalid Address
+      /// 
+      /// Locales: en, ja
+      static let alertSelectAddressByQRInvalidAddressTitle = Rswift.StringResource(key: "Alert.SelectAddressByQR.InvalidAddress.Title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Keep backup words safe!
+      /// 
+      /// Locales: en, ja
+      static let alertBackupTitle = Rswift.StringResource(key: "Alert.Backup.Title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Please try again later
+      /// 
+      /// Locales: en, ja
+      static let errorMessageNoConnection = Rswift.StringResource(key: "Error.Message.NoConnection", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Please try again later
+      /// 
+      /// Locales: en, ja
+      static let errorMessageSystemError = Rswift.StringResource(key: "Error.Message.SystemError", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Please try again later
+      /// 
+      /// Locales: en, ja
+      static let errorMessageUnexpected = Rswift.StringResource(key: "Error.Message.Unexpected", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Received
+      /// 
+      /// Locales: en, ja
+      static let transactionReceived = Rswift.StringResource(key: "Transaction.Received", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Receiving
+      /// 
+      /// Locales: en, ja
+      static let transactionWatingForReceive = Rswift.StringResource(key: "Transaction.WatingForReceive", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Reject
+      /// 
+      /// Locales: en, ja
+      static let commonCameraAccessCancel = Rswift.StringResource(key: "Common.CameraAccess.Cancel", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Scan QR
+      /// 
+      /// Locales: en, ja
+      static let pageQRCode = Rswift.StringResource(key: "Page.QRCode", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Scan a QR code, or paste an address
+      /// 
+      /// Locales: en, ja
+      static let selectAddressWarningText = Rswift.StringResource(key: "SelectAddress.Warning.Text", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Sending
+      /// 
+      /// Locales: en, ja
+      static let transactionWaitingForSend = Rswift.StringResource(key: "Transaction.WaitingForSend", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Sent
+      /// 
+      /// Locales: en, ja
+      static let commonSent = Rswift.StringResource(key: "Common.Sent", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Sent
+      /// 
+      /// Locales: en, ja
+      static let transactionSent = Rswift.StringResource(key: "Transaction.Sent", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Something went wrong :(
+      /// 
+      /// Locales: en, ja
+      static let errorTitleUnexpected = Rswift.StringResource(key: "Error.Title.Unexpected", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: System Error
+      /// 
+      /// Locales: en, ja
+      static let errorTitleSystemError = Rswift.StringResource(key: "Error.Title.SystemError", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Try again with a different QR code
+      /// 
+      /// Locales: en, ja
+      static let alertSelectAddressByQRInvalidAddressMessage = Rswift.StringResource(key: "Alert.SelectAddressByQR.InvalidAddress.Message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: You can recover your wallet anytime anywhere by backing it up
+      /// 
+      /// Locales: en, ja
+      static let suggestBackupMessage = Rswift.StringResource(key: "SuggestBackup.Message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: You can scan QR codes by allowing
+      /// 
+      /// Locales: en, ja
+      static let commonCameraAccessDescription = Rswift.StringResource(key: "Common.CameraAccess.Description", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: You will need them when you recover.  Be carefull not to lose them
+      /// 
+      /// Locales: en, ja
+      static let alertBackupMessage = Rswift.StringResource(key: "Alert.Backup.Message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: “WeiWallet” is requesting a camera access
+      /// 
+      /// Locales: en, ja
+      static let commonCameraAccessTitle = Rswift.StringResource(key: "Common.CameraAccess.Title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       
-      /// en translation: Please leave enough time and try again
+      /// en translation: Bad Connection :(
       /// 
       /// Locales: en, ja
-      static func error_message_about_system(_: Void = ()) -> String {
-        return NSLocalizedString("error_message_about_system", bundle: R.hostingBundle, comment: "")
+      static func errorTitleNoConnection(_: Void = ()) -> String {
+        return NSLocalizedString("Error.Title.NoConnection", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Please restart the application once
+      /// en translation: Close
       /// 
       /// Locales: en, ja
-      static func error_message_about_fatal(_: Void = ()) -> String {
-        return NSLocalizedString("error_message_about_fatal", bundle: R.hostingBundle, comment: "")
+      static func commonClose(_: Void = ()) -> String {
+        return NSLocalizedString("Common.Close", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Please try again in a good network location
+      /// en translation: Copy Address
       /// 
       /// Locales: en, ja
-      static func error_message_no_connection(_: Void = ()) -> String {
-        return NSLocalizedString("error_message_no_connection", bundle: R.hostingBundle, comment: "")
+      static func pageCopyAddress(_: Void = ()) -> String {
+        return NSLocalizedString("Page.CopyAddress", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: fatal error
+      /// en translation: Failed
       /// 
       /// Locales: en, ja
-      static func error_title_about_fatal(_: Void = ()) -> String {
-        return NSLocalizedString("error_title_about_fatal", bundle: R.hostingBundle, comment: "")
+      static func commonSendFailed(_: Void = ()) -> String {
+        return NSLocalizedString("Common.SendFailed", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: no network
+      /// en translation: Failed to fetch value
       /// 
       /// Locales: en, ja
-      static func error_title_no_connection(_: Void = ()) -> String {
-        return NSLocalizedString("error_title_no_connection", bundle: R.hostingBundle, comment: "")
+      static func errorEtherFailedToConvert(_: Void = ()) -> String {
+        return NSLocalizedString("Error.Ether.FailedToConvert", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: system error
+      /// en translation: Following is a full list of your back up words. Please make sure to kepp these 12 words in order.
       /// 
       /// Locales: en, ja
-      static func error_title_about_system(_: Void = ()) -> String {
-        return NSLocalizedString("error_title_about_system", bundle: R.hostingBundle, comment: "")
+      static func backupMessage(_: Void = ()) -> String {
+        return NSLocalizedString("Backup.Message", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Invalid Address
+      /// 
+      /// Locales: en, ja
+      static func alertSelectAddressByQRInvalidAddressTitle(_: Void = ()) -> String {
+        return NSLocalizedString("Alert.SelectAddressByQR.InvalidAddress.Title", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Keep backup words safe!
+      /// 
+      /// Locales: en, ja
+      static func alertBackupTitle(_: Void = ()) -> String {
+        return NSLocalizedString("Alert.Backup.Title", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Please try again later
+      /// 
+      /// Locales: en, ja
+      static func errorMessageNoConnection(_: Void = ()) -> String {
+        return NSLocalizedString("Error.Message.NoConnection", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Please try again later
+      /// 
+      /// Locales: en, ja
+      static func errorMessageSystemError(_: Void = ()) -> String {
+        return NSLocalizedString("Error.Message.SystemError", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Please try again later
+      /// 
+      /// Locales: en, ja
+      static func errorMessageUnexpected(_: Void = ()) -> String {
+        return NSLocalizedString("Error.Message.Unexpected", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Received
+      /// 
+      /// Locales: en, ja
+      static func transactionReceived(_: Void = ()) -> String {
+        return NSLocalizedString("Transaction.Received", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Receiving
+      /// 
+      /// Locales: en, ja
+      static func transactionWatingForReceive(_: Void = ()) -> String {
+        return NSLocalizedString("Transaction.WatingForReceive", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Reject
+      /// 
+      /// Locales: en, ja
+      static func commonCameraAccessCancel(_: Void = ()) -> String {
+        return NSLocalizedString("Common.CameraAccess.Cancel", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Scan QR
+      /// 
+      /// Locales: en, ja
+      static func pageQRCode(_: Void = ()) -> String {
+        return NSLocalizedString("Page.QRCode", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Scan a QR code, or paste an address
+      /// 
+      /// Locales: en, ja
+      static func selectAddressWarningText(_: Void = ()) -> String {
+        return NSLocalizedString("SelectAddress.Warning.Text", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Sending
+      /// 
+      /// Locales: en, ja
+      static func transactionWaitingForSend(_: Void = ()) -> String {
+        return NSLocalizedString("Transaction.WaitingForSend", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Sent
+      /// 
+      /// Locales: en, ja
+      static func commonSent(_: Void = ()) -> String {
+        return NSLocalizedString("Common.Sent", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Sent
+      /// 
+      /// Locales: en, ja
+      static func transactionSent(_: Void = ()) -> String {
+        return NSLocalizedString("Transaction.Sent", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Something went wrong :(
+      /// 
+      /// Locales: en, ja
+      static func errorTitleUnexpected(_: Void = ()) -> String {
+        return NSLocalizedString("Error.Title.Unexpected", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: System Error
+      /// 
+      /// Locales: en, ja
+      static func errorTitleSystemError(_: Void = ()) -> String {
+        return NSLocalizedString("Error.Title.SystemError", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Try again with a different QR code
+      /// 
+      /// Locales: en, ja
+      static func alertSelectAddressByQRInvalidAddressMessage(_: Void = ()) -> String {
+        return NSLocalizedString("Alert.SelectAddressByQR.InvalidAddress.Message", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: You can recover your wallet anytime anywhere by backing it up
+      /// 
+      /// Locales: en, ja
+      static func suggestBackupMessage(_: Void = ()) -> String {
+        return NSLocalizedString("SuggestBackup.Message", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: You can scan QR codes by allowing
+      /// 
+      /// Locales: en, ja
+      static func commonCameraAccessDescription(_: Void = ()) -> String {
+        return NSLocalizedString("Common.CameraAccess.Description", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: You will need them when you recover.  Be carefull not to lose them
+      /// 
+      /// Locales: en, ja
+      static func alertBackupMessage(_: Void = ()) -> String {
+        return NSLocalizedString("Alert.Backup.Message", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: “WeiWallet” is requesting a camera access
+      /// 
+      /// Locales: en, ja
+      static func commonCameraAccessTitle(_: Void = ()) -> String {
+        return NSLocalizedString("Common.CameraAccess.Title", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.maintenanceViewController` struct is generated, and contains static references to 2 localization keys.
+    struct maintenanceViewController {
+      /// en translation: Come back again later!
+      /// 
+      /// Locales: en, ja
+      static let iLaZBEExText = Rswift.StringResource(key: "iLa-zB-EEx.text", tableName: "MaintenanceViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: We are currenctly under the maintenance.
+      /// 
+      /// Locales: en, ja
+      static let aJiIOEText = Rswift.StringResource(key: "99a-Ji-iOE.text", tableName: "MaintenanceViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation: Come back again later!
+      /// 
+      /// Locales: en, ja
+      static func iLaZBEExText(_: Void = ()) -> String {
+        return NSLocalizedString("iLa-zB-EEx.text", tableName: "MaintenanceViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: We are currenctly under the maintenance.
+      /// 
+      /// Locales: en, ja
+      static func aJiIOEText(_: Void = ()) -> String {
+        return NSLocalizedString("99a-Ji-iOE.text", tableName: "MaintenanceViewController", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
@@ -1468,6 +1716,78 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
+    /// This `R.string.settingViewController` struct is generated, and contains static references to 6 localization keys.
+    struct settingViewController {
+      /// en translation: Backup
+      /// 
+      /// Locales: en, ja
+      static let kmKNADlEText = Rswift.StringResource(key: "kmK-NA-dlE.text", tableName: "SettingViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Privacy Policy
+      /// 
+      /// Locales: en, ja
+      static let oa6JUlsText = Rswift.StringResource(key: "4OA-6J-uls.text", tableName: "SettingViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Security
+      /// 
+      /// Locales: en, ja
+      static let rvCvUdzHeaderTitle = Rswift.StringResource(key: "9rv-cv-udz.headerTitle", tableName: "SettingViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Service Terms
+      /// 
+      /// Locales: en, ja
+      static let be9DGC0wText = Rswift.StringResource(key: "BE9-dG-C0w.text", tableName: "SettingViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Setting
+      /// 
+      /// Locales: en, ja
+      static let barAl1RTTitle = Rswift.StringResource(key: "BAR-Al-1RT.title", tableName: "SettingViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Terms
+      /// 
+      /// Locales: en, ja
+      static let vtHfC9cHeaderTitle = Rswift.StringResource(key: "4Vt-hf-c9c.headerTitle", tableName: "SettingViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation: Backup
+      /// 
+      /// Locales: en, ja
+      static func kmKNADlEText(_: Void = ()) -> String {
+        return NSLocalizedString("kmK-NA-dlE.text", tableName: "SettingViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Privacy Policy
+      /// 
+      /// Locales: en, ja
+      static func oa6JUlsText(_: Void = ()) -> String {
+        return NSLocalizedString("4OA-6J-uls.text", tableName: "SettingViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Security
+      /// 
+      /// Locales: en, ja
+      static func rvCvUdzHeaderTitle(_: Void = ()) -> String {
+        return NSLocalizedString("9rv-cv-udz.headerTitle", tableName: "SettingViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Service Terms
+      /// 
+      /// Locales: en, ja
+      static func be9DGC0wText(_: Void = ()) -> String {
+        return NSLocalizedString("BE9-dG-C0w.text", tableName: "SettingViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Setting
+      /// 
+      /// Locales: en, ja
+      static func barAl1RTTitle(_: Void = ()) -> String {
+        return NSLocalizedString("BAR-Al-1RT.title", tableName: "SettingViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Terms
+      /// 
+      /// Locales: en, ja
+      static func vtHfC9cHeaderTitle(_: Void = ()) -> String {
+        return NSLocalizedString("4Vt-hf-c9c.headerTitle", tableName: "SettingViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
     /// This `R.string.suggestBackupViewController` struct is generated, and contains static references to 4 localization keys.
     struct suggestBackupViewController {
       /// en translation: Backup
@@ -1601,8 +1921,8 @@ struct _R: Rswift.Validatable {
       try launchScreen.validate()
       try homeViewController.validate()
       try latestTransactionListViewController.validate()
-      try maintenanceViewController.validate()
       try sendConfirmationViewController.validate()
+      try maintenanceViewController.validate()
     }
     
     struct agreeServiceTermsViewController: Rswift.StoryboardResourceWithInitialControllerType {
