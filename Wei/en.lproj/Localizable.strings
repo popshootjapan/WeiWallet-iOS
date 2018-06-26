@@ -21,3 +21,7 @@
 "Transaction.WaitingForSend" = "Sending";
 "Transaction.Received" = "Received";
 "Transaction.Sent" = "Sent";
+
+// MARK: - Send View Pager
+"Page.QRCode" = "Scan QR";
+"Page.CopyAddress" = "Copy Address";

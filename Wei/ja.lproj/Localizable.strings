@@ -21,3 +21,7 @@
 "Transaction.WaitingForSend" = "送金中";
 "Transaction.Received" = "受け取り済み";
 "Transaction.Sent" = "送金済み";
+
+// MARK: - Send View Pager
+"Page.QRCode" = "QRコードを撮影";
+"Page.CopyAddress" = "アドレスコピー";

@@ -50,7 +50,7 @@ final class SendBaseViewController: UIViewController {
     private func embedSwipableViewController() {
         let viewController = SwipableViewController.make(
             viewControllers: [SelectAddressByQRViewController.make(), SelectAddressByPasteViewController.make()],
-            titles: ["QRコード撮影", "アドレスコピー"]
+            titles: [R.string.localizable.pageQRCode(), R.string.localizable.pageCopyAddress()]
         )
         
         viewController.navigationItem.title = navigationItem.title

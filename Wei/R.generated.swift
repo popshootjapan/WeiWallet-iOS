@@ -710,12 +710,16 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 11 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 13 localization keys.
     struct localizable {
       /// en translation: Bad Connection :(
       /// 
       /// Locales: en, ja
       static let errorTitleNoConnection = Rswift.StringResource(key: "Error.Title.NoConnection", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Copy Address
+      /// 
+      /// Locales: en, ja
+      static let pageCopyAddress = Rswift.StringResource(key: "Page.CopyAddress", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Failed to fetch value
       /// 
       /// Locales: en, ja
@@ -740,6 +744,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let transactionWatingForReceive = Rswift.StringResource(key: "Transaction.WatingForReceive", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Scan QR
+      /// 
+      /// Locales: en, ja
+      static let pageQRCode = Rswift.StringResource(key: "Page.QRCode", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Sending
       /// 
       /// Locales: en, ja
@@ -762,6 +770,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func errorTitleNoConnection(_: Void = ()) -> String {
         return NSLocalizedString("Error.Title.NoConnection", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Copy Address
+      /// 
+      /// Locales: en, ja
+      static func pageCopyAddress(_: Void = ()) -> String {
+        return NSLocalizedString("Page.CopyAddress", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Failed to fetch value
@@ -804,6 +819,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func transactionWatingForReceive(_: Void = ()) -> String {
         return NSLocalizedString("Transaction.WatingForReceive", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Scan QR
+      /// 
+      /// Locales: en, ja
+      static func pageQRCode(_: Void = ()) -> String {
+        return NSLocalizedString("Page.QRCode", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Sending
