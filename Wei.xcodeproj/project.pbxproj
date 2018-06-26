@@ -59,7 +59,6 @@
 		AE1F8C13208B79CD0088A043 /* TransactionHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1F8C12208B79CD0088A043 /* TransactionHistory.swift */; };
 		AE1F8C1A208B8E3B0088A043 /* HUD+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1F8C19208B8E3B0088A043 /* HUD+Rx.swift */; };
 		AE1F8C1C208B94210088A043 /* AgreeServiceTermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1F8C1B208B94210088A043 /* AgreeServiceTermsViewController.swift */; };
-		AE1F8C1E208B94260088A043 /* AgreeServiceTermsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE1F8C1D208B94260088A043 /* AgreeServiceTermsViewController.storyboard */; };
 		AE1F8C23208CE28D0088A043 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1F8C22208CE28D0088A043 /* APIClient.swift */; };
 		AE1F8C252090B3F10088A043 /* AlertConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1F8C242090B3F10088A043 /* AlertConvertable.swift */; };
 		AE1F8C272090B4270088A043 /* APIClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1F8C262090B4270088A043 /* APIClientError.swift */; };
@@ -111,6 +110,7 @@
 		AE69C84E20E0E25600EB1293 /* MyWalletViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE69C85020E0E25600EB1293 /* MyWalletViewController.storyboard */; };
 		AE69C85520E0E32600EB1293 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE69C85720E0E32600EB1293 /* HomeViewController.storyboard */; };
 		AE6D4CB420E20492007CF3C5 /* CreateWalletViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4CB620E20492007CF3C5 /* CreateWalletViewController.storyboard */; };
+		AE6D4CBB20E20618007CF3C5 /* AgreeServiceTermsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4CBD20E20618007CF3C5 /* AgreeServiceTermsViewController.storyboard */; };
 		AE8C9FC6209EF85F00C616E1 /* DebugListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */; };
 		AE8C9FC8209EF87300C616E1 /* DebugListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */; };
 		AE979E8020D7B6F5009B353F /* Decimal+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */; };
@@ -262,7 +262,6 @@
 		AE1F8C12208B79CD0088A043 /* TransactionHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistory.swift; sourceTree = "<group>"; };
 		AE1F8C19208B8E3B0088A043 /* HUD+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HUD+Rx.swift"; sourceTree = "<group>"; };
 		AE1F8C1B208B94210088A043 /* AgreeServiceTermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreeServiceTermsViewController.swift; sourceTree = "<group>"; };
-		AE1F8C1D208B94260088A043 /* AgreeServiceTermsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AgreeServiceTermsViewController.storyboard; sourceTree = "<group>"; };
 		AE1F8C22208CE28D0088A043 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		AE1F8C242090B3F10088A043 /* AlertConvertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertConvertable.swift; sourceTree = "<group>"; };
 		AE1F8C262090B4270088A043 /* APIClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientError.swift; sourceTree = "<group>"; };
@@ -319,6 +318,9 @@
 		AE6D4CB520E20492007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CreateWalletViewController.storyboard; sourceTree = "<group>"; };
 		AE6D4CB820E20494007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/CreateWalletViewController.strings; sourceTree = "<group>"; };
 		AE6D4CBA20E20495007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/CreateWalletViewController.strings; sourceTree = "<group>"; };
+		AE6D4CBC20E20618007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AgreeServiceTermsViewController.storyboard; sourceTree = "<group>"; };
+		AE6D4CBF20E2061E007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AgreeServiceTermsViewController.strings; sourceTree = "<group>"; };
+		AE6D4CC120E2061F007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/AgreeServiceTermsViewController.strings; sourceTree = "<group>"; };
 		AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugListViewController.swift; sourceTree = "<group>"; };
 		AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DebugListViewController.storyboard; sourceTree = "<group>"; };
 		AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extension.swift"; sourceTree = "<group>"; };
@@ -706,7 +708,7 @@
 		AE1F8C1F208B94310088A043 /* AgreeServiceTerms */ = {
 			isa = PBXGroup;
 			children = (
-				AE1F8C1D208B94260088A043 /* AgreeServiceTermsViewController.storyboard */,
+				AE6D4CBD20E20618007CF3C5 /* AgreeServiceTermsViewController.storyboard */,
 				AE1F8C1B208B94210088A043 /* AgreeServiceTermsViewController.swift */,
 			);
 			path = AgreeServiceTerms;
@@ -1101,7 +1103,7 @@
 				AE3F7306207E791100482502 /* SwipableViewController.storyboard in Resources */,
 				DE624F872072477000840B06 /* SelectAddressByPasteViewController.storyboard in Resources */,
 				DE9133AF20A82EA2003CDE67 /* BackupViewController.storyboard in Resources */,
-				AE1F8C1E208B94260088A043 /* AgreeServiceTermsViewController.storyboard in Resources */,
+				AE6D4CBB20E20618007CF3C5 /* AgreeServiceTermsViewController.storyboard in Resources */,
 				1A798C0B2081DF9800812D80 /* LatestTransactionListViewController.storyboard in Resources */,
 				AE69C85520E0E32600EB1293 /* HomeViewController.storyboard in Resources */,
 				DEC577292074D76E00DC3923 /* ReceiveViewController.storyboard in Resources */,
@@ -1446,6 +1448,16 @@
 				AE6D4CBA20E20495007CF3C5 /* ja */,
 			);
 			name = CreateWalletViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		AE6D4CBD20E20618007CF3C5 /* AgreeServiceTermsViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE6D4CBC20E20618007CF3C5 /* Base */,
+				AE6D4CBF20E2061E007CF3C5 /* en */,
+				AE6D4CC120E2061F007CF3C5 /* ja */,
+			);
+			name = AgreeServiceTermsViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		AED6F44D205514BB004A280F /* LaunchScreen.storyboard */ = {
