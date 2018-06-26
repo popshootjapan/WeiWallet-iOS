@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "受取る"; ObjectID = "IhN-5F-ElS"; */
+"IhN-5F-ElS.text" = "Receive";
+
+/* Class = "UILabel"; text = "コピーしました"; ObjectID = "Ixd-C7-G7U"; */
+"Ixd-C7-G7U.text" = "Copied!";
+
+/* Class = "UIButton"; normalTitle = "コピーする"; ObjectID = "bXd-Eq-paz"; */
+"bXd-Eq-paz.normalTitle" = "Copy";
+
+/* Class = "UINavigationItem"; title = "受取る"; ObjectID = "baL-mq-kRE"; */
+"baL-mq-kRE.title" = "Receive";
+
+/* Class = "UILabel"; text = " "; ObjectID = "e7O-SR-4Jd"; */
+"e7O-SR-4Jd.text" = " ";
+
+/* Class = "UIButton"; normalTitle = "閉じる"; ObjectID = "jbu-ol-Hbx"; */
+"jbu-ol-Hbx.normalTitle" = "Close";
+
+/* Class = "UILabel"; text = "受取用アドレス"; ObjectID = "zEv-RG-uty"; */
+"zEv-RG-uty.text" = "Receive Address";
