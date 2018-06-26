@@ -77,8 +77,8 @@ final class BackupViewController: UIViewController {
     
     private func showConfirmAlert() {
         showAlertController(
-            title: "バックアップキーを大切に保管してください",
-            message: "復元する際に必要になります。\n無くさないように気をつけてください。",
+            title: R.string.localizable.alertBackupTitle(),
+            message: R.string.localizable.alertBackupMessage(),
             actionTitle: "OK",
             handler: { [weak self] _ in
                 self?.backupTrigger.onNext(())

@@ -710,7 +710,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 16 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 18 localization keys.
     struct localizable {
       /// en translation: Bad Connection :(
       /// 
@@ -732,6 +732,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let backupMessage = Rswift.StringResource(key: "Backup.Message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Keep backup words safe!
+      /// 
+      /// Locales: en, ja
+      static let alertBackupTitle = Rswift.StringResource(key: "Alert.Backup.Title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Please try again later
       /// 
       /// Locales: en, ja
@@ -776,6 +780,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let suggestBackupMessage = Rswift.StringResource(key: "SuggestBackup.Message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: You will need them when you recover.  Be carefull not to lose them
+      /// 
+      /// Locales: en, ja
+      static let alertBackupMessage = Rswift.StringResource(key: "Alert.Backup.Message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       
       /// en translation: Bad Connection :(
       /// 
@@ -810,6 +818,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func backupMessage(_: Void = ()) -> String {
         return NSLocalizedString("Backup.Message", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Keep backup words safe!
+      /// 
+      /// Locales: en, ja
+      static func alertBackupTitle(_: Void = ()) -> String {
+        return NSLocalizedString("Alert.Backup.Title", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Please try again later
@@ -887,6 +902,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func suggestBackupMessage(_: Void = ()) -> String {
         return NSLocalizedString("SuggestBackup.Message", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: You will need them when you recover.  Be carefull not to lose them
+      /// 
+      /// Locales: en, ja
+      static func alertBackupMessage(_: Void = ()) -> String {
+        return NSLocalizedString("Alert.Backup.Message", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}

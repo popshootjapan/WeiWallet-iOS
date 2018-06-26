@@ -34,3 +34,7 @@
 
 // MARK: - Common
 "Common.Close" = "閉じる";
+
+// MARK: - Alert
+"Alert.Backup.Title" = "バックアップキーを大切に保管してください";
+"Alert.Backup.Message" = "復元する際に必要になります。\n無くさないように気をつけてください。";
