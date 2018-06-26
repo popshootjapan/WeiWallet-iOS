@@ -26,6 +26,9 @@
 "Page.QRCode" = "QRコードを撮影";
 "Page.CopyAddress" = "アドレスコピー";
 
+// MARK: - SelectAddressByQR
+"SelectAddress.Warning.Text" = "相手のQRコードを撮影するか、\nアドレスを入力してください";
+
 // MARK: - Suggest Backup
 "SuggestBackup.Message" = "バックアップを取ることであなたの保有しているイーサリアムは復元することができます";
 

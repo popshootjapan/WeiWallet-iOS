@@ -710,7 +710,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 18 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 19 localization keys.
     struct localizable {
       /// en translation: Bad Connection :(
       /// 
@@ -760,6 +760,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let pageQRCode = Rswift.StringResource(key: "Page.QRCode", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Scan a QR code、 or paste an address
+      /// 
+      /// Locales: en, ja
+      static let selectAddressWarningText = Rswift.StringResource(key: "SelectAddress.Warning.Text", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Sending
       /// 
       /// Locales: en, ja
@@ -867,6 +871,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func pageQRCode(_: Void = ()) -> String {
         return NSLocalizedString("Page.QRCode", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Scan a QR code、 or paste an address
+      /// 
+      /// Locales: en, ja
+      static func selectAddressWarningText(_: Void = ()) -> String {
+        return NSLocalizedString("SelectAddress.Warning.Text", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Sending

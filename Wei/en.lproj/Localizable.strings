@@ -26,6 +26,9 @@
 "Page.QRCode" = "Scan QR";
 "Page.CopyAddress" = "Copy Address";
 
+// MARK: - SelectAddressByQR
+"SelectAddress.Warning.Text" = "Scan a QR code,\nor paste an address";
+
 // MARK: - Suggest Backup
 "SuggestBackup.Message" = "You can recover your wallet anytime anywhere by backing it up";
 
@@ -38,3 +41,4 @@
 // MARK: - Alert
 "Alert.Backup.Title" = "Keep backup words safe!";
 "Alert.Backup.Message" = "You will need them when you recover. \nBe carefull not to lose them";
+

@@ -15,6 +15,11 @@ final class SelectAddressByQRViewController: UIViewController {
     var viewModel: SelectAddressByQRViewModel!
     
     @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var warningTextView: UITextView! {
+        didSet {
+            warningTextView.text = R.string.localizable.selectAddressWarningText()
+        }
+    }
     
     private let disposeBag = DisposeBag()
     private let address = PublishSubject<String>()
