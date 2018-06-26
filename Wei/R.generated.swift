@@ -420,8 +420,69 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 4 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 5 localization tables.
   struct string {
+    /// This `R.string.createWalletViewController` struct is generated, and contains static references to 5 localization keys.
+    struct createWalletViewController {
+      /// en translation: Create Wallet
+      /// 
+      /// Locales: en, ja
+      static let tn6Qa4iJNormalTitle = Rswift.StringResource(key: "TN6-qa-4iJ.normalTitle", tableName: "CreateWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Recover
+      /// 
+      /// Locales: en, ja
+      static let qvXQsKRGNormalTitle = Rswift.StringResource(key: "QvX-qs-kRG.normalTitle", tableName: "CreateWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Service Terms
+      /// 
+      /// Locales: en, ja
+      static let a06LX5VNormalTitle = Rswift.StringResource(key: "7a0-6L-X5V.normalTitle", tableName: "CreateWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Wei Wallet(ウェイウォレット)は すべての人のための、もっともシンプルな イーサリアムウォレットです。
+      /// 
+      /// Locales: en, ja
+      static let el0TcT1KText = Rswift.StringResource(key: "El0-Tc-t1K.text", tableName: "CreateWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: あなたの仮想通貨を、日常に連れだそう。
+      /// 
+      /// Locales: en, ja
+      static let ysBVyZikText = Rswift.StringResource(key: "ysB-vy-zik.text", tableName: "CreateWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation: Create Wallet
+      /// 
+      /// Locales: en, ja
+      static func tn6Qa4iJNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("TN6-qa-4iJ.normalTitle", tableName: "CreateWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Recover
+      /// 
+      /// Locales: en, ja
+      static func qvXQsKRGNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("QvX-qs-kRG.normalTitle", tableName: "CreateWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Service Terms
+      /// 
+      /// Locales: en, ja
+      static func a06LX5VNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("7a0-6L-X5V.normalTitle", tableName: "CreateWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Wei Wallet(ウェイウォレット)は すべての人のための、もっともシンプルな イーサリアムウォレットです。
+      /// 
+      /// Locales: en, ja
+      static func el0TcT1KText(_: Void = ()) -> String {
+        return NSLocalizedString("El0-Tc-t1K.text", tableName: "CreateWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: あなたの仮想通貨を、日常に連れだそう。
+      /// 
+      /// Locales: en, ja
+      static func ysBVyZikText(_: Void = ()) -> String {
+        return NSLocalizedString("ysB-vy-zik.text", tableName: "CreateWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
     /// This `R.string.homeViewController` struct is generated, and contains static references to 2 localization keys.
     struct homeViewController {
       /// en translation:  Receive

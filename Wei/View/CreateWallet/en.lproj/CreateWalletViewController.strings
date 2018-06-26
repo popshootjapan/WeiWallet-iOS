@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; normalTitle = "利用規約"; ObjectID = "7a0-6L-X5V"; */
+"7a0-6L-X5V.normalTitle" = "Service Terms";
+
+/* Class = "UITextView"; text = "Wei Wallet(ウェイウォレット)は\nすべての人のための、もっともシンプルな\nイーサリアムウォレットです。"; ObjectID = "El0-Tc-t1K"; */
+"El0-Tc-t1K.text" = "Wei Wallet(ウェイウォレット)は\nすべての人のための、もっともシンプルな\nイーサリアムウォレットです。";
+
+/* Class = "UIButton"; normalTitle = "復元する"; ObjectID = "QvX-qs-kRG"; */
+"QvX-qs-kRG.normalTitle" = "Recover";
+
+/* Class = "UIButton"; normalTitle = "ウォレットを作成する"; ObjectID = "TN6-qa-4iJ"; */
+"TN6-qa-4iJ.normalTitle" = "Create Wallet";
+
+/* Class = "UILabel"; text = "あなたの仮想通貨を、日常に連れだそう。"; ObjectID = "ysB-vy-zik"; */
+"ysB-vy-zik.text" = "あなたの仮想通貨を、日常に連れだそう。";
