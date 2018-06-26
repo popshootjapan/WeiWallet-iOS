@@ -420,7 +420,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 17 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 18 localization tables.
   struct string {
     /// This `R.string.agreeServiceTermsViewController` struct is generated, and contains static references to 3 localization keys.
     struct agreeServiceTermsViewController {
@@ -1463,6 +1463,78 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func r4k33IuENormalTitle(_: Void = ()) -> String {
         return NSLocalizedString("r4k-33-iuE.normalTitle", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.settingViewController` struct is generated, and contains static references to 6 localization keys.
+    struct settingViewController {
+      /// en translation: Backup
+      /// 
+      /// Locales: en, ja
+      static let kmKNADlEText = Rswift.StringResource(key: "kmK-NA-dlE.text", tableName: "SettingViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Privacy Policy
+      /// 
+      /// Locales: en, ja
+      static let oa6JUlsText = Rswift.StringResource(key: "4OA-6J-uls.text", tableName: "SettingViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Security
+      /// 
+      /// Locales: en, ja
+      static let rvCvUdzHeaderTitle = Rswift.StringResource(key: "9rv-cv-udz.headerTitle", tableName: "SettingViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Service Terms
+      /// 
+      /// Locales: en, ja
+      static let be9DGC0wText = Rswift.StringResource(key: "BE9-dG-C0w.text", tableName: "SettingViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Setting
+      /// 
+      /// Locales: en, ja
+      static let barAl1RTTitle = Rswift.StringResource(key: "BAR-Al-1RT.title", tableName: "SettingViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Terms
+      /// 
+      /// Locales: en, ja
+      static let vtHfC9cHeaderTitle = Rswift.StringResource(key: "4Vt-hf-c9c.headerTitle", tableName: "SettingViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation: Backup
+      /// 
+      /// Locales: en, ja
+      static func kmKNADlEText(_: Void = ()) -> String {
+        return NSLocalizedString("kmK-NA-dlE.text", tableName: "SettingViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Privacy Policy
+      /// 
+      /// Locales: en, ja
+      static func oa6JUlsText(_: Void = ()) -> String {
+        return NSLocalizedString("4OA-6J-uls.text", tableName: "SettingViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Security
+      /// 
+      /// Locales: en, ja
+      static func rvCvUdzHeaderTitle(_: Void = ()) -> String {
+        return NSLocalizedString("9rv-cv-udz.headerTitle", tableName: "SettingViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Service Terms
+      /// 
+      /// Locales: en, ja
+      static func be9DGC0wText(_: Void = ()) -> String {
+        return NSLocalizedString("BE9-dG-C0w.text", tableName: "SettingViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Setting
+      /// 
+      /// Locales: en, ja
+      static func barAl1RTTitle(_: Void = ()) -> String {
+        return NSLocalizedString("BAR-Al-1RT.title", tableName: "SettingViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Terms
+      /// 
+      /// Locales: en, ja
+      static func vtHfC9cHeaderTitle(_: Void = ()) -> String {
+        return NSLocalizedString("4Vt-hf-c9c.headerTitle", tableName: "SettingViewController", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}

@@ -121,6 +121,7 @@
 		AE6D4CFA20E20DBD007CF3C5 /* SelectAmountViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4CFC20E20DBD007CF3C5 /* SelectAmountViewController.storyboard */; };
 		AE6D4D0120E20E62007CF3C5 /* BalanceAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4D0320E20E62007CF3C5 /* BalanceAccessoryView.xib */; };
 		AE6D4D0820E215F2007CF3C5 /* SendConfirmationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4D0A20E215F2007CF3C5 /* SendConfirmationViewController.storyboard */; };
+		AE6D4D0F20E225D5007CF3C5 /* SettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4D1120E225D5007CF3C5 /* SettingViewController.storyboard */; };
 		AE8C9FC6209EF85F00C616E1 /* DebugListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */; };
 		AE8C9FC8209EF87300C616E1 /* DebugListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */; };
 		AE979E8020D7B6F5009B353F /* Decimal+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */; };
@@ -170,7 +171,6 @@
 		DE624F952072486B00840B06 /* SendConfirmationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE624F942072486B00840B06 /* SendConfirmationViewModel.swift */; };
 		DE7682CF207B4526004094BA /* TransactionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7682CE207B4526004094BA /* TransactionContext.swift */; };
 		DE7682DC207F3C28004094BA /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7682DB207F3C28004094BA /* SettingViewController.swift */; };
-		DE7682DE207F3C63004094BA /* SettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE7682DD207F3C63004094BA /* SettingViewController.storyboard */; };
 		DE7682E0207F3C88004094BA /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7682DF207F3C87004094BA /* SettingViewModel.swift */; };
 		DE7682EA207F4AFD004094BA /* TransactionHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7682E9207F4AFD004094BA /* TransactionHistoryViewController.swift */; };
 		DE7682EC207F4B1E004094BA /* TransactionHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7682EB207F4B1E004094BA /* TransactionHistoryViewModel.swift */; };
@@ -353,6 +353,9 @@
 		AE6D4D0920E215F2007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SendConfirmationViewController.storyboard; sourceTree = "<group>"; };
 		AE6D4D0C20E215F6007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SendConfirmationViewController.strings; sourceTree = "<group>"; };
 		AE6D4D0E20E215F7007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SendConfirmationViewController.strings; sourceTree = "<group>"; };
+		AE6D4D1020E225D5007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SettingViewController.storyboard; sourceTree = "<group>"; };
+		AE6D4D1320E225D8007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SettingViewController.strings; sourceTree = "<group>"; };
+		AE6D4D1520E225D9007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SettingViewController.strings; sourceTree = "<group>"; };
 		AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugListViewController.swift; sourceTree = "<group>"; };
 		AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DebugListViewController.storyboard; sourceTree = "<group>"; };
 		AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extension.swift"; sourceTree = "<group>"; };
@@ -409,7 +412,6 @@
 		DE624F942072486B00840B06 /* SendConfirmationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendConfirmationViewModel.swift; sourceTree = "<group>"; };
 		DE7682CE207B4526004094BA /* TransactionContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionContext.swift; sourceTree = "<group>"; };
 		DE7682DB207F3C28004094BA /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		DE7682DD207F3C63004094BA /* SettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingViewController.storyboard; sourceTree = "<group>"; };
 		DE7682DF207F3C87004094BA /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		DE7682E9207F4AFD004094BA /* TransactionHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryViewController.swift; sourceTree = "<group>"; };
 		DE7682EB207F4B1E004094BA /* TransactionHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryViewModel.swift; sourceTree = "<group>"; };
@@ -960,7 +962,7 @@
 		DE7682DA207F3C11004094BA /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				DE7682DD207F3C63004094BA /* SettingViewController.storyboard */,
+				AE6D4D1120E225D5007CF3C5 /* SettingViewController.storyboard */,
 				DE7682DB207F3C28004094BA /* SettingViewController.swift */,
 				DE7682DF207F3C87004094BA /* SettingViewModel.swift */,
 			);
@@ -1135,7 +1137,7 @@
 				AE6D4D0820E215F2007CF3C5 /* SendConfirmationViewController.storyboard in Resources */,
 				AE6D4CDE20E20963007CF3C5 /* RestoreWalletViewController.storyboard in Resources */,
 				AE6D4CF320E20BD8007CF3C5 /* SelectAddressByQRViewController.storyboard in Resources */,
-				DE7682DE207F3C63004094BA /* SettingViewController.storyboard in Resources */,
+				AE6D4D0F20E225D5007CF3C5 /* SettingViewController.storyboard in Resources */,
 				AE6D4CB420E20492007CF3C5 /* CreateWalletViewController.storyboard in Resources */,
 				DE9272C8208AD55000E03AB9 /* TutorialTopView.xib in Resources */,
 				AE69C84E20E0E25600EB1293 /* MyWalletViewController.storyboard in Resources */,
@@ -1590,6 +1592,16 @@
 				AE6D4D0E20E215F7007CF3C5 /* ja */,
 			);
 			name = SendConfirmationViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		AE6D4D1120E225D5007CF3C5 /* SettingViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE6D4D1020E225D5007CF3C5 /* Base */,
+				AE6D4D1320E225D8007CF3C5 /* en */,
+				AE6D4D1520E225D9007CF3C5 /* ja */,
+			);
+			name = SettingViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		AED6F44D205514BB004A280F /* LaunchScreen.storyboard */ = {

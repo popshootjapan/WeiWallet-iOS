@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "プライバシーポリシー"; ObjectID = "4OA-6J-uls"; */
+"4OA-6J-uls.text" = "プライバシーポリシー";
+
+/* Class = "UITableViewSection"; headerTitle = "規約類"; ObjectID = "4Vt-hf-c9c"; */
+"4Vt-hf-c9c.headerTitle" = "規約類";
+
+/* Class = "UITableViewSection"; headerTitle = "セキュリティ"; ObjectID = "9rv-cv-udz"; */
+"9rv-cv-udz.headerTitle" = "セキュリティ";
+
+/* Class = "UINavigationItem"; title = "設定"; ObjectID = "BAR-Al-1RT"; */
+"BAR-Al-1RT.title" = "設定";
+
+/* Class = "UILabel"; text = "利用規約"; ObjectID = "BE9-dG-C0w"; */
+"BE9-dG-C0w.text" = "利用規約";
+
+/* Class = "UILabel"; text = "バックアップ"; ObjectID = "kmK-NA-dlE"; */
+"kmK-NA-dlE.text" = "バックアップ";
