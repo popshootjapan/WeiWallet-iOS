@@ -50,13 +50,13 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4G-ca-63W">
-                                <rect key="frame" x="155" y="214" width="10" height="57.5"/>
+                                <rect key="frame" x="155" y="217" width="10" height="57.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zwG-CD-wOg">
-                                <rect key="frame" x="16" y="115" width="288" height="60"/>
+                                <rect key="frame" x="16" y="118" width="288" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZY-NZ-D5R">
                                         <rect key="frame" x="8" y="8" width="272" height="44"/>
@@ -81,19 +81,22 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="宛先" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVP-hL-XMW">
-                                <rect key="frame" x="145" y="88" width="30" height="15"/>
+                                <rect key="frame" x="145" y="88" width="30" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="A3G-DE-CT8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
                                 <color key="textColor" red="0.1764705882352941" green="0.18823529411764706" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="送金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vg-Fw-a7s">
-                                <rect key="frame" x="137.5" y="191" width="45" height="15"/>
+                                <rect key="frame" x="137.5" y="194" width="45" height="15"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
                                 <color key="textColor" red="0.1764705882" green="0.18823529410000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LVv-vp-VAG">
-                                <rect key="frame" x="132" y="280" width="56" height="18"/>
+                                <rect key="frame" x="132" y="283" width="56" height="18"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="= " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDK-ts-GlL">
                                         <rect key="frame" x="0.0" y="0.0" width="13.5" height="18"/>
@@ -116,13 +119,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手数料" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImU-9n-bhE">
-                                <rect key="frame" x="137.5" y="314" width="45" height="15"/>
+                                <rect key="frame" x="137.5" y="317" width="45" height="15"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
                                 <color key="textColor" red="0.1764705882" green="0.18823529410000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ko4-j8-D6B">
-                                <rect key="frame" x="156" y="337" width="9.5" height="18"/>
+                                <rect key="frame" x="156" y="340" width="9.5" height="18"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pyp-BL-9rK">
                                         <rect key="frame" x="0.0" y="0.0" width="9.5" height="18"/>
@@ -142,7 +145,7 @@
                             <constraint firstItem="LVv-vp-VAG" firstAttribute="top" secondItem="A4G-ca-63W" secondAttribute="bottom" constant="8" id="8zG-9X-25r"/>
                             <constraint firstItem="A4G-ca-63W" firstAttribute="top" secondItem="8vg-Fw-a7s" secondAttribute="bottom" constant="8" id="9qR-pG-GYQ"/>
                             <constraint firstItem="XAz-kW-HeF" firstAttribute="bottom" secondItem="i0w-x9-bDH" secondAttribute="bottom" constant="16" id="9z7-ag-lC5"/>
-                            <constraint firstItem="XAz-kW-HeF" firstAttribute="trailing" secondItem="i0w-x9-bDH" secondAttribute="trailing" constant="16" id="AIM-SD-I9L"/>
+                            <constraint firstItem="XAz-kW-HeF" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="i0w-x9-bDH" secondAttribute="trailing" id="AIM-SD-I9L"/>
                             <constraint firstItem="XAz-kW-HeF" firstAttribute="trailing" secondItem="zwG-CD-wOg" secondAttribute="trailing" constant="16" id="BKk-24-LKR"/>
                             <constraint firstItem="LVv-vp-VAG" firstAttribute="centerX" secondItem="XAz-kW-HeF" secondAttribute="centerX" id="CL3-tn-ej8"/>
                             <constraint firstItem="8vg-Fw-a7s" firstAttribute="centerX" secondItem="XAz-kW-HeF" secondAttribute="centerX" id="CsA-xM-Ev0"/>
@@ -153,7 +156,9 @@
                             <constraint firstItem="A4G-ca-63W" firstAttribute="centerX" secondItem="XAz-kW-HeF" secondAttribute="centerX" id="OPP-sl-PDU"/>
                             <constraint firstItem="8vg-Fw-a7s" firstAttribute="top" secondItem="zwG-CD-wOg" secondAttribute="bottom" constant="16" id="Qsy-05-hws"/>
                             <constraint firstItem="i0w-x9-bDH" firstAttribute="top" secondItem="UGj-dG-BDB" secondAttribute="bottom" constant="48" id="WRI-4n-nD1"/>
+                            <constraint firstItem="i0w-x9-bDH" firstAttribute="leading" secondItem="aqm-P9-Byq" secondAttribute="leading" constant="152" id="kSc-im-RXu"/>
                             <constraint firstItem="ImU-9n-bhE" firstAttribute="top" secondItem="LVv-vp-VAG" secondAttribute="bottom" constant="16" id="khV-ne-6cC"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="r4k-33-iuE" secondAttribute="trailing" constant="20" symbolic="YES" id="n9A-e4-Cg5"/>
                             <constraint firstItem="ImU-9n-bhE" firstAttribute="centerX" secondItem="XAz-kW-HeF" secondAttribute="centerX" id="rrp-vn-Q4Y"/>
                             <constraint firstItem="zwG-CD-wOg" firstAttribute="leading" secondItem="XAz-kW-HeF" secondAttribute="leading" constant="16" id="s7V-AM-Ubj"/>
                             <constraint firstItem="r4k-33-iuE" firstAttribute="centerY" secondItem="i0w-x9-bDH" secondAttribute="centerY" id="vd6-H5-Gfp"/>

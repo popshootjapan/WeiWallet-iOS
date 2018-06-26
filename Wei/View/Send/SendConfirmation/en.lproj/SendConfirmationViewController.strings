@@ -3,7 +3,7 @@
 "1mx-7Q-M2M.text" = "0";
 
 /* Class = "UILabel"; text = "送金額"; ObjectID = "8vg-Fw-a7s"; */
-"8vg-Fw-a7s.text" = "Sending amount";
+"8vg-Fw-a7s.text" = "Amount";
 
 /* Class = "UILabel"; text = " "; ObjectID = "A4G-ca-63W"; */
 "A4G-ca-63W.text" = " ";

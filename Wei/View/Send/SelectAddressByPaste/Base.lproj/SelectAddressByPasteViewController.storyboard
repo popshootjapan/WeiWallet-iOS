@@ -18,14 +18,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QrG-lM-GHn">
-                                <rect key="frame" x="75.5" y="167" width="224" height="27"/>
+                                <rect key="frame" x="75.5" y="165" width="224" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="3vZ-ty-pQV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
                                 <state key="normal" title="クリップボードからペーストする">
                                     <color key="titleColor" red="0.086274509803921567" green="0.32941176470588235" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vO8-fg-oHL">
-                                <rect key="frame" x="16" y="73" width="343" height="70"/>
+                                <rect key="frame" x="16" y="75" width="343" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCs-wy-xXz">
                                         <rect key="frame" x="8" y="26.5" width="327" height="18"/>
@@ -38,7 +41,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="SiI-OL-wMy"/>
                                     <constraint firstItem="UCs-wy-xXz" firstAttribute="leading" secondItem="vO8-fg-oHL" secondAttribute="leading" constant="8" id="Ssd-n6-Gy9"/>
-                                    <constraint firstItem="UCs-wy-xXz" firstAttribute="trailing" secondItem="vO8-fg-oHL" secondAttribute="trailing" constant="-8" id="dIc-WS-RFY"/>
                                     <constraint firstItem="UCs-wy-xXz" firstAttribute="centerX" secondItem="vO8-fg-oHL" secondAttribute="centerX" id="fBd-X8-d1d"/>
                                     <constraint firstItem="UCs-wy-xXz" firstAttribute="centerY" secondItem="vO8-fg-oHL" secondAttribute="centerY" id="pN6-HH-O0u"/>
                                 </constraints>
@@ -49,7 +51,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="宛先アドレス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YdQ-db-eI3">
-                                <rect key="frame" x="142.5" y="44" width="90" height="15"/>
+                                <rect key="frame" x="142.5" y="44" width="90" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="wyS-jV-2f6"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -80,7 +85,7 @@
                             <constraint firstItem="vO8-fg-oHL" firstAttribute="leading" secondItem="oaj-UX-Uxg" secondAttribute="leading" constant="16" id="Dvb-ZR-Wmg"/>
                             <constraint firstItem="QrG-lM-GHn" firstAttribute="centerX" secondItem="oaj-UX-Uxg" secondAttribute="centerX" id="IDc-ep-ztD"/>
                             <constraint firstItem="oaj-UX-Uxg" firstAttribute="trailing" secondItem="ET9-V5-iAr" secondAttribute="trailing" id="Lzd-VE-jwd"/>
-                            <constraint firstItem="QrG-lM-GHn" firstAttribute="top" secondItem="vO8-fg-oHL" secondAttribute="bottom" constant="24" id="NyZ-uS-lPT"/>
+                            <constraint firstItem="QrG-lM-GHn" firstAttribute="top" secondItem="vO8-fg-oHL" secondAttribute="bottom" constant="20" id="NyZ-uS-lPT"/>
                             <constraint firstItem="YdQ-db-eI3" firstAttribute="top" secondItem="oaj-UX-Uxg" secondAttribute="top" constant="24" id="ZvY-CU-DpK"/>
                             <constraint firstItem="ET9-V5-iAr" firstAttribute="leading" secondItem="oaj-UX-Uxg" secondAttribute="leading" id="mK4-yn-3vy"/>
                             <constraint firstItem="vO8-fg-oHL" firstAttribute="centerX" secondItem="oaj-UX-Uxg" secondAttribute="centerX" id="vS1-ad-G5P"/>

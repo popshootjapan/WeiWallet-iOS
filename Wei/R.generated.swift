@@ -479,7 +479,7 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let dXCnZZIText = Rswift.StringResource(key: "6dX-Cn-ZZI.text", tableName: "BackupViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: Write down backup words
+      /// en translation: Keep them safe
       /// 
       /// Locales: en, ja
       static let a4sNePRGTitle = Rswift.StringResource(key: "A4s-ne-pRG.title", tableName: "BackupViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
@@ -512,7 +512,7 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("6dX-Cn-ZZI.text", tableName: "BackupViewController", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Write down backup words
+      /// en translation: Keep them safe
       /// 
       /// Locales: en, ja
       static func a4sNePRGTitle(_: Void = ()) -> String {
@@ -1334,6 +1334,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let rDKTsGlLText = Rswift.StringResource(key: "rDK-ts-GlL.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Amount
+      /// 
+      /// Locales: en, ja
+      static let vgFwA7sText = Rswift.StringResource(key: "8vg-Fw-a7s.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Confirm
       /// 
       /// Locales: en, ja
@@ -1354,10 +1358,6 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let cvphlxmwText = Rswift.StringResource(key: "CVP-hL-XMW.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: Sending amount
-      /// 
-      /// Locales: en, ja
-      static let vgFwA7sText = Rswift.StringResource(key: "8vg-Fw-a7s.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Sent
       /// 
       /// Locales: en, ja
@@ -1409,6 +1409,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("rDK-ts-GlL.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Amount
+      /// 
+      /// Locales: en, ja
+      static func vgFwA7sText(_: Void = ()) -> String {
+        return NSLocalizedString("8vg-Fw-a7s.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Confirm
       /// 
       /// Locales: en, ja
@@ -1442,13 +1449,6 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func cvphlxmwText(_: Void = ()) -> String {
         return NSLocalizedString("CVP-hL-XMW.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: Sending amount
-      /// 
-      /// Locales: en, ja
-      static func vgFwA7sText(_: Void = ()) -> String {
-        return NSLocalizedString("8vg-Fw-a7s.text", tableName: "SendConfirmationViewController", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Sent
