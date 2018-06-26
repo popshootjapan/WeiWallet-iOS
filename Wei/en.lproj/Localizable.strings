@@ -37,6 +37,8 @@
 
 // MARK: - Common
 "Common.Close" = "Close";
+"Common.Sent" = "Sent";
+"Common.SendFailed" = "Failed";
 
 // MARK: - Alert
 "Alert.Backup.Title" = "Keep backup words safe!";

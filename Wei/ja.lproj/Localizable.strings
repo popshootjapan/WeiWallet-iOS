@@ -37,6 +37,8 @@
 
 // MARK: - Common
 "Common.Close" = "閉じる";
+"Common.Sent" = "送金完了";
+"Common.SendFailed" = "送金失敗";
 
 // MARK: - Alert
 "Alert.Backup.Title" = "バックアップキーを大切に保管してください";

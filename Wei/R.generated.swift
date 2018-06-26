@@ -710,7 +710,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 19 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 21 localization keys.
     struct localizable {
       /// en translation: Bad Connection :(
       /// 
@@ -724,6 +724,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let pageCopyAddress = Rswift.StringResource(key: "Page.CopyAddress", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Failed
+      /// 
+      /// Locales: en, ja
+      static let commonSendFailed = Rswift.StringResource(key: "Common.SendFailed", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Failed to fetch value
       /// 
       /// Locales: en, ja
@@ -760,7 +764,7 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let pageQRCode = Rswift.StringResource(key: "Page.QRCode", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: Scan a QR code、 or paste an address
+      /// en translation: Scan a QR code, or paste an address
       /// 
       /// Locales: en, ja
       static let selectAddressWarningText = Rswift.StringResource(key: "SelectAddress.Warning.Text", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
@@ -768,6 +772,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let transactionWaitingForSend = Rswift.StringResource(key: "Transaction.WaitingForSend", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Sent
+      /// 
+      /// Locales: en, ja
+      static let commonSent = Rswift.StringResource(key: "Common.Sent", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Sent
       /// 
       /// Locales: en, ja
@@ -808,6 +816,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func pageCopyAddress(_: Void = ()) -> String {
         return NSLocalizedString("Page.CopyAddress", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Failed
+      /// 
+      /// Locales: en, ja
+      static func commonSendFailed(_: Void = ()) -> String {
+        return NSLocalizedString("Common.SendFailed", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Failed to fetch value
@@ -873,7 +888,7 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("Page.QRCode", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Scan a QR code、 or paste an address
+      /// en translation: Scan a QR code, or paste an address
       /// 
       /// Locales: en, ja
       static func selectAddressWarningText(_: Void = ()) -> String {
@@ -885,6 +900,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func transactionWaitingForSend(_: Void = ()) -> String {
         return NSLocalizedString("Transaction.WaitingForSend", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Sent
+      /// 
+      /// Locales: en, ja
+      static func commonSent(_: Void = ()) -> String {
+        return NSLocalizedString("Common.Sent", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Sent
