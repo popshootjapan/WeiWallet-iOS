@@ -710,7 +710,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 23 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 26 localization keys.
     struct localizable {
       /// en translation: Bad Connection :(
       /// 
@@ -764,6 +764,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let transactionWatingForReceive = Rswift.StringResource(key: "Transaction.WatingForReceive", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Reject
+      /// 
+      /// Locales: en, ja
+      static let commonCameraAccessCancel = Rswift.StringResource(key: "Common.CameraAccess.Cancel", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Scan QR
       /// 
       /// Locales: en, ja
@@ -800,10 +804,18 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let suggestBackupMessage = Rswift.StringResource(key: "SuggestBackup.Message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: You can scan QR codes by allowing
+      /// 
+      /// Locales: en, ja
+      static let commonCameraAccessDescription = Rswift.StringResource(key: "Common.CameraAccess.Description", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: You will need them when you recover.  Be carefull not to lose them
       /// 
       /// Locales: en, ja
       static let alertBackupMessage = Rswift.StringResource(key: "Alert.Backup.Message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: “WeiWallet” is requesting a camera access
+      /// 
+      /// Locales: en, ja
+      static let commonCameraAccessTitle = Rswift.StringResource(key: "Common.CameraAccess.Title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       
       /// en translation: Bad Connection :(
       /// 
@@ -896,6 +908,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("Transaction.WatingForReceive", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Reject
+      /// 
+      /// Locales: en, ja
+      static func commonCameraAccessCancel(_: Void = ()) -> String {
+        return NSLocalizedString("Common.CameraAccess.Cancel", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Scan QR
       /// 
       /// Locales: en, ja
@@ -959,11 +978,25 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("SuggestBackup.Message", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: You can scan QR codes by allowing
+      /// 
+      /// Locales: en, ja
+      static func commonCameraAccessDescription(_: Void = ()) -> String {
+        return NSLocalizedString("Common.CameraAccess.Description", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: You will need them when you recover.  Be carefull not to lose them
       /// 
       /// Locales: en, ja
       static func alertBackupMessage(_: Void = ()) -> String {
         return NSLocalizedString("Alert.Backup.Message", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: “WeiWallet” is requesting a camera access
+      /// 
+      /// Locales: en, ja
+      static func commonCameraAccessTitle(_: Void = ()) -> String {
+        return NSLocalizedString("Common.CameraAccess.Title", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}

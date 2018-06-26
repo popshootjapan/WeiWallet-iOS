@@ -39,6 +39,9 @@
 "Common.Close" = "閉じる";
 "Common.Sent" = "送金完了";
 "Common.SendFailed" = "送金失敗";
+"Common.CameraAccess.Title" = "“WeiWallet”がカメラへのアクセスを求めています";
+"Common.CameraAccess.Description" = "これによりQRコードを撮影してアドレスを読み込むことができます";
+"Common.CameraAccess.Cancel" = "許可しない";
 
 // MARK: - Alert
 "Alert.Backup.Title" = "バックアップキーを大切に保管してください";

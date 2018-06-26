@@ -91,11 +91,11 @@ final class SelectAddressByQRViewController: UIViewController {
     private func showSettingsAlertController() {
         DispatchQueue.main.async { () in
             AppDelegate.rootViewController.presentedViewController?.showAlertController(
-                title: "“WeiWallet”がカメラへのアクセスを求めています",
-                message: "これによりQRコードを撮影してアドレスを読み込むことができます",
+                title: R.string.localizable.commonCameraAccessTitle(),
+                message: R.string.localizable.commonCameraAccessDescription(),
                 actionTitle: "OK",
                 withCancel: true,
-                cancelTitle: "許可しない",
+                cancelTitle: R.string.localizable.commonCameraAccessCancel(),
                 handler: { _ in
                     if let settingsURL = URL(string: UIApplicationOpenSettingsURLString) {
                         UIApplication.shared.open(settingsURL)

@@ -39,6 +39,9 @@
 "Common.Close" = "Close";
 "Common.Sent" = "Sent";
 "Common.SendFailed" = "Failed";
+"Common.CameraAccess.Title" = "“WeiWallet” is requesting a camera access";
+"Common.CameraAccess.Description" = "You can scan QR codes by allowing";
+"Common.CameraAccess.Cancel" = "Reject";
 
 // MARK: - Alert
 "Alert.Backup.Title" = "Keep backup words safe!";
