@@ -710,7 +710,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 21 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 23 localization keys.
     struct localizable {
       /// en translation: Bad Connection :(
       /// 
@@ -736,6 +736,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let backupMessage = Rswift.StringResource(key: "Backup.Message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Invalid Address
+      /// 
+      /// Locales: en, ja
+      static let alertSelectAddressByQRInvalidAddressTitle = Rswift.StringResource(key: "Alert.SelectAddressByQR.InvalidAddress.Title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Keep backup words safe!
       /// 
       /// Locales: en, ja
@@ -788,6 +792,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let errorTitleSystemError = Rswift.StringResource(key: "Error.Title.SystemError", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Try again with a different QR code
+      /// 
+      /// Locales: en, ja
+      static let alertSelectAddressByQRInvalidAddressMessage = Rswift.StringResource(key: "Alert.SelectAddressByQR.InvalidAddress.Message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: You can recover your wallet anytime anywhere by backing it up
       /// 
       /// Locales: en, ja
@@ -837,6 +845,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func backupMessage(_: Void = ()) -> String {
         return NSLocalizedString("Backup.Message", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Invalid Address
+      /// 
+      /// Locales: en, ja
+      static func alertSelectAddressByQRInvalidAddressTitle(_: Void = ()) -> String {
+        return NSLocalizedString("Alert.SelectAddressByQR.InvalidAddress.Title", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Keep backup words safe!
@@ -928,6 +943,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func errorTitleSystemError(_: Void = ()) -> String {
         return NSLocalizedString("Error.Title.SystemError", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Try again with a different QR code
+      /// 
+      /// Locales: en, ja
+      static func alertSelectAddressByQRInvalidAddressMessage(_: Void = ()) -> String {
+        return NSLocalizedString("Alert.SelectAddressByQR.InvalidAddress.Message", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: You can recover your wallet anytime anywhere by backing it up

@@ -61,7 +61,10 @@ final class SelectAddressByQRViewController: UIViewController {
         output
             .isAddressValid
             .drive(onNext: { [weak self] in
-                self?.showAlertController(title: "アドレスが間違っています", message: "QRコードを確認して再度お試しください。", handler: nil)
+                self?.showAlertController(
+                    title: R.string.localizable.alertSelectAddressByQRInvalidAddressTitle(),
+                    message: R.string.localizable.alertSelectAddressByQRInvalidAddressMessage()
+                )
             })
             .disposed(by: disposeBag)
         

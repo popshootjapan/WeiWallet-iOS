@@ -43,3 +43,5 @@
 // MARK: - Alert
 "Alert.Backup.Title" = "バックアップキーを大切に保管してください";
 "Alert.Backup.Message" = "復元する際に必要になります。\n無くさないように気をつけてください。";
+"Alert.SelectAddressByQR.InvalidAddress.Title" = "アドレスが間違っています";
+"Alert.SelectAddressByQR.InvalidAddress.Message" = "QRコードを確認して再度お試しください。";
