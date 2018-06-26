@@ -43,6 +43,15 @@
 "Common.CameraAccess.Description" = "これによりQRコードを撮影してアドレスを読み込むことができます";
 "Common.CameraAccess.Cancel" = "許可しない";
 
+// MARK: - Tutorial
+"Tutorial.First.Title" = "ようこそWei Walletへ！";
+"Tutorial.Second.Title" = "スムーズな受取と送金";
+"Tutorial.Third.Title" = "Wei Walletは安全です";
+
+"Tutorial.First.Description" = "あなたのウォレットが作成されました。";
+"Tutorial.Second.Description" = "受取や送金は素早く完了します。";
+"Tutorial.Third.Description" = "バックアップを取ることでウォレット内のイーサリアムはいつでも復元することができます。";
+
 // MARK: - Alert
 "Alert.Backup.Title" = "バックアップキーを大切に保管してください";
 "Alert.Backup.Message" = "復元する際に必要になります。\n無くさないように気をつけてください。";

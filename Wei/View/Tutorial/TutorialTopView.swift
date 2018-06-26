@@ -28,22 +28,22 @@ final class TutorialTopView: UIView {
         func title() -> String {
             switch self {
             case .first:
-                return "ようこそWei Walletへ！"
+                return R.string.localizable.tutorialFirstTitle()
             case .second:
-                return "スムーズな受取と送金"
+                return R.string.localizable.tutorialSecondTitle()
             case .third:
-                return "Wei Walletは安全です"
+                return R.string.localizable.tutorialThirdTitle()
             }
         }
         
         func description() -> String {
             switch self {
             case .first:
-                return "あなたのウォレットが作成されました。"
+                return R.string.localizable.tutorialFirstDescription()
             case .second:
-                return "受取や送金は素早く完了します。"
+                return R.string.localizable.tutorialSecondDescription()
             case .third:
-                return "バックアップを取ることでウォレット内のイーサリアムはいつでも復元することができます。"
+                return R.string.localizable.tutorialThirdDescription()
             }
         }
         
