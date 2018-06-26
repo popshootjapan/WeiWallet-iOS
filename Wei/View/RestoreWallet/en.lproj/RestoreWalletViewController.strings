@@ -1,0 +1,42 @@
+
+/* Class = "UILabel"; text = "11"; ObjectID = "AIi-XI-g0y"; */
+"AIi-XI-g0y.text" = "11";
+
+/* Class = "UILabel"; text = "12"; ObjectID = "Bt0-Od-5m6"; */
+"Bt0-Od-5m6.text" = "12";
+
+/* Class = "UIBarButtonItem"; title = "確認する"; ObjectID = "Dz7-p3-XC4"; */
+"Dz7-p3-XC4.title" = "Confirm";
+
+/* Class = "UILabel"; text = "6"; ObjectID = "K6k-ci-pLm"; */
+"K6k-ci-pLm.text" = "6";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "Kkv-J8-YdO"; */
+"Kkv-J8-YdO.text" = "2";
+
+/* Class = "UILabel"; text = "8"; ObjectID = "Y9g-Po-sSe"; */
+"Y9g-Po-sSe.text" = "8";
+
+/* Class = "UILabel"; text = "4"; ObjectID = "Yl4-eK-flx"; */
+"Yl4-eK-flx.text" = "4";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "Z99-Si-Ocp"; */
+"Z99-Si-Ocp.text" = "9";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "k1o-ef-Q7m"; */
+"k1o-ef-Q7m.text" = "3";
+
+/* Class = "UILabel"; text = "7"; ObjectID = "prN-ws-GJv"; */
+"prN-ws-GJv.text" = "7";
+
+/* Class = "UINavigationItem"; title = "バックアップキーの入力"; ObjectID = "q6f-oH-gNU"; */
+"q6f-oH-gNU.title" = "Restore your wallet";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "r7a-JI-hHW"; */
+"r7a-JI-hHW.text" = "1";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "tnr-Za-VDh"; */
+"tnr-Za-VDh.text" = "5";
+
+/* Class = "UILabel"; text = "10"; ObjectID = "uzi-3Q-m6l"; */
+"uzi-3Q-m6l.text" = "10";

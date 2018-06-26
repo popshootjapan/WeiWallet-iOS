@@ -420,7 +420,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 10 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 11 localization tables.
   struct string {
     /// This `R.string.agreeServiceTermsViewController` struct is generated, and contains static references to 3 localization keys.
     struct agreeServiceTermsViewController {
@@ -871,6 +871,166 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func zEvRGUtyText(_: Void = ()) -> String {
         return NSLocalizedString("zEv-RG-uty.text", tableName: "ReceiveViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.restoreWalletViewController` struct is generated, and contains static references to 14 localization keys.
+    struct restoreWalletViewController {
+      /// en translation: 1
+      /// 
+      /// Locales: en, ja
+      static let r7aJIHHWText = Rswift.StringResource(key: "r7a-JI-hHW.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 10
+      /// 
+      /// Locales: en, ja
+      static let uzi3QM6lText = Rswift.StringResource(key: "uzi-3Q-m6l.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 11
+      /// 
+      /// Locales: en, ja
+      static let aIiXIG0yText = Rswift.StringResource(key: "AIi-XI-g0y.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 12
+      /// 
+      /// Locales: en, ja
+      static let bt0Od5m6Text = Rswift.StringResource(key: "Bt0-Od-5m6.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 2
+      /// 
+      /// Locales: en, ja
+      static let kkvJ8YdOText = Rswift.StringResource(key: "Kkv-J8-YdO.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 3
+      /// 
+      /// Locales: en, ja
+      static let k1oEfQ7mText = Rswift.StringResource(key: "k1o-ef-Q7m.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 4
+      /// 
+      /// Locales: en, ja
+      static let yl4EKFlxText = Rswift.StringResource(key: "Yl4-eK-flx.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 5
+      /// 
+      /// Locales: en, ja
+      static let tnrZaVDhText = Rswift.StringResource(key: "tnr-Za-VDh.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 6
+      /// 
+      /// Locales: en, ja
+      static let k6kCiPLmText = Rswift.StringResource(key: "K6k-ci-pLm.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 7
+      /// 
+      /// Locales: en, ja
+      static let prNWsGJvText = Rswift.StringResource(key: "prN-ws-GJv.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 8
+      /// 
+      /// Locales: en, ja
+      static let y9gPoSSeText = Rswift.StringResource(key: "Y9g-Po-sSe.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: 9
+      /// 
+      /// Locales: en, ja
+      static let z99SiOcpText = Rswift.StringResource(key: "Z99-Si-Ocp.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Confirm
+      /// 
+      /// Locales: en, ja
+      static let dz7P3XC4Title = Rswift.StringResource(key: "Dz7-p3-XC4.title", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Enter your backup words
+      /// 
+      /// Locales: en, ja
+      static let q6fOHGNUTitle = Rswift.StringResource(key: "q6f-oH-gNU.title", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation: 1
+      /// 
+      /// Locales: en, ja
+      static func r7aJIHHWText(_: Void = ()) -> String {
+        return NSLocalizedString("r7a-JI-hHW.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 10
+      /// 
+      /// Locales: en, ja
+      static func uzi3QM6lText(_: Void = ()) -> String {
+        return NSLocalizedString("uzi-3Q-m6l.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 11
+      /// 
+      /// Locales: en, ja
+      static func aIiXIG0yText(_: Void = ()) -> String {
+        return NSLocalizedString("AIi-XI-g0y.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 12
+      /// 
+      /// Locales: en, ja
+      static func bt0Od5m6Text(_: Void = ()) -> String {
+        return NSLocalizedString("Bt0-Od-5m6.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 2
+      /// 
+      /// Locales: en, ja
+      static func kkvJ8YdOText(_: Void = ()) -> String {
+        return NSLocalizedString("Kkv-J8-YdO.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 3
+      /// 
+      /// Locales: en, ja
+      static func k1oEfQ7mText(_: Void = ()) -> String {
+        return NSLocalizedString("k1o-ef-Q7m.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 4
+      /// 
+      /// Locales: en, ja
+      static func yl4EKFlxText(_: Void = ()) -> String {
+        return NSLocalizedString("Yl4-eK-flx.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 5
+      /// 
+      /// Locales: en, ja
+      static func tnrZaVDhText(_: Void = ()) -> String {
+        return NSLocalizedString("tnr-Za-VDh.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 6
+      /// 
+      /// Locales: en, ja
+      static func k6kCiPLmText(_: Void = ()) -> String {
+        return NSLocalizedString("K6k-ci-pLm.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 7
+      /// 
+      /// Locales: en, ja
+      static func prNWsGJvText(_: Void = ()) -> String {
+        return NSLocalizedString("prN-ws-GJv.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 8
+      /// 
+      /// Locales: en, ja
+      static func y9gPoSSeText(_: Void = ()) -> String {
+        return NSLocalizedString("Y9g-Po-sSe.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: 9
+      /// 
+      /// Locales: en, ja
+      static func z99SiOcpText(_: Void = ()) -> String {
+        return NSLocalizedString("Z99-Si-Ocp.text", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Confirm
+      /// 
+      /// Locales: en, ja
+      static func dz7P3XC4Title(_: Void = ()) -> String {
+        return NSLocalizedString("Dz7-p3-XC4.title", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Enter your backup words
+      /// 
+      /// Locales: en, ja
+      static func q6fOHGNUTitle(_: Void = ()) -> String {
+        return NSLocalizedString("q6f-oH-gNU.title", tableName: "RestoreWalletViewController", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
