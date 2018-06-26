@@ -420,7 +420,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 18 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 19 localization tables.
   struct string {
     /// This `R.string.agreeServiceTermsViewController` struct is generated, and contains static references to 3 localization keys.
     struct agreeServiceTermsViewController {
@@ -777,6 +777,34 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func error_title_about_system(_: Void = ()) -> String {
         return NSLocalizedString("error_title_about_system", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.maintenanceViewController` struct is generated, and contains static references to 2 localization keys.
+    struct maintenanceViewController {
+      /// en translation: Come back again later!
+      /// 
+      /// Locales: en, ja
+      static let iLaZBEExText = Rswift.StringResource(key: "iLa-zB-EEx.text", tableName: "MaintenanceViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: We are currenctly under the maintenance.
+      /// 
+      /// Locales: en, ja
+      static let aJiIOEText = Rswift.StringResource(key: "99a-Ji-iOE.text", tableName: "MaintenanceViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation: Come back again later!
+      /// 
+      /// Locales: en, ja
+      static func iLaZBEExText(_: Void = ()) -> String {
+        return NSLocalizedString("iLa-zB-EEx.text", tableName: "MaintenanceViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: We are currenctly under the maintenance.
+      /// 
+      /// Locales: en, ja
+      static func aJiIOEText(_: Void = ()) -> String {
+        return NSLocalizedString("99a-Ji-iOE.text", tableName: "MaintenanceViewController", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
@@ -1673,8 +1701,8 @@ struct _R: Rswift.Validatable {
       try launchScreen.validate()
       try homeViewController.validate()
       try latestTransactionListViewController.validate()
-      try maintenanceViewController.validate()
       try sendConfirmationViewController.validate()
+      try maintenanceViewController.validate()
     }
     
     struct agreeServiceTermsViewController: Rswift.StoryboardResourceWithInitialControllerType {
