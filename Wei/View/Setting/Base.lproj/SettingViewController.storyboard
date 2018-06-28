@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" misplaced="YES" id="IhA-T2-wOE">
+                        <view key="tableFooterView" contentMode="scaleToFill" id="IhA-T2-wOE">
                             <rect key="frame" x="0.0" y="361.5" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -40,6 +40,7 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kmK-NA-dlE" secondAttribute="trailing" constant="20" symbolic="YES" id="1Lc-CM-EKT"/>
                                                 <constraint firstItem="kmK-NA-dlE" firstAttribute="centerY" secondItem="NuH-DJ-Try" secondAttribute="centerY" id="JoH-Ii-L8V"/>
                                                 <constraint firstItem="kmK-NA-dlE" firstAttribute="leading" secondItem="NuH-DJ-Try" secondAttribute="leading" constant="16" id="vuj-uI-W03"/>
                                             </constraints>
@@ -66,6 +67,7 @@
                                             <constraints>
                                                 <constraint firstItem="A68-Dm-5aY" firstAttribute="centerY" secondItem="hFT-Gv-DWn" secondAttribute="centerY" id="8jt-Vb-sHa"/>
                                                 <constraint firstItem="A68-Dm-5aY" firstAttribute="leading" secondItem="hFT-Gv-DWn" secondAttribute="leading" constant="16" id="C1Q-iZ-QoM"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="A68-Dm-5aY" secondAttribute="trailing" constant="20" symbolic="YES" id="xJL-5b-8PV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -88,6 +90,7 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BE9-dG-C0w" secondAttribute="trailing" constant="20" symbolic="YES" id="4Su-Sv-IyN"/>
                                                 <constraint firstItem="BE9-dG-C0w" firstAttribute="leading" secondItem="ghK-sU-pHZ" secondAttribute="leading" constant="16" id="hXB-pI-QuO"/>
                                                 <constraint firstItem="BE9-dG-C0w" firstAttribute="centerY" secondItem="ghK-sU-pHZ" secondAttribute="centerY" id="ox4-bw-ZTw"/>
                                             </constraints>
@@ -109,6 +112,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="4OA-6J-uls" firstAttribute="leading" secondItem="ZQ3-PN-ERR" secondAttribute="leading" constant="16" id="0a6-1q-aP6"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4OA-6J-uls" secondAttribute="trailing" constant="20" symbolic="YES" id="OsQ-Qc-fCq"/>
                                                 <constraint firstItem="4OA-6J-uls" firstAttribute="centerY" secondItem="ZQ3-PN-ERR" secondAttribute="centerY" id="ge9-ec-g7q"/>
                                             </constraints>
                                         </tableViewCellContentView>

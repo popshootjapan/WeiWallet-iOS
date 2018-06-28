@@ -35,6 +35,7 @@ final class CurrencySettingViewModel: InjectableViewModel {
     func build(input: Input) -> Output {
         let currencies = Driver.just(Currency.all)
         let selectedCurrency = currencyManager.currency.asDriver(onErrorDriveWith: .empty())
+            .debug()
         
         input.selectedIndexPath
             .withLatestFrom(currencies) { $1[$0.row] }

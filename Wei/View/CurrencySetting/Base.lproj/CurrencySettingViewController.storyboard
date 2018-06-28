@@ -34,6 +34,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="XSe-2k-ers" firstAttribute="leading" secondItem="Bn9-0a-jtm" secondAttribute="leading" constant="16" id="e8h-f3-l8Y"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XSe-2k-ers" secondAttribute="trailing" constant="20" symbolic="YES" id="oe2-qo-uj0"/>
                                         <constraint firstItem="XSe-2k-ers" firstAttribute="centerY" secondItem="Bn9-0a-jtm" secondAttribute="centerY" id="pDe-xz-XNY"/>
                                     </constraints>
                                 </tableViewCellContentView>

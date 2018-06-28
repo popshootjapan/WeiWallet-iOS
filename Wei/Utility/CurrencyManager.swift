@@ -12,7 +12,7 @@ import RxCocoa
 protocol CurrencyManagerProtocol {
     
     /// Represents user's currency
-    var currency: Observable<Currency> { get }
+    var currency: Driver<Currency> { get }
     
     /// Updates user's currency
     var updateCurrency: PublishSubject<Currency> { get }
@@ -25,13 +25,15 @@ final class CurrencyManager: CurrencyManagerProtocol, Injectable {
     )
     
     let updateCurrency = PublishSubject<Currency>()
-    let currency: Observable<Currency>
+    let currency: Driver<Currency>
     
     init(dependency: Dependency) {
         var userDefaultsStore = dependency
         
         currency = updateCurrency
+            .distinctUntilChanged()
             .do(onNext: { userDefaultsStore.currency = $0 })
             .startWith(userDefaultsStore.currency ?? LocaleLanguage.preferred().currency())
+            .asDriver(onErrorDriveWith: .empty())
     }
 }

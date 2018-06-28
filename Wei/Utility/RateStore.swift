@@ -27,7 +27,7 @@ final class RateStore: Injectable, RateStoreProtocol {
     
     init(dependency: Dependency) {
         let (cache, repository, updater, currencyManager) = dependency
-        let currency = currencyManager.currency
+        let currency = currencyManager.currency.asObservable()
         
         let cachedRate = currency.flatMap { currency -> Observable<Price> in
             return cache.load(for: RateService.GetCurrentRate(currency: currency)).asObservable()
