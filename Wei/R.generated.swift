@@ -267,7 +267,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 21 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 22 storyboards.
   struct storyboard {
     /// Storyboard `AgreeServiceTermsViewController`.
     static let agreeServiceTermsViewController = _R.storyboard.agreeServiceTermsViewController()
@@ -275,6 +275,8 @@ struct R: Rswift.Validatable {
     static let backupViewController = _R.storyboard.backupViewController()
     /// Storyboard `CreateWalletViewController`.
     static let createWalletViewController = _R.storyboard.createWalletViewController()
+    /// Storyboard `CurrencySettingViewController`.
+    static let currencySettingViewController = _R.storyboard.currencySettingViewController()
     /// Storyboard `DebugListViewController`.
     static let debugListViewController = _R.storyboard.debugListViewController()
     /// Storyboard `HomeViewController`.
@@ -325,6 +327,11 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "CreateWalletViewController", bundle: ...)`
     static func createWalletViewController(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.createWalletViewController)
+    }
+    
+    /// `UIStoryboard(name: "CurrencySettingViewController", bundle: ...)`
+    static func currencySettingViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.currencySettingViewController)
     }
     
     /// `UIStoryboard(name: "DebugListViewController", bundle: ...)`
@@ -1993,13 +2000,13 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       try myWalletViewController.validate()
+      try maintenanceViewController.validate()
       try createWalletViewController.validate()
       try suggestBackupViewController.validate()
       try launchScreen.validate()
       try homeViewController.validate()
       try latestTransactionListViewController.validate()
       try sendConfirmationViewController.validate()
-      try maintenanceViewController.validate()
     }
     
     struct agreeServiceTermsViewController: Rswift.StoryboardResourceWithInitialControllerType {
@@ -2029,6 +2036,15 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if UIKit.UIImage(named: "logo_vertical") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'logo_vertical' is used in storyboard 'CreateWalletViewController', but couldn't be loaded.") }
       }
+      
+      fileprivate init() {}
+    }
+    
+    struct currencySettingViewController: Rswift.StoryboardResourceWithInitialControllerType {
+      typealias InitialController = CurrencySettingViewController
+      
+      let bundle = R.hostingBundle
+      let name = "CurrencySettingViewController"
       
       fileprivate init() {}
     }

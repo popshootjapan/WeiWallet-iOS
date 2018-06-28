@@ -134,6 +134,9 @@
 		AEC36ADD20C5851E00FE4737 /* LocalTransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC36ADC20C5851E00FE4737 /* LocalTransactionRepository.swift */; };
 		AEC36ADF20C5855600FE4737 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC36ADE20C5855600FE4737 /* RealmManager.swift */; };
 		AEC36AE120C58A9800FE4737 /* LocalTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC36AE020C58A9800FE4737 /* LocalTransaction.swift */; };
+		AED49F4D20E4CCC500C2AF33 /* CurrencySettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED49F4C20E4CCC500C2AF33 /* CurrencySettingViewController.swift */; };
+		AED49F4F20E4CCCB00C2AF33 /* CurrencySettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED49F4E20E4CCCB00C2AF33 /* CurrencySettingViewController.storyboard */; };
+		AED49F5220E4CD4500C2AF33 /* CurrencySettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED49F5120E4CD4500C2AF33 /* CurrencySettingViewModel.swift */; };
 		AED6F445205514BB004A280F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6F444205514BB004A280F /* AppDelegate.swift */; };
 		AED6F44C205514BB004A280F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AED6F44B205514BB004A280F /* Assets.xcassets */; };
 		AED6F44F205514BB004A280F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED6F44D205514BB004A280F /* LaunchScreen.storyboard */; };
@@ -370,6 +373,9 @@
 		AEC36ADC20C5851E00FE4737 /* LocalTransactionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTransactionRepository.swift; sourceTree = "<group>"; };
 		AEC36ADE20C5855600FE4737 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		AEC36AE020C58A9800FE4737 /* LocalTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTransaction.swift; sourceTree = "<group>"; };
+		AED49F4C20E4CCC500C2AF33 /* CurrencySettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySettingViewController.swift; sourceTree = "<group>"; };
+		AED49F4E20E4CCCB00C2AF33 /* CurrencySettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CurrencySettingViewController.storyboard; sourceTree = "<group>"; };
+		AED49F5120E4CD4500C2AF33 /* CurrencySettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySettingViewModel.swift; sourceTree = "<group>"; };
 		AED6F441205514BB004A280F /* Wei.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wei.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED6F444205514BB004A280F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AED6F44B205514BB004A280F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -803,6 +809,16 @@
 			path = Debug;
 			sourceTree = "<group>";
 		};
+		AED49F5020E4CCCF00C2AF33 /* CurrencySetting */ = {
+			isa = PBXGroup;
+			children = (
+				AED49F4E20E4CCCB00C2AF33 /* CurrencySettingViewController.storyboard */,
+				AED49F4C20E4CCC500C2AF33 /* CurrencySettingViewController.swift */,
+				AED49F5120E4CD4500C2AF33 /* CurrencySettingViewModel.swift */,
+			);
+			path = CurrencySetting;
+			sourceTree = "<group>";
+		};
 		AED6F438205514BB004A280F = {
 			isa = PBXGroup;
 			children = (
@@ -887,6 +903,7 @@
 				AE14A61E2070A50C003A63FF /* Common */,
 				AE8C9FC9209EF87800C616E1 /* Debug */,
 				AEFA44FE20B318F600844D4A /* RestoreWallet */,
+				AED49F5020E4CCCF00C2AF33 /* CurrencySetting */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1139,6 +1156,7 @@
 				AE6D4D0820E215F2007CF3C5 /* SendConfirmationViewController.storyboard in Resources */,
 				AE6D4CDE20E20963007CF3C5 /* RestoreWalletViewController.storyboard in Resources */,
 				AE6D4CF320E20BD8007CF3C5 /* SelectAddressByQRViewController.storyboard in Resources */,
+				AED49F4F20E4CCCB00C2AF33 /* CurrencySettingViewController.storyboard in Resources */,
 				AE6D4D0F20E225D5007CF3C5 /* SettingViewController.storyboard in Resources */,
 				AE6D4CB420E20492007CF3C5 /* CreateWalletViewController.storyboard in Resources */,
 				DE9272C8208AD55000E03AB9 /* TutorialTopView.xib in Resources */,
@@ -1287,11 +1305,13 @@
 			files = (
 				1AEA0A98205979DB0068C2E1 /* ApplicationStore.swift in Sources */,
 				AE61468F2088FA3E00A9E77A /* DialogPresentationController.swift in Sources */,
+				AED49F5220E4CD4500C2AF33 /* CurrencySettingViewModel.swift in Sources */,
 				DEC577272074D74E00DC3923 /* ReceiveViewController.swift in Sources */,
 				AE14A62F20712221003A63FF /* MyWalletViewController.swift in Sources */,
 				DE624F8F207247EA00840B06 /* SelectAmountViewModel.swift in Sources */,
 				DEF040C720692E4200DFE35A /* Wei+Extension.swift in Sources */,
 				AE43C3A620D10D620050BDDE /* CurrencyManager.swift in Sources */,
+				AED49F4D20E4CCC500C2AF33 /* CurrencySettingViewController.swift in Sources */,
 				AE979E8220D8BD8F009B353F /* Amount.swift in Sources */,
 				1A798BFF2081D8C400812D80 /* EthereumKit+Extension.swift in Sources */,
 				AE3F7309207F7ECA00482502 /* Currency.swift in Sources */,

@@ -12,6 +12,8 @@ enum Currency: String {
     case jpy = "JPY"
     case usd = "USD"
     
+    static let all = [Currency.jpy, Currency.usd]
+    
     var balanceTitleName: String {
         switch self {
         case .jpy:

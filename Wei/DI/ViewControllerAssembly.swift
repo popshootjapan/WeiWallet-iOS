@@ -131,6 +131,14 @@ final class ViewControllerAssembly: Assembly {
             return viewController
         }
         
+        // MARK: - CurrencySettingViewController
+        
+        container.register(CurrencySettingViewController.self) { resolver in
+            let viewController = UIStoryboard.instantiateViewController(of: CurrencySettingViewController.self)
+            viewController.viewModel = resolver.resolve(CurrencySettingViewModel.self)!
+            return viewController
+        }
+        
         // MARK: - TransactionHistoryViewController
         
         container.register(TransactionHistoryViewController.self) { resolver in

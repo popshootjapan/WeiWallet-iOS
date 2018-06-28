@@ -43,8 +43,11 @@ final class SettingViewController: UITableViewController {
                 case .security:
                     let viewController = BackupViewController.make()
                     self?.navigationController?.pushViewController(viewController, animated: true)
+                    
                 case .general:
-                    break
+                    let viewController = CurrencySettingViewController.make()
+                    self?.navigationController?.pushViewController(viewController, animated: true)
+                    
                 case .info:
                     self?.showWebView(for: SettingSection.InfoCellType(rawValue: indexPath.row)!)
                 }
