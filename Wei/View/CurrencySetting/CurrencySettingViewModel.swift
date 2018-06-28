@@ -17,9 +17,11 @@ final class CurrencySettingViewModel: InjectableViewModel {
     )
     
     private let currencyManager: CurrencyManagerProtocol
+    private let disposeBag: DisposeBag
     
     init(dependency: Dependency) {
         currencyManager = dependency
+        disposeBag = DisposeBag()
     }
     
     struct Input {
@@ -32,13 +34,14 @@ final class CurrencySettingViewModel: InjectableViewModel {
     
     func build(input: Input) -> Output {
         let currencies = Driver.just(Currency.all)
+        let selectedCurrency = currencyManager.currency.asDriver(onErrorDriveWith: .empty())
         
-        let selectedCurrency = input.selectedIndexPath
+        input.selectedIndexPath
             .withLatestFrom(currencies) { $1[$0.row] }
-            .do(onNext: { [weak self] currency in
+            .drive(onNext: { [weak self] currency in
                 self?.currencyManager.updateCurrency.onNext(currency)
             })
-            .withLatestFrom(currencyManager.currency.asDriver(onErrorDriveWith: .empty()))
+            .disposed(by: disposeBag)
         
         return Output(currencies: Driver
             .combineLatest(currencies, selectedCurrency)

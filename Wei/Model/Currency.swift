@@ -14,12 +14,12 @@ enum Currency: String {
     
     static let all = [Currency.jpy, Currency.usd]
     
-    var balanceTitleName: String {
+    var name: String {
         switch self {
         case .jpy:
-            return "日本円"
+            return R.string.localizable.commonJPY()
         case .usd:
-            return "US Dollar"
+            return R.string.localizable.commonUSD()
         }
     }
     

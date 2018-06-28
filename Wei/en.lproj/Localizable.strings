@@ -42,6 +42,8 @@
 "Common.CameraAccess.Title" = "“WeiWallet” is requesting a camera access";
 "Common.CameraAccess.Description" = "You can scan QR codes by allowing";
 "Common.CameraAccess.Cancel" = "Reject";
+"Common.USD" = "US Dollar";
+"Common.JPY" = "Japanese Yen";
 
 // MARK: - Tutorial
 "Tutorial.First.Title" = "Welcome to Wei Wallet！";

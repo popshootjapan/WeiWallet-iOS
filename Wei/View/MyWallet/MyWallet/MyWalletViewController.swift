@@ -58,7 +58,7 @@ final class MyWalletViewController: UIViewController {
         output
             .currency
             .drive(onNext: { [weak self] currency in
-                self?.fiatBalanceTitleLabel.text = currency.balanceTitleName
+                self?.fiatBalanceTitleLabel.text = currency.name
             })
             .disposed(by: disposeBag)
 

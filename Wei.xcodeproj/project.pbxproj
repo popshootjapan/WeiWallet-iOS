@@ -135,8 +135,9 @@
 		AEC36ADF20C5855600FE4737 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC36ADE20C5855600FE4737 /* RealmManager.swift */; };
 		AEC36AE120C58A9800FE4737 /* LocalTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC36AE020C58A9800FE4737 /* LocalTransaction.swift */; };
 		AED49F4D20E4CCC500C2AF33 /* CurrencySettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED49F4C20E4CCC500C2AF33 /* CurrencySettingViewController.swift */; };
-		AED49F4F20E4CCCB00C2AF33 /* CurrencySettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED49F4E20E4CCCB00C2AF33 /* CurrencySettingViewController.storyboard */; };
 		AED49F5220E4CD4500C2AF33 /* CurrencySettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED49F5120E4CD4500C2AF33 /* CurrencySettingViewModel.swift */; };
+		AED49F5420E4D18800C2AF33 /* CurrencySettingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED49F5320E4D18800C2AF33 /* CurrencySettingViewCell.swift */; };
+		AED49F5520E4D67B00C2AF33 /* CurrencySettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED49F5720E4D67B00C2AF33 /* CurrencySettingViewController.storyboard */; };
 		AED6F445205514BB004A280F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6F444205514BB004A280F /* AppDelegate.swift */; };
 		AED6F44C205514BB004A280F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AED6F44B205514BB004A280F /* Assets.xcassets */; };
 		AED6F44F205514BB004A280F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED6F44D205514BB004A280F /* LaunchScreen.storyboard */; };
@@ -374,8 +375,11 @@
 		AEC36ADE20C5855600FE4737 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		AEC36AE020C58A9800FE4737 /* LocalTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTransaction.swift; sourceTree = "<group>"; };
 		AED49F4C20E4CCC500C2AF33 /* CurrencySettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySettingViewController.swift; sourceTree = "<group>"; };
-		AED49F4E20E4CCCB00C2AF33 /* CurrencySettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CurrencySettingViewController.storyboard; sourceTree = "<group>"; };
 		AED49F5120E4CD4500C2AF33 /* CurrencySettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySettingViewModel.swift; sourceTree = "<group>"; };
+		AED49F5320E4D18800C2AF33 /* CurrencySettingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySettingViewCell.swift; sourceTree = "<group>"; };
+		AED49F5620E4D67B00C2AF33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CurrencySettingViewController.storyboard; sourceTree = "<group>"; };
+		AED49F5920E4D67D00C2AF33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/CurrencySettingViewController.strings; sourceTree = "<group>"; };
+		AED49F5B20E4D67E00C2AF33 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/CurrencySettingViewController.strings; sourceTree = "<group>"; };
 		AED6F441205514BB004A280F /* Wei.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wei.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED6F444205514BB004A280F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AED6F44B205514BB004A280F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -812,9 +816,10 @@
 		AED49F5020E4CCCF00C2AF33 /* CurrencySetting */ = {
 			isa = PBXGroup;
 			children = (
-				AED49F4E20E4CCCB00C2AF33 /* CurrencySettingViewController.storyboard */,
+				AED49F5720E4D67B00C2AF33 /* CurrencySettingViewController.storyboard */,
 				AED49F4C20E4CCC500C2AF33 /* CurrencySettingViewController.swift */,
 				AED49F5120E4CD4500C2AF33 /* CurrencySettingViewModel.swift */,
+				AED49F5320E4D18800C2AF33 /* CurrencySettingViewCell.swift */,
 			);
 			path = CurrencySetting;
 			sourceTree = "<group>";
@@ -1156,7 +1161,7 @@
 				AE6D4D0820E215F2007CF3C5 /* SendConfirmationViewController.storyboard in Resources */,
 				AE6D4CDE20E20963007CF3C5 /* RestoreWalletViewController.storyboard in Resources */,
 				AE6D4CF320E20BD8007CF3C5 /* SelectAddressByQRViewController.storyboard in Resources */,
-				AED49F4F20E4CCCB00C2AF33 /* CurrencySettingViewController.storyboard in Resources */,
+				AED49F5520E4D67B00C2AF33 /* CurrencySettingViewController.storyboard in Resources */,
 				AE6D4D0F20E225D5007CF3C5 /* SettingViewController.storyboard in Resources */,
 				AE6D4CB420E20492007CF3C5 /* CreateWalletViewController.storyboard in Resources */,
 				DE9272C8208AD55000E03AB9 /* TutorialTopView.xib in Resources */,
@@ -1392,6 +1397,7 @@
 				AE3F72FE207E6BD100482502 /* UserAgent.swift in Sources */,
 				DE624F912072482800840B06 /* SendConfirmationViewController.swift in Sources */,
 				DE624F85207246F700840B06 /* SelectAddressByPasteViewController.swift in Sources */,
+				AED49F5420E4D18800C2AF33 /* CurrencySettingViewCell.swift in Sources */,
 				AE14A64920789851003A63FF /* SendBaseViewController.swift in Sources */,
 				DE624F80207245C500840B06 /* SelectAddressByQRViewModel.swift in Sources */,
 				AE14A6202070A560003A63FF /* CreateWalletViewModel.swift in Sources */,
@@ -1634,6 +1640,16 @@
 				AE6D4D1C20E2267C007CF3C5 /* ja */,
 			);
 			name = MaintenanceViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		AED49F5720E4D67B00C2AF33 /* CurrencySettingViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AED49F5620E4D67B00C2AF33 /* Base */,
+				AED49F5920E4D67D00C2AF33 /* en */,
+				AED49F5B20E4D67E00C2AF33 /* ja */,
+			);
+			name = CurrencySettingViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		AED6F44D205514BB004A280F /* LaunchScreen.storyboard */ = {
