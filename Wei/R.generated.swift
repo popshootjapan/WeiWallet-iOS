@@ -429,7 +429,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 20 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 21 localization tables.
   struct string {
     /// This `R.string.agreeServiceTermsViewController` struct is generated, and contains static references to 3 localization keys.
     struct agreeServiceTermsViewController {
@@ -1841,7 +1841,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.settingViewController` struct is generated, and contains static references to 7 localization keys.
+    /// This `R.string.settingViewController` struct is generated, and contains static references to 8 localization keys.
     struct settingViewController {
       /// en translation: Backup
       /// 
@@ -1851,6 +1851,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let doSR5EygHeaderTitle = Rswift.StringResource(key: "doS-r5-eyg.headerTitle", tableName: "SettingViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Local currency
+      /// 
+      /// Locales: en, ja
+      static let a68Dm5aYText = Rswift.StringResource(key: "A68-Dm-5aY.text", tableName: "SettingViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Privacy Policy
       /// 
       /// Locales: en, ja
@@ -1884,6 +1888,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func doSR5EygHeaderTitle(_: Void = ()) -> String {
         return NSLocalizedString("doS-r5-eyg.headerTitle", tableName: "SettingViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Local currency
+      /// 
+      /// Locales: en, ja
+      static func a68Dm5aYText(_: Void = ()) -> String {
+        return NSLocalizedString("A68-Dm-5aY.text", tableName: "SettingViewController", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Privacy Policy
@@ -1974,6 +1985,23 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
+    /// This `R.string.transactionHistoryViewController` struct is generated, and contains static references to 1 localization keys.
+    struct transactionHistoryViewController {
+      /// en translation: History
+      /// 
+      /// Locales: en, ja
+      static let wiK1FnUTitle = Rswift.StringResource(key: "1wi-K1-FnU.title", tableName: "TransactionHistoryViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation: History
+      /// 
+      /// Locales: en, ja
+      static func wiK1FnUTitle(_: Void = ()) -> String {
+        return NSLocalizedString("1wi-K1-FnU.title", tableName: "TransactionHistoryViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
     /// This `R.string.tutorialViewController` struct is generated, and contains static references to 2 localization keys.
     struct tutorialViewController {
       /// en translation: Next
@@ -2052,13 +2080,13 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       try myWalletViewController.validate()
-      try maintenanceViewController.validate()
       try createWalletViewController.validate()
       try suggestBackupViewController.validate()
       try launchScreen.validate()
       try homeViewController.validate()
       try latestTransactionListViewController.validate()
       try sendConfirmationViewController.validate()
+      try maintenanceViewController.validate()
     }
     
     struct agreeServiceTermsViewController: Rswift.StoryboardResourceWithInitialControllerType {

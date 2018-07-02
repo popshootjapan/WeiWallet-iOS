@@ -165,6 +165,7 @@
 		DE318DE520916626008FA01E /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE318DE420916626008FA01E /* Formatter.swift */; };
 		DE3A38392084969A00AB44B0 /* BalanceAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3A38372084969900AB44B0 /* BalanceAccessoryView.swift */; };
 		DE3A3882208636C800AB44B0 /* URL+WeiExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3A3881208636C800AB44B0 /* URL+WeiExtension.swift */; };
+		DE4C19EF20EA518400C20AE5 /* TransactionHistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE4C19F120EA518400C20AE5 /* TransactionHistoryViewController.storyboard */; };
 		DE624F7C2072452D00840B06 /* SelectAddressByQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE624F7B2072452D00840B06 /* SelectAddressByQRViewController.swift */; };
 		DE624F80207245C500840B06 /* SelectAddressByQRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE624F7F207245C500840B06 /* SelectAddressByQRViewModel.swift */; };
 		DE624F85207246F700840B06 /* SelectAddressByPasteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE624F84207246F700840B06 /* SelectAddressByPasteViewController.swift */; };
@@ -178,7 +179,6 @@
 		DE7682E0207F3C88004094BA /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7682DF207F3C87004094BA /* SettingViewModel.swift */; };
 		DE7682EA207F4AFD004094BA /* TransactionHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7682E9207F4AFD004094BA /* TransactionHistoryViewController.swift */; };
 		DE7682EC207F4B1E004094BA /* TransactionHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7682EB207F4B1E004094BA /* TransactionHistoryViewModel.swift */; };
-		DE7682EE207F4B32004094BA /* TransactionHistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE7682ED207F4B32004094BA /* TransactionHistoryViewController.storyboard */; };
 		DE91338E20A03B39003CDE67 /* UIDevice+WeiExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE91338D20A03B39003CDE67 /* UIDevice+WeiExtension.swift */; };
 		DE9133B120A82EB1003CDE67 /* BackupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9133B020A82EB1003CDE67 /* BackupViewController.swift */; };
 		DE9133B320A82F1A003CDE67 /* BackupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9133B220A82F1A003CDE67 /* BackupViewModel.swift */; };
@@ -337,8 +337,6 @@
 		AE6D4CDB20E208D2007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ReceiveViewController.strings; sourceTree = "<group>"; };
 		AE6D4CDD20E208D4007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/ReceiveViewController.strings; sourceTree = "<group>"; };
 		AE6D4CDF20E20963007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RestoreWalletViewController.storyboard; sourceTree = "<group>"; };
-		AE6D4CE220E20965007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/RestoreWalletViewController.strings; sourceTree = "<group>"; };
-		AE6D4CE420E20966007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/RestoreWalletViewController.strings; sourceTree = "<group>"; };
 		AE6D4CE620E20AA6007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SendBaseViewController.storyboard; sourceTree = "<group>"; };
 		AE6D4CE920E20AA8007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SendBaseViewController.strings; sourceTree = "<group>"; };
 		AE6D4CEB20E20AA9007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SendBaseViewController.strings; sourceTree = "<group>"; };
@@ -414,6 +412,11 @@
 		DE3A3881208636C800AB44B0 /* URL+WeiExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+WeiExtension.swift"; sourceTree = "<group>"; };
 		DE4C19EC20EA504400C20AE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SettingViewController.strings; sourceTree = "<group>"; };
 		DE4C19EE20EA504800C20AE5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SettingViewController.strings; sourceTree = "<group>"; };
+		DE4C19F020EA518400C20AE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TransactionHistoryViewController.storyboard; sourceTree = "<group>"; };
+		DE4C19F320EA518600C20AE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TransactionHistoryViewController.strings; sourceTree = "<group>"; };
+		DE4C19F520EA518900C20AE5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/TransactionHistoryViewController.strings; sourceTree = "<group>"; };
+		DE4C19FD20EA546B00C20AE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/RestoreWalletViewController.strings; sourceTree = "<group>"; };
+		DE4C19FF20EA547000C20AE5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/RestoreWalletViewController.strings; sourceTree = "<group>"; };
 		DE624F7B2072452D00840B06 /* SelectAddressByQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressByQRViewController.swift; sourceTree = "<group>"; };
 		DE624F7F207245C500840B06 /* SelectAddressByQRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressByQRViewModel.swift; sourceTree = "<group>"; };
 		DE624F84207246F700840B06 /* SelectAddressByPasteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressByPasteViewController.swift; sourceTree = "<group>"; };
@@ -427,7 +430,6 @@
 		DE7682DF207F3C87004094BA /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		DE7682E9207F4AFD004094BA /* TransactionHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryViewController.swift; sourceTree = "<group>"; };
 		DE7682EB207F4B1E004094BA /* TransactionHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryViewModel.swift; sourceTree = "<group>"; };
-		DE7682ED207F4B32004094BA /* TransactionHistoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransactionHistoryViewController.storyboard; sourceTree = "<group>"; };
 		DE91338D20A03B39003CDE67 /* UIDevice+WeiExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+WeiExtension.swift"; sourceTree = "<group>"; };
 		DE9133B020A82EB1003CDE67 /* BackupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupViewController.swift; sourceTree = "<group>"; };
 		DE9133B220A82F1A003CDE67 /* BackupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupViewModel.swift; sourceTree = "<group>"; };
@@ -996,7 +998,7 @@
 		DE7682E8207F4AE1004094BA /* TransactionHistory */ = {
 			isa = PBXGroup;
 			children = (
-				DE7682ED207F4B32004094BA /* TransactionHistoryViewController.storyboard */,
+				DE4C19F120EA518400C20AE5 /* TransactionHistoryViewController.storyboard */,
 				DE7682E9207F4AFD004094BA /* TransactionHistoryViewController.swift */,
 				DE7682EB207F4B1E004094BA /* TransactionHistoryViewModel.swift */,
 				AE171B032083436400212494 /* TransactionHistoryViewCell.swift */,
@@ -1171,7 +1173,7 @@
 				AE6D4D1620E22679007CF3C5 /* MaintenanceViewController.storyboard in Resources */,
 				AE6D4CC220E20679007CF3C5 /* SuggestBackupViewController.storyboard in Resources */,
 				079A5EFA20851C21009067A2 /* Settings.bundle in Resources */,
-				DE7682EE207F4B32004094BA /* TransactionHistoryViewController.storyboard in Resources */,
+				DE4C19EF20EA518400C20AE5 /* TransactionHistoryViewController.storyboard in Resources */,
 				AE8C9FC8209EF87300C616E1 /* DebugListViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1556,8 +1558,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				AE6D4CDF20E20963007CF3C5 /* Base */,
-				AE6D4CE220E20965007CF3C5 /* en */,
-				AE6D4CE420E20966007CF3C5 /* ja */,
+				DE4C19FD20EA546B00C20AE5 /* en */,
+				DE4C19FF20EA547000C20AE5 /* ja */,
 			);
 			name = RestoreWalletViewController.storyboard;
 			sourceTree = "<group>";
@@ -1668,6 +1670,16 @@
 				DE052D5120D4017000ACFA49 /* ja */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		DE4C19F120EA518400C20AE5 /* TransactionHistoryViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE4C19F020EA518400C20AE5 /* Base */,
+				DE4C19F320EA518600C20AE5 /* en */,
+				DE4C19F520EA518900C20AE5 /* ja */,
+			);
+			name = TransactionHistoryViewController.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
