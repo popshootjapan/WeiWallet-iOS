@@ -16,6 +16,11 @@ or alternatively using `brew cask install fastlane`
 
 # Available Actions
 ## iOS
+### ios deploy
+```
+fastlane ios deploy
+```
+Deploy a new version to the App Store
 ### ios inhouse
 ```
 fastlane ios inhouse
