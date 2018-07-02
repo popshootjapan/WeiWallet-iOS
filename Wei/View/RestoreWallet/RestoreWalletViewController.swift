@@ -17,12 +17,14 @@ final class RestoreWalletViewController: UIViewController {
     @IBOutlet private var mnemonicWordTextFields: [UITextField]!
     @IBOutlet private weak var confirmButton: UIBarButtonItem!
     @IBOutlet private weak var scrollView: UIScrollView!
+    @IBOutlet private weak var messageLabel: UILabel!
     
     private let disposeBag = DisposeBag()
     private var isOpenedKeyboard: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        messageLabel.text = R.string.localizable.restoreWalletMessage()
         bindViewModel()
         bindKeyboard()
     }

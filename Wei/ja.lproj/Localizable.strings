@@ -35,6 +35,12 @@
 // MARK: - Backup
 "Backup.Message" = "12個の単語の並びがお客様のバックアップキーです。順番通りに記録して大事に保管してください。";
 
+// MARK: - Restore Wallet
+"RestoreWallet.Message" = "バックアップで記憶した12個の単語の並びを順番に入力してください。";
+
+// MARK: - Create Wallet
+"CreateWallet.Message" = "Wei Wallet(ウェイウォレット)は\nすべての人のための、もっともシンプルな\nイーサリアムウォレットです。";
+
 // MARK: - Common
 "Common.Close" = "閉じる";
 "Common.Sent" = "送金完了";

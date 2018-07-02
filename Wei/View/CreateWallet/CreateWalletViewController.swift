@@ -24,6 +24,7 @@ final class CreateWalletViewController: UIViewController {
     }
     @IBOutlet private weak var textView: UITextView! {
         didSet {
+            textView.text = R.string.localizable.createWalletMessage()
             hideIfNeccesary(textView)
         }
     }

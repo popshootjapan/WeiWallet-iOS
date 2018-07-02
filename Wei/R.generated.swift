@@ -625,7 +625,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.createWalletViewController` struct is generated, and contains static references to 5 localization keys.
+    /// This `R.string.createWalletViewController` struct is generated, and contains static references to 4 localization keys.
     struct createWalletViewController {
       /// en translation: Create Wallet
       /// 
@@ -643,10 +643,6 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let a06LX5VNormalTitle = Rswift.StringResource(key: "7a0-6L-X5V.normalTitle", tableName: "CreateWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: Wei Wallet(ウェイウォレット)は すべての人のための、もっともシンプルな イーサリアムウォレットです。
-      /// 
-      /// Locales: en, ja
-      static let el0TcT1KText = Rswift.StringResource(key: "El0-Tc-t1K.text", tableName: "CreateWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       
       /// en translation: Create Wallet
       /// 
@@ -674,13 +670,6 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func a06LX5VNormalTitle(_: Void = ()) -> String {
         return NSLocalizedString("7a0-6L-X5V.normalTitle", tableName: "CreateWalletViewController", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: Wei Wallet(ウェイウォレット)は すべての人のための、もっともシンプルな イーサリアムウォレットです。
-      /// 
-      /// Locales: en, ja
-      static func el0TcT1KText(_: Void = ()) -> String {
-        return NSLocalizedString("El0-Tc-t1K.text", tableName: "CreateWalletViewController", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
@@ -747,7 +736,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 34 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 36 localization keys.
     struct localizable {
       /// en translation: Bad Connection :(
       /// 
@@ -789,6 +778,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let alertBackupTitle = Rswift.StringResource(key: "Alert.Backup.Title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Please enter the order of the 12 words memorized by backup in order.
+      /// 
+      /// Locales: en, ja
+      static let restoreWalletMessage = Rswift.StringResource(key: "RestoreWallet.Message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Please try again later
       /// 
       /// Locales: en, ja
@@ -849,6 +842,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let commonUSD = Rswift.StringResource(key: "Common.USD", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Wei Wallet is the simplest ethereum wallet for everyone.
+      /// 
+      /// Locales: en, ja
+      static let createWalletMessage = Rswift.StringResource(key: "CreateWallet.Message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Wei Wallet, very safe!
       /// 
       /// Locales: en, ja
@@ -956,6 +953,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("Alert.Backup.Title", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Please enter the order of the 12 words memorized by backup in order.
+      /// 
+      /// Locales: en, ja
+      static func restoreWalletMessage(_: Void = ()) -> String {
+        return NSLocalizedString("RestoreWallet.Message", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Please try again later
       /// 
       /// Locales: en, ja
@@ -1059,6 +1063,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func commonUSD(_: Void = ()) -> String {
         return NSLocalizedString("Common.USD", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Wei Wallet is the simplest ethereum wallet for everyone.
+      /// 
+      /// Locales: en, ja
+      static func createWalletMessage(_: Void = ()) -> String {
+        return NSLocalizedString("CreateWallet.Message", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Wei Wallet, very safe!

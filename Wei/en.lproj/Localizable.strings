@@ -35,6 +35,12 @@
 // MARK: - Backup
 "Backup.Message" = "Following is a full list of your back up words. Please make sure to kepp these 12 words in order.";
 
+// MARK: - Restore Wallet
+"RestoreWallet.Message" = "Please enter the order of the 12 words memorized by backup in order.";
+
+// MARK: - Create Wallet
+"CreateWallet.Message" = "Wei Wallet is the simplest ethereum wallet for everyone.";
+
 // MARK: - Common
 "Common.Close" = "Close";
 "Common.Sent" = "Sent";
