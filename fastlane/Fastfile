@@ -40,7 +40,6 @@ platform :ios do
       skip_binary_upload: false
     )
     notification(subtitle: "Finished Uploading", message: "See iTunes Connect")
-    refresh_dsyms
     slack(message: "Uploaded the release version of wei :tada:")
   end
 
