@@ -42,6 +42,8 @@
 "Common.CameraAccess.Title" = "“WeiWallet”がカメラへのアクセスを求めています";
 "Common.CameraAccess.Description" = "これによりQRコードを撮影してアドレスを読み込むことができます";
 "Common.CameraAccess.Cancel" = "許可しない";
+"Common.USD" = "アメリカドル";
+"Common.JPY" = "日本円";
 
 // MARK: - Tutorial
 "Tutorial.First.Title" = "ようこそWei Walletへ！";

@@ -8,6 +8,8 @@
 /* Class = "UITableViewSection"; headerTitle = "セキュリティ"; ObjectID = "9rv-cv-udz"; */
 "9rv-cv-udz.headerTitle" = "Security";
 
+"doS-r5-eyg.headerTitle" = "General";
+
 /* Class = "UINavigationItem"; title = "設定"; ObjectID = "BAR-Al-1RT"; */
 "BAR-Al-1RT.title" = "Setting";
 

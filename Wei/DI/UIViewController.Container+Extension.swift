@@ -99,6 +99,12 @@ extension SettingViewController {
     }
 }
 
+extension CurrencySettingViewController {
+    static func make() -> CurrencySettingViewController {
+        return Container.shared.resolve(CurrencySettingViewController.self)!
+    }
+}
+
 extension TransactionHistoryViewController {
     static func make() -> TransactionHistoryViewController {
         return Container.shared.resolve(TransactionHistoryViewController.self)!

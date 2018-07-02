@@ -134,6 +134,12 @@ final class ViewModelAssembly: Assembly {
             return SettingViewModel()
         }
         
+        container.register(CurrencySettingViewModel.self) { resolver in
+            return CurrencySettingViewModel(dependency: (
+                resolver.resolve(CurrencyManagerProtocol.self)!
+            ))
+        }
+        
         // MARK: - TransactionHistoryViewModel
         
         container.register(TransactionHistoryViewModel.self) { (resolver) in

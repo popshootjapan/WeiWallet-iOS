@@ -48,15 +48,14 @@ final class SelectAmountViewModel: InjectableViewModel {
     
     func build(input: Input) -> Output {
         let address = self.toAddress!
-        let currency = currencyManager.currency.asDriver(onErrorDriveWith: .empty())
+        let currency = currencyManager.currency
         
         // NOTE: Deal with fixed tx fee
         let txFee = Wei(Gas.safeLow.gasLimit * Gas.safeLow.gasPrice)
         
         // fiatTxFeeAction converts specified tx fee to fiat price.
-        let fiatTxFeeAction = input.viewWillAppear
-            .withLatestFrom(currency)
-            .flatMap { [weak self] currency -> Driver<Action<(Price, Currency)>> in
+        let fiatTxFeeAction = Driver.combineLatest(input.viewWillAppear, currency)
+            .flatMap { [weak self] _, currency -> Driver<Action<(Price, Currency)>> in
                 guard let weakSelf = self else {
                     return Driver.just(Action.succeeded((Price(price: "0", currency: nil), currency)))
                 }
@@ -68,43 +67,46 @@ final class SelectAmountViewModel: InjectableViewModel {
             }
         
         // fiatTxFee returns current fiat value in Fiat structure.
-        let fiatTxFee = fiatTxFeeAction.elements.flatMap { price, currency -> Driver<Fiat> in
-            guard let doubleValue = Double(price.price) else {
-                return .empty()
+        let fiatTxFee = fiatTxFeeAction.elements
+            .flatMap { price, currency -> Driver<Fiat> in
+                guard let doubleValue = Double(price.price) else {
+                    return .empty()
+                }
+                
+                switch currency {
+                case .jpy:
+                    // strip the decimal amount from tx fee.
+                    // only use number before the decimal point.
+                    // for example 2 for 1.2345
+                    return Driver.just(Fiat.jpy(Int64(ceil(doubleValue))))
+                
+                case .usd:
+                    return Driver.just(Fiat.usd(Decimal(doubleValue)))
+                }
             }
-            
-            switch currency {
-            case .jpy:
-                // strip the decimal amount from tx fee.
-                // only use number before the decimal point.
-                // for example 2 for 1.2345
-                return Driver.just(Fiat.jpy(Int64(ceil(doubleValue))))
-            
-            case .usd:
-                return Driver.just(Fiat.usd(Decimal(doubleValue)))
-            }
-        }
+            .distinctUntilChanged()
         
         // User's total fiat balance
         let fiatBalance = balanceStore.fiatBalance.asDriver(onErrorDriveWith: .empty())
         
         // User's usable fiat balance (totalBalance - txFee)
-        let availableBalance = Driver.combineLatest(fiatBalance, fiatTxFee) { balance, txFee -> Fiat in
-            let availableBalance = balance.value - txFee.value
-            switch balance {
-            case .jpy:
-                return Fiat.jpy(availableBalance.toInt64())
-            case .usd:
-                return Fiat.usd(availableBalance)
+        let availableBalance = Driver
+            .combineLatest(fiatBalance, fiatTxFee) { balance, txFee -> Fiat in
+                let availableBalance = balance.value - txFee.value
+                switch balance {
+                case .jpy:
+                    return Fiat.jpy(availableBalance.toInt64())
+                case .usd:
+                    return Fiat.usd(availableBalance)
+                }
             }
-        }
+            .distinctUntilChanged()
         
         // inputAmount will be used to manage input text field text. it will prevents the text field from having
         // invalid string value(which cannot be converted to Decimal).
         let inputAmount = Driver
             .combineLatest(input.amountTextFieldDidInput, availableBalance)
             .map { inputAmount, availableBalance -> String in
-                
                 // If input text has more than one ".", then return the string with last letter dropped.
                 // eg, 12.9. -> 12.9
                 guard inputAmount.filter({ $0 == "." }).count <= 1 else {
@@ -113,7 +115,8 @@ final class SelectAmountViewModel: InjectableViewModel {
                 
                 // If input text has more than 2 decimal points, return the string with last letter dropped
                 // eg, 1.324 -> 1.32
-                guard let subString = inputAmount.split(separator: ".").last, String(subString).count <= 2 else {
+                let subStrings = inputAmount.split(separator: ".")
+                if let subString = subStrings.last, subStrings.count == 2 && String(subString).count > 2 {
                     return String(inputAmount.dropLast())
                 }
                 
@@ -128,6 +131,7 @@ final class SelectAmountViewModel: InjectableViewModel {
                 return amount <= availableAmount ?
                     inputAmount : availableAmount.description
             }
+            .distinctUntilChanged()
         
         // fiatAmount represents an amount user gives as an input in text field.
         // if user's input is larger than user's fiat balance, it returns user's total balance.
@@ -142,11 +146,11 @@ final class SelectAmountViewModel: InjectableViewModel {
                     return Fiat.usd(amount)
                 }
             }
+            .distinctUntilChanged()
         
         // in convertToEtherAction fiatAmount is converted to ether unit
         // if fiatAmount is empty, or 0, it will return the price of 0.
-        let convertToEtherAction = inputFiatAmount
-            .withLatestFrom(currency) { ($0, $1) }
+        let convertToEtherAction = Driver.combineLatest(inputFiatAmount, currency)
             .flatMapLatest { [weak self] fiatAmount, currency -> Driver<Action<Price>> in
                 guard let weakSelf = self, fiatAmount.value > 0 else {
                     // NOTE: Returns price of 0 if the fiatAmount is empty and/or fiatAmount is 0
@@ -164,6 +168,7 @@ final class SelectAmountViewModel: InjectableViewModel {
                 }
                 return Driver.just(ether)
             }
+            .distinctUntilChanged()
         
         let transactionContext = Driver.combineLatest(etherAmount, inputFiatAmount, fiatTxFee) {
             return TransactionContext(address: address, etherAmount: Amount.ether($0), fiatAmount: Amount.fiat($1), fiatFee: Amount.fiat($2))
