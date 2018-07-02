@@ -763,10 +763,6 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let commonClose = Rswift.StringResource(key: "Common.Close", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: Copy Address
-      /// 
-      /// Locales: en, ja
-      static let pageCopyAddress = Rswift.StringResource(key: "Page.CopyAddress", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Easy to send and receive
       /// 
       /// Locales: en, ja
@@ -795,6 +791,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let alertBackupTitle = Rswift.StringResource(key: "Alert.Backup.Title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Paste Address
+      /// 
+      /// Locales: en, ja
+      static let pageCopyAddress = Rswift.StringResource(key: "Page.CopyAddress", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Please enter the order of the 12 words memorized by backup in order.
       /// 
       /// Locales: en, ja
@@ -914,13 +914,6 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("Common.Close", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Copy Address
-      /// 
-      /// Locales: en, ja
-      static func pageCopyAddress(_: Void = ()) -> String {
-        return NSLocalizedString("Page.CopyAddress", bundle: R.hostingBundle, comment: "")
-      }
-      
       /// en translation: Easy to send and receive
       /// 
       /// Locales: en, ja
@@ -968,6 +961,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func alertBackupTitle(_: Void = ()) -> String {
         return NSLocalizedString("Alert.Backup.Title", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Paste Address
+      /// 
+      /// Locales: en, ja
+      static func pageCopyAddress(_: Void = ()) -> String {
+        return NSLocalizedString("Page.CopyAddress", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Please enter the order of the 12 words memorized by backup in order.

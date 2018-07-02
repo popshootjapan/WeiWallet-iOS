@@ -24,7 +24,7 @@
 
 // MARK: - Send View Pager
 "Page.QRCode" = "Scan QR";
-"Page.CopyAddress" = "Copy Address";
+"Page.CopyAddress" = "Paste Address";
 
 // MARK: - SelectAddressByQR
 "SelectAddress.Warning.Text" = "Scan a QR code,\nor paste an address";
