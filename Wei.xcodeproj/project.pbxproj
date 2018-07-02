@@ -18,7 +18,6 @@
 		1A798C032081DE7200812D80 /* LatestTransactionListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A798C022081DE7200812D80 /* LatestTransactionListViewCell.swift */; };
 		1A798C052081DE8700812D80 /* InputAppliable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A798C042081DE8700812D80 /* InputAppliable.swift */; };
 		1A798C092081DF4E00812D80 /* LatestTransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A798C082081DF4E00812D80 /* LatestTransactionListViewModel.swift */; };
-		1A798C0B2081DF9800812D80 /* LatestTransactionListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A798C0A2081DF9800812D80 /* LatestTransactionListViewController.storyboard */; };
 		1A798C0D2081E23200812D80 /* UIViewController.Container+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A798C0C2081E23200812D80 /* UIViewController.Container+Extension.swift */; };
 		1A798C0F2081E7C800812D80 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A798C0E2081E7C800812D80 /* UITableView+Extension.swift */; };
 		1A798C112081E81700812D80 /* UITableView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A798C102081E81700812D80 /* UITableView+Rx.swift */; };
@@ -166,6 +165,7 @@
 		DE3A38392084969A00AB44B0 /* BalanceAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3A38372084969900AB44B0 /* BalanceAccessoryView.swift */; };
 		DE3A3882208636C800AB44B0 /* URL+WeiExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3A3881208636C800AB44B0 /* URL+WeiExtension.swift */; };
 		DE4C19EF20EA518400C20AE5 /* TransactionHistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE4C19F120EA518400C20AE5 /* TransactionHistoryViewController.storyboard */; };
+		DE4C1A0020EA5A8100C20AE5 /* LatestTransactionListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE4C1A0220EA5A8100C20AE5 /* LatestTransactionListViewController.storyboard */; };
 		DE624F7C2072452D00840B06 /* SelectAddressByQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE624F7B2072452D00840B06 /* SelectAddressByQRViewController.swift */; };
 		DE624F80207245C500840B06 /* SelectAddressByQRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE624F7F207245C500840B06 /* SelectAddressByQRViewModel.swift */; };
 		DE624F85207246F700840B06 /* SelectAddressByPasteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE624F84207246F700840B06 /* SelectAddressByPasteViewController.swift */; };
@@ -221,7 +221,6 @@
 		1A798C022081DE7200812D80 /* LatestTransactionListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestTransactionListViewCell.swift; sourceTree = "<group>"; };
 		1A798C042081DE8700812D80 /* InputAppliable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputAppliable.swift; sourceTree = "<group>"; };
 		1A798C082081DF4E00812D80 /* LatestTransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestTransactionListViewModel.swift; sourceTree = "<group>"; };
-		1A798C0A2081DF9800812D80 /* LatestTransactionListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LatestTransactionListViewController.storyboard; sourceTree = "<group>"; };
 		1A798C0C2081E23200812D80 /* UIViewController.Container+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController.Container+Extension.swift"; sourceTree = "<group>"; };
 		1A798C0E2081E7C800812D80 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		1A798C102081E81700812D80 /* UITableView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Rx.swift"; sourceTree = "<group>"; };
@@ -417,6 +416,9 @@
 		DE4C19F520EA518900C20AE5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/TransactionHistoryViewController.strings; sourceTree = "<group>"; };
 		DE4C19FD20EA546B00C20AE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/RestoreWalletViewController.strings; sourceTree = "<group>"; };
 		DE4C19FF20EA547000C20AE5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/RestoreWalletViewController.strings; sourceTree = "<group>"; };
+		DE4C1A0120EA5A8100C20AE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LatestTransactionListViewController.storyboard; sourceTree = "<group>"; };
+		DE4C1A0420EA5A9600C20AE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LatestTransactionListViewController.strings; sourceTree = "<group>"; };
+		DE4C1A0620EA5A9700C20AE5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LatestTransactionListViewController.strings; sourceTree = "<group>"; };
 		DE624F7B2072452D00840B06 /* SelectAddressByQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressByQRViewController.swift; sourceTree = "<group>"; };
 		DE624F7F207245C500840B06 /* SelectAddressByQRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressByQRViewModel.swift; sourceTree = "<group>"; };
 		DE624F84207246F700840B06 /* SelectAddressByPasteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressByPasteViewController.swift; sourceTree = "<group>"; };
@@ -513,7 +515,7 @@
 		1A798C062081DF3200812D80 /* LatestTransactionList */ = {
 			isa = PBXGroup;
 			children = (
-				1A798C0A2081DF9800812D80 /* LatestTransactionListViewController.storyboard */,
+				DE4C1A0220EA5A8100C20AE5 /* LatestTransactionListViewController.storyboard */,
 				1A798C002081DE1E00812D80 /* LatestTransactionListViewController.swift */,
 				1A798C082081DF4E00812D80 /* LatestTransactionListViewModel.swift */,
 				1A798C022081DE7200812D80 /* LatestTransactionListViewCell.swift */,
@@ -1154,7 +1156,7 @@
 				AE6D4CEC20E20AEA007CF3C5 /* SelectAddressByPasteViewController.storyboard in Resources */,
 				AE6D4CC920E20723007CF3C5 /* BackupViewController.storyboard in Resources */,
 				AE6D4CBB20E20618007CF3C5 /* AgreeServiceTermsViewController.storyboard in Resources */,
-				1A798C0B2081DF9800812D80 /* LatestTransactionListViewController.storyboard in Resources */,
+				DE4C1A0020EA5A8100C20AE5 /* LatestTransactionListViewController.storyboard in Resources */,
 				AE69C85520E0E32600EB1293 /* HomeViewController.storyboard in Resources */,
 				AE6D4CD720E208D0007CF3C5 /* ReceiveViewController.storyboard in Resources */,
 				DE052D4E20D4016B00ACFA49 /* Localizable.strings in Resources */,
@@ -1680,6 +1682,16 @@
 				DE4C19F520EA518900C20AE5 /* ja */,
 			);
 			name = TransactionHistoryViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		DE4C1A0220EA5A8100C20AE5 /* LatestTransactionListViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE4C1A0120EA5A8100C20AE5 /* Base */,
+				DE4C1A0420EA5A9600C20AE5 /* en */,
+				DE4C1A0620EA5A9700C20AE5 /* ja */,
+			);
+			name = LatestTransactionListViewController.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

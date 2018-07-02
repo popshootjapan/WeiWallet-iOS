@@ -429,7 +429,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 21 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 22 localization tables.
   struct string {
     /// This `R.string.agreeServiceTermsViewController` struct is generated, and contains static references to 3 localization keys.
     struct agreeServiceTermsViewController {
@@ -726,6 +726,23 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func oPJVcJOeText(_: Void = ()) -> String {
         return NSLocalizedString("oPJ-vc-JOe.text", tableName: "HomeViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.latestTransactionListViewController` struct is generated, and contains static references to 1 localization keys.
+    struct latestTransactionListViewController {
+      /// en translation: No transaction
+      /// 
+      /// Locales: en, ja
+      static let ugodmhy6Text = Rswift.StringResource(key: "UGO-dM-hY6.text", tableName: "LatestTransactionListViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation: No transaction
+      /// 
+      /// Locales: en, ja
+      static func ugodmhy6Text(_: Void = ()) -> String {
+        return NSLocalizedString("UGO-dM-hY6.text", tableName: "LatestTransactionListViewController", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
