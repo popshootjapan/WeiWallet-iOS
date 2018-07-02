@@ -63,7 +63,7 @@ enum Environment {
         case .production, .staging:
             return false
         case .development:
-            return true
+            return false
         }
     }
 }
