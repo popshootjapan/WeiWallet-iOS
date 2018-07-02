@@ -358,8 +358,6 @@
 		AE6D4D0C20E215F6007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SendConfirmationViewController.strings; sourceTree = "<group>"; };
 		AE6D4D0E20E215F7007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SendConfirmationViewController.strings; sourceTree = "<group>"; };
 		AE6D4D1020E225D5007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SettingViewController.storyboard; sourceTree = "<group>"; };
-		AE6D4D1320E225D8007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SettingViewController.strings; sourceTree = "<group>"; };
-		AE6D4D1520E225D9007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SettingViewController.strings; sourceTree = "<group>"; };
 		AE6D4D1720E22679007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MaintenanceViewController.storyboard; sourceTree = "<group>"; };
 		AE6D4D1A20E2267B007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MaintenanceViewController.strings; sourceTree = "<group>"; };
 		AE6D4D1C20E2267C007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MaintenanceViewController.strings; sourceTree = "<group>"; };
@@ -414,6 +412,8 @@
 		DE318DE420916626008FA01E /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		DE3A38372084969900AB44B0 /* BalanceAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceAccessoryView.swift; sourceTree = "<group>"; };
 		DE3A3881208636C800AB44B0 /* URL+WeiExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+WeiExtension.swift"; sourceTree = "<group>"; };
+		DE4C19EC20EA504400C20AE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SettingViewController.strings; sourceTree = "<group>"; };
+		DE4C19EE20EA504800C20AE5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SettingViewController.strings; sourceTree = "<group>"; };
 		DE624F7B2072452D00840B06 /* SelectAddressByQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressByQRViewController.swift; sourceTree = "<group>"; };
 		DE624F7F207245C500840B06 /* SelectAddressByQRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressByQRViewModel.swift; sourceTree = "<group>"; };
 		DE624F84207246F700840B06 /* SelectAddressByPasteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressByPasteViewController.swift; sourceTree = "<group>"; };
@@ -1626,8 +1626,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				AE6D4D1020E225D5007CF3C5 /* Base */,
-				AE6D4D1320E225D8007CF3C5 /* en */,
-				AE6D4D1520E225D9007CF3C5 /* ja */,
+				DE4C19EC20EA504400C20AE5 /* en */,
+				DE4C19EE20EA504800C20AE5 /* ja */,
 			);
 			name = SettingViewController.storyboard;
 			sourceTree = "<group>";
