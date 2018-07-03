@@ -50,6 +50,8 @@
 "Common.CameraAccess.Cancel" = "Reject";
 "Common.USD" = "US Dollar";
 "Common.JPY" = "Japanese Yen";
+"Common.USD.Short" = "USD";
+"Common.JPY.Short" = "JPY";
 
 // MARK: - Tutorial
 "Tutorial.First.Title" = "Welcome to Wei Wallet！";
