@@ -26,6 +26,7 @@ final class DebugListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         showAlertController(title: "Clear keychain?", withCancel: true) { [weak self] _ in
             self?.appicationStore.clearData()
+            Cache.shared.clear()
             self?.dismiss(animated: true)
         }
     }
