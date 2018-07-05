@@ -112,6 +112,11 @@ final class SelectAmountViewModel: InjectableViewModel {
                     return "0"
                 }
                 
+                // Returns 0 if input amount contains only zero.
+                guard inputAmount.map({ $0 == "0"}).contains(false) else {
+                    return "0"
+                }
+                
                 // If input text has more than one ".", then return the string with last letter dropped.
                 // eg, 12.9. -> 12.9
                 guard inputAmount.filter({ $0 == "." }).count <= 1 else {
@@ -134,7 +139,7 @@ final class SelectAmountViewModel: InjectableViewModel {
                 let availableAmount = availableBalance.value.round(scale: 2)
                 
                 return amount <= availableAmount ?
-                    inputAmount : availableAmount.description
+                    amount.description : availableAmount.description
             }
         
         // fiatAmount represents an amount user gives as an input in text field.
