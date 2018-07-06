@@ -1,4 +1,4 @@
-github "D-Technologies/EthereumKit" "92c121b0614eb5fe8d97f9f68fa4344041068966"
+github "D-Technologies/EthereumKit" "9fd6206d11da18ecabf59c70d5970b14f869a87f"
 github "Quick/Nimble" "v7.1.2"
 github "Quick/Quick" "v1.3.0"
 github "ReactiveX/RxSwift" "4.2.0"

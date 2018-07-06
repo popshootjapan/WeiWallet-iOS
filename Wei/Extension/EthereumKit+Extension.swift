@@ -56,7 +56,7 @@ extension Transaction {
 }
 
 extension Network {
-    static var currenct: Network {
+    static var current: Network {
         let network: Network
         #if DEBUG || INHOUSE
             network = .ropsten
