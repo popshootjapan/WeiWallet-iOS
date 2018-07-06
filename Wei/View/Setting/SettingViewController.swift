@@ -45,8 +45,15 @@ final class SettingViewController: UITableViewController {
                     self?.navigationController?.pushViewController(viewController, animated: true)
                     
                 case .general:
-                    let viewController = CurrencySettingViewController.make()
-                    self?.navigationController?.pushViewController(viewController, animated: true)
+                    switch SettingSection.GeneralCellType(rawValue: indexPath.row)! {
+                    case .currency:
+                        let viewController = CurrencySettingViewController.make()
+                        self?.navigationController?.pushViewController(viewController, animated: true)
+                        
+                    case .network:
+                        let viewController = NetworkSettingViewController.make()
+                        self?.navigationController?.pushViewController(viewController, animated: true)
+                    }
                     
                 case .info:
                     self?.showWebView(for: SettingSection.InfoCellType(rawValue: indexPath.row)!)
@@ -62,6 +69,11 @@ final class SettingViewController: UITableViewController {
         
         enum SecurityCellType: Int {
             case backup
+        }
+        
+        enum GeneralCellType: Int {
+            case currency
+            case network
         }
         
         enum InfoCellType: Int {

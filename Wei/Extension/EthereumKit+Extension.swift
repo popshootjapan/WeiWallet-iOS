@@ -65,4 +65,6 @@ extension Network {
         #endif
         return network
     }
+    
+    static let all: [Network] = [.main, .ropsten, .kovan, .private(chainID: 1, testUse: true)]
 }

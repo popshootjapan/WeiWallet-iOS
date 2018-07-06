@@ -139,6 +139,14 @@ final class ViewControllerAssembly: Assembly {
             return viewController
         }
         
+        // MARK: - NetworkSettingViewController
+        
+        container.register(NetworkSettingViewController.self) { resolver in
+            let viewController = UIStoryboard.instantiateViewController(of: NetworkSettingViewController.self)
+            viewController.viewModel = resolver.resolve(NetworkSettingViewModel.self)!
+            return viewController
+        }
+        
         // MARK: - TransactionHistoryViewController
         
         container.register(TransactionHistoryViewController.self) { resolver in
