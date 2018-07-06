@@ -67,4 +67,17 @@ extension Network {
     }
     
     static let all: [Network] = [.main, .ropsten, .kovan, .private(chainID: 1, testUse: true)]
+    
+    var name: String {
+        switch self {
+        case .main:
+            return "Mainnet"
+        case .ropsten:
+            return "Ropsten"
+        case .kovan:
+            return "Kovan"
+        case .private:
+            return "Private"
+        }
+    }
 }

@@ -16,6 +16,7 @@ final class NetworkSettingViewCell: UITableViewCell, InputAppliable {
     
     func apply(input: Input) {
         let (network, selectedNetwork) = input
+        nameLabel.text = network.name
         
         let font = selectedNetwork ? UIFont.boldSystemFont(ofSize: 16) : UIFont.systemFont(ofSize: 16)
         nameLabel.font = font
