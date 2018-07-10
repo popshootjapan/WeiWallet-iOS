@@ -42,6 +42,7 @@
 "CreateWallet.Message" = "Wei Wallet is the simplest ethereum wallet for everyone.";
 
 // MARK: - Common
+"Common.Cancel" = "Cancel";
 "Common.Close" = "Close";
 "Common.Sent" = "Sent";
 "Common.SendFailed" = "Failed";
@@ -67,4 +68,5 @@
 "Alert.Backup.Message" = "You will need them when you recover. \nBe carefull not to lose them";
 "Alert.SelectAddressByQR.InvalidAddress.Title" = "Invalid Address";
 "Alert.SelectAddressByQR.InvalidAddress.Message" = "Try again with a different QR code";
+"Alert.SwitchNetwork" = "App will restart after switching a network";
 

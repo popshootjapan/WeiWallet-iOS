@@ -23,8 +23,26 @@ final class NetworkSettingViewController: UITableViewController {
     }
     
     private func bindViewModel() {
+        let selectedIndexPath = tableView.rx.itemSelected.asDriver().flatMap { [weak self] indexPath -> Driver<IndexPath> in
+            let selectedIndexPath = PublishSubject<IndexPath>()
+            
+            let alertController = UIAlertController(
+                title: R.string.localizable.alertSwitchNetwork(),
+                message: nil, preferredStyle: .alert
+            )
+            
+            alertController.addAction(UIAlertAction(title: "OK", style: .default) { _ in
+                selectedIndexPath.onNext(indexPath)
+            })
+            
+            alertController.addAction(UIAlertAction(title: R.string.localizable.commonCancel(), style: .cancel))
+            self?.present(alertController, animated: true)
+            
+            return selectedIndexPath.asDriver(onErrorDriveWith: .empty())
+        }
+        
         let output = viewModel.build(input: .init(
-            selectedIndexPath: tableView.rx.itemSelected.asDriver()
+            selectedIndexPath: selectedIndexPath
         ))
         
         output

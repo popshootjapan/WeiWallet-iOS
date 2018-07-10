@@ -762,12 +762,20 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 38 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 40 localization keys.
     struct localizable {
+      /// en translation: App will restart after switching a network
+      /// 
+      /// Locales: en, ja
+      static let alertSwitchNetwork = Rswift.StringResource(key: "Alert.SwitchNetwork", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Bad Connection :(
       /// 
       /// Locales: en, ja
       static let errorTitleNoConnection = Rswift.StringResource(key: "Error.Title.NoConnection", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Cancel
+      /// 
+      /// Locales: en, ja
+      static let commonCancel = Rswift.StringResource(key: "Common.Cancel", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Close
       /// 
       /// Locales: en, ja
@@ -917,11 +925,25 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static let commonCameraAccessTitle = Rswift.StringResource(key: "Common.CameraAccess.Title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       
+      /// en translation: App will restart after switching a network
+      /// 
+      /// Locales: en, ja
+      static func alertSwitchNetwork(_: Void = ()) -> String {
+        return NSLocalizedString("Alert.SwitchNetwork", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Bad Connection :(
       /// 
       /// Locales: en, ja
       static func errorTitleNoConnection(_: Void = ()) -> String {
         return NSLocalizedString("Error.Title.NoConnection", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Cancel
+      /// 
+      /// Locales: en, ja
+      static func commonCancel(_: Void = ()) -> String {
+        return NSLocalizedString("Common.Cancel", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Close

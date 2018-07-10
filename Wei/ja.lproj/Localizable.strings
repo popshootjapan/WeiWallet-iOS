@@ -42,6 +42,7 @@
 "CreateWallet.Message" = "Wei Wallet(ウェイウォレット)は\nすべての人のための、もっともシンプルな\nイーサリアムウォレットです。";
 
 // MARK: - Common
+"Common.Cancel" = "キャンセル";
 "Common.Close" = "閉じる";
 "Common.Sent" = "送金完了";
 "Common.SendFailed" = "送金失敗";
@@ -67,3 +68,4 @@
 "Alert.Backup.Message" = "復元する際に必要になります。\n無くさないように気をつけてください。";
 "Alert.SelectAddressByQR.InvalidAddress.Title" = "アドレスが間違っています";
 "Alert.SelectAddressByQR.InvalidAddress.Message" = "QRコードを確認して再度お試しください。";
+"Alert.SwitchNetwork" = "ネットワーク変更後にアプリが再起動します";

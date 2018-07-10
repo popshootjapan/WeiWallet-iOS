@@ -39,7 +39,7 @@ final class NetworkSettingViewModel: InjectableViewModel {
             .drive(onNext: { [weak self] indexPath in
                 let network = Network.all[indexPath.row]
                 self?.applicationStore.network = network
-                self?.applicationStore.clearData()
+                Cache.shared.clear()
                 AppDelegate.rootViewController.showHomeViewController()
             })
             .disposed(by: disposeBag)
