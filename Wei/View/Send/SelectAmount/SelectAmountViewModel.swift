@@ -93,20 +93,30 @@ final class SelectAmountViewModel: InjectableViewModel {
         let availableBalance = Driver
             .combineLatest(fiatBalance, fiatTxFee) { balance, txFee -> Fiat in
                 let availableBalance = balance.value - txFee.value
+                
+                // if availableBalance is a negative value, it returns 0
                 switch balance {
                 case .jpy:
-                    return Fiat.jpy(availableBalance.toInt64())
+                    return Fiat.jpy(availableBalance >= 0 ? availableBalance.toInt64() : 0)
                 case .usd:
-                    return Fiat.usd(availableBalance)
+                    return Fiat.usd(availableBalance >= 0 ? availableBalance : 0)
                 }
             }
-            .distinctUntilChanged()
         
         // inputAmount will be used to manage input text field text. it will prevents the text field from having
         // invalid string value(which cannot be converted to Decimal).
         let inputAmount = Driver
             .combineLatest(input.amountTextFieldDidInput, availableBalance)
             .map { inputAmount, availableBalance -> String in
+                guard availableBalance.value > 0 else {
+                    return "0"
+                }
+                
+                // Returns 0 if input amount contains only zero.
+                guard inputAmount.map({ $0 == "0"}).contains(false) else {
+                    return "0"
+                }
+                
                 // If input text has more than one ".", then return the string with last letter dropped.
                 // eg, 12.9. -> 12.9
                 guard inputAmount.filter({ $0 == "." }).count <= 1 else {
@@ -129,9 +139,8 @@ final class SelectAmountViewModel: InjectableViewModel {
                 let availableAmount = availableBalance.value.round(scale: 2)
                 
                 return amount <= availableAmount ?
-                    inputAmount : availableAmount.description
+                    amount.description : availableAmount.description
             }
-            .distinctUntilChanged()
         
         // fiatAmount represents an amount user gives as an input in text field.
         // if user's input is larger than user's fiat balance, it returns user's total balance.
@@ -146,7 +155,6 @@ final class SelectAmountViewModel: InjectableViewModel {
                     return Fiat.usd(amount)
                 }
             }
-            .distinctUntilChanged()
         
         // in convertToEtherAction fiatAmount is converted to ether unit
         // if fiatAmount is empty, or 0, it will return the price of 0.

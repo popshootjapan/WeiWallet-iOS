@@ -85,14 +85,8 @@ final class SelectAmountViewController: UIViewController {
         output
             .currency
             .drive(onNext: { [weak self] currency in
-                switch currency {
-                case .jpy:
-                    self?.currencyCodeLabel.text = "日本円 (￥)"
-                    self?.amountTextField.keyboardType = .numberPad
-                case .usd:
-                    self?.currencyCodeLabel.text = "USD ($)"
-                    self?.amountTextField.keyboardType = .decimalPad
-                }
+                self?.currencyCodeLabel.text = "\(currency.shortName) (\(currency.unit))"
+                self?.amountTextField.keyboardType = currency == .jpy ? .numberPad : .decimalPad
             })
             .disposed(by: disposeBag)
         

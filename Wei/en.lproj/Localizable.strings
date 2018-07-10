@@ -24,7 +24,7 @@
 
 // MARK: - Send View Pager
 "Page.QRCode" = "Scan QR";
-"Page.CopyAddress" = "Copy Address";
+"Page.CopyAddress" = "Paste Address";
 
 // MARK: - SelectAddressByQR
 "SelectAddress.Warning.Text" = "Scan a QR code,\nor paste an address";
@@ -35,6 +35,12 @@
 // MARK: - Backup
 "Backup.Message" = "Following is a full list of your back up words. Please make sure to kepp these 12 words in order.";
 
+// MARK: - Restore Wallet
+"RestoreWallet.Message" = "Please enter the order of the 12 words memorized by backup in order.";
+
+// MARK: - Create Wallet
+"CreateWallet.Message" = "Wei Wallet is the simplest ethereum wallet for everyone.";
+
 // MARK: - Common
 "Common.Close" = "Close";
 "Common.Sent" = "Sent";
@@ -44,6 +50,8 @@
 "Common.CameraAccess.Cancel" = "Reject";
 "Common.USD" = "US Dollar";
 "Common.JPY" = "Japanese Yen";
+"Common.USD.Short" = "USD";
+"Common.JPY.Short" = "JPY";
 
 // MARK: - Tutorial
 "Tutorial.First.Title" = "Welcome to Wei Wallet！";

@@ -23,6 +23,24 @@ enum Currency: String {
         }
     }
     
+    var shortName: String {
+        switch self {
+        case .jpy:
+            return R.string.localizable.commonJPYShort()
+        case .usd:
+            return R.string.localizable.commonUSDShort()
+        }
+    }
+    
+    var unit: String {
+        switch self {
+        case .jpy:
+            return "￥"
+        case .usd:
+            return "$"
+        }
+    }
+    
     var showBackupPopupAmount: Decimal {
         switch self {
         case .jpy:

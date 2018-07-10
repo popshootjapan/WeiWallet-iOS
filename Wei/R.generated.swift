@@ -429,7 +429,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 20 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 22 localization tables.
   struct string {
     /// This `R.string.agreeServiceTermsViewController` struct is generated, and contains static references to 3 localization keys.
     struct agreeServiceTermsViewController {
@@ -625,7 +625,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.createWalletViewController` struct is generated, and contains static references to 5 localization keys.
+    /// This `R.string.createWalletViewController` struct is generated, and contains static references to 4 localization keys.
     struct createWalletViewController {
       /// en translation: Create Wallet
       /// 
@@ -643,10 +643,6 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let a06LX5VNormalTitle = Rswift.StringResource(key: "7a0-6L-X5V.normalTitle", tableName: "CreateWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: Wei Wallet(ウェイウォレット)は すべての人のための、もっともシンプルな イーサリアムウォレットです。
-      /// 
-      /// Locales: en, ja
-      static let el0TcT1KText = Rswift.StringResource(key: "El0-Tc-t1K.text", tableName: "CreateWalletViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       
       /// en translation: Create Wallet
       /// 
@@ -674,13 +670,6 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func a06LX5VNormalTitle(_: Void = ()) -> String {
         return NSLocalizedString("7a0-6L-X5V.normalTitle", tableName: "CreateWalletViewController", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// en translation: Wei Wallet(ウェイウォレット)は すべての人のための、もっともシンプルな イーサリアムウォレットです。
-      /// 
-      /// Locales: en, ja
-      static func el0TcT1KText(_: Void = ()) -> String {
-        return NSLocalizedString("El0-Tc-t1K.text", tableName: "CreateWalletViewController", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
@@ -742,12 +731,29 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
+    /// This `R.string.latestTransactionListViewController` struct is generated, and contains static references to 1 localization keys.
+    struct latestTransactionListViewController {
+      /// en translation: No transaction
+      /// 
+      /// Locales: en, ja
+      static let ugodmhy6Text = Rswift.StringResource(key: "UGO-dM-hY6.text", tableName: "LatestTransactionListViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation: No transaction
+      /// 
+      /// Locales: en, ja
+      static func ugodmhy6Text(_: Void = ()) -> String {
+        return NSLocalizedString("UGO-dM-hY6.text", tableName: "LatestTransactionListViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
     /// This `R.string.launchScreen` struct is generated, and contains static references to 0 localization keys.
     struct launchScreen {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 34 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 38 localization keys.
     struct localizable {
       /// en translation: Bad Connection :(
       /// 
@@ -757,10 +763,6 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let commonClose = Rswift.StringResource(key: "Common.Close", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
-      /// en translation: Copy Address
-      /// 
-      /// Locales: en, ja
-      static let pageCopyAddress = Rswift.StringResource(key: "Page.CopyAddress", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Easy to send and receive
       /// 
       /// Locales: en, ja
@@ -781,6 +783,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let alertSelectAddressByQRInvalidAddressTitle = Rswift.StringResource(key: "Alert.SelectAddressByQR.InvalidAddress.Title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: JPY
+      /// 
+      /// Locales: en, ja
+      static let commonJPYShort = Rswift.StringResource(key: "Common.JPY.Short", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Japanese Yen
       /// 
       /// Locales: en, ja
@@ -789,6 +795,14 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let alertBackupTitle = Rswift.StringResource(key: "Alert.Backup.Title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Paste Address
+      /// 
+      /// Locales: en, ja
+      static let pageCopyAddress = Rswift.StringResource(key: "Page.CopyAddress", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Please enter the order of the 12 words memorized by backup in order.
+      /// 
+      /// Locales: en, ja
+      static let restoreWalletMessage = Rswift.StringResource(key: "RestoreWallet.Message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Please try again later
       /// 
       /// Locales: en, ja
@@ -849,6 +863,14 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let commonUSD = Rswift.StringResource(key: "Common.USD", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: USD
+      /// 
+      /// Locales: en, ja
+      static let commonUSDShort = Rswift.StringResource(key: "Common.USD.Short", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Wei Wallet is the simplest ethereum wallet for everyone.
+      /// 
+      /// Locales: en, ja
+      static let createWalletMessage = Rswift.StringResource(key: "CreateWallet.Message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Wei Wallet, very safe!
       /// 
       /// Locales: en, ja
@@ -900,13 +922,6 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("Common.Close", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Copy Address
-      /// 
-      /// Locales: en, ja
-      static func pageCopyAddress(_: Void = ()) -> String {
-        return NSLocalizedString("Page.CopyAddress", bundle: R.hostingBundle, comment: "")
-      }
-      
       /// en translation: Easy to send and receive
       /// 
       /// Locales: en, ja
@@ -942,6 +957,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("Alert.SelectAddressByQR.InvalidAddress.Title", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: JPY
+      /// 
+      /// Locales: en, ja
+      static func commonJPYShort(_: Void = ()) -> String {
+        return NSLocalizedString("Common.JPY.Short", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Japanese Yen
       /// 
       /// Locales: en, ja
@@ -954,6 +976,20 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func alertBackupTitle(_: Void = ()) -> String {
         return NSLocalizedString("Alert.Backup.Title", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Paste Address
+      /// 
+      /// Locales: en, ja
+      static func pageCopyAddress(_: Void = ()) -> String {
+        return NSLocalizedString("Page.CopyAddress", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Please enter the order of the 12 words memorized by backup in order.
+      /// 
+      /// Locales: en, ja
+      static func restoreWalletMessage(_: Void = ()) -> String {
+        return NSLocalizedString("RestoreWallet.Message", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Please try again later
@@ -1059,6 +1095,20 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func commonUSD(_: Void = ()) -> String {
         return NSLocalizedString("Common.USD", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: USD
+      /// 
+      /// Locales: en, ja
+      static func commonUSDShort(_: Void = ()) -> String {
+        return NSLocalizedString("Common.USD.Short", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Wei Wallet is the simplest ethereum wallet for everyone.
+      /// 
+      /// Locales: en, ja
+      static func createWalletMessage(_: Void = ()) -> String {
+        return NSLocalizedString("CreateWallet.Message", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Wei Wallet, very safe!
@@ -1841,7 +1891,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.settingViewController` struct is generated, and contains static references to 7 localization keys.
+    /// This `R.string.settingViewController` struct is generated, and contains static references to 8 localization keys.
     struct settingViewController {
       /// en translation: Backup
       /// 
@@ -1851,6 +1901,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let doSR5EygHeaderTitle = Rswift.StringResource(key: "doS-r5-eyg.headerTitle", tableName: "SettingViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Local currency
+      /// 
+      /// Locales: en, ja
+      static let a68Dm5aYText = Rswift.StringResource(key: "A68-Dm-5aY.text", tableName: "SettingViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Privacy Policy
       /// 
       /// Locales: en, ja
@@ -1884,6 +1938,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func doSR5EygHeaderTitle(_: Void = ()) -> String {
         return NSLocalizedString("doS-r5-eyg.headerTitle", tableName: "SettingViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Local currency
+      /// 
+      /// Locales: en, ja
+      static func a68Dm5aYText(_: Void = ()) -> String {
+        return NSLocalizedString("A68-Dm-5aY.text", tableName: "SettingViewController", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Privacy Policy
@@ -1974,6 +2035,23 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
+    /// This `R.string.transactionHistoryViewController` struct is generated, and contains static references to 1 localization keys.
+    struct transactionHistoryViewController {
+      /// en translation: History
+      /// 
+      /// Locales: en, ja
+      static let wiK1FnUTitle = Rswift.StringResource(key: "1wi-K1-FnU.title", tableName: "TransactionHistoryViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      
+      /// en translation: History
+      /// 
+      /// Locales: en, ja
+      static func wiK1FnUTitle(_: Void = ()) -> String {
+        return NSLocalizedString("1wi-K1-FnU.title", tableName: "TransactionHistoryViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
     /// This `R.string.tutorialViewController` struct is generated, and contains static references to 2 localization keys.
     struct tutorialViewController {
       /// en translation: Next
@@ -2052,13 +2130,13 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       try myWalletViewController.validate()
-      try maintenanceViewController.validate()
       try createWalletViewController.validate()
       try suggestBackupViewController.validate()
       try launchScreen.validate()
       try homeViewController.validate()
       try latestTransactionListViewController.validate()
       try sendConfirmationViewController.validate()
+      try maintenanceViewController.validate()
     }
     
     struct agreeServiceTermsViewController: Rswift.StoryboardResourceWithInitialControllerType {

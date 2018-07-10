@@ -14,7 +14,6 @@ final class BalanceAccessoryView: UIView, InputAppliable {
 
     @IBOutlet private weak var availableBalanceLabel: UILabel!
     @IBOutlet private weak var balanceLabel: UILabel!
-    @IBOutlet private weak var fiatUnitLabel: UILabel!
     @IBOutlet private weak var txFeeLabel: UILabel!
 
     enum Input {

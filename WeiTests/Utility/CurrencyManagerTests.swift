@@ -41,6 +41,7 @@ final class CurrencyManagerTests: QuickSpec {
                 
                 currencyManager
                     .currency
+                    .asObservable()
                     .subscribe(currency)
                     .disposed(by: disposeBag)
                 
