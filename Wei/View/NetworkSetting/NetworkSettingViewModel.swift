@@ -16,13 +16,15 @@ final class NetworkSettingViewModel: InjectableViewModel {
     )
     
     private var applicationStore: ApplicationStoreProtocol
+    private let disposeBag: DisposeBag
     
     init(dependency: Dependency) {
         applicationStore = dependency
+        disposeBag = DisposeBag()
     }
     
     struct Input {
-        let selectedNetwork: Driver<Network>
+        let selectedIndexPath: Driver<IndexPath>
     }
     
     struct Output {
@@ -30,8 +32,20 @@ final class NetworkSettingViewModel: InjectableViewModel {
     }
     
     func build(input: Input) -> Output {
+        let selectedNetwork = applicationStore.network
+        
+        input
+            .selectedIndexPath
+            .drive(onNext: { [weak self] indexPath in
+                let network = Network.all[indexPath.row]
+                self?.applicationStore.network = network
+                self?.applicationStore.clearData()
+                AppDelegate.rootViewController.showHomeViewController()
+            })
+            .disposed(by: disposeBag)
+        
         return Output(
-            networks: Driver.just(Network.all.map { ($0, false) })
+            networks: Driver.just(Network.all.map { ($0, $0 == selectedNetwork) })
         )
     }
 }

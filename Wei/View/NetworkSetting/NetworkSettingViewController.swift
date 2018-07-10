@@ -24,7 +24,7 @@ final class NetworkSettingViewController: UITableViewController {
     
     private func bindViewModel() {
         let output = viewModel.build(input: .init(
-            selectedNetwork: selectedNetwork.asDriver(onErrorDriveWith: .empty())
+            selectedIndexPath: tableView.rx.itemSelected.asDriver()
         ))
         
         output

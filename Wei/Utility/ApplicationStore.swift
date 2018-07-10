@@ -6,8 +6,6 @@
 //  Copyright © 2018 popshoot. All rights reserved.
 //
 
-import EthereumKit
-
 protocol ApplicationStoreProtocol {
     
     /// Represents user's master seed
