@@ -125,7 +125,7 @@ final class ApplicationStore: ApplicationStoreProtocol, Injectable {
         }
         set {
             switch newValue {
-            case .main:
+            case .mainnet:
                 userDefaultsStore.network = "main"
             case .kovan:
                 userDefaultsStore.network = "kovan"
