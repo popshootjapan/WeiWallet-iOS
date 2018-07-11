@@ -23,6 +23,9 @@ protocol ApplicationStoreProtocol {
     /// Represents a user's currency
     var currency: Currency? { get set }
     
+    /// Represents a current network user is using
+    var network: Network { get set }
+    
     /// Clears data in keychain
     func clearData()
 }
@@ -95,6 +98,44 @@ final class ApplicationStore: ApplicationStoreProtocol, Injectable {
         }
         set {
             userDefaultsStore.currency = newValue?.rawValue
+        }
+    }
+    
+    var network: Network {
+        get {
+            guard let networkName = userDefaultsStore.network else {
+                return Network.current
+            }
+            
+            let network: Network?
+            switch networkName {
+            case "main", "ropsten", "kovan":
+                network = Network(name: networkName)
+            case "private":
+                network = Network(name: networkName, chainID: userDefaultsStore.chainID, testUse: userDefaultsStore.testUse)
+            default:
+                network = nil
+            }
+            
+            guard let storedNetwork = network else {
+                return Network.current
+            }
+            
+            return storedNetwork
+        }
+        set {
+            switch newValue {
+            case .mainnet:
+                userDefaultsStore.network = "main"
+            case .kovan:
+                userDefaultsStore.network = "kovan"
+            case .ropsten:
+                userDefaultsStore.network = "ropsten"
+            case .private(let chainID, let testUse):
+                userDefaultsStore.network = "private"
+                userDefaultsStore.chainID = chainID
+                userDefaultsStore.testUse = testUse
+            }
         }
     }
     

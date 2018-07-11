@@ -33,7 +33,7 @@ final class WalletManager: WalletManagerProtocol, Injectable {
         }
         
         do {
-            wallet = try Wallet(seed: Data(hex: seed), network: Network.currenct, debugPrints: Environment.current.debugPrints)
+            wallet = try Wallet(seed: Data(hex: seed), network: applicationStore.network, debugPrints: Environment.current.debugPrints)
         } catch let error {
             fatalError("Failed to instantiate Wallet: \(error.localizedDescription)")
         }

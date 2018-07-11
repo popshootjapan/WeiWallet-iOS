@@ -128,6 +128,11 @@
 		AE979E8220D8BD8F009B353F /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E8120D8BD8F009B353F /* Amount.swift */; };
 		AE979E8420D8D009009B353F /* Fiat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E8320D8D009009B353F /* Fiat.swift */; };
 		AE979E8620D8DE73009B353F /* AddressValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E8520D8DE73009B353F /* AddressValidator.swift */; };
+		AE9E863B20EF411A008354E9 /* NetworkSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E863A20EF411A008354E9 /* NetworkSettingViewController.swift */; };
+		AE9E863D20EF413D008354E9 /* NetworkSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9E863C20EF413D008354E9 /* NetworkSettingViewController.storyboard */; };
+		AE9E864020EF416B008354E9 /* NetworkSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E863F20EF416B008354E9 /* NetworkSettingViewModel.swift */; };
+		AE9E864220EF43FF008354E9 /* NetworkSettingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E864120EF43FF008354E9 /* NetworkSettingViewCell.swift */; };
+		AE9E864420EF4434008354E9 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E864320EF4434008354E9 /* Network.swift */; };
 		AEC36ADA20C538EF00FE4737 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC36AD820C538EF00FE4737 /* RealmSwift.framework */; };
 		AEC36ADB20C538EF00FE4737 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC36AD920C538EF00FE4737 /* Realm.framework */; };
 		AEC36ADD20C5851E00FE4737 /* LocalTransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC36ADC20C5851E00FE4737 /* LocalTransactionRepository.swift */; };
@@ -364,6 +369,11 @@
 		AE979E8120D8BD8F009B353F /* Amount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amount.swift; sourceTree = "<group>"; };
 		AE979E8320D8D009009B353F /* Fiat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fiat.swift; sourceTree = "<group>"; };
 		AE979E8520D8DE73009B353F /* AddressValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressValidator.swift; sourceTree = "<group>"; };
+		AE9E863A20EF411A008354E9 /* NetworkSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSettingViewController.swift; sourceTree = "<group>"; };
+		AE9E863C20EF413D008354E9 /* NetworkSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NetworkSettingViewController.storyboard; sourceTree = "<group>"; };
+		AE9E863F20EF416B008354E9 /* NetworkSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSettingViewModel.swift; sourceTree = "<group>"; };
+		AE9E864120EF43FF008354E9 /* NetworkSettingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSettingViewCell.swift; sourceTree = "<group>"; };
+		AE9E864320EF4434008354E9 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		AEC36AD820C538EF00FE4737 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		AEC36AD920C538EF00FE4737 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		AEC36ADC20C5851E00FE4737 /* LocalTransactionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTransactionRepository.swift; sourceTree = "<group>"; };
@@ -508,6 +518,7 @@
 				AE979E8120D8BD8F009B353F /* Amount.swift */,
 				AE979E8320D8D009009B353F /* Fiat.swift */,
 				AE979E8520D8DE73009B353F /* AddressValidator.swift */,
+				AE9E864320EF4434008354E9 /* Network.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -817,6 +828,17 @@
 			path = Debug;
 			sourceTree = "<group>";
 		};
+		AE9E863E20EF4156008354E9 /* NetworkSetting */ = {
+			isa = PBXGroup;
+			children = (
+				AE9E863C20EF413D008354E9 /* NetworkSettingViewController.storyboard */,
+				AE9E863A20EF411A008354E9 /* NetworkSettingViewController.swift */,
+				AE9E863F20EF416B008354E9 /* NetworkSettingViewModel.swift */,
+				AE9E864120EF43FF008354E9 /* NetworkSettingViewCell.swift */,
+			);
+			path = NetworkSetting;
+			sourceTree = "<group>";
+		};
 		AED49F5020E4CCCF00C2AF33 /* CurrencySetting */ = {
 			isa = PBXGroup;
 			children = (
@@ -913,6 +935,7 @@
 				AE8C9FC9209EF87800C616E1 /* Debug */,
 				AEFA44FE20B318F600844D4A /* RestoreWallet */,
 				AED49F5020E4CCCF00C2AF33 /* CurrencySetting */,
+				AE9E863E20EF4156008354E9 /* NetworkSetting */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1171,6 +1194,7 @@
 				DE9272C8208AD55000E03AB9 /* TutorialTopView.xib in Resources */,
 				AE69C84E20E0E25600EB1293 /* MyWalletViewController.storyboard in Resources */,
 				AED6F44C205514BB004A280F /* Assets.xcassets in Resources */,
+				AE9E863D20EF413D008354E9 /* NetworkSettingViewController.storyboard in Resources */,
 				AE6D4CFA20E20DBD007CF3C5 /* SelectAmountViewController.storyboard in Resources */,
 				AE6D4D1620E22679007CF3C5 /* MaintenanceViewController.storyboard in Resources */,
 				AE6D4CC220E20679007CF3C5 /* SuggestBackupViewController.storyboard in Resources */,
@@ -1332,6 +1356,7 @@
 				DE0DDCF4207F977200735C3C /* SendBaseViewModel.swift in Sources */,
 				DE7682E0207F3C88004094BA /* SettingViewModel.swift in Sources */,
 				DE9272C6208AD54700E03AB9 /* TutorialTopView.swift in Sources */,
+				AE9E863B20EF411A008354E9 /* NetworkSettingViewController.swift in Sources */,
 				1AB9224820765FB600DEF52B /* RateService.swift in Sources */,
 				AED6F491205525DC004A280F /* RootViewController.swift in Sources */,
 				DE91338E20A03B39003CDE67 /* UIDevice+WeiExtension.swift in Sources */,
@@ -1397,6 +1422,7 @@
 				1AEA0AA6205ABB610068C2E1 /* Injectable.swift in Sources */,
 				DE7682CF207B4526004094BA /* TransactionContext.swift in Sources */,
 				1AEA0A8A205967CD0068C2E1 /* RootViewModel.swift in Sources */,
+				AE9E864420EF4434008354E9 /* Network.swift in Sources */,
 				DE9133B820A98DCD003CDE67 /* SuggestBackupViewModel.swift in Sources */,
 				AE3F72FE207E6BD100482502 /* UserAgent.swift in Sources */,
 				DE624F912072482800840B06 /* SendConfirmationViewController.swift in Sources */,
@@ -1415,9 +1441,11 @@
 				AE979E8620D8DE73009B353F /* AddressValidator.swift in Sources */,
 				1AB430BB2096FCC800109A06 /* PageControl.swift in Sources */,
 				AE14A6152070A1E3003A63FF /* CreateWalletViewController.swift in Sources */,
+				AE9E864220EF43FF008354E9 /* NetworkSettingViewCell.swift in Sources */,
 				DEC5772B2074D79200DC3923 /* ReceiveViewModel.swift in Sources */,
 				DE9133C620AEFE78003CDE67 /* MnemonicWord.swift in Sources */,
 				DEF040C920692E9600DFE35A /* UIColor+WeiExtension.swift in Sources */,
+				AE9E864020EF416B008354E9 /* NetworkSettingViewModel.swift in Sources */,
 				DE9272C2208ACF4E00E03AB9 /* TutorialViewController.swift in Sources */,
 				AE14A61C2070A3E7003A63FF /* ControllableNavigationBar.swift in Sources */,
 				DE7682EA207F4AFD004094BA /* TransactionHistoryViewController.swift in Sources */,
@@ -1760,7 +1788,7 @@
 				CODE_SIGN_ENTITLEMENTS = Wei/Wei.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = JUG749AXCX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1789,7 +1817,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 10;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -1928,7 +1956,7 @@
 				BUNDLE_DISPLAY_SUFFIX = "-D";
 				CODE_SIGN_ENTITLEMENTS = Wei/Wei.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = JUG749AXCX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1958,7 +1986,7 @@
 				CODE_SIGN_ENTITLEMENTS = Wei/Wei.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = JUG749AXCX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1987,7 +2015,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 10;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -2012,7 +2040,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 10;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

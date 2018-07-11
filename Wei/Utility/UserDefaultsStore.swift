@@ -13,6 +13,15 @@ protocol UserDefaultsStoreProtocol {
     /// Represents a user's currency
     var currency: String? { get set }
     
+    /// Represents a current network
+    var network: String? { get set }
+    
+    /// Represents a current chainID (used only in private network)
+    var chainID: Int { get set }
+    
+    /// Represents a flag whether or not a private network is used for test case
+    var testUse: Bool { get set }
+    
     /// Removes all data in user defaults
     func removeAll()
 }
@@ -32,6 +41,9 @@ final class UserDefaultsStore: UserDefaultsStoreProtocol {
     
     enum Key: String {
         case currency
+        case network
+        case chainID
+        case testUse
     }
     
     var currency: String? {
@@ -40,6 +52,33 @@ final class UserDefaultsStore: UserDefaultsStoreProtocol {
         }
         set {
             setValue(newValue, for: .currency)
+        }
+    }
+    
+    var network: String? {
+        get {
+            return value(for: .network)
+        }
+        set {
+            setValue(newValue, for: .network)
+        }
+    }
+    
+    var chainID: Int {
+        get {
+            return value(for: .chainID) ?? 0
+        }
+        set {
+            setValue(newValue, for: .chainID)
+        }
+    }
+    
+    var testUse: Bool {
+        get {
+            return value(for: .testUse) ?? true
+        }
+        set {
+            setValue(newValue, for: .testUse)
         }
     }
     

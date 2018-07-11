@@ -248,7 +248,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 5 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 6 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `CurrencySettingViewCell`.
     static let currencySettingViewCell: Rswift.ReuseIdentifier<CurrencySettingViewCell> = Rswift.ReuseIdentifier(identifier: "CurrencySettingViewCell")
@@ -256,6 +256,8 @@ struct R: Rswift.Validatable {
     static let latestTransactionListViewCell: Rswift.ReuseIdentifier<LatestTransactionListViewCell> = Rswift.ReuseIdentifier(identifier: "LatestTransactionListViewCell")
     /// Reuse identifier `MnemonicWordViewCell`.
     static let mnemonicWordViewCell: Rswift.ReuseIdentifier<MnemonicWordViewCell> = Rswift.ReuseIdentifier(identifier: "MnemonicWordViewCell")
+    /// Reuse identifier `NetworkSettingViewCell`.
+    static let networkSettingViewCell: Rswift.ReuseIdentifier<NetworkSettingViewCell> = Rswift.ReuseIdentifier(identifier: "NetworkSettingViewCell")
     /// Reuse identifier `SettingViewCell`.
     static let settingViewCell: Rswift.ReuseIdentifier<UIKit.UITableViewCell> = Rswift.ReuseIdentifier(identifier: "SettingViewCell")
     /// Reuse identifier `TransactionHistoryViewCell`.
@@ -269,7 +271,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 22 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 23 storyboards.
   struct storyboard {
     /// Storyboard `AgreeServiceTermsViewController`.
     static let agreeServiceTermsViewController = _R.storyboard.agreeServiceTermsViewController()
@@ -291,6 +293,8 @@ struct R: Rswift.Validatable {
     static let maintenanceViewController = _R.storyboard.maintenanceViewController()
     /// Storyboard `MyWalletViewController`.
     static let myWalletViewController = _R.storyboard.myWalletViewController()
+    /// Storyboard `NetworkSettingViewController`.
+    static let networkSettingViewController = _R.storyboard.networkSettingViewController()
     /// Storyboard `ReceiveViewController`.
     static let receiveViewController = _R.storyboard.receiveViewController()
     /// Storyboard `RestoreWalletViewController`.
@@ -364,6 +368,11 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "MyWalletViewController", bundle: ...)`
     static func myWalletViewController(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.myWalletViewController)
+    }
+    
+    /// `UIStoryboard(name: "NetworkSettingViewController", bundle: ...)`
+    static func networkSettingViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.networkSettingViewController)
     }
     
     /// `UIStoryboard(name: "ReceiveViewController", bundle: ...)`
@@ -753,12 +762,20 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 38 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 40 localization keys.
     struct localizable {
+      /// en translation: App will restart after switching a network
+      /// 
+      /// Locales: en, ja
+      static let alertSwitchNetwork = Rswift.StringResource(key: "Alert.SwitchNetwork", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Bad Connection :(
       /// 
       /// Locales: en, ja
       static let errorTitleNoConnection = Rswift.StringResource(key: "Error.Title.NoConnection", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Cancel
+      /// 
+      /// Locales: en, ja
+      static let commonCancel = Rswift.StringResource(key: "Common.Cancel", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Close
       /// 
       /// Locales: en, ja
@@ -908,11 +925,25 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static let commonCameraAccessTitle = Rswift.StringResource(key: "Common.CameraAccess.Title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       
+      /// en translation: App will restart after switching a network
+      /// 
+      /// Locales: en, ja
+      static func alertSwitchNetwork(_: Void = ()) -> String {
+        return NSLocalizedString("Alert.SwitchNetwork", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Bad Connection :(
       /// 
       /// Locales: en, ja
       static func errorTitleNoConnection(_: Void = ()) -> String {
         return NSLocalizedString("Error.Title.NoConnection", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Cancel
+      /// 
+      /// Locales: en, ja
+      static func commonCancel(_: Void = ()) -> String {
+        return NSLocalizedString("Common.Cancel", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Close
@@ -1891,7 +1922,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.settingViewController` struct is generated, and contains static references to 8 localization keys.
+    /// This `R.string.settingViewController` struct is generated, and contains static references to 9 localization keys.
     struct settingViewController {
       /// en translation: Backup
       /// 
@@ -1905,6 +1936,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let a68Dm5aYText = Rswift.StringResource(key: "A68-Dm-5aY.text", tableName: "SettingViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Network
+      /// 
+      /// Locales: en, ja
+      static let paWVA6SbText = Rswift.StringResource(key: "paW-vA-6Sb.text", tableName: "SettingViewController", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Privacy Policy
       /// 
       /// Locales: en, ja
@@ -1945,6 +1980,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func a68Dm5aYText(_: Void = ()) -> String {
         return NSLocalizedString("A68-Dm-5aY.text", tableName: "SettingViewController", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Network
+      /// 
+      /// Locales: en, ja
+      static func paWVA6SbText(_: Void = ()) -> String {
+        return NSLocalizedString("paW-vA-6Sb.text", tableName: "SettingViewController", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Privacy Policy
@@ -2251,6 +2293,15 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if UIKit.UIImage(named: "bg_wallet") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'bg_wallet' is used in storyboard 'MyWalletViewController', but couldn't be loaded.") }
       }
+      
+      fileprivate init() {}
+    }
+    
+    struct networkSettingViewController: Rswift.StoryboardResourceWithInitialControllerType {
+      typealias InitialController = NetworkSettingViewController
+      
+      let bundle = R.hostingBundle
+      let name = "NetworkSettingViewController"
       
       fileprivate init() {}
     }
