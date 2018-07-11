@@ -20,11 +20,14 @@ final class MockApplicationStore: ApplicationStoreProtocol {
     
     var currency: Currency? = nil
     
+    var network: Network = Network.current
+    
     func clearData() {
         seed = nil
         mnemonic = nil
         accessToken = nil
         isAlreadyBackup = false
         currency = nil
+        network = Network.current
     }
 }
