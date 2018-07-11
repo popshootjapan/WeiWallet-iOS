@@ -18,16 +18,22 @@ protocol GethRepositoryProtocol {
     func getTransactions(address: String) -> Single<Transactions>
 }
 
-final class GethRepository: GethRepositoryProtocol {
+final class GethRepository: GethRepositoryProtocol, Injectable {
     
-    private var geth: Geth = {
-        return Geth(configuration: Configuration(
-            network: Network.currenct,
+    typealias Dependency = (
+        ApplicationStoreProtocol
+    )
+    
+    private let geth: Geth
+    
+    init(dependency: Dependency) {
+        geth = Geth(configuration: Configuration(
+            network: dependency.network,
             nodeEndpoint: Environment.current.nodeEndpoint,
             etherscanAPIKey: Environment.current.etherscanAPIKey,
             debugPrints: Environment.current.debugPrints
         ))
-    }()
+    }
     
     func getGasPrice() -> Single<Wei> {
         return Single.create { [weak geth] observer in

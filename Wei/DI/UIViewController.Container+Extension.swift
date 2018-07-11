@@ -105,6 +105,12 @@ extension CurrencySettingViewController {
     }
 }
 
+extension NetworkSettingViewController {
+    static func make() -> NetworkSettingViewController {
+        return Container.shared.resolve(NetworkSettingViewController.self)!
+    }
+}
+
 extension TransactionHistoryViewController {
     static func make() -> TransactionHistoryViewController {
         return Container.shared.resolve(TransactionHistoryViewController.self)!

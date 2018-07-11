@@ -56,7 +56,7 @@ extension Transaction {
 }
 
 extension Network {
-    static var currenct: Network {
+    static var current: Network {
         let network: Network
         #if DEBUG || INHOUSE
             network = .ropsten
@@ -65,4 +65,6 @@ extension Network {
         #endif
         return network
     }
+    
+    static let all: [Network] = [.mainnet, .ropsten, .kovan, .private(chainID: 1, testUse: true)]
 }

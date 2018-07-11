@@ -69,7 +69,7 @@ final class RootViewController: UIViewController {
             })
     }
     
-    private func showHomeViewController() {
+    func showHomeViewController() {
         let viewController = HomeViewController.make()
         let navigationController = NavigationController(rootViewController: viewController)
         embed(navigationController, to: view)

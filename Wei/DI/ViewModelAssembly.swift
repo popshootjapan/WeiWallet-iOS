@@ -134,9 +134,19 @@ final class ViewModelAssembly: Assembly {
             return SettingViewModel()
         }
         
+        // MARK: - CurrencySettingViewModel
+        
         container.register(CurrencySettingViewModel.self) { resolver in
             return CurrencySettingViewModel(dependency: (
                 resolver.resolve(CurrencyManagerProtocol.self)!
+            ))
+        }
+        
+        // MARK: - NetworkSettingViewModel
+        
+        container.register(NetworkSettingViewModel.self) { resolver in
+            return NetworkSettingViewModel(dependency: (
+                resolver.resolve(ApplicationStoreProtocol.self)!
             ))
         }
         

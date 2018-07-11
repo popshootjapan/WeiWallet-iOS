@@ -139,7 +139,9 @@ final class UtilityAssembly: Assembly {
         // EthereumRepository
         
         container.register(GethRepositoryProtocol.self) { resolver in
-            return GethRepository()
+            return GethRepository(dependency: (
+                resolver.resolve(ApplicationStoreProtocol.self)!
+            ))
         }
         
         // RateRepository

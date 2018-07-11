@@ -11,6 +11,8 @@
 /* Class = "UILabel"; text = "通貨単位"; ObjectID = "A68-Dm-5aY"; */
 "A68-Dm-5aY.text" = "通貨単位";
 
+"paW-vA-6Sb.text" = "ネットワーク";
+
 /* Class = "UINavigationItem"; title = "設定"; ObjectID = "BAR-Al-1RT"; */
 "BAR-Al-1RT.title" = "設定";
 
