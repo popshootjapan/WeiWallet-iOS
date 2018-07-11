@@ -61,7 +61,7 @@ extension Network {
         #if DEBUG || INHOUSE
             network = .ropsten
         #else
-            network = .main
+            network = .mainnet
         #endif
         return network
     }
