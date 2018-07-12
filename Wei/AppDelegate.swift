@@ -26,10 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
         
-        if let url = launchOptions?[.url] as? URL {
-            handleDeepLinkAction(url: url)
-        }
-        
         return true
     }
     
