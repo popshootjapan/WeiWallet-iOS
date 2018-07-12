@@ -11,10 +11,16 @@ import RxCocoa
 import EthereumKit
 
 protocol WalletManagerProtocol {
+    
     func address() -> String
+    
     func privateKey() -> String
+    
     func sign(rawTransaction: RawTransaction) throws -> String
+    
     func sign(message: String) throws -> String
+    
+    func sign(hex: String) throws -> String
 }
 
 final class WalletManager: WalletManagerProtocol, Injectable {
@@ -53,5 +59,9 @@ final class WalletManager: WalletManagerProtocol, Injectable {
     
     func sign(message: String) throws -> String {
         return try wallet.sign(message: message)
+    }
+    
+    func sign(hex: String) throws -> String {
+        return try wallet.sign(hex: hex)
     }
 }

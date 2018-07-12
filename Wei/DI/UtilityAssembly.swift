@@ -93,6 +93,14 @@ final class UtilityAssembly: Assembly {
             }
             .inObjectScope(.container)
         
+        // DeepLinkActionHandler
+        
+        container.register(DeepLinkActionHandlerProtocol.self) { resolver in
+            return DeepLinkActionHandler(dependency: (
+                resolver.resolve(WalletManagerProtocol.self)!
+            ))
+        }
+        
         // APIClient
         
         container
