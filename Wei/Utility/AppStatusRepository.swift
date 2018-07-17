@@ -16,17 +16,19 @@ protocol AppStatusRepositoryProtocol {
 final class AppStatusRepository: Injectable, AppStatusRepositoryProtocol {
     
     typealias Dependency = (
-        APIClientProtocol
+        APIClientProtocol,
+        ApplicationStoreProtocol
     )
     
     private let apiClient: APIClientProtocol
+    private let applicationStore: ApplicationStoreProtocol
     
     init(dependency: Dependency) {
-        apiClient = dependency
+        (apiClient, applicationStore) = dependency
     }
     
     func getAppStatus() -> Single<AppStatus> {
-        let request = AppStatusService.GetAppStatus()
+        let request = HTTPRequest(AppStatusService.GetAppStatus(), accessToken: applicationStore.accessToken)
         return apiClient.response(from: request)
     }
 }

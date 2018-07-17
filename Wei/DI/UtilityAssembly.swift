@@ -156,7 +156,8 @@ final class UtilityAssembly: Assembly {
         
         container.register(AppStatusRepositoryProtocol.self) { resolver in
             return AppStatusRepository(dependency: (
-                resolver.resolve(APIClientProtocol.self)!
+                resolver.resolve(APIClientProtocol.self)!,
+                resolver.resolve(ApplicationStoreProtocol.self)!
             ))
         }
         

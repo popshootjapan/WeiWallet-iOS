@@ -12,7 +12,8 @@ import RxSwift
 import RxCocoa
 
 protocol APIClientProtocol {
-    func response<Request>(from request: Request) -> Single<Request.Response> where Request: WeiRequest, Request.Response: Decodable
+    func response<Request>(from request: Request) -> Single<Request.Response>
+        where Request: APIKit.Request, Request.Response: Decodable
 }
 
 final class APIClient: APIClientProtocol {
@@ -23,8 +24,10 @@ final class APIClient: APIClientProtocol {
         return Session(adapter: adapter)
     }()
     
-    func response<Request>(from request: Request) -> Single<Request.Response> where Request: WeiRequest, Request.Response: Decodable {
-        return Single
+    func response<Request>(from request: Request) -> Single<Request.Response>
+        where Request: APIKit.Request, Request.Response: Decodable {
+        
+            return Single
             .create { [weak session] observer in
                 session?.send(request) { result in
                     switch result {
