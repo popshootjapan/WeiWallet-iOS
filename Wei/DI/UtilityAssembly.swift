@@ -165,7 +165,8 @@ final class UtilityAssembly: Assembly {
         
         container.register(RegistrationRepositoryProtocol.self) { resolver in
             return RegistrationRepository(dependency: (
-                resolver.resolve(APIClientProtocol.self)!
+                resolver.resolve(APIClientProtocol.self)!,
+                resolver.resolve(ApplicationStoreProtocol.self)!
             ))
         }
         

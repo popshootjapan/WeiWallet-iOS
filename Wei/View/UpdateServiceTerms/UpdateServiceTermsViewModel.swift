@@ -9,6 +9,42 @@
 import RxSwift
 import RxCocoa
 
-final class UpdateServiceTermsViewModel {
+final class UpdateServiceTermsViewModel: InjectableViewModel {
     
+    typealias Dependency = (
+        RegistrationRepositoryProtocol
+    )
+    
+    private let repository: RegistrationRepositoryProtocol
+    
+    init(dependency: Dependency) {
+        (repository) = dependency
+    }
+    
+    struct Input {
+        let agreeButtonDidTap: Driver<Void>
+    }
+    
+    struct Output {
+        let isExecuting: Driver<Bool>
+        let error: Driver<Error>
+        let dismissViewController: Driver<Void>
+    }
+    
+    func build(input: Input) -> Output {
+        let agreeAction = input.agreeButtonDidTap.flatMap { [weak self] _ -> Driver<Action<Void>> in
+            guard let weakSelf = self else {
+                return Driver.empty()
+            }
+            
+            let source = weakSelf.repository.agreeServiceTerms()
+            return Action.makeDriver(source)
+        }
+        
+        return Output(
+            isExecuting: agreeAction.isExecuting,
+            error: agreeAction.error,
+            dismissViewController: agreeAction.elements
+        )
+    }
 }

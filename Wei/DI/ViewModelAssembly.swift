@@ -183,7 +183,9 @@ final class ViewModelAssembly: Assembly {
         // MARK: - UpdateServiceTermsViewModel
         
         container.register(UpdateServiceTermsViewModel.self) { resolver in
-            return UpdateServiceTermsViewModel()
+            return UpdateServiceTermsViewModel(dependency: (
+                resolver.resolve(RegistrationRepositoryProtocol.self)!
+            ))
         }
     }
 }

@@ -11,22 +11,30 @@ import RxCocoa
 
 protocol RegistrationRepositoryProtocol {
     func signUp(address: String, sign: String, token: String) -> Single<String>
+    func agreeServiceTerms() -> Single<Void>
 }
 
 final class RegistrationRepository: Injectable, RegistrationRepositoryProtocol {
     
     typealias Dependency = (
-        APIClientProtocol
+        APIClientProtocol,
+        ApplicationStoreProtocol
     )
     
     private let apiClient: APIClientProtocol
+    private let applicationStore: ApplicationStoreProtocol
     
     init(dependency: Dependency) {
-        apiClient = dependency
+        (apiClient, applicationStore) = dependency
     }
     
     func signUp(address: String, sign: String, token: String) -> Single<String> {
         let request = RegistrationService.SignUp(address: address, sign: sign, token: token)
         return apiClient.response(from: request).map { $0.token }
+    }
+    
+    func agreeServiceTerms() -> Single<Void> {
+        let request = HTTPRequest(RegistrationService.AgreeServiceTerms(), accessToken: applicationStore.accessToken)
+        return apiClient.response(from: request).map { _ in }
     }
 }
