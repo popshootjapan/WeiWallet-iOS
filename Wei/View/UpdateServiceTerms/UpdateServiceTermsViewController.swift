@@ -14,6 +14,10 @@ final class UpdateServiceTermsViewController: UIViewController {
     
     var viewModel: UpdateServiceTermsViewModel!
     
+    @IBOutlet private weak var agreeButton: UIButton!
+    
+    private let disposeBag = DisposeBag()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         transitioningDelegate = self
@@ -22,7 +26,32 @@ final class UpdateServiceTermsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bindViewModel()
+    }
+    
+    private func bindViewModel() {
+        let output = viewModel.build(input: UpdateServiceTermsViewModel.Input(
+            agreeButtonDidTap: agreeButton.rx.tap.asDriver()
+        ))
         
+        output
+            .dismissViewController
+            .drive(onNext: { [weak self] in
+                self?.dismiss(animated: true)
+            })
+            .disposed(by: disposeBag)
+        
+        output
+            .error
+            .drive(onNext: { [weak self] error in
+                self?.showAlertController(withError: error)
+            })
+            .disposed(by: disposeBag)
+        
+        output
+            .isExecuting
+            .drive(rx.isHUDAnimating)
+            .disposed(by: disposeBag)
     }
 }
 

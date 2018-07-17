@@ -16,14 +16,50 @@
                     <view key="view" contentMode="scaleToFill" id="DYd-Oj-dk1">
                         <rect key="frame" x="0.0" y="0.0" width="316" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ewR-jl-8Kq">
+                                <rect key="frame" x="0.0" y="0.0" width="316" height="176"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="176" id="VLs-Q3-tr9"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAY-Xa-mrX">
+                                <rect key="frame" x="16" y="420" width="284" height="56"/>
+                                <color key="backgroundColor" red="0.086274509803921567" green="0.32549019607843138" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="Mqt-jG-0o4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
+                                <state key="normal" title="規約に同意する">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cEh-qA-FwQ" firstAttribute="trailing" secondItem="LAY-Xa-mrX" secondAttribute="trailing" constant="16" id="5iv-Zg-dod"/>
+                            <constraint firstItem="LAY-Xa-mrX" firstAttribute="leading" secondItem="cEh-qA-FwQ" secondAttribute="leading" constant="16" id="BN8-J2-UQb"/>
+                            <constraint firstItem="ewR-jl-8Kq" firstAttribute="trailing" secondItem="cEh-qA-FwQ" secondAttribute="trailing" id="Evq-Li-cEa"/>
+                            <constraint firstItem="cEh-qA-FwQ" firstAttribute="bottom" secondItem="LAY-Xa-mrX" secondAttribute="bottom" constant="24" id="aRD-Eg-dq4"/>
+                            <constraint firstItem="ewR-jl-8Kq" firstAttribute="leading" secondItem="cEh-qA-FwQ" secondAttribute="leading" id="adE-Ee-sA9"/>
+                            <constraint firstItem="ewR-jl-8Kq" firstAttribute="top" secondItem="DYd-Oj-dk1" secondAttribute="top" id="tv5-lS-qm6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cEh-qA-FwQ"/>
                     </view>
                     <size key="freeformSize" width="316" height="500"/>
+                    <connections>
+                        <outlet property="agreeButton" destination="LAY-Xa-mrX" id="SPO-6h-kbf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KvU-Pf-Qe0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-153" y="201"/>
+            <point key="canvasLocation" x="-153.59999999999999" y="200.59970014992504"/>
         </scene>
     </scenes>
 </document>
