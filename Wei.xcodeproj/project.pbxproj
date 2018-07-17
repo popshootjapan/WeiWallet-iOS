@@ -155,6 +155,9 @@
 		AEE6C05B20DCCC060003581D /* SelectAddressByPasteViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE6C05A20DCCC060003581D /* SelectAddressByPasteViewModelTests.swift */; };
 		AEE6C05D20DCD1220003581D /* MockRateRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE6C05C20DCD1220003581D /* MockRateRepository.swift */; };
 		AEE6C05F20DCD1BC0003581D /* MockRateRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE6C05E20DCD1BC0003581D /* MockRateRepositoryTests.swift */; };
+		AEEFC9AB20FDD3FF00D49F89 /* UpdateServiceTermsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEFC9AA20FDD3FF00D49F89 /* UpdateServiceTermsViewController.storyboard */; };
+		AEEFC9AD20FDD40600D49F89 /* UpdateServiceTermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEFC9AC20FDD40600D49F89 /* UpdateServiceTermsViewController.swift */; };
+		AEEFC9B120FDD50800D49F89 /* UpdateServiceTermsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEFC9B020FDD50800D49F89 /* UpdateServiceTermsViewModel.swift */; };
 		AEFA44FD20B318D100844D4A /* RestoreWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFA44FC20B318D100844D4A /* RestoreWalletViewController.swift */; };
 		AEFA450020B31BE500844D4A /* RestoreWalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFA44FF20B31BE500844D4A /* RestoreWalletViewModel.swift */; };
 		AEFE581220C7C07B00CE47F8 /* NonceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE581120C7C07B00CE47F8 /* NonceManager.swift */; };
@@ -402,6 +405,9 @@
 		AEE6C05A20DCCC060003581D /* SelectAddressByPasteViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressByPasteViewModelTests.swift; sourceTree = "<group>"; };
 		AEE6C05C20DCD1220003581D /* MockRateRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRateRepository.swift; sourceTree = "<group>"; };
 		AEE6C05E20DCD1BC0003581D /* MockRateRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRateRepositoryTests.swift; sourceTree = "<group>"; };
+		AEEFC9AA20FDD3FF00D49F89 /* UpdateServiceTermsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpdateServiceTermsViewController.storyboard; sourceTree = "<group>"; };
+		AEEFC9AC20FDD40600D49F89 /* UpdateServiceTermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateServiceTermsViewController.swift; sourceTree = "<group>"; };
+		AEEFC9B020FDD50800D49F89 /* UpdateServiceTermsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateServiceTermsViewModel.swift; sourceTree = "<group>"; };
 		AEFA44FC20B318D100844D4A /* RestoreWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreWalletViewController.swift; sourceTree = "<group>"; };
 		AEFA44FF20B31BE500844D4A /* RestoreWalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreWalletViewModel.swift; sourceTree = "<group>"; };
 		AEFE581120C7C07B00CE47F8 /* NonceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonceManager.swift; sourceTree = "<group>"; };
@@ -936,6 +942,7 @@
 				AEFA44FE20B318F600844D4A /* RestoreWallet */,
 				AED49F5020E4CCCF00C2AF33 /* CurrencySetting */,
 				AE9E863E20EF4156008354E9 /* NetworkSetting */,
+				AEEFC9B220FDD56600D49F89 /* UpdateServiceTerms */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -947,6 +954,16 @@
 				AEE6C05A20DCCC060003581D /* SelectAddressByPasteViewModelTests.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AEEFC9B220FDD56600D49F89 /* UpdateServiceTerms */ = {
+			isa = PBXGroup;
+			children = (
+				AEEFC9AA20FDD3FF00D49F89 /* UpdateServiceTermsViewController.storyboard */,
+				AEEFC9AC20FDD40600D49F89 /* UpdateServiceTermsViewController.swift */,
+				AEEFC9B020FDD50800D49F89 /* UpdateServiceTermsViewModel.swift */,
+			);
+			path = UpdateServiceTerms;
 			sourceTree = "<group>";
 		};
 		AEFA44FE20B318F600844D4A /* RestoreWallet */ = {
@@ -1186,6 +1203,7 @@
 				AE6D4CD020E20898007CF3C5 /* TutorialViewController.storyboard in Resources */,
 				AED6F44F205514BB004A280F /* LaunchScreen.storyboard in Resources */,
 				AE6D4D0820E215F2007CF3C5 /* SendConfirmationViewController.storyboard in Resources */,
+				AEEFC9AB20FDD3FF00D49F89 /* UpdateServiceTermsViewController.storyboard in Resources */,
 				AE6D4CDE20E20963007CF3C5 /* RestoreWalletViewController.storyboard in Resources */,
 				AE6D4CF320E20BD8007CF3C5 /* SelectAddressByQRViewController.storyboard in Resources */,
 				AED49F5520E4D67B00C2AF33 /* CurrencySettingViewController.storyboard in Resources */,
@@ -1379,6 +1397,7 @@
 				AE1F8C1C208B94210088A043 /* AgreeServiceTermsViewController.swift in Sources */,
 				AE14A6342071226F003A63FF /* MyWalletViewModel.swift in Sources */,
 				AEFA44FD20B318D100844D4A /* RestoreWalletViewController.swift in Sources */,
+				AEEFC9AD20FDD40600D49F89 /* UpdateServiceTermsViewController.swift in Sources */,
 				DEC5772D2075F51700DC3923 /* QRCoder.swift in Sources */,
 				1AEA0A95205978730068C2E1 /* Environment.swift in Sources */,
 				AE979E8020D7B6F5009B353F /* Decimal+Extension.swift in Sources */,
@@ -1427,6 +1446,7 @@
 				AE3F72FE207E6BD100482502 /* UserAgent.swift in Sources */,
 				DE624F912072482800840B06 /* SendConfirmationViewController.swift in Sources */,
 				DE624F85207246F700840B06 /* SelectAddressByPasteViewController.swift in Sources */,
+				AEEFC9B120FDD50800D49F89 /* UpdateServiceTermsViewModel.swift in Sources */,
 				AED49F5420E4D18800C2AF33 /* CurrencySettingViewCell.swift in Sources */,
 				AE14A64920789851003A63FF /* SendBaseViewController.swift in Sources */,
 				DE624F80207245C500840B06 /* SelectAddressByQRViewModel.swift in Sources */,

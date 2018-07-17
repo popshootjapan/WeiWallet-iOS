@@ -146,3 +146,9 @@ extension SuggestBackupViewController {
         return Container.shared.resolve(SuggestBackupViewController.self)!
     }
 }
+
+extension UpdateServiceTermsViewController {
+    static func make() -> UpdateServiceTermsViewController {
+        return Container.shared.resolve(UpdateServiceTermsViewController.self)!
+    }
+}

@@ -179,5 +179,11 @@ final class ViewModelAssembly: Assembly {
         container.register(SuggestBackupViewModel.self) { (resolver) in
             return SuggestBackupViewModel()
         }
+        
+        // MARK: - UpdateServiceTermsViewModel
+        
+        container.register(UpdateServiceTermsViewModel.self) { resolver in
+            return UpdateServiceTermsViewModel()
+        }
     }
 }

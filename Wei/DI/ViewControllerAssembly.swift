@@ -190,6 +190,14 @@ final class ViewControllerAssembly: Assembly {
             viewController.viewModel = resolver.resolve(SuggestBackupViewModel.self)!
             return viewController
         }
+        
+        // MARL: - UpdateServiceTermsViewController
+        
+        container.register(UpdateServiceTermsViewController.self) { resolver in
+            let viewController = UIStoryboard.instantiateViewController(of: UpdateServiceTermsViewController.self)
+            viewController.viewModel = resolver.resolve(UpdateServiceTermsViewModel.self)!
+            return viewController
+        }
     }
 }
 

@@ -34,6 +34,7 @@ final class RootViewModel: InjectableViewModel {
         let presentCreateWalletViewController: Driver<Void>
         let presentMaintenanceViewController: Driver<Void>
         let presentAppStoreForForceUpdates: Driver<Void>
+        let presentAgreeTermsViewController: Driver<Void>
     }
     
     func build(input: Input) -> Output {
@@ -57,6 +58,10 @@ final class RootViewModel: InjectableViewModel {
             .filter { $0.forceUpdates }
             .map { _ in }
         
+        let presentAgreeTermsViewController = appStatus
+            .filter { $0.needsAgreeTerms }
+            .map { _ in }
+        
         let showHomeViewController = input.viewWillAppear
             .filter { applicationStore.seed != nil && applicationStore.accessToken != nil }
         
@@ -70,7 +75,8 @@ final class RootViewModel: InjectableViewModel {
             showHomeViewController: showHomeViewController,
             presentCreateWalletViewController: presentCreateWalletViewController,
             presentMaintenanceViewController: presentMaintenanceViewController,
-            presentAppStoreForForceUpdates: presentAppStoreForForceUpdates
+            presentAppStoreForForceUpdates: presentAppStoreForForceUpdates,
+            presentAgreeTermsViewController: presentAgreeTermsViewController
         )
     }
 }
