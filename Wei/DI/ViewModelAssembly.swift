@@ -36,8 +36,7 @@ final class ViewModelAssembly: Assembly {
                 resolver.resolve(ApplicationStoreProtocol.self)!,
                 resolver.resolve(MnemonicManagerProtocol.self)!,
                 resolver.resolve(RegistrationRepositoryProtocol.self)!,
-                resolver.resolve(DeviceCheckerProtocol.self)!,
-                resolver.resolve(APIClientProtocol.self)!
+                resolver.resolve(DeviceCheckerProtocol.self)!
             ))
         }
         
