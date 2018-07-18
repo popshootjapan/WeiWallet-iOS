@@ -15,6 +15,7 @@ final class UpdateServiceTermsViewController: UIViewController {
     var viewModel: UpdateServiceTermsViewModel!
     
     @IBOutlet private weak var agreeButton: UIButton!
+    @IBOutlet private weak var termsButton: UIButton!
     
     private let disposeBag = DisposeBag()
     
@@ -31,7 +32,8 @@ final class UpdateServiceTermsViewController: UIViewController {
     
     private func bindViewModel() {
         let output = viewModel.build(input: UpdateServiceTermsViewModel.Input(
-            agreeButtonDidTap: agreeButton.rx.tap.asDriver()
+            agreeButtonDidTap: agreeButton.rx.tap.asDriver(),
+            termsButtonDidTap: termsButton.rx.tap.asDriver()
         ))
         
         output
@@ -45,6 +47,13 @@ final class UpdateServiceTermsViewController: UIViewController {
             .error
             .drive(onNext: { [weak self] error in
                 self?.showAlertController(withError: error)
+            })
+            .disposed(by: disposeBag)
+        
+        output
+            .showServiceTerm
+            .drive(onNext: { _ in
+                UIApplication.shared.open(URL.wei.terms)
             })
             .disposed(by: disposeBag)
         

@@ -23,12 +23,14 @@ final class UpdateServiceTermsViewModel: InjectableViewModel {
     
     struct Input {
         let agreeButtonDidTap: Driver<Void>
+        let termsButtonDidTap: Driver<Void>
     }
     
     struct Output {
         let isExecuting: Driver<Bool>
         let error: Driver<Error>
         let dismissViewController: Driver<Void>
+        let showServiceTerm: Driver<Void>
     }
     
     func build(input: Input) -> Output {
@@ -44,7 +46,8 @@ final class UpdateServiceTermsViewModel: InjectableViewModel {
         return Output(
             isExecuting: agreeAction.isExecuting,
             error: agreeAction.error,
-            dismissViewController: agreeAction.elements
+            dismissViewController: agreeAction.elements,
+            showServiceTerm: input.termsButtonDidTap
         )
     }
 }
