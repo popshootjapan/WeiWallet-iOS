@@ -51,12 +51,6 @@ extension RestoreWalletViewController {
     }
 }
 
-extension AgreeServiceTermsViewController {
-    static func make() -> AgreeServiceTermsViewController {
-        return Container.shared.resolve(AgreeServiceTermsViewController.self)!
-    }
-}
-
 extension SendBaseViewController {
     static func make() -> SendBaseViewController {
         return Container.shared.resolve(SendBaseViewController.self)!

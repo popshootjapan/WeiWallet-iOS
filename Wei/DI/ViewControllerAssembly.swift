@@ -69,12 +69,6 @@ final class ViewControllerAssembly: Assembly {
             return viewController
         }
         
-        // MARK: - AgreeServiceTermsViewController
-        
-        container.register(AgreeServiceTermsViewController.self) { resolver in
-            return UIStoryboard.instantiateViewController(of: AgreeServiceTermsViewController.self)
-        }
-        
         // MARK: - SendBaseViewController
         
         container.register(SendBaseViewController.self) { resolver in
