@@ -131,6 +131,7 @@
 		AE9E864020EF416B008354E9 /* NetworkSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E863F20EF416B008354E9 /* NetworkSettingViewModel.swift */; };
 		AE9E864220EF43FF008354E9 /* NetworkSettingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E864120EF43FF008354E9 /* NetworkSettingViewCell.swift */; };
 		AE9E864420EF4434008354E9 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E864320EF4434008354E9 /* Network.swift */; };
+		AEC16E8120FF0B63001FC632 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE052D4920D3FC7C00ACFA49 /* R.generated.swift */; };
 		AEC36ADA20C538EF00FE4737 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC36AD820C538EF00FE4737 /* RealmSwift.framework */; };
 		AEC36ADB20C538EF00FE4737 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC36AD920C538EF00FE4737 /* Realm.framework */; };
 		AEC36ADD20C5851E00FE4737 /* LocalTransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC36ADC20C5851E00FE4737 /* LocalTransactionRepository.swift */; };
@@ -164,7 +165,6 @@
 		DE02317C209169AC00508B5B /* UINotificationFeedbackGenerator+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE02317B209169AC00508B5B /* UINotificationFeedbackGenerator+Extension.swift */; };
 		DE0231812091712700508B5B /* MaintenanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0231802091712700508B5B /* MaintenanceViewController.swift */; };
 		DE02318320917DF200508B5B /* UIApplication+WeiExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE02318220917DF200508B5B /* UIApplication+WeiExtension.swift */; };
-		DE052D4A20D3FC7C00ACFA49 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE052D4920D3FC7C00ACFA49 /* R.generated.swift */; };
 		DE052D4E20D4016B00ACFA49 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE052D5020D4016B00ACFA49 /* Localizable.strings */; };
 		DE0DDCF4207F977200735C3C /* SendBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0DDCF3207F977200735C3C /* SendBaseViewModel.swift */; };
 		DE318DE320915BAD008FA01E /* BalanceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE318DE220915BAD008FA01E /* BalanceStore.swift */; };
@@ -1460,6 +1460,7 @@
 				DE0231812091712700508B5B /* MaintenanceViewController.swift in Sources */,
 				DE3A38392084969A00AB44B0 /* BalanceAccessoryView.swift in Sources */,
 				AEC36ADD20C5851E00FE4737 /* LocalTransactionRepository.swift in Sources */,
+				AEC16E8120FF0B63001FC632 /* R.generated.swift in Sources */,
 				AE3F730B207F7F6300482502 /* Price.swift in Sources */,
 				AE3EB5FF20A83A9000D61CE6 /* Gas.swift in Sources */,
 				1AEA0A91205978250068C2E1 /* KeychainStore.swift in Sources */,
