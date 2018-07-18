@@ -69,19 +69,25 @@ final class CreateWalletViewModel: InjectableViewModel {
             // the instance to the ViewModel.
             let wallet = Container.shared.resolve(WalletManagerProtocol.self)!
             
-            let signUp = weakSelf.deviceChecker.deviceToken.flatMap { deviceToken -> Observable<String> in
-                return weakSelf.registrationRepository
-                    .signUp(address: wallet.address(), sign: try wallet.sign(message: "Welcome to Wei wallet!"), token: deviceToken)
-                    .asObservable()
-                    .do(onNext: { accessToken in
-                        // Store user's access token
-                        weakSelf.applicationStore.accessToken = accessToken
-                    })
+            let signUpCompleted: Observable<String>
+            if weakSelf.applicationStore.accessToken == nil {
+                signUpCompleted = weakSelf.deviceChecker.deviceToken.flatMap { deviceToken -> Observable<String> in
+                    return weakSelf.registrationRepository
+                        .signUp(address: wallet.address(), sign: try wallet.sign(message: "Welcome to Wei wallet!"), token: deviceToken)
+                        .asObservable()
+                }
+            } else {
+                signUpCompleted = Observable.just(weakSelf.applicationStore.accessToken!)
             }
             
-            let source = signUp.flatMap { accessToken -> Observable<Void> in
-                return weakSelf.registrationRepository.agreeServiceTerms().asObservable()
-            }
+            let source = signUpCompleted
+                .do(onNext: { accessToken in
+                    // Store user's access token
+                    weakSelf.applicationStore.accessToken = accessToken
+                })
+                .flatMap { _ -> Observable<Void> in
+                    return weakSelf.registrationRepository.agreeServiceTerms().asObservable()
+                }
             
             return Action.makeDriver(source)
         }
