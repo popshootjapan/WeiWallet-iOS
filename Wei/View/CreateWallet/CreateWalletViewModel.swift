@@ -17,18 +17,16 @@ final class CreateWalletViewModel: InjectableViewModel {
         ApplicationStoreProtocol,
         MnemonicManagerProtocol,
         RegistrationRepositoryProtocol,
-        DeviceCheckerProtocol,
-        APIClientProtocol
+        DeviceCheckerProtocol
     )
     
     private var applicationStore: ApplicationStoreProtocol
     private let mnemonicManager: MnemonicManagerProtocol
     private let registrationRepository: RegistrationRepositoryProtocol
     private let deviceChecker: DeviceCheckerProtocol
-    private let apiClient: APIClientProtocol
     
     init(dependency: Dependency) {
-        (applicationStore, mnemonicManager, registrationRepository, deviceChecker, apiClient) = dependency
+        (applicationStore, mnemonicManager, registrationRepository, deviceChecker) = dependency
     }
     
     struct Input {
@@ -46,7 +44,7 @@ final class CreateWalletViewModel: InjectableViewModel {
     }
     
     func build(input: Input) -> Output {
-        let didGenerateWalletAction = input.createWalletButtonDidTap.flatMap { [weak self] deviceToken -> Driver<Action<String>> in
+        let didGenerateWalletAction = input.createWalletButtonDidTap.flatMap { [weak self] deviceToken -> Driver<Action<Void>> in
             guard let weakSelf = self else {
                 return Driver.empty()
             }
@@ -71,21 +69,31 @@ final class CreateWalletViewModel: InjectableViewModel {
             // the instance to the ViewModel.
             let wallet = Container.shared.resolve(WalletManagerProtocol.self)!
             
-            let source = weakSelf.deviceChecker.deviceToken.flatMap { deviceToken -> Observable<String> in
-                return weakSelf.registrationRepository
-                    .signUp(address: wallet.address(), sign: try wallet.sign(message: "Welcome to Wei wallet!"), token: deviceToken)
-                    .asObservable()
+            let signUpCompleted: Observable<String>
+            if weakSelf.applicationStore.accessToken == nil {
+                signUpCompleted = weakSelf.deviceChecker.deviceToken.flatMap { deviceToken -> Observable<String> in
+                    return weakSelf.registrationRepository
+                        .signUp(address: wallet.address(), sign: try wallet.sign(message: "Welcome to Wei wallet!"), token: deviceToken)
+                        .asObservable()
+                }
+            } else {
+                signUpCompleted = Observable.just(weakSelf.applicationStore.accessToken!)
             }
+            
+            let source = signUpCompleted
+                .do(onNext: { accessToken in
+                    // Store user's access token
+                    weakSelf.applicationStore.accessToken = accessToken
+                })
+                .flatMap { _ -> Observable<Void> in
+                    return weakSelf.registrationRepository.agreeServiceTerms().asObservable()
+                }
             
             return Action.makeDriver(source)
         }
         
         let (didGenerateWallet, isGeneratingWallet, error) = (
-            didGenerateWalletAction.elements
-                .do(onNext: { [weak self] accessToken in
-                    self?.applicationStore.accessToken = accessToken
-                })
-                .map { _ in },
+            didGenerateWalletAction.elements,
             didGenerateWalletAction.isExecuting,
             didGenerateWalletAction.error
         )

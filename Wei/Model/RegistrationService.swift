@@ -35,4 +35,16 @@ final class RegistrationService {
             ]
         }
     }
+    
+    struct AgreeServiceTerms: WeiRequest {        
+        struct Response: Decodable {}
+        
+        var path: String {
+            return "agrement_version"
+        }
+        
+        var method: HTTPMethod {
+            return .put
+        }
+    }
 }

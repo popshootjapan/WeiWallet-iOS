@@ -9,9 +9,11 @@
 struct AppStatus: Decodable {
     let isUnderMaintenance: Bool
     let forceUpdates: Bool
+    let needsAgreeTerms: Bool
     
     enum CodingKeys: String, CodingKey {
         case isUnderMaintenance = "maintenance_ongoing"
         case forceUpdates = "need_update"
+        case needsAgreeTerms = "need_terms_agrement"
     }
 }

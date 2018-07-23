@@ -16,17 +16,22 @@ protocol AppStatusRepositoryProtocol {
 final class AppStatusRepository: Injectable, AppStatusRepositoryProtocol {
     
     typealias Dependency = (
-        APIClientProtocol
+        APIClientProtocol,
+        ApplicationStoreProtocol
     )
     
     private let apiClient: APIClientProtocol
+    private let applicationStore: ApplicationStoreProtocol
     
     init(dependency: Dependency) {
-        apiClient = dependency
+        (apiClient, applicationStore) = dependency
     }
     
     func getAppStatus() -> Single<AppStatus> {
-        let request = AppStatusService.GetAppStatus()
+        guard let accessToken = applicationStore.accessToken else {
+            fatalError("AccessToken is necessary")
+        }
+        let request = AuthorizedRequest(AppStatusService.GetAppStatus(), accessToken: accessToken)
         return apiClient.response(from: request)
     }
 }

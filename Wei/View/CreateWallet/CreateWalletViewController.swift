@@ -47,8 +47,8 @@ final class CreateWalletViewController: UIViewController {
         
         output
             .presentAgreeServiceTermViewController
-            .drive(onNext: { [weak self] in
-                self?.presentAgreeTermsViewController()
+            .drive(onNext: { _ in
+                UIApplication.shared.open(URL.wei.terms)
             })
             .disposed(by: disposeBag)
         
@@ -80,11 +80,6 @@ final class CreateWalletViewController: UIViewController {
         if UIDevice.wei.is3_5Inch() || UIDevice.wei.is4Inch() || UIDevice.wei.isPad() {
             view.isHidden = true
         }
-    }
-    
-    private func presentAgreeTermsViewController() {
-        let viewController = AgreeServiceTermsViewController.make()
-        present(viewController, animated: true)
     }
     
     private func pushRestoreWalletViewController() {
