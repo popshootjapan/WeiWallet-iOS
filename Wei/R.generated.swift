@@ -40,8 +40,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 26 images.
+  /// This `R.image` struct is generated, and contains static references to 27 images.
   struct image {
+    /// Image `bg_header`.
+    static let bg_header = Rswift.ImageResource(bundle: R.hostingBundle, name: "bg_header")
     /// Image `bg_wallet`.
     static let bg_wallet = Rswift.ImageResource(bundle: R.hostingBundle, name: "bg_wallet")
     /// Image `icon_backup`.
@@ -94,6 +96,11 @@ struct R: Rswift.Validatable {
     static let tutorial_second = Rswift.ImageResource(bundle: R.hostingBundle, name: "tutorial_second")
     /// Image `tutorial_third`.
     static let tutorial_third = Rswift.ImageResource(bundle: R.hostingBundle, name: "tutorial_third")
+    
+    /// `UIImage(named: "bg_header", bundle: ..., traitCollection: ...)`
+    static func bg_header(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.bg_header, compatibleWith: traitCollection)
+    }
     
     /// `UIImage(named: "bg_wallet", bundle: ..., traitCollection: ...)`
     static func bg_wallet(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -2137,6 +2144,7 @@ struct _R: Rswift.Validatable {
       try createWalletViewController.validate()
       try suggestBackupViewController.validate()
       try launchScreen.validate()
+      try updateServiceTermsViewController.validate()
       try homeViewController.validate()
       try latestTransactionListViewController.validate()
       try sendConfirmationViewController.validate()
@@ -2374,11 +2382,15 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct updateServiceTermsViewController: Rswift.StoryboardResourceWithInitialControllerType {
+    struct updateServiceTermsViewController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = UpdateServiceTermsViewController
       
       let bundle = R.hostingBundle
       let name = "UpdateServiceTermsViewController"
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "bg_header") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'bg_header' is used in storyboard 'UpdateServiceTermsViewController', but couldn't be loaded.") }
+      }
       
       fileprivate init() {}
     }

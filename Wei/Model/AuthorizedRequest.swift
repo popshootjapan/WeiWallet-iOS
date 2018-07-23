@@ -1,5 +1,5 @@
 //
-//  HTTPRequest.swift
+//  AuthorizedRequest.swift
 //  Wei
 //
 //  Created by Ryo Fukuda on 2018/07/17.
@@ -8,18 +8,14 @@
 
 import APIKit
 
-struct HTTPRequest<Request: WeiRequest>: APIKit.Request {
+struct AuthorizedRequest<Request: WeiRequest>: APIKit.Request {
     
     typealias Response = Request.Response
     
     private let baseRequest: Request
     private let accessToken: String
     
-    init(_ baseRequest: Request, accessToken: String?) {
-        guard let accessToken = accessToken else {
-            fatalError("AccessToken is necessary for this request")
-        }
-        
+    init(_ baseRequest: Request, accessToken: String) {
         self.baseRequest = baseRequest
         self.accessToken = accessToken
     }

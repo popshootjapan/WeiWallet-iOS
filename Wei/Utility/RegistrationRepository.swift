@@ -34,7 +34,10 @@ final class RegistrationRepository: Injectable, RegistrationRepositoryProtocol {
     }
     
     func agreeServiceTerms() -> Single<Void> {
-        let request = HTTPRequest(RegistrationService.AgreeServiceTerms(), accessToken: applicationStore.accessToken)
+        guard let accessToken = applicationStore.accessToken else {
+            fatalError("AccessToken is necessary")
+        }
+        let request = AuthorizedRequest(RegistrationService.AgreeServiceTerms(), accessToken: accessToken)
         return apiClient.response(from: request).map { _ in }
     }
 }

@@ -28,7 +28,10 @@ final class AppStatusRepository: Injectable, AppStatusRepositoryProtocol {
     }
     
     func getAppStatus() -> Single<AppStatus> {
-        let request = HTTPRequest(AppStatusService.GetAppStatus(), accessToken: applicationStore.accessToken)
+        guard let accessToken = applicationStore.accessToken else {
+            fatalError("AccessToken is necessary")
+        }
+        let request = AuthorizedRequest(AppStatusService.GetAppStatus(), accessToken: accessToken)
         return apiClient.response(from: request)
     }
 }

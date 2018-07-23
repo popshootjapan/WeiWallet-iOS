@@ -157,7 +157,7 @@
 		AEEFC9AB20FDD3FF00D49F89 /* UpdateServiceTermsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEFC9AA20FDD3FF00D49F89 /* UpdateServiceTermsViewController.storyboard */; };
 		AEEFC9AD20FDD40600D49F89 /* UpdateServiceTermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEFC9AC20FDD40600D49F89 /* UpdateServiceTermsViewController.swift */; };
 		AEEFC9B120FDD50800D49F89 /* UpdateServiceTermsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEFC9B020FDD50800D49F89 /* UpdateServiceTermsViewModel.swift */; };
-		AEEFC9B420FDDEA700D49F89 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEFC9B320FDDEA700D49F89 /* HTTPRequest.swift */; };
+		AEEFC9B420FDDEA700D49F89 /* AuthorizedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEFC9B320FDDEA700D49F89 /* AuthorizedRequest.swift */; };
 		AEFA44FD20B318D100844D4A /* RestoreWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFA44FC20B318D100844D4A /* RestoreWalletViewController.swift */; };
 		AEFA450020B31BE500844D4A /* RestoreWalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFA44FF20B31BE500844D4A /* RestoreWalletViewModel.swift */; };
 		AEFE581220C7C07B00CE47F8 /* NonceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE581120C7C07B00CE47F8 /* NonceManager.swift */; };
@@ -403,7 +403,7 @@
 		AEEFC9AA20FDD3FF00D49F89 /* UpdateServiceTermsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpdateServiceTermsViewController.storyboard; sourceTree = "<group>"; };
 		AEEFC9AC20FDD40600D49F89 /* UpdateServiceTermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateServiceTermsViewController.swift; sourceTree = "<group>"; };
 		AEEFC9B020FDD50800D49F89 /* UpdateServiceTermsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateServiceTermsViewModel.swift; sourceTree = "<group>"; };
-		AEEFC9B320FDDEA700D49F89 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		AEEFC9B320FDDEA700D49F89 /* AuthorizedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedRequest.swift; sourceTree = "<group>"; };
 		AEFA44FC20B318D100844D4A /* RestoreWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreWalletViewController.swift; sourceTree = "<group>"; };
 		AEFA44FF20B31BE500844D4A /* RestoreWalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreWalletViewModel.swift; sourceTree = "<group>"; };
 		AEFE581120C7C07B00CE47F8 /* NonceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonceManager.swift; sourceTree = "<group>"; };
@@ -521,7 +521,7 @@
 				AE979E8320D8D009009B353F /* Fiat.swift */,
 				AE979E8520D8DE73009B353F /* AddressValidator.swift */,
 				AE9E864320EF4434008354E9 /* Network.swift */,
-				AEEFC9B320FDDEA700D49F89 /* HTTPRequest.swift */,
+				AEEFC9B320FDDEA700D49F89 /* AuthorizedRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1407,7 +1407,7 @@
 				1AB430BF209718B300109A06 /* UIScrollView+Rx.swift in Sources */,
 				DE624F7C2072452D00840B06 /* SelectAddressByQRViewController.swift in Sources */,
 				1A798C0F2081E7C800812D80 /* UITableView+Extension.swift in Sources */,
-				AEEFC9B420FDDEA700D49F89 /* HTTPRequest.swift in Sources */,
+				AEEFC9B420FDDEA700D49F89 /* AuthorizedRequest.swift in Sources */,
 				AE1F8C13208B79CD0088A043 /* TransactionHistory.swift in Sources */,
 				AE14A61A2070A20E003A63FF /* NavigationController.swift in Sources */,
 				AE1F8C2B2090BB1B0088A043 /* Updater.swift in Sources */,
