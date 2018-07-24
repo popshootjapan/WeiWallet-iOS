@@ -69,12 +69,6 @@ final class ViewControllerAssembly: Assembly {
             return viewController
         }
         
-        // MARK: - AgreeServiceTermsViewController
-        
-        container.register(AgreeServiceTermsViewController.self) { resolver in
-            return UIStoryboard.instantiateViewController(of: AgreeServiceTermsViewController.self)
-        }
-        
         // MARK: - SendBaseViewController
         
         container.register(SendBaseViewController.self) { resolver in
@@ -188,6 +182,14 @@ final class ViewControllerAssembly: Assembly {
         container.register(SuggestBackupViewController.self) { resolver in
             let viewController = UIStoryboard.instantiateViewController(of: SuggestBackupViewController.self)
             viewController.viewModel = resolver.resolve(SuggestBackupViewModel.self)!
+            return viewController
+        }
+        
+        // MARL: - UpdateServiceTermsViewController
+        
+        container.register(UpdateServiceTermsViewController.self) { resolver in
+            let viewController = UIStoryboard.instantiateViewController(of: UpdateServiceTermsViewController.self)
+            viewController.viewModel = resolver.resolve(UpdateServiceTermsViewModel.self)!
             return viewController
         }
     }

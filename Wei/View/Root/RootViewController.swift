@@ -56,6 +56,13 @@ final class RootViewController: UIViewController {
                 self?.presentMaintenanceViewController()
             })
             .disposed(by: disposeBag)
+        
+        output
+            .presentAgreeTermsViewController
+            .drive(onNext: { [weak self] in
+                self?.presentAgreeTermsViewController()
+            })
+            .disposed(by: disposeBag)
     }
     
     private func openAppStore() {
@@ -84,6 +91,11 @@ final class RootViewController: UIViewController {
     private func presentMaintenanceViewController() {
         let viewController = MaintenanceViewController.make()
         present(viewController, animated: false)
+    }
+    
+    private func presentAgreeTermsViewController() {
+        let viewController = UpdateServiceTermsViewController.make()
+        present(viewController, animated: true)
     }
 }
 

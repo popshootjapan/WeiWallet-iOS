@@ -34,18 +34,21 @@ final class RootViewModel: InjectableViewModel {
         let presentCreateWalletViewController: Driver<Void>
         let presentMaintenanceViewController: Driver<Void>
         let presentAppStoreForForceUpdates: Driver<Void>
+        let presentAgreeTermsViewController: Driver<Void>
     }
     
     func build(input: Input) -> Output {
         let applicationStore = self.applicationStore
         
-        let appStatusAction = input.viewWillAppear.flatMap { [weak self] _ -> Driver<Action<AppStatus>> in
-            guard let weakSelf = self else {
-                return Driver.empty()
+        let appStatusAction = input.viewWillAppear
+            .filter { applicationStore.accessToken != nil }
+            .flatMap { [weak self] _ -> Driver<Action<AppStatus>> in
+                guard let weakSelf = self else {
+                    return Driver.empty()
+                }
+                let source = weakSelf.appStatusRepository.getAppStatus().retry(10)
+                return Action.makeDriver(source)
             }
-            let source = weakSelf.appStatusRepository.getAppStatus().retry(10)
-            return Action.makeDriver(source)
-        }
         
         let appStatus = appStatusAction.elements
         
@@ -55,6 +58,10 @@ final class RootViewModel: InjectableViewModel {
         
         let presentAppStoreForForceUpdates = appStatus
             .filter { $0.forceUpdates }
+            .map { _ in }
+        
+        let presentAgreeTermsViewController = appStatus
+            .filter { $0.needsAgreeTerms }
             .map { _ in }
         
         let showHomeViewController = input.viewWillAppear
@@ -70,7 +77,8 @@ final class RootViewModel: InjectableViewModel {
             showHomeViewController: showHomeViewController,
             presentCreateWalletViewController: presentCreateWalletViewController,
             presentMaintenanceViewController: presentMaintenanceViewController,
-            presentAppStoreForForceUpdates: presentAppStoreForForceUpdates
+            presentAppStoreForForceUpdates: presentAppStoreForForceUpdates,
+            presentAgreeTermsViewController: presentAgreeTermsViewController
         )
     }
 }
