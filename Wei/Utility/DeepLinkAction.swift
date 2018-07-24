@@ -10,8 +10,8 @@ import Foundation
 import EthereumKit
 
 enum DeepLinkAction {
-    case signMessage(String)
-    case signTransaction(RawTransaction)
+    case signMessage(message: String, callbackScheme: String)
+    case signTransaction(rawTransaction: RawTransaction, callbackScheme: String)
     
     init?(url: URL) throws {
         guard let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false),
@@ -21,18 +21,20 @@ enum DeepLinkAction {
         
         switch (host, urlComponents.path) {
         case ("sdk", "/personal_sign"):
-            guard let message = urlComponents.queryItems?.first(where: { $0.name == "message"})?.value else {
+            guard let message = urlComponents.queryItems?.first(where: { $0.name == "message"})?.value,
+                let callBackScheme = urlComponents.queryItems?.first(where: { $0.name == "callback_scheme" })?.value else {
                 return nil
             }
-            self = .signMessage(message)
+            self = .signMessage(message: message, callbackScheme: callBackScheme)
             
         case ("sdk", "/sign_transaction"):
-            guard let hex = urlComponents.queryItems?.first(where: { $0.name == "raw_transaction" })?.value else {
+            guard let hex = urlComponents.queryItems?.first(where: { $0.name == "raw_transaction" })?.value,
+                let callBackScheme = urlComponents.queryItems?.first(where: { $0.name == "callback_scheme" })?.value else {
                 return nil
             }
             
             let rawTransaction = try JSONDecoder().decode(RawTransaction.self, from: Data(hex: hex))
-            self = .signTransaction(rawTransaction)
+            self = .signTransaction(rawTransaction: rawTransaction, callbackScheme: callBackScheme)
             
         default:
             return nil

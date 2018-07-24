@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol DeepLinkActionHandlerProtocol {
     func execute(action: DeepLinkAction) throws
@@ -26,13 +27,13 @@ final class DeepLinkActionHandler: DeepLinkActionHandlerProtocol, Injectable {
     
     func execute(action: DeepLinkAction) throws {
         switch action {
-        case .signMessage(let message):
+        case .signMessage(let message, let callbackScheme):
             let signedMessage = try walletManager.sign(hex: message)
-            print("deeplink action: Sign", signedMessage)
+            print("deeplink action: Sign", signedMessage, callbackScheme)
             
-        case .signTransaction(let rawTransaction):
+        case .signTransaction(let rawTransaction, let callbackScheme):
             let signedTransaction = try walletManager.sign(rawTransaction: rawTransaction)
-            print("deeplink action: Sign Transaction", signedTransaction)
+            print("deeplink action: Sign Transaction", signedTransaction, callbackScheme)
         }
     }
 }
