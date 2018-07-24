@@ -9,11 +9,14 @@
 import UIKit
 import Fabric
 import Crashlytics
+import Swinject
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    private let deepLinkHandler = Container.shared.resolve(DeepLinkActionHandlerProtocol.self)!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         Fabric.with([Crashlytics.self])
@@ -24,6 +27,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        handleDeepLinkAction(url: url)
+        return true
+    }
+    
+    private func handleDeepLinkAction(url: URL) {
+        do {
+            guard let action = try DeepLinkAction(url: url) else {
+                return
+            }
+            
+            try deepLinkHandler.execute(action: action)
+        } catch let error {
+            print(error)
+        }
     }
     
     static var rootViewController: RootViewController {

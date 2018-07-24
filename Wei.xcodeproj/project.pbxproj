@@ -39,6 +39,8 @@
 		1AEA0AA6205ABB610068C2E1 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA0AA5205ABB610068C2E1 /* Injectable.swift */; };
 		8B99D35DC2E642873E38F347 /* Pods_WeiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 936EB0ECDF22CD12056CAE75 /* Pods_WeiTests.framework */; };
 		A7AF3D52759E96BE87D5E7DE /* Pods_Wei.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4060799F17C5BBE080440E1 /* Pods_Wei.framework */; };
+		AE0D465020F73FB500E6E8A7 /* DeepLinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D464F20F73FB500E6E8A7 /* DeepLinkAction.swift */; };
+		AE0D465220F740DF00E6E8A7 /* DeepLinkActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D465120F740DF00E6E8A7 /* DeepLinkActionHandler.swift */; };
 		AE14A6152070A1E3003A63FF /* CreateWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE14A6142070A1E3003A63FF /* CreateWalletViewController.swift */; };
 		AE14A61A2070A20E003A63FF /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE14A6192070A20E003A63FF /* NavigationController.swift */; };
 		AE14A61C2070A3E7003A63FF /* ControllableNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE14A61B2070A3E7003A63FF /* ControllableNavigationBar.swift */; };
@@ -253,6 +255,8 @@
 		71A603D1ABFA65A1659CB557 /* Pods-Wei.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wei.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wei/Pods-Wei.release.xcconfig"; sourceTree = "<group>"; };
 		936EB0ECDF22CD12056CAE75 /* Pods_WeiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A12D119CABBC62F1D4268257 /* Pods-Wei.inhouse.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wei.inhouse.xcconfig"; path = "Pods/Target Support Files/Pods-Wei/Pods-Wei.inhouse.xcconfig"; sourceTree = "<group>"; };
+		AE0D464F20F73FB500E6E8A7 /* DeepLinkAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkAction.swift; sourceTree = "<group>"; };
+		AE0D465120F740DF00E6E8A7 /* DeepLinkActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkActionHandler.swift; sourceTree = "<group>"; };
 		AE14A6142070A1E3003A63FF /* CreateWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWalletViewController.swift; sourceTree = "<group>"; };
 		AE14A6192070A20E003A63FF /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		AE14A61B2070A3E7003A63FF /* ControllableNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllableNavigationBar.swift; sourceTree = "<group>"; };
@@ -668,6 +672,8 @@
 				AEFE581120C7C07B00CE47F8 /* NonceManager.swift */,
 				AE43C3A520D10D620050BDDE /* CurrencyManager.swift */,
 				AE43C3A720D10E880050BDDE /* UserDefaultsStore.swift */,
+				AE0D464F20F73FB500E6E8A7 /* DeepLinkAction.swift */,
+				AE0D465120F740DF00E6E8A7 /* DeepLinkActionHandler.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -1400,6 +1406,7 @@
 				AE3F7304207E78FA00482502 /* SwipableViewController.swift in Sources */,
 				AE6146642087154800A9E77A /* RegistrationRepository.swift in Sources */,
 				AE14A6282070D2F7003A63FF /* HomeViewController.swift in Sources */,
+				AE0D465220F740DF00E6E8A7 /* DeepLinkActionHandler.swift in Sources */,
 				AE1F8C272090B4270088A043 /* APIClientError.swift in Sources */,
 				AE43C3A820D10E880050BDDE /* UserDefaultsStore.swift in Sources */,
 				1AEA0A86205967460068C2E1 /* InjectableViewModel.swift in Sources */,
@@ -1434,6 +1441,7 @@
 				AEEFC9B120FDD50800D49F89 /* UpdateServiceTermsViewModel.swift in Sources */,
 				AED49F5420E4D18800C2AF33 /* CurrencySettingViewCell.swift in Sources */,
 				AE14A64920789851003A63FF /* SendBaseViewController.swift in Sources */,
+				AE0D465020F73FB500E6E8A7 /* DeepLinkAction.swift in Sources */,
 				DE624F80207245C500840B06 /* SelectAddressByQRViewModel.swift in Sources */,
 				AE14A6202070A560003A63FF /* CreateWalletViewModel.swift in Sources */,
 				AED6F497205527EF004A280F /* Container+Extension.swift in Sources */,
