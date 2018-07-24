@@ -17,6 +17,7 @@ extension WeiRequest {
     var baseURL: URL {
         return Environment.current.weiBaseURL
             .appendingPathComponent("api")
+            .appendingPathComponent("v2")
     }
     
     var method: HTTPMethod {
@@ -28,7 +29,10 @@ extension WeiRequest {
     }
     
     var headerFields: [String : String] {
-        return ["os": "\(userAgent.device)", "version": "\(userAgent.version)"]
+        return [
+            "os": "\(userAgent.device)",
+            "version": "\(userAgent.version)"
+        ]
     }
     
     func intercept(urlRequest: URLRequest) throws -> URLRequest {
