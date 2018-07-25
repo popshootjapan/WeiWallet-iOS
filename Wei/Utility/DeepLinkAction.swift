@@ -16,7 +16,7 @@ enum DeepLinkAction {
     
     init?(url: URL) throws {
         guard let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false),
-            let host = urlComponents.host else {
+            let host = urlComponents.host, host == "sdk" else {
                 return nil
         }
         
@@ -24,26 +24,24 @@ enum DeepLinkAction {
             return nil
         }
         
-        switch (host, urlComponents.path) {
-        case ("sdk", "/sign_personal_message"):
+        switch urlComponents.path {
+        case "/sign_personal_message":
             guard let message = urlComponents.queryItems?.first(where: { $0.name == "message"})?.value else {
                 return nil
             }
             self = .signMessage(message: message, callbackScheme: callBackScheme)
             
-        case ("sdk", "/sign_transaction"):
+        case "/sign_transaction":
             guard let hex = urlComponents.queryItems?.first(where: { $0.name == "raw_transaction" })?.value else {
                 return nil
             }
-            
             let rawTransaction = try JSONDecoder().decode(RawTransaction.self, from: Data(hex: hex))
             self = .signTransaction(rawTransaction: rawTransaction, callbackScheme: callBackScheme)
             
-        case ("sdk", "/broadcast_transaction"):
+        case "/broadcast_transaction":
             guard let hex = urlComponents.queryItems?.first(where: { $0.name == "raw_transaction" })?.value else {
                     return nil
             }
-            
             let rawTransaction = try JSONDecoder().decode(RawTransaction.self, from: Data(hex: hex))
             self = .broadcastTransaction(rawTransaction: rawTransaction, callbackScheme: callBackScheme)
             
