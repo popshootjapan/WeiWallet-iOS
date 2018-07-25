@@ -25,7 +25,7 @@ enum DeepLinkAction {
         }
         
         switch (host, urlComponents.path) {
-        case ("sdk", "/personal_sign"):
+        case ("sdk", "/sign_personal_message"):
             guard let message = urlComponents.queryItems?.first(where: { $0.name == "message"})?.value else {
                 return nil
             }
