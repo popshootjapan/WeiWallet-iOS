@@ -34,6 +34,10 @@ final class DeepLinkActionHandler: DeepLinkActionHandlerProtocol, Injectable {
         case .signTransaction(let rawTransaction, let callbackScheme):
             let signedTransaction = try walletManager.sign(rawTransaction: rawTransaction)
             print("deeplink action: Sign Transaction", signedTransaction, callbackScheme)
+            
+        case .broadcastTransaction(let rawTransaction, let callbackScheme):
+            let signedTransaction = try walletManager.sign(rawTransaction: rawTransaction)
+            print("deeplink action: Broadcast Transaction", signedTransaction, callbackScheme)
         }
     }
 }
