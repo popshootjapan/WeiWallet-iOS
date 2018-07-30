@@ -23,11 +23,11 @@
 "Transaction.Sent" = "送金済み";
 
 // MARK: - Send View Pager
-"Page.QRCode" = "QRコードを撮影";
+"Page.QRCode" = "QRを読み取る";
 "Page.CopyAddress" = "アドレスコピー";
 
 // MARK: - SelectAddressByQR
-"SelectAddress.Warning.Text" = "相手のQRコードを撮影するか、\nアドレスを入力してください";
+"SelectAddress.Warning.Text" = "相手のQRコードを読み取るか、\nアドレスを入力してください";
 
 // MARK: - Suggest Backup
 "SuggestBackup.Message" = "バックアップを取ることであなたの保有しているイーサリアムは復元することができます";
