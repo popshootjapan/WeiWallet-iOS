@@ -40,7 +40,7 @@ final class RegistrationService {
         struct Response: Decodable {}
         
         var path: String {
-            return "agrement_version"
+            return "agreement_version"
         }
         
         var method: HTTPMethod {

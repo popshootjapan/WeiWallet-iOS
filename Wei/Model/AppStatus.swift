@@ -14,6 +14,6 @@ struct AppStatus: Decodable {
     enum CodingKeys: String, CodingKey {
         case isUnderMaintenance = "maintenance_ongoing"
         case forceUpdates = "need_update"
-        case needsAgreeTerms = "need_terms_agrement"
+        case needsAgreeTerms = "need_terms_agreement"
     }
 }
