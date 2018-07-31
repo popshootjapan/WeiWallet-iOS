@@ -58,7 +58,7 @@
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">いつもWei Walletをご利用いただきありがとうございます。
-サービスの安定的な提供のため、2018年7月12日にWeiWalletの</string>
+サービスの安定的な提供のため、WeiWalletの</string>
                                         <attributes>
                                             <font key="NSFont" size="13" name="HiraginoSans-W3"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
