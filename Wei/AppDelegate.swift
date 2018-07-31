@@ -16,9 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    lazy private var deepLinkHandler = {
-        return Container.shared.resolve(DeepLinkActionHandlerProtocol.self)!
-    }()
+    private let deepLinkHandler = Container.shared.resolve(DeepLinkActionHandlerProtocol.self)!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         Fabric.with([Crashlytics.self])

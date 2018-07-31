@@ -32,14 +32,26 @@ final class WalletManager: WalletManagerProtocol, Injectable {
     )
     
     init(dependency: Dependency) {
-        let applicationStore = dependency
+        var applicationStore = dependency
         
-        guard let seed = applicationStore.seed else {
-            fatalError("Store seed before instantiating Wallet")
+        let seed: Data
+        if let storedSeed = applicationStore.seed {
+            seed = Data(hex: storedSeed)
+        } else {
+            let mnemonic = Mnemonic.create()
+            
+            do {
+                seed = try Mnemonic.createSeed(mnemonic: mnemonic)
+            } catch let error {
+                fatalError("failed to generate seed, error: \(error.localizedDescription)")
+            }
+            
+            applicationStore.mnemonic = mnemonic.joined(separator: " ")
+            applicationStore.seed = seed.toHexString()
         }
         
         do {
-            wallet = try Wallet(seed: Data(hex: seed), network: applicationStore.network, debugPrints: Environment.current.debugPrints)
+            wallet = try Wallet(seed: seed, network: applicationStore.network, debugPrints: Environment.current.debugPrints)
         } catch let error {
             fatalError("Failed to instantiate Wallet: \(error.localizedDescription)")
         }

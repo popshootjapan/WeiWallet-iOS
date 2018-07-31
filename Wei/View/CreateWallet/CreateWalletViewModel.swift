@@ -15,18 +15,20 @@ final class CreateWalletViewModel: InjectableViewModel {
     
     typealias Dependency = (
         ApplicationStoreProtocol,
+        WalletManagerProtocol,
         MnemonicManagerProtocol,
         RegistrationRepositoryProtocol,
         DeviceCheckerProtocol
     )
     
     private var applicationStore: ApplicationStoreProtocol
+    private let walletManager: WalletManagerProtocol
     private let mnemonicManager: MnemonicManagerProtocol
     private let registrationRepository: RegistrationRepositoryProtocol
     private let deviceChecker: DeviceCheckerProtocol
     
     init(dependency: Dependency) {
-        (applicationStore, mnemonicManager, registrationRepository, deviceChecker) = dependency
+        (applicationStore, walletManager, mnemonicManager, registrationRepository, deviceChecker) = dependency
     }
     
     struct Input {
@@ -49,35 +51,19 @@ final class CreateWalletViewModel: InjectableViewModel {
                 return Driver.empty()
             }
             
-            // When the wallet generation succeeds and api registration fails, there will be the case
-            // that user has a seed but not registered propery. so do not double-generate wallet seed
-            // to prevent it.
-            if weakSelf.applicationStore.seed == nil {
-                let mnemonic = weakSelf.mnemonicManager.create()
-                let seed: String
-                do {
-                    seed = try weakSelf.mnemonicManager.createSeed(mnemonic: mnemonic).toHexString()
-                } catch let error {
-                    return Driver.just(Action.failed(error))
-                }
-                weakSelf.applicationStore.mnemonic = mnemonic.joined(separator: " ")
-                weakSelf.applicationStore.seed = seed
-            }
-                
-            // NOTE: To register user's address, you need the instance of wallet,
-            // but because the seed is generated right before here, you can't inject
-            // the instance to the ViewModel.
-            let wallet = Container.shared.resolve(WalletManagerProtocol.self)!
-            
             let signUpCompleted: Observable<String>
-            if weakSelf.applicationStore.accessToken == nil {
+            if let accessToken = weakSelf.applicationStore.accessToken {
+                signUpCompleted = Observable.just(accessToken)
+            } else {
                 signUpCompleted = weakSelf.deviceChecker.deviceToken.flatMap { deviceToken -> Observable<String> in
                     return weakSelf.registrationRepository
-                        .signUp(address: wallet.address(), sign: try wallet.sign(message: "Welcome to Wei wallet!"), token: deviceToken)
+                        .signUp(
+                            address: weakSelf.walletManager.address(),
+                            sign: try weakSelf.walletManager.sign(message: "Welcome to Wei wallet!"),
+                            token: deviceToken
+                        )
                         .asObservable()
                 }
-            } else {
-                signUpCompleted = Observable.just(weakSelf.applicationStore.accessToken!)
             }
             
             let source = signUpCompleted
