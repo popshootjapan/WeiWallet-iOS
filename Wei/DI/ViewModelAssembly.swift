@@ -34,6 +34,7 @@ final class ViewModelAssembly: Assembly {
         container.register(CreateWalletViewModel.self) { resolver in
             return CreateWalletViewModel(dependency: (
                 resolver.resolve(ApplicationStoreProtocol.self)!,
+                resolver.resolve(WalletManagerProtocol.self)!,
                 resolver.resolve(MnemonicManagerProtocol.self)!,
                 resolver.resolve(RegistrationRepositoryProtocol.self)!,
                 resolver.resolve(DeviceCheckerProtocol.self)!
