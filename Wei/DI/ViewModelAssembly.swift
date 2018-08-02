@@ -192,7 +192,8 @@ final class ViewModelAssembly: Assembly {
         
         container.register(SignTransactionViewModel.self) { (resolver, rawTransaction: RawTransaction) in
             let viewModel = SignTransactionViewModel(dependency: (
-                resolver.resolve(WalletManagerProtocol.self)!
+                resolver.resolve(WalletManagerProtocol.self)!,
+                resolver.resolve(CurrencyManagerProtocol.self)!
             ))
             viewModel.rawTransaction = rawTransaction
             return viewModel

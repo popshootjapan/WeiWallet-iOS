@@ -15,24 +15,31 @@ final class SignTransactionViewModel: InjectableViewModel {
     var rawTransaction: RawTransaction!
     
     typealias Dependency = (
-        WalletManagerProtocol
+        WalletManagerProtocol,
+        CurrencyManagerProtocol
     )
     
     private let walletManager: WalletManagerProtocol
+    private let currencyManager: CurrencyManagerProtocol
     
     init(dependency: Dependency) {
-        (walletManager) = dependency
+        (walletManager, currencyManager) = dependency
     }
     
     struct Input {
-        
+        let cancelButtonDidTap: Driver<Void>
+        let doneButtonDidTap: Driver<Void>
     }
     
     struct Output {
-        
+        let dismissViewController: Driver<Void>
+        let currency: Driver<Currency>
     }
     
     func build(input: Input) -> Output {
-        return Output()
+        return Output(
+            dismissViewController: input.cancelButtonDidTap,
+            currency: currencyManager.currency
+        )
     }
 }
