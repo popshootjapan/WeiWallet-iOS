@@ -128,6 +128,9 @@
 		AE979E8220D8BD8F009B353F /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E8120D8BD8F009B353F /* Amount.swift */; };
 		AE979E8420D8D009009B353F /* Fiat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E8320D8D009009B353F /* Fiat.swift */; };
 		AE979E8620D8DE73009B353F /* AddressValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E8520D8DE73009B353F /* AddressValidator.swift */; };
+		AE9ABA132112D65500B8A063 /* SignTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ABA122112D65500B8A063 /* SignTransactionViewController.swift */; };
+		AE9ABA152112D65A00B8A063 /* SignTransactionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9ABA142112D65A00B8A063 /* SignTransactionViewController.storyboard */; };
+		AE9ABA182112DA7400B8A063 /* SignTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ABA172112DA7400B8A063 /* SignTransactionViewModel.swift */; };
 		AE9E863B20EF411A008354E9 /* NetworkSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E863A20EF411A008354E9 /* NetworkSettingViewController.swift */; };
 		AE9E863D20EF413D008354E9 /* NetworkSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9E863C20EF413D008354E9 /* NetworkSettingViewController.storyboard */; };
 		AE9E864020EF416B008354E9 /* NetworkSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E863F20EF416B008354E9 /* NetworkSettingViewModel.swift */; };
@@ -371,6 +374,9 @@
 		AE979E8120D8BD8F009B353F /* Amount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amount.swift; sourceTree = "<group>"; };
 		AE979E8320D8D009009B353F /* Fiat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fiat.swift; sourceTree = "<group>"; };
 		AE979E8520D8DE73009B353F /* AddressValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressValidator.swift; sourceTree = "<group>"; };
+		AE9ABA122112D65500B8A063 /* SignTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignTransactionViewController.swift; sourceTree = "<group>"; };
+		AE9ABA142112D65A00B8A063 /* SignTransactionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignTransactionViewController.storyboard; sourceTree = "<group>"; };
+		AE9ABA172112DA7400B8A063 /* SignTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignTransactionViewModel.swift; sourceTree = "<group>"; };
 		AE9E863A20EF411A008354E9 /* NetworkSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSettingViewController.swift; sourceTree = "<group>"; };
 		AE9E863C20EF413D008354E9 /* NetworkSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NetworkSettingViewController.storyboard; sourceTree = "<group>"; };
 		AE9E863F20EF416B008354E9 /* NetworkSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSettingViewModel.swift; sourceTree = "<group>"; };
@@ -828,6 +834,16 @@
 			path = Debug;
 			sourceTree = "<group>";
 		};
+		AE9ABA162112D65F00B8A063 /* SignTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				AE9ABA142112D65A00B8A063 /* SignTransactionViewController.storyboard */,
+				AE9ABA122112D65500B8A063 /* SignTransactionViewController.swift */,
+				AE9ABA172112DA7400B8A063 /* SignTransactionViewModel.swift */,
+			);
+			path = SignTransaction;
+			sourceTree = "<group>";
+		};
 		AE9E863E20EF4156008354E9 /* NetworkSetting */ = {
 			isa = PBXGroup;
 			children = (
@@ -936,6 +952,7 @@
 				AED49F5020E4CCCF00C2AF33 /* CurrencySetting */,
 				AE9E863E20EF4156008354E9 /* NetworkSetting */,
 				AEEFC9B220FDD56600D49F89 /* UpdateServiceTerms */,
+				AE9ABA162112D65F00B8A063 /* SignTransaction */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1201,6 +1218,7 @@
 				AED49F5520E4D67B00C2AF33 /* CurrencySettingViewController.storyboard in Resources */,
 				AE6D4D0F20E225D5007CF3C5 /* SettingViewController.storyboard in Resources */,
 				AE6D4CB420E20492007CF3C5 /* CreateWalletViewController.storyboard in Resources */,
+				AE9ABA152112D65A00B8A063 /* SignTransactionViewController.storyboard in Resources */,
 				DE9272C8208AD55000E03AB9 /* TutorialTopView.xib in Resources */,
 				AE69C84E20E0E25600EB1293 /* MyWalletViewController.storyboard in Resources */,
 				AED6F44C205514BB004A280F /* Assets.xcassets in Resources */,
@@ -1454,6 +1472,7 @@
 				AE979E8620D8DE73009B353F /* AddressValidator.swift in Sources */,
 				1AB430BB2096FCC800109A06 /* PageControl.swift in Sources */,
 				AE14A6152070A1E3003A63FF /* CreateWalletViewController.swift in Sources */,
+				AE9ABA132112D65500B8A063 /* SignTransactionViewController.swift in Sources */,
 				AE9E864220EF43FF008354E9 /* NetworkSettingViewCell.swift in Sources */,
 				DEC5772B2074D79200DC3923 /* ReceiveViewModel.swift in Sources */,
 				DE9133C620AEFE78003CDE67 /* MnemonicWord.swift in Sources */,
@@ -1466,6 +1485,7 @@
 				AE171B042083436400212494 /* TransactionHistoryViewCell.swift in Sources */,
 				AEFE581220C7C07B00CE47F8 /* NonceManager.swift in Sources */,
 				DE0231812091712700508B5B /* MaintenanceViewController.swift in Sources */,
+				AE9ABA182112DA7400B8A063 /* SignTransactionViewModel.swift in Sources */,
 				DE3A38392084969A00AB44B0 /* BalanceAccessoryView.swift in Sources */,
 				AEC36ADD20C5851E00FE4737 /* LocalTransactionRepository.swift in Sources */,
 				AEC16E8120FF0B63001FC632 /* R.generated.swift in Sources */,
