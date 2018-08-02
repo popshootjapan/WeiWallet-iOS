@@ -32,7 +32,6 @@ final class DeepLinkActionHandler: DeepLinkActionHandlerProtocol, Injectable {
             print("deeplink action: Sign", signedMessage, callbackScheme)
             
         case .signTransaction(let rawTransaction, let callbackScheme):
-            print(callbackScheme)
             presentSignTransactionViewController(rawTransaction: rawTransaction, scheme: callbackScheme)
             
         case .broadcastTransaction(let rawTransaction, let callbackScheme):
