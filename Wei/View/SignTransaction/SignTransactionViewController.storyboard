@@ -50,7 +50,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Itb-DI-j0E">
-                                        <rect key="frame" x="111" y="47" width="153" height="57.5"/>
+                                        <rect key="frame" x="118.5" y="47" width="138" height="57.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSm-wF-PbN">
                                                 <rect key="frame" x="0.0" y="0.0" width="119" height="57.5"/>
@@ -58,8 +58,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahn-7e-GwA">
-                                                <rect key="frame" x="123" y="21.5" width="30" height="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahn-7e-GwA">
+                                                <rect key="frame" x="123" y="21.5" width="15" height="15"/>
                                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -212,7 +212,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="vWO-2e-2sg">
-                                        <rect key="frame" x="16" y="39" width="84" height="29"/>
+                                        <rect key="frame" x="16" y="39" width="69" height="29"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1001" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gW6-Ae-6WA">
                                                 <rect key="frame" x="0.0" y="0.0" width="52" height="29"/>
@@ -220,8 +220,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vap-N8-qZk">
-                                                <rect key="frame" x="54" y="0.0" width="30" height="29"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vap-N8-qZk">
+                                                <rect key="frame" x="54" y="0.0" width="15" height="29"/>
                                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -321,6 +321,23 @@
                         <barButtonItem key="leftBarButtonItem" title="キャンセル" id="paG-kL-0eJ"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="paG-kL-0eJ" id="2ia-bX-yzM"/>
+                        <outlet property="doneButton" destination="3Cs-57-hg5" id="DEq-XM-j2k"/>
+                        <outlet property="etherAmountLabel" destination="J3j-Jt-7uU" id="pgK-vB-ucY"/>
+                        <outlet property="fiatEtherLabel" destination="98h-Yr-lEi" id="AXM-gO-9rO"/>
+                        <outlet property="toAddressLabel" destination="l7J-73-efD" id="Arl-yr-p26"/>
+                        <outlet property="totalFiatAmountLabel" destination="gW6-Ae-6WA" id="iUv-3n-cNt"/>
+                        <outletCollection property="fiatAmountLabels" destination="jSm-wF-PbN" collectionClass="NSMutableArray" id="qmZ-8Q-cfk"/>
+                        <outletCollection property="fiatAmountLabels" destination="Ks0-wJ-isa" collectionClass="NSMutableArray" id="N6g-BB-aUk"/>
+                        <outletCollection property="fiatFeeLabels" destination="Ust-gN-q97" collectionClass="NSMutableArray" id="AVC-CO-HWu"/>
+                        <outletCollection property="fiatFeeLabels" destination="vHP-Qz-BVS" collectionClass="NSMutableArray" id="M3C-2X-14J"/>
+                        <outletCollection property="fiatCurrencyLabels" destination="ahn-7e-GwA" collectionClass="NSMutableArray" id="FLA-Id-QWk"/>
+                        <outletCollection property="fiatCurrencyLabels" destination="LwF-MU-Rsg" collectionClass="NSMutableArray" id="9Pd-uY-Tuf"/>
+                        <outletCollection property="fiatCurrencyLabels" destination="Vap-N8-qZk" collectionClass="NSMutableArray" id="bRh-2S-2N4"/>
+                        <outletCollection property="fiatCurrencyLabels" destination="tdm-BK-HOt" collectionClass="NSMutableArray" id="Jhr-zb-BRL"/>
+                        <outletCollection property="fiatCurrencyLabels" destination="1Qy-OE-k3L" collectionClass="NSMutableArray" id="gju-Pf-grO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="heo-ar-pNX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
