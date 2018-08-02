@@ -34,12 +34,20 @@ final class SignTransactionViewModel: InjectableViewModel {
     struct Output {
         let dismissViewController: Driver<Void>
         let currency: Driver<Currency>
+        let etherAmount: Driver<Ether>
     }
     
     func build(input: Input) -> Output {
+        guard let rawTransaction = self.rawTransaction else {
+            fatalError("RawTransaction is necessary")
+        }
+        
+        let etherAmount = Driver.just(try! Converter.toEther(wei: rawTransaction.value))
+        
         return Output(
             dismissViewController: input.cancelButtonDidTap,
-            currency: currencyManager.currency
+            currency: currencyManager.currency,
+            etherAmount: etherAmount
         )
     }
 }

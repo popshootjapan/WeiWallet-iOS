@@ -51,6 +51,12 @@ final class SignTransactionViewController: UIViewController {
                 self?.updateCurrency(currency)
             })
             .disposed(by: disposeBag)
+        
+        output
+            .etherAmount
+            .map { $0.string }
+            .drive(etherAmountLabel.rx.text)
+            .disposed(by: disposeBag)
     }
     
     private func updateCurrency(_ currency: Currency) {
