@@ -7,6 +7,7 @@
 //
 
 import Swinject
+import EthereumKit
 import UIKit
 
 extension RootViewController {
@@ -144,5 +145,12 @@ extension SuggestBackupViewController {
 extension UpdateServiceTermsViewController {
     static func make() -> UpdateServiceTermsViewController {
         return Container.shared.resolve(UpdateServiceTermsViewController.self)!
+    }
+}
+
+extension SignTransactionViewController {
+    static func make(rawTransaction: RawTransaction,
+                     completionHandler: @escaping ((String) -> Void)) -> SignTransactionViewController {
+        return Container.shared.resolve(SignTransactionViewController.self, arguments: rawTransaction, completionHandler)!
     }
 }

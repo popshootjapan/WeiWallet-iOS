@@ -8,6 +8,7 @@
 
 import UIKit
 import Swinject
+import EthereumKit
 
 final class ViewControllerAssembly: Assembly {
     func assemble(container: Container) {
@@ -190,6 +191,17 @@ final class ViewControllerAssembly: Assembly {
         container.register(UpdateServiceTermsViewController.self) { resolver in
             let viewController = UIStoryboard.instantiateViewController(of: UpdateServiceTermsViewController.self)
             viewController.viewModel = resolver.resolve(UpdateServiceTermsViewModel.self)!
+            return viewController
+        }
+        
+        // MARK: - SignTransactionViewController
+        
+        container.register(SignTransactionViewController.self) {
+            (resolver, rawTransaction: RawTransaction, completionHandler: @escaping ((String) -> Void)) in
+            
+            let viewController = UIStoryboard.instantiateViewController(of: SignTransactionViewController.self)
+            viewController.viewModel = resolver.resolve(SignTransactionViewModel.self, argument: rawTransaction)!
+            viewController.completionHandler = completionHandler
             return viewController
         }
     }

@@ -278,7 +278,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 23 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 24 storyboards.
   struct storyboard {
     /// Storyboard `BackupViewController`.
     static let backupViewController = _R.storyboard.backupViewController()
@@ -316,6 +316,8 @@ struct R: Rswift.Validatable {
     static let sendConfirmationViewController = _R.storyboard.sendConfirmationViewController()
     /// Storyboard `SettingViewController`.
     static let settingViewController = _R.storyboard.settingViewController()
+    /// Storyboard `SignTransactionViewController`.
+    static let signTransactionViewController = _R.storyboard.signTransactionViewController()
     /// Storyboard `SuggestBackupViewController`.
     static let suggestBackupViewController = _R.storyboard.suggestBackupViewController()
     /// Storyboard `SwipableViewController`.
@@ -415,6 +417,11 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "SettingViewController", bundle: ...)`
     static func settingViewController(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.settingViewController)
+    }
+    
+    /// `UIStoryboard(name: "SignTransactionViewController", bundle: ...)`
+    static func signTransactionViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.signTransactionViewController)
     }
     
     /// `UIStoryboard(name: "SuggestBackupViewController", bundle: ...)`
@@ -2140,8 +2147,8 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       try myWalletViewController.validate()
-      try maintenanceViewController.validate()
       try createWalletViewController.validate()
+      try maintenanceViewController.validate()
       try suggestBackupViewController.validate()
       try launchScreen.validate()
       try updateServiceTermsViewController.validate()
@@ -2338,6 +2345,15 @@ struct _R: Rswift.Validatable {
       
       let bundle = R.hostingBundle
       let name = "SettingViewController"
+      
+      fileprivate init() {}
+    }
+    
+    struct signTransactionViewController: Rswift.StoryboardResourceWithInitialControllerType {
+      typealias InitialController = SignTransactionViewController
+      
+      let bundle = R.hostingBundle
+      let name = "SignTransactionViewController"
       
       fileprivate init() {}
     }
