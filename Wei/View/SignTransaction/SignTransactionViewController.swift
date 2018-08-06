@@ -102,6 +102,13 @@ final class SignTransactionViewController: UIViewController {
                 self?.showAlertController(withError: error)
             })
             .disposed(by: disposeBag)
+        
+        output
+            .signature
+            .drive(onNext: { [weak self] signature in
+                self?.completionHandler(signature)
+            })
+            .disposed(by: disposeBag)
     }
     
     private func updateCurrency(_ currency: Currency) {

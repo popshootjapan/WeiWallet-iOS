@@ -44,6 +44,7 @@ final class SignTransactionViewModel: InjectableViewModel {
         let totalPrice: Driver<String>
         let isExecuting: Driver<Bool>
         let error: Driver<Error>
+        let signature: Driver<String>
     }
     
     func build(input: Input) -> Output {
@@ -88,6 +89,13 @@ final class SignTransactionViewModel: InjectableViewModel {
         
         let error = Driver.merge(fiatAmountAction.error, fiatFeeAction.error, totalPriceAction.error)
         
+        let signature = input.doneButtonDidTap.flatMap { [weak self] _ -> Driver<String> in
+            guard let weakSelf = self else {
+                return Driver.empty()
+            }
+            return Driver.just(try! weakSelf.walletManager.sign(rawTransaction: rawTransaction))
+        }
+        
         return Output(
             dismissViewController: input.cancelButtonDidTap,
             toAddress: Driver.just(rawTransaction.to.string),
@@ -98,7 +106,8 @@ final class SignTransactionViewModel: InjectableViewModel {
             fiatFee: fiatFeeAction.elements.map { $0.price },
             totalPrice: totalPriceAction.elements.map { $0.price },
             isExecuting: isExecuting,
-            error: error
+            error: error,
+            signature: signature
         )
     }
 }
