@@ -41,6 +41,12 @@ final class DeepLinkActionHandler: DeepLinkActionHandlerProtocol, Injectable {
     }
     
     private func presentSignTransactionViewController(rawTransaction: RawTransaction, scheme: String) {
+        if AppDelegate.rootViewController.presentedViewController != nil {
+            AppDelegate.rootViewController.dismiss(animated: true) { [weak self] in
+                self?.presentSignTransactionViewController(rawTransaction: rawTransaction, scheme: scheme)
+            }
+        }
+        
         let viewController = SignTransactionViewController.make(rawTransaction: rawTransaction) { [weak self] signature in
             guard let url = self?.buildURL(
                 scheme: scheme,

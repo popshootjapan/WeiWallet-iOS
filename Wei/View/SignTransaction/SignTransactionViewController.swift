@@ -57,6 +57,32 @@ final class SignTransactionViewController: UIViewController {
             .map { $0.string }
             .drive(etherAmountLabel.rx.text)
             .disposed(by: disposeBag)
+        
+        output
+            .toAddress
+            .drive(toAddressLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        output
+            .isExecuting
+            .drive(rx.isHUDAnimating)
+            .disposed(by: disposeBag)
+        
+        output
+            .fiatAmount
+            .drive(onNext: { [weak self] fiatAmount in
+                self?.fiatAmountLabels.forEach {
+                    $0.text = fiatAmount
+                }
+            })
+            .disposed(by: disposeBag)
+        
+        output
+            .error
+            .drive(onNext: { [weak self] error in
+                self?.showAlertController(withError: error)
+            })
+            .disposed(by: disposeBag)
     }
     
     private func updateCurrency(_ currency: Currency) {

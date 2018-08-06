@@ -94,8 +94,8 @@
                                         <color key="textColor" red="0.44313725490196076" green="0.46274509803921571" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0x123456789123456789" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7J-73-efD">
-                                        <rect key="frame" x="16" y="33" width="189.5" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0x123456789123456789" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="l7J-73-efD">
+                                        <rect key="frame" x="16" y="33" width="343" height="18"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -103,6 +103,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="l7J-73-efD" secondAttribute="trailing" constant="16" id="0aD-J3-VrZ"/>
                                     <constraint firstItem="l7J-73-efD" firstAttribute="leading" secondItem="fs7-lV-vLF" secondAttribute="leading" constant="16" id="3gq-01-mqk"/>
                                     <constraint firstAttribute="trailing" secondItem="8L3-Gs-D7z" secondAttribute="trailing" id="P6c-zU-uCz"/>
                                     <constraint firstItem="8L3-Gs-D7z" firstAttribute="top" secondItem="l7J-73-efD" secondAttribute="bottom" constant="16" id="YdD-Vd-ah5"/>
