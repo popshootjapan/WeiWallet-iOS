@@ -20,7 +20,7 @@ final class SignTransactionViewController: UIViewController {
     @IBOutlet private var fiatCurrencyLabels: [UILabel]!
     @IBOutlet private weak var etherAmountLabel: UILabel!
     @IBOutlet private weak var toAddressLabel: UILabel!
-    @IBOutlet private weak var fiatEtherLabel: UILabel!
+    @IBOutlet private weak var etherFeeLabel: UILabel!
     @IBOutlet private weak var totalFiatAmountLabel: UILabel!
     @IBOutlet private weak var cancelButton: UIBarButtonItem!
     @IBOutlet private weak var doneButton: UIButton!
@@ -66,6 +66,25 @@ final class SignTransactionViewController: UIViewController {
         output
             .isExecuting
             .drive(rx.isHUDAnimating)
+            .disposed(by: disposeBag)
+        
+        output
+            .etherFee
+            .drive(etherFeeLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        output
+            .totalPrice
+            .drive(totalFiatAmountLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        output
+            .fiatFee
+            .drive(onNext: { [weak self] fiatFee in
+                self?.fiatFeeLabels.forEach {
+                    $0.text = fiatFee
+                }
+            })
             .disposed(by: disposeBag)
         
         output

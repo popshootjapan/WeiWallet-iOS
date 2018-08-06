@@ -326,7 +326,7 @@
                         <outlet property="cancelButton" destination="paG-kL-0eJ" id="2ia-bX-yzM"/>
                         <outlet property="doneButton" destination="3Cs-57-hg5" id="DEq-XM-j2k"/>
                         <outlet property="etherAmountLabel" destination="J3j-Jt-7uU" id="pgK-vB-ucY"/>
-                        <outlet property="fiatEtherLabel" destination="98h-Yr-lEi" id="AXM-gO-9rO"/>
+                        <outlet property="etherFeeLabel" destination="98h-Yr-lEi" id="Igy-TE-sah"/>
                         <outlet property="toAddressLabel" destination="l7J-73-efD" id="Arl-yr-p26"/>
                         <outlet property="totalFiatAmountLabel" destination="gW6-Ae-6WA" id="iUv-3n-cNt"/>
                         <outletCollection property="fiatAmountLabels" destination="jSm-wF-PbN" collectionClass="NSMutableArray" id="qmZ-8Q-cfk"/>

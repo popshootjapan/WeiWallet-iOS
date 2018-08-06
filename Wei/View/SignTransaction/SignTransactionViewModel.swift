@@ -39,6 +39,9 @@ final class SignTransactionViewModel: InjectableViewModel {
         let currency: Driver<Currency>
         let etherAmount: Driver<Ether>
         let fiatAmount: Driver<String>
+        let etherFee: Driver<String>
+        let fiatFee: Driver<String>
+        let totalPrice: Driver<String>
         let isExecuting: Driver<Bool>
         let error: Driver<Error>
     }
@@ -48,9 +51,11 @@ final class SignTransactionViewModel: InjectableViewModel {
             fatalError("RawTransaction is necessary")
         }
         
+        let txFeeInWei = Wei(Gas.safeLow.gasLimit * Gas.safeLow.gasPrice)
         let currency = currencyManager.currency
+        
         let etherAmount = Driver.just(try! Converter.toEther(wei: rawTransaction.value))
-        let fiatAmount = currency.flatMap { [weak self] currency -> Driver<Action<Price>> in
+        let fiatAmountAction = currency.flatMap { [weak self] currency -> Driver<Action<Price>> in
             guard let weakSelf = self else {
                 return Driver.empty()
             }
@@ -58,18 +63,40 @@ final class SignTransactionViewModel: InjectableViewModel {
             return Action.makeDriver(source)
         }
         
-        let (price, isExecuting, error) = (
-            fiatAmount.elements,
-            fiatAmount.isExecuting,
-            fiatAmount.error
-        )
+        let etherFee = Driver.just(try! Converter.toEther(wei: txFeeInWei))
+            .map { $0.string }
+        
+        let fiatFeeAction = Driver.combineLatest(Driver.just(txFeeInWei), currency).flatMap { [weak self] wei, currency -> Driver<Action<Price>> in
+            guard let weakSelf = self else {
+                return Driver.empty()
+            }
+            let source = weakSelf.rateRepository.convertToFiat(from: wei.asString(withBase: 10), to: currency)
+            return Action.makeDriver(source)
+        }
+        
+        let totalPriceAction = Driver.combineLatest(Driver.just(txFeeInWei + rawTransaction.value), currency)
+            .flatMap { [weak self] wei, currency -> Driver<Action<Price>> in
+                guard let weakSelf = self else {
+                    return Driver.empty()
+                }
+                let source = weakSelf.rateRepository.convertToFiat(from: wei.asString(withBase: 10), to: currency)
+                return Action.makeDriver(source)
+            }
+        
+        let isExecuting = Driver.merge(fiatAmountAction.isExecuting, fiatFeeAction.isExecuting, totalPriceAction.isExecuting)
+            .distinctUntilChanged()
+        
+        let error = Driver.merge(fiatAmountAction.error, fiatFeeAction.error, totalPriceAction.error)
         
         return Output(
             dismissViewController: input.cancelButtonDidTap,
             toAddress: Driver.just(rawTransaction.to.string),
             currency: currency,
             etherAmount: etherAmount,
-            fiatAmount: price.map { $0.price },
+            fiatAmount: fiatAmountAction.elements.map { $0.price },
+            etherFee: etherFee,
+            fiatFee: fiatFeeAction.elements.map { $0.price },
+            totalPrice: totalPriceAction.elements.map { $0.price },
             isExecuting: isExecuting,
             error: error
         )
