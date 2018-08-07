@@ -46,11 +46,11 @@ final class DeepLinkActionHandler: DeepLinkActionHandlerProtocol, Injectable {
             }
         }
         
-        let viewController = SignTransactionViewController.make(rawTransaction: rawTransaction, actionKind: actionKind) { [weak self] signature in
+        let viewController = SignTransactionViewController.make(rawTransaction: rawTransaction, actionKind: actionKind) { [weak self] string in
             guard let url = self?.buildURL(
                 scheme: scheme,
                 path: actionKind == .sign ? "/sign_transaction" : "/broadcast_transaction",
-                queryItems: URLQueryItem(name: "signature", value: signature)) else {
+                queryItems: URLQueryItem(name: actionKind == .sign ? "signature" : "txid", value: string)) else {
                     fatalError()
             }
             UIApplication.shared.open(url)
