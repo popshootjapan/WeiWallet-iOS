@@ -149,8 +149,8 @@ extension UpdateServiceTermsViewController {
 }
 
 extension SignTransactionViewController {
-    static func make(rawTransaction: RawTransaction,
+    static func make(rawTransaction: RawTransaction, actionKind: SignTransactionViewModel.ActionKind,
                      completionHandler: @escaping ((String) -> Void)) -> SignTransactionViewController {
-        return Container.shared.resolve(SignTransactionViewController.self, arguments: rawTransaction, completionHandler)!
+        return Container.shared.resolve(SignTransactionViewController.self, arguments: rawTransaction, actionKind, completionHandler)!
     }
 }

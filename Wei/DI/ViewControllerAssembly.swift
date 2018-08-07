@@ -197,10 +197,10 @@ final class ViewControllerAssembly: Assembly {
         // MARK: - SignTransactionViewController
         
         container.register(SignTransactionViewController.self) {
-            (resolver, rawTransaction: RawTransaction, completionHandler: @escaping ((String) -> Void)) in
+            (resolver, rawTransaction: RawTransaction, actionKind: SignTransactionViewModel.ActionKind, completionHandler: @escaping ((String) -> Void)) in
             
             let viewController = UIStoryboard.instantiateViewController(of: SignTransactionViewController.self)
-            viewController.viewModel = resolver.resolve(SignTransactionViewModel.self, argument: rawTransaction)!
+            viewController.viewModel = resolver.resolve(SignTransactionViewModel.self, arguments: rawTransaction, actionKind)!
             viewController.completionHandler = completionHandler
             return viewController
         }

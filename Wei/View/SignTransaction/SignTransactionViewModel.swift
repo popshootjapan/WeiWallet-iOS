@@ -12,20 +12,28 @@ import EthereumKit
 
 final class SignTransactionViewModel: InjectableViewModel {
     
+    enum ActionKind {
+        case sign
+        case broadcast
+    }
+    
+    var actionKind: ActionKind!
     var rawTransaction: RawTransaction!
     
     typealias Dependency = (
         WalletManagerProtocol,
         CurrencyManagerProtocol,
-        RateRepositoryProtocol
+        RateRepositoryProtocol,
+        GethRepositoryProtocol
     )
     
     private let walletManager: WalletManagerProtocol
     private let currencyManager: CurrencyManagerProtocol
     private let rateRepository: RateRepositoryProtocol
+    private let gethRepository: GethRepositoryProtocol
     
     init(dependency: Dependency) {
-        (walletManager, currencyManager, rateRepository) = dependency
+        (walletManager, currencyManager, rateRepository, gethRepository) = dependency
     }
     
     struct Input {
@@ -44,11 +52,11 @@ final class SignTransactionViewModel: InjectableViewModel {
         let totalPrice: Driver<String>
         let isExecuting: Driver<Bool>
         let error: Driver<Error>
-        let signature: Driver<String>
+        let completed: Driver<String>
     }
     
     func build(input: Input) -> Output {
-        guard let rawTransaction = self.rawTransaction else {
+        guard let rawTransaction = self.rawTransaction, let actionKind = self.actionKind else {
             fatalError("RawTransaction is necessary")
         }
         
@@ -84,17 +92,37 @@ final class SignTransactionViewModel: InjectableViewModel {
                 return Action.makeDriver(source)
             }
         
-        let isExecuting = Driver.merge(fiatAmountAction.isExecuting, fiatFeeAction.isExecuting, totalPriceAction.isExecuting)
-            .distinctUntilChanged()
-        
-        let error = Driver.merge(fiatAmountAction.error, fiatFeeAction.error, totalPriceAction.error)
-        
-        let signature = input.doneButtonDidTap.flatMap { [weak self] _ -> Driver<String> in
-            guard let weakSelf = self else {
-                return Driver.empty()
+        let completeAction = input.doneButtonDidTap
+            .flatMap { [weak self] _ -> Driver<String> in
+                guard let weakSelf = self else {
+                    return Driver.empty()
+                }
+                return Driver.just(try! weakSelf.walletManager.sign(rawTransaction: rawTransaction))
             }
-            return Driver.just(try! weakSelf.walletManager.sign(rawTransaction: rawTransaction))
-        }
+            .flatMap { [weak self] signature -> Driver<Action<String>> in
+                guard let weakSelf = self, actionKind == .broadcast else {
+                    return Driver.just(Action.succeeded(signature))
+                }
+                
+                let source = weakSelf.gethRepository.sendRawTransaction(rawTransaction: signature)
+                    .map { $0.id }
+                
+                return Action.makeDriver(source)
+            }
+        
+        let isExecuting = Driver.merge(
+            fiatAmountAction.isExecuting,
+            fiatFeeAction.isExecuting,
+            totalPriceAction.isExecuting,
+            completeAction.isExecuting
+        )
+        
+        let error = Driver.merge(
+            fiatAmountAction.error,
+            fiatFeeAction.error,
+            totalPriceAction.error,
+            completeAction.error
+        )
         
         return Output(
             dismissViewController: input.cancelButtonDidTap,
@@ -107,7 +135,7 @@ final class SignTransactionViewModel: InjectableViewModel {
             totalPrice: totalPriceAction.elements.map { $0.price },
             isExecuting: isExecuting,
             error: error,
-            signature: signature
+            completed: completeAction.elements
         )
     }
 }

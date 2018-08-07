@@ -190,13 +190,15 @@ final class ViewModelAssembly: Assembly {
         
         // MARK: - SignTransactionViewModel
         
-        container.register(SignTransactionViewModel.self) { (resolver, rawTransaction: RawTransaction) in
+        container.register(SignTransactionViewModel.self) { (resolver, rawTransaction: RawTransaction, actionKind: SignTransactionViewModel.ActionKind) in
             let viewModel = SignTransactionViewModel(dependency: (
                 resolver.resolve(WalletManagerProtocol.self)!,
                 resolver.resolve(CurrencyManagerProtocol.self)!,
-                resolver.resolve(RateRepositoryProtocol.self)!
+                resolver.resolve(RateRepositoryProtocol.self)!,
+                resolver.resolve(GethRepositoryProtocol.self)!
             ))
             viewModel.rawTransaction = rawTransaction
+            viewModel.actionKind = actionKind
             return viewModel
         }
     }

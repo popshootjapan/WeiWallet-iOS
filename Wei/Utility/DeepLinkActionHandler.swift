@@ -32,25 +32,24 @@ final class DeepLinkActionHandler: DeepLinkActionHandlerProtocol, Injectable {
             print("deeplink action: Sign", signedMessage, callbackScheme)
             
         case .signTransaction(let rawTransaction, let callbackScheme):
-            presentSignTransactionViewController(rawTransaction: rawTransaction, scheme: callbackScheme)
+            presentSignTransactionViewController(rawTransaction: rawTransaction, actionKind: .sign, scheme: callbackScheme)
             
         case .broadcastTransaction(let rawTransaction, let callbackScheme):
-            let signedTransaction = try walletManager.sign(rawTransaction: rawTransaction)
-            print("deeplink action: Broadcast Transaction", signedTransaction, callbackScheme)
+            presentSignTransactionViewController(rawTransaction: rawTransaction, actionKind: .broadcast, scheme: callbackScheme)
         }
     }
     
-    private func presentSignTransactionViewController(rawTransaction: RawTransaction, scheme: String) {
+    private func presentSignTransactionViewController(rawTransaction: RawTransaction, actionKind: SignTransactionViewModel.ActionKind, scheme: String) {
         if AppDelegate.rootViewController.presentedViewController != nil {
             AppDelegate.rootViewController.dismiss(animated: true) { [weak self] in
-                self?.presentSignTransactionViewController(rawTransaction: rawTransaction, scheme: scheme)
+                self?.presentSignTransactionViewController(rawTransaction: rawTransaction, actionKind: actionKind, scheme: scheme)
             }
         }
         
-        let viewController = SignTransactionViewController.make(rawTransaction: rawTransaction) { [weak self] signature in
+        let viewController = SignTransactionViewController.make(rawTransaction: rawTransaction, actionKind: actionKind) { [weak self] signature in
             guard let url = self?.buildURL(
                 scheme: scheme,
-                path: "/sign_transaction",
+                path: actionKind == .sign ? "/sign_transaction" : "/broadcast_transaction",
                 queryItems: URLQueryItem(name: "signature", value: signature)) else {
                     fatalError()
             }

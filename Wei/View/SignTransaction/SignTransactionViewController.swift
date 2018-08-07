@@ -104,9 +104,9 @@ final class SignTransactionViewController: UIViewController {
             .disposed(by: disposeBag)
         
         output
-            .signature
-            .drive(onNext: { [weak self] signature in
-                self?.completionHandler(signature)
+            .completed
+            .drive(onNext: { [weak self] string in
+                self?.completionHandler(string)
             })
             .disposed(by: disposeBag)
     }
