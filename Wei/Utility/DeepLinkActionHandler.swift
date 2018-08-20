@@ -10,7 +10,7 @@ import UIKit
 import EthereumKit
 
 protocol DeepLinkActionHandlerProtocol {
-    func execute(action: DeepLinkAction) throws
+    func execute(action: DeepLinkAction)
 }
 
 final class DeepLinkActionHandler: DeepLinkActionHandlerProtocol, Injectable {
@@ -25,11 +25,10 @@ final class DeepLinkActionHandler: DeepLinkActionHandlerProtocol, Injectable {
         walletManager = dependency
     }
     
-    func execute(action: DeepLinkAction) throws {
+    func execute(action: DeepLinkAction) {
         switch action {
         case .signMessage(let message, let callbackScheme):
-            let signedMessage = try walletManager.sign(hex: message)
-            print("deeplink action: Sign", signedMessage, callbackScheme)
+            presentSignMessageAlertController(message: message, scheme: callbackScheme)
             
         case .signTransaction(let rawTransaction, let callbackScheme):
             presentSignTransactionViewController(rawTransaction: rawTransaction, actionKind: .sign, scheme: callbackScheme)
@@ -67,7 +66,39 @@ final class DeepLinkActionHandler: DeepLinkActionHandlerProtocol, Injectable {
         AppDelegate.rootViewController.present(navigationController, animated: true)
     }
     
-    func buildURL(scheme: String, path: String, queryItems: URLQueryItem...) -> URL? {
+    private func presentSignMessageAlertController(message: String, scheme: String) {
+        if AppDelegate.rootViewController.presentedViewController != nil {
+            AppDelegate.rootViewController.dismiss(animated: true) { [weak self] in
+                self?.presentSignMessageAlertController(message: message, scheme: scheme)
+            }
+        }
+        
+        let signedMessage: String?
+        do {
+            signedMessage = try walletManager.sign(hex: message)
+        } catch let error {
+            fatalError("Failed to sign a message: \(error.localizedDescription)")
+        }
+        
+        guard let signature = signedMessage else {
+            fatalError()
+        }
+        
+        // TODO:
+        let alertController = UIAlertController(title: "Signing a message", message: "", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default) { [weak self] _ in
+            guard let url = self?.buildURL(scheme: scheme, path: "/sign_personal_message", queryItems: URLQueryItem(name: "signature", value: signature)) else {
+                fatalError("Failed to build url for SDK")
+            }
+            print(url)
+            UIApplication.shared.open(url)
+        })
+        
+        alertController.addAction(UIAlertAction(title: R.string.localizable.commonCancel(), style: .cancel))
+        AppDelegate.rootViewController.present(alertController, animated: true)
+    }
+    
+    private func buildURL(scheme: String, path: String, queryItems: URLQueryItem...) -> URL? {
         var urlComponents: URLComponents = URLComponents()
         urlComponents.scheme = scheme
         urlComponents.host = "sdk"
