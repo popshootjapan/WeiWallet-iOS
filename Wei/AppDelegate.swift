@@ -39,8 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             guard let action = try DeepLinkAction(url: url) else {
                 return
             }
-            
-            try deepLinkHandler.execute(action: action)
+            deepLinkHandler.execute(action: action)
         } catch let error {
             print(error)
         }
