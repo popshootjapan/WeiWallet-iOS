@@ -47,11 +47,19 @@ final class DeepLinkActionHandler: DeepLinkActionHandlerProtocol, Injectable {
         }
         
         let viewController = SignTransactionViewController.make(rawTransaction: rawTransaction, actionKind: actionKind) { [weak self] string in
-            guard let url = self?.buildURL(
-                scheme: scheme,
-                path: actionKind == .sign ? "/sign_transaction" : "/broadcast_transaction",
-                queryItems: URLQueryItem(name: actionKind == .sign ? "signature" : "txid", value: string)) else {
-                    fatalError()
+            let url: URL
+            switch actionKind {
+            case .sign:
+                guard let builtURL = self?.buildURL(scheme: scheme, path: "/sign_transaction", queryItems: URLQueryItem(name: "signature", value: string)) else {
+                    fatalError("Failed to build url for SDK")
+                }
+                url = builtURL
+                
+            case .broadcast:
+                guard let builtURL = self?.buildURL(scheme: scheme, path: "/broadcast_transaction", queryItems: URLQueryItem(name: "txid", value: string)) else {
+                    fatalError("Failed to build url for SDK")
+                }
+                url = builtURL
             }
             UIApplication.shared.open(url)
         }
