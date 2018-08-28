@@ -21,3 +21,16 @@ extension UIStoryboard {
         return viewController
     }
 }
+
+extension UINib {
+    static func instantiateView<View: UIView>(of type: View.Type, withName name: String = String(describing: View.self)) -> View {
+        let bundle = Bundle(for: View.self)
+        let nib = UINib(nibName: name, bundle: bundle)
+        
+        guard let view = nib.instantiate(withOwner: nil, options: nil).first as? View else {
+            fatalError("Could not find the specified view in the nib.")
+        }
+        
+        return view
+    }
+}

@@ -60,7 +60,10 @@ private extension ReceiveViewController {
         
         output
             .qrCodeImage
-            .drive(qrImageView.rx.image)
+            .drive(onNext: { [weak self] image in
+                let view = QRImageView.instantiate(with: image)
+                self?.qrImageView.image = view.toImage()
+            })
             .disposed(by: disposeBag)
         
         output

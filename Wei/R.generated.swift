@@ -40,10 +40,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 27 images.
+  /// This `R.image` struct is generated, and contains static references to 28 images.
   struct image {
     /// Image `bg_header`.
     static let bg_header = Rswift.ImageResource(bundle: R.hostingBundle, name: "bg_header")
+    /// Image `bg_receive_eth`.
+    static let bg_receive_eth = Rswift.ImageResource(bundle: R.hostingBundle, name: "bg_receive_eth")
     /// Image `bg_wallet`.
     static let bg_wallet = Rswift.ImageResource(bundle: R.hostingBundle, name: "bg_wallet")
     /// Image `icon_backup`.
@@ -100,6 +102,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "bg_header", bundle: ..., traitCollection: ...)`
     static func bg_header(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.bg_header, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "bg_receive_eth", bundle: ..., traitCollection: ...)`
+    static func bg_receive_eth(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.bg_receive_eth, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "bg_wallet", bundle: ..., traitCollection: ...)`
@@ -235,16 +242,23 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
   struct nib {
     /// Nib `BalanceAccessoryView`.
     static let balanceAccessoryView = _R.nib._BalanceAccessoryView()
+    /// Nib `QRImageView`.
+    static let qrImageView = _R.nib._QRImageView()
     /// Nib `TutorialTopView`.
     static let tutorialTopView = _R.nib._TutorialTopView()
     
     /// `UINib(name: "BalanceAccessoryView", in: bundle)`
     static func balanceAccessoryView(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.balanceAccessoryView)
+    }
+    
+    /// `UINib(name: "QRImageView", in: bundle)`
+    static func qrImageView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.qrImageView)
     }
     
     /// `UINib(name: "TutorialTopView", in: bundle)`
@@ -2116,15 +2130,35 @@ struct R: Rswift.Validatable {
 struct _R: Rswift.Validatable {
   static func validate() throws {
     try storyboard.validate()
+    try nib.validate()
   }
   
-  struct nib {
+  struct nib: Rswift.Validatable {
+    static func validate() throws {
+      try _QRImageView.validate()
+    }
+    
     struct _BalanceAccessoryView: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "BalanceAccessoryView"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> BalanceAccessoryView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? BalanceAccessoryView
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _QRImageView: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "QRImageView"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> QRImageView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? QRImageView
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "bg_receive_eth", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'bg_receive_eth' is used in nib 'QRImageView', but couldn't be loaded.") }
       }
       
       fileprivate init() {}
