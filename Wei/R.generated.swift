@@ -40,10 +40,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 27 images.
+  /// This `R.image` struct is generated, and contains static references to 28 images.
   struct image {
     /// Image `bg_header`.
     static let bg_header = Rswift.ImageResource(bundle: R.hostingBundle, name: "bg_header")
+    /// Image `bg_receive_eth`.
+    static let bg_receive_eth = Rswift.ImageResource(bundle: R.hostingBundle, name: "bg_receive_eth")
     /// Image `bg_wallet`.
     static let bg_wallet = Rswift.ImageResource(bundle: R.hostingBundle, name: "bg_wallet")
     /// Image `icon_backup`.
@@ -100,6 +102,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "bg_header", bundle: ..., traitCollection: ...)`
     static func bg_header(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.bg_header, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "bg_receive_eth", bundle: ..., traitCollection: ...)`
+    static func bg_receive_eth(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.bg_receive_eth, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "bg_wallet", bundle: ..., traitCollection: ...)`
@@ -2151,6 +2158,7 @@ struct _R: Rswift.Validatable {
       try maintenanceViewController.validate()
       try suggestBackupViewController.validate()
       try launchScreen.validate()
+      try receiveViewController.validate()
       try updateServiceTermsViewController.validate()
       try homeViewController.validate()
       try latestTransactionListViewController.validate()
@@ -2273,11 +2281,15 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct receiveViewController: Rswift.StoryboardResourceWithInitialControllerType {
+    struct receiveViewController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = ReceiveViewController
       
       let bundle = R.hostingBundle
       let name = "ReceiveViewController"
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "bg_receive_eth") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'bg_receive_eth' is used in storyboard 'ReceiveViewController', but couldn't be loaded.") }
+      }
       
       fileprivate init() {}
     }
