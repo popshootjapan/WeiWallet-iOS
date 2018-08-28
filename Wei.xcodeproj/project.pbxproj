@@ -142,6 +142,8 @@
 		AEC36ADD20C5851E00FE4737 /* LocalTransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC36ADC20C5851E00FE4737 /* LocalTransactionRepository.swift */; };
 		AEC36ADF20C5855600FE4737 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC36ADE20C5855600FE4737 /* RealmManager.swift */; };
 		AEC36AE120C58A9800FE4737 /* LocalTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC36AE020C58A9800FE4737 /* LocalTransaction.swift */; };
+		AEC4C92721352C550053E404 /* QRImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEC4C92621352C550053E404 /* QRImageView.xib */; };
+		AEC4C92921352C5B0053E404 /* QRImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC4C92821352C5B0053E404 /* QRImageView.swift */; };
 		AED49F4D20E4CCC500C2AF33 /* CurrencySettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED49F4C20E4CCC500C2AF33 /* CurrencySettingViewController.swift */; };
 		AED49F5220E4CD4500C2AF33 /* CurrencySettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED49F5120E4CD4500C2AF33 /* CurrencySettingViewModel.swift */; };
 		AED49F5420E4D18800C2AF33 /* CurrencySettingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED49F5320E4D18800C2AF33 /* CurrencySettingViewCell.swift */; };
@@ -387,6 +389,8 @@
 		AEC36ADC20C5851E00FE4737 /* LocalTransactionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTransactionRepository.swift; sourceTree = "<group>"; };
 		AEC36ADE20C5855600FE4737 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		AEC36AE020C58A9800FE4737 /* LocalTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTransaction.swift; sourceTree = "<group>"; };
+		AEC4C92621352C550053E404 /* QRImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRImageView.xib; sourceTree = "<group>"; };
+		AEC4C92821352C5B0053E404 /* QRImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRImageView.swift; sourceTree = "<group>"; };
 		AED49F4C20E4CCC500C2AF33 /* CurrencySettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySettingViewController.swift; sourceTree = "<group>"; };
 		AED49F5120E4CD4500C2AF33 /* CurrencySettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySettingViewModel.swift; sourceTree = "<group>"; };
 		AED49F5320E4D18800C2AF33 /* CurrencySettingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySettingViewCell.swift; sourceTree = "<group>"; };
@@ -720,6 +724,7 @@
 			isa = PBXGroup;
 			children = (
 				AE3F7307207E791600482502 /* SwipableView */,
+				AEC4C92A21352C5F0053E404 /* QRImageView */,
 				AE14A6192070A20E003A63FF /* NavigationController.swift */,
 				1AB9224120764EA300DEF52B /* PresentationController.swift */,
 				AE61468C2088F98400A9E77A /* ModalPresentationController.swift */,
@@ -853,6 +858,15 @@
 				AE9E864120EF43FF008354E9 /* NetworkSettingViewCell.swift */,
 			);
 			path = NetworkSetting;
+			sourceTree = "<group>";
+		};
+		AEC4C92A21352C5F0053E404 /* QRImageView */ = {
+			isa = PBXGroup;
+			children = (
+				AEC4C92621352C550053E404 /* QRImageView.xib */,
+				AEC4C92821352C5B0053E404 /* QRImageView.swift */,
+			);
+			path = QRImageView;
 			sourceTree = "<group>";
 		};
 		AED49F5020E4CCCF00C2AF33 /* CurrencySetting */ = {
@@ -1217,6 +1231,7 @@
 				AE6D4CF320E20BD8007CF3C5 /* SelectAddressByQRViewController.storyboard in Resources */,
 				AED49F5520E4D67B00C2AF33 /* CurrencySettingViewController.storyboard in Resources */,
 				AE6D4D0F20E225D5007CF3C5 /* SettingViewController.storyboard in Resources */,
+				AEC4C92721352C550053E404 /* QRImageView.xib in Resources */,
 				AE6D4CB420E20492007CF3C5 /* CreateWalletViewController.storyboard in Resources */,
 				AE9ABA152112D65A00B8A063 /* SignTransactionViewController.storyboard in Resources */,
 				DE9272C8208AD55000E03AB9 /* TutorialTopView.xib in Resources */,
@@ -1453,6 +1468,7 @@
 				1AEA0A8A205967CD0068C2E1 /* RootViewModel.swift in Sources */,
 				AE9E864420EF4434008354E9 /* Network.swift in Sources */,
 				DE9133B820A98DCD003CDE67 /* SuggestBackupViewModel.swift in Sources */,
+				AEC4C92921352C5B0053E404 /* QRImageView.swift in Sources */,
 				AE3F72FE207E6BD100482502 /* UserAgent.swift in Sources */,
 				DE624F912072482800840B06 /* SendConfirmationViewController.swift in Sources */,
 				DE624F85207246F700840B06 /* SelectAddressByPasteViewController.swift in Sources */,

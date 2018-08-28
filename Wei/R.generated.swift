@@ -242,16 +242,23 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
   struct nib {
     /// Nib `BalanceAccessoryView`.
     static let balanceAccessoryView = _R.nib._BalanceAccessoryView()
+    /// Nib `QRImageView`.
+    static let qrImageView = _R.nib._QRImageView()
     /// Nib `TutorialTopView`.
     static let tutorialTopView = _R.nib._TutorialTopView()
     
     /// `UINib(name: "BalanceAccessoryView", in: bundle)`
     static func balanceAccessoryView(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.balanceAccessoryView)
+    }
+    
+    /// `UINib(name: "QRImageView", in: bundle)`
+    static func qrImageView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.qrImageView)
     }
     
     /// `UINib(name: "TutorialTopView", in: bundle)`
@@ -2123,15 +2130,35 @@ struct R: Rswift.Validatable {
 struct _R: Rswift.Validatable {
   static func validate() throws {
     try storyboard.validate()
+    try nib.validate()
   }
   
-  struct nib {
+  struct nib: Rswift.Validatable {
+    static func validate() throws {
+      try _QRImageView.validate()
+    }
+    
     struct _BalanceAccessoryView: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "BalanceAccessoryView"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> BalanceAccessoryView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? BalanceAccessoryView
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _QRImageView: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "QRImageView"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> QRImageView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? QRImageView
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "bg_receive_eth", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'bg_receive_eth' is used in nib 'QRImageView', but couldn't be loaded.") }
       }
       
       fileprivate init() {}
@@ -2158,7 +2185,6 @@ struct _R: Rswift.Validatable {
       try maintenanceViewController.validate()
       try suggestBackupViewController.validate()
       try launchScreen.validate()
-      try receiveViewController.validate()
       try updateServiceTermsViewController.validate()
       try homeViewController.validate()
       try latestTransactionListViewController.validate()
@@ -2281,15 +2307,11 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct receiveViewController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+    struct receiveViewController: Rswift.StoryboardResourceWithInitialControllerType {
       typealias InitialController = ReceiveViewController
       
       let bundle = R.hostingBundle
       let name = "ReceiveViewController"
-      
-      static func validate() throws {
-        if UIKit.UIImage(named: "bg_receive_eth") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'bg_receive_eth' is used in storyboard 'ReceiveViewController', but couldn't be loaded.") }
-      }
       
       fileprivate init() {}
     }
