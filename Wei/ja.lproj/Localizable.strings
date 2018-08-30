@@ -22,6 +22,9 @@
 "Transaction.Received" = "受け取り済み";
 "Transaction.Sent" = "送金済み";
 
+// MARK: - Receive
+"Receive.ShareQR" = "QRコードを共有する";
+
 // MARK: - Send View Pager
 "Page.QRCode" = "QRを読み取る";
 "Page.CopyAddress" = "アドレスコピー";
