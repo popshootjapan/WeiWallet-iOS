@@ -18,6 +18,11 @@ final class ReceiveViewController: UIViewController {
     @IBOutlet private weak var copyAddressButton: UIButton!
     @IBOutlet private weak var addressLabel: UILabel!
     @IBOutlet private weak var closeButton: UIButton!
+    @IBOutlet private weak var shareQRCodeButton: UIButton! {
+        didSet {
+            shareQRCodeButton.setTitle(R.string.localizable.receiveShareQR(), for: .normal)
+        }
+    }
     @IBOutlet private weak var copyNoticeView: UIView!
 
     private let topMargin: CGFloat = 64
@@ -40,7 +45,8 @@ private extension ReceiveViewController {
     func bindViewModel() {
         let input = ReceiveViewModel.Input(
             copyAddressButtonDidTap: copyAddressButton.rx.tap.asDriver(),
-            closeButtonDidTap: closeButton.rx.tap.asDriver()
+            closeButtonDidTap: closeButton.rx.tap.asDriver(),
+            shareQRCodeButtonDidTap: shareQRCodeButton.rx.tap.asDriver()
         )
         
         let output = viewModel.build(input: input)
@@ -70,6 +76,13 @@ private extension ReceiveViewController {
             .dismissViewController
             .drive(onNext: { [weak self] _ in
                 self?.dismiss(animated: true)
+            })
+            .disposed(by: disposeBag)
+        
+        output
+            .presentActivityController
+            .drive(onNext: { [weak self] image in
+                self?.presentActivityController(with: image)
             })
             .disposed(by: disposeBag)
     }
@@ -120,6 +133,12 @@ private extension ReceiveViewController {
                 completion()
             }
         )
+    }
+    
+    func presentActivityController(with qrImage: UIImage) {
+        let shareMessageItems: [Any] = [qrImage]
+        let activityViewController = UIActivityViewController(activityItems: shareMessageItems, applicationActivities: nil)
+        present(activityViewController, animated: true)
     }
 }
 

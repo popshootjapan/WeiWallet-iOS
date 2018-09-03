@@ -27,6 +27,7 @@ final class ReceiveViewModel: InjectableViewModel {
     struct Input {
         let copyAddressButtonDidTap: Driver<Void>
         let closeButtonDidTap: Driver<Void>
+        let shareQRCodeButtonDidTap: Driver<Void>
     }
     
     struct Output {
@@ -34,6 +35,7 @@ final class ReceiveViewModel: InjectableViewModel {
         let address: Driver<String>
         let qrCodeImage: Driver<UIImage>
         let dismissViewController: Driver<Void>
+        let presentActivityController: Driver<UIImage>
     }
     
     func build(input: Input) -> Output {
@@ -51,7 +53,9 @@ final class ReceiveViewModel: InjectableViewModel {
             copyByClipboard: copyByClipboard,
             address: address,
             qrCodeImage: qrCodeImage,
-            dismissViewController: input.closeButtonDidTap
+            dismissViewController: input.closeButtonDidTap,
+            presentActivityController: input.shareQRCodeButtonDidTap
+                .withLatestFrom(qrCodeImage)
         )
     }
 }

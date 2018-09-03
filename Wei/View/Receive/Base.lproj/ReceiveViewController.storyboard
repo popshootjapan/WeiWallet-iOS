@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oa1-zy-SMZ">
-                                <rect key="frame" x="8" y="355" width="359" height="66"/>
+                                <rect key="frame" x="8" y="409" width="359" height="66"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXd-Eq-paz">
                                         <rect key="frame" x="279" y="0.0" width="80" height="66"/>
@@ -58,7 +58,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="受取用アドレス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEv-RG-uty">
-                                <rect key="frame" x="135" y="324" width="105" height="15"/>
+                                <rect key="frame" x="135" y="378" width="105" height="15"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -147,14 +147,25 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtp-Qo-2Gm">
+                                <rect key="frame" x="115" y="324" width="144" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="144" id="6kw-2J-UNl"/>
+                                    <constraint firstAttribute="height" constant="30" id="Cqk-cf-QVL"/>
+                                </constraints>
+                                <state key="normal" title="QRコードを共有する">
+                                    <color key="titleColor" red="0.086274509803921567" green="0.32549019607843138" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="FAq-SS-Ohx" firstAttribute="trailing" secondItem="hxC-TS-ETu" secondAttribute="trailing" constant="16" id="5wd-Cj-zeV"/>
                             <constraint firstItem="hxC-TS-ETu" firstAttribute="top" secondItem="12M-xc-dJI" secondAttribute="bottom" constant="16" id="AAj-a6-sTK"/>
                             <constraint firstItem="12M-xc-dJI" firstAttribute="trailing" secondItem="FAq-SS-Ohx" secondAttribute="trailing" id="Etr-Ny-CwJ"/>
-                            <constraint firstItem="zEv-RG-uty" firstAttribute="top" secondItem="hxC-TS-ETu" secondAttribute="bottom" constant="24" id="IPr-SR-ZpP"/>
                             <constraint firstItem="hxC-TS-ETu" firstAttribute="leading" secondItem="FAq-SS-Ohx" secondAttribute="leading" constant="16" id="LxY-Sr-Joz"/>
+                            <constraint firstItem="qtp-Qo-2Gm" firstAttribute="centerX" secondItem="rS0-NN-g7i" secondAttribute="centerX" id="MsI-ki-Trf"/>
+                            <constraint firstItem="qtp-Qo-2Gm" firstAttribute="top" secondItem="hxC-TS-ETu" secondAttribute="bottom" constant="24" id="R82-zi-S1K"/>
                             <constraint firstItem="oa1-zy-SMZ" firstAttribute="top" secondItem="zEv-RG-uty" secondAttribute="bottom" constant="16" id="TAW-OW-NRh"/>
                             <constraint firstItem="12M-xc-dJI" firstAttribute="top" secondItem="rS0-NN-g7i" secondAttribute="top" id="X5n-2L-U7A"/>
                             <constraint firstItem="12M-xc-dJI" firstAttribute="leading" secondItem="FAq-SS-Ohx" secondAttribute="leading" id="XrF-gs-cea"/>
@@ -165,6 +176,7 @@
                             <constraint firstItem="oa1-zy-SMZ" firstAttribute="centerX" secondItem="FAq-SS-Ohx" secondAttribute="centerX" id="kq8-8l-Eb2"/>
                             <constraint firstItem="rdZ-bY-6c0" firstAttribute="leading" secondItem="FAq-SS-Ohx" secondAttribute="leading" id="tl7-rt-KvQ"/>
                             <constraint firstItem="zEv-RG-uty" firstAttribute="centerX" secondItem="FAq-SS-Ohx" secondAttribute="centerX" id="u0O-Jn-Quf"/>
+                            <constraint firstItem="zEv-RG-uty" firstAttribute="top" secondItem="qtp-Qo-2Gm" secondAttribute="bottom" constant="24" id="w2z-IE-P7L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FAq-SS-Ohx"/>
                         <userDefinedRuntimeAttributes>
@@ -181,6 +193,7 @@
                         <outlet property="copyAddressButton" destination="bXd-Eq-paz" id="K33-EE-oL4"/>
                         <outlet property="copyNoticeView" destination="rdZ-bY-6c0" id="a6D-eb-TSP"/>
                         <outlet property="qrImageView" destination="s03-V9-dZH" id="RUu-DL-gjo"/>
+                        <outlet property="shareQRCodeButton" destination="qtp-Qo-2Gm" id="209-QZ-n5x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1mp-fz-vNx" userLabel="First Responder" sceneMemberID="firstResponder"/>

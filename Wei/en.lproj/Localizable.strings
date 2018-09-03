@@ -22,6 +22,9 @@
 "Transaction.Received" = "Received";
 "Transaction.Sent" = "Sent";
 
+// MARK: - Receive
+"Receive.ShareQR" = "Share QR code";
+
 // MARK: - Send View Pager
 "Page.QRCode" = "Scan QR";
 "Page.CopyAddress" = "Paste Address";
