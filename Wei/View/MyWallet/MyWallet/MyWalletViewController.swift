@@ -61,6 +61,18 @@ final class MyWalletViewController: UIViewController {
                 self?.fiatBalanceTitleLabel.text = currency.name
             })
             .disposed(by: disposeBag)
+        
+        output
+            .network
+            .drive(onNext: { [weak self] network in
+                switch network {
+                case .mainnet:
+                    self?.titleLabel.text = R.string.localizable.commonETH()
+                default:
+                    self?.titleLabel.text = network.name
+                }
+            })
+            .disposed(by: disposeBag)
 
         output
             .presentSendViewController
