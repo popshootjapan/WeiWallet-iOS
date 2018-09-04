@@ -39,6 +39,7 @@ final class MyWalletViewModel: InjectableViewModel {
         let fiatBalance: Driver<Fiat>
         let error: Driver<Error>
         let currency: Driver<Currency>
+        let network: Driver<Network>
         let presentSendViewController: Driver<Void>
         let pushTransactionHistoryViewController: Driver<Void>
         let presentSuggestBackupViewController: Driver<Void>
@@ -66,6 +67,7 @@ final class MyWalletViewModel: InjectableViewModel {
             fiatBalance: fiatBalance,
             error: getEtherBalanceAction.error,
             currency: currency,
+            network: Driver.just(applicationStore.network),
             presentSendViewController: input.sendButtonDidTap,
             pushTransactionHistoryViewController: input.historyButtonDidTap,
             presentSuggestBackupViewController: suggestBackup
