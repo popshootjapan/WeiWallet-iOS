@@ -22,6 +22,9 @@ protocol UserDefaultsStoreProtocol {
     /// Represents a flag whether or not a private network is used for test case
     var testUse: Bool { get set }
     
+    /// Represents a gas price
+    var gasPrice: Int? { get set }
+    
     /// Removes all data in user defaults
     func removeAll()
 }
@@ -44,6 +47,7 @@ final class UserDefaultsStore: UserDefaultsStoreProtocol {
         case network
         case chainID
         case testUse
+        case gasPrice
     }
     
     var currency: String? {
@@ -79,6 +83,15 @@ final class UserDefaultsStore: UserDefaultsStoreProtocol {
         }
         set {
             setValue(newValue, for: .testUse)
+        }
+    }
+    
+    var gasPrice: Int? {
+        get {
+            return value(for: .gasPrice)
+        }
+        set {
+            setValue(newValue, for: .gasPrice)
         }
     }
     

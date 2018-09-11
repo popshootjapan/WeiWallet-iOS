@@ -21,19 +21,21 @@ final class SignTransactionViewModel: InjectableViewModel {
     var rawTransaction: RawTransaction!
     
     typealias Dependency = (
+        ApplicationStoreProtocol,
         WalletManagerProtocol,
         CurrencyManagerProtocol,
         RateRepositoryProtocol,
         GethRepositoryProtocol
     )
     
+    private let applicationStore: ApplicationStoreProtocol
     private let walletManager: WalletManagerProtocol
     private let currencyManager: CurrencyManagerProtocol
     private let rateRepository: RateRepositoryProtocol
     private let gethRepository: GethRepositoryProtocol
     
     init(dependency: Dependency) {
-        (walletManager, currencyManager, rateRepository, gethRepository) = dependency
+        (applicationStore, walletManager, currencyManager, rateRepository, gethRepository) = dependency
     }
     
     struct Input {
@@ -60,7 +62,7 @@ final class SignTransactionViewModel: InjectableViewModel {
             fatalError("RawTransaction is necessary")
         }
         
-        let txFeeInWei = Wei(Gas.safeLow.gasLimit * Gas.safeLow.gasPrice)
+        let txFeeInWei = Wei(Gas.normalGasLimit * Converter.toWei(GWei: applicationStore.gasPrice))
         let currency = currencyManager.currency
         
         let etherAmount = Driver.just(try! Converter.toEther(wei: rawTransaction.value))

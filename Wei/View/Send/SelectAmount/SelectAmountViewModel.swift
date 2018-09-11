@@ -16,17 +16,19 @@ final class SelectAmountViewModel: InjectableViewModel {
     var toAddress: String!
     
     typealias Dependency = (
+        ApplicationStoreProtocol,
         BalanceStoreProtocol,
         RateRepositoryProtocol,
         CurrencyManagerProtocol
     )
     
+    private let applicationStore: ApplicationStoreProtocol
     private let balanceStore: BalanceStoreProtocol
     private let rateRepository: RateRepositoryProtocol
     private let currencyManager: CurrencyManagerProtocol
 
     init(dependency: Dependency) {
-        (balanceStore, rateRepository, currencyManager) = dependency
+        (applicationStore, balanceStore, rateRepository, currencyManager) = dependency
     }
     
     struct Input {
@@ -51,7 +53,7 @@ final class SelectAmountViewModel: InjectableViewModel {
         let currency = currencyManager.currency
         
         // NOTE: Deal with fixed tx fee
-        let txFee = Wei(Gas.safeLow.gasLimit * Gas.safeLow.gasPrice)
+        let txFee = Wei(Gas.normalGasLimit * Converter.toWei(GWei: applicationStore.gasPrice))
         
         // fiatTxFeeAction converts specified tx fee to fiat price.
         let fiatTxFeeAction = Driver.combineLatest(input.viewWillAppear, currency)

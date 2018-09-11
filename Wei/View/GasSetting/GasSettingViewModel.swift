@@ -6,6 +6,8 @@
 //  Copyright © 2018 yz. All rights reserved.
 //
 
+import Foundation
+import EthereumKit
 import RxSwift
 import RxCocoa
 
@@ -22,14 +24,25 @@ final class GasSettingViewModel: InjectableViewModel {
     }
     
     struct Input {
-        
+        let sliderValue: Driver<Float>
     }
     
     struct Output {
-        
+        let initialGasPrice: Int
+        let updatedGasPrice: Driver<Int>
     }
     
     func build(input: Input) -> Output {
-        return Output()
+        
+        let updatedGasPrice = input.sliderValue
+            .map { Int($0 * 100 ) }
+            .do(onNext: { [weak self] gasPrice in
+                self?.applicationStore.gasPrice = gasPrice
+            })
+        
+        return Output(
+            initialGasPrice: applicationStore.gasPrice,
+            updatedGasPrice: updatedGasPrice
+        )
     }
 }
