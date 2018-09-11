@@ -12,6 +12,9 @@ final class GasSettingViewController: UIViewController {
     
     var viewModel: GasSettingViewModel!
     
+    @IBOutlet private weak var gasPriceLabel: UILabel!
+    @IBOutlet private weak var slider: UISlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
