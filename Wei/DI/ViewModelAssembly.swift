@@ -201,5 +201,13 @@ final class ViewModelAssembly: Assembly {
             viewModel.actionKind = actionKind
             return viewModel
         }
+        
+        // MARK: - GasSettingViewModel
+        
+        container.register(GasSettingViewModel.self) { resolver in
+            return GasSettingViewModel(dependency: (
+                resolver.resolve(ApplicationStoreProtocol.self)!
+            ))
+        }
     }
 }

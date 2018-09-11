@@ -292,7 +292,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 24 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 25 storyboards.
   struct storyboard {
     /// Storyboard `BackupViewController`.
     static let backupViewController = _R.storyboard.backupViewController()
@@ -302,6 +302,8 @@ struct R: Rswift.Validatable {
     static let currencySettingViewController = _R.storyboard.currencySettingViewController()
     /// Storyboard `DebugListViewController`.
     static let debugListViewController = _R.storyboard.debugListViewController()
+    /// Storyboard `GasSettingViewController`.
+    static let gasSettingViewController = _R.storyboard.gasSettingViewController()
     /// Storyboard `HomeViewController`.
     static let homeViewController = _R.storyboard.homeViewController()
     /// Storyboard `LatestTransactionListViewController`.
@@ -361,6 +363,11 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "DebugListViewController", bundle: ...)`
     static func debugListViewController(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.debugListViewController)
+    }
+    
+    /// `UIStoryboard(name: "GasSettingViewController", bundle: ...)`
+    static func gasSettingViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.gasSettingViewController)
     }
     
     /// `UIStoryboard(name: "HomeViewController", bundle: ...)`
@@ -2202,13 +2209,13 @@ struct _R: Rswift.Validatable {
   
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
-      try myWalletViewController.validate()
       try createWalletViewController.validate()
-      try maintenanceViewController.validate()
+      try myWalletViewController.validate()
       try suggestBackupViewController.validate()
       try launchScreen.validate()
-      try updateServiceTermsViewController.validate()
       try homeViewController.validate()
+      try updateServiceTermsViewController.validate()
+      try maintenanceViewController.validate()
       try latestTransactionListViewController.validate()
       try sendConfirmationViewController.validate()
     }
@@ -2249,6 +2256,15 @@ struct _R: Rswift.Validatable {
       
       let bundle = R.hostingBundle
       let name = "DebugListViewController"
+      
+      fileprivate init() {}
+    }
+    
+    struct gasSettingViewController: Rswift.StoryboardResourceWithInitialControllerType {
+      typealias InitialController = GasSettingViewController
+      
+      let bundle = R.hostingBundle
+      let name = "GasSettingViewController"
       
       fileprivate init() {}
     }

@@ -204,6 +204,14 @@ final class ViewControllerAssembly: Assembly {
             viewController.completionHandler = completionHandler
             return viewController
         }
+        
+        // MARK: - GasSettingViewController
+        
+        container.register(GasSettingViewController.self) { resolver in
+            let viewController = UIStoryboard.instantiateViewController(of: GasSettingViewController.self)
+            viewController.viewModel = resolver.resolve(GasSettingViewModel.self)!
+            return viewController
+        }
     }
 }
 
