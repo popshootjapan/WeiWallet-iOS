@@ -35,7 +35,10 @@ final class GasSettingViewModel: InjectableViewModel {
     func build(input: Input) -> Output {
         
         let updatedGasPrice = input.sliderValue
-            .map { Int($0 * 100 ) }
+            .map { value -> Int in
+                let intValue = Int(value * 100)
+                return intValue == 0 ? 1 : intValue
+            }
             .do(onNext: { [weak self] gasPrice in
                 self?.applicationStore.gasPrice = gasPrice
             })
