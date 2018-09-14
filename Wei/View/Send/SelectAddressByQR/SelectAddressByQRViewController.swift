@@ -97,7 +97,7 @@ final class SelectAddressByQRViewController: UIViewController {
                 withCancel: true,
                 cancelTitle: R.string.localizable.commonCameraAccessCancel(),
                 handler: { _ in
-                    if let settingsURL = URL(string: UIApplicationOpenSettingsURLString) {
+                    if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
                         UIApplication.shared.open(settingsURL)
                     }
             })

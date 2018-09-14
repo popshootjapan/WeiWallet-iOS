@@ -32,7 +32,7 @@ final class BalanceStore: Injectable, BalanceStoreProtocol {
     init(dependency: Dependency) {
         let (geth, wallet, updater, rateStore, cache) = dependency
         
-        let tick = NotificationCenter.default.rx.notification(Notification.Name.UIApplicationWillEnterForeground)
+        let tick = NotificationCenter.default.rx.notification(UIApplication.willEnterForegroundNotification)
             .map { _ in }
             .startWith(())
 

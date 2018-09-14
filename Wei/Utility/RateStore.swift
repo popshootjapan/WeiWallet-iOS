@@ -6,7 +6,7 @@
 //  Copyright © 2018 popshoot All rights reserved.
 //
 
-import Foundation
+import UIKit
 import RxSwift
 import RxCocoa
 
@@ -33,7 +33,7 @@ final class RateStore: Injectable, RateStoreProtocol {
             return cache.load(for: RateService.GetCurrentRate(currency: currency)).asObservable()
         }
         
-        let tick = NotificationCenter.default.rx.notification(Notification.Name.UIApplicationWillEnterForeground)
+        let tick = NotificationCenter.default.rx.notification(UIApplication.willEnterForegroundNotification)
             .map { _ in }
             .startWith(())
         

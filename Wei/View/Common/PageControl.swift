@@ -28,7 +28,7 @@ class PageControl: UIControl {
         collectionView.scrollsToTop = false
         collectionView.backgroundColor = UIColor.clear
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.decelerationRate = UIScrollViewDecelerationRateFast
+        collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
         collectionView.register(Cell.self, forCellWithReuseIdentifier: Cell.reuseIdentifier)
         
         return collectionView

@@ -59,7 +59,7 @@ final class QRCoder: NSObject, QRCoderProtocol {
             "inputCorrectionLevel": "H"
         ]
         
-        let filter = CIFilter(name: "CIQRCodeGenerator", withInputParameters: parameters)
+        let filter = CIFilter(name: "CIQRCodeGenerator", parameters: parameters)
         guard let outputImage = filter?.outputImage else {
             return nil
         }
