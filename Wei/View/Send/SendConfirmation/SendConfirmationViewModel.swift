@@ -14,6 +14,7 @@ import EthereumKit
 final class SendConfirmationViewModel: InjectableViewModel {
     
     typealias Dependency = (
+        ApplicationStoreProtocol,
         GethRepositoryProtocol,
         WalletManagerProtocol,
         UpdaterProtocol,
@@ -22,6 +23,7 @@ final class SendConfirmationViewModel: InjectableViewModel {
         TransactionContext
     )
     
+    private let applicationStore: ApplicationStoreProtocol
     private let gethRepository: GethRepositoryProtocol
     private let walletManager: WalletManagerProtocol
     private let updater: UpdaterProtocol
@@ -30,7 +32,7 @@ final class SendConfirmationViewModel: InjectableViewModel {
     private let transactionContext: TransactionContext
     
     init(dependency: Dependency) {
-        (gethRepository, walletManager, updater, localTransactionRepository, currencyManager, transactionContext) = dependency
+        (applicationStore, gethRepository, walletManager, updater, localTransactionRepository, currencyManager, transactionContext) = dependency
     }
     
     struct Input {
@@ -57,7 +59,7 @@ final class SendConfirmationViewModel: InjectableViewModel {
                 return Driver.empty()
             }
             
-            let gas = Gas.safeLow
+            let gas = Gas(gasLimit: Gas.normalGasLimit, gasPrice: Converter.toWei(GWei: weakSelf.applicationStore.gasPrice))
             let address = weakSelf.walletManager.address()
             
             let value: String

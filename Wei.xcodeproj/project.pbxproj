@@ -41,6 +41,9 @@
 		A7AF3D52759E96BE87D5E7DE /* Pods_Wei.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4060799F17C5BBE080440E1 /* Pods_Wei.framework */; };
 		AE0D465020F73FB500E6E8A7 /* DeepLinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D464F20F73FB500E6E8A7 /* DeepLinkAction.swift */; };
 		AE0D465220F740DF00E6E8A7 /* DeepLinkActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D465120F740DF00E6E8A7 /* DeepLinkActionHandler.swift */; };
+		AE0F70DA214796AC004DE7B6 /* GasSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0F70D9214796AC004DE7B6 /* GasSettingViewController.swift */; };
+		AE0F70DC214796C4004DE7B6 /* GasSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0F70DB214796C4004DE7B6 /* GasSettingViewController.storyboard */; };
+		AE0F70DF214796E8004DE7B6 /* GasSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0F70DE214796E8004DE7B6 /* GasSettingViewModel.swift */; };
 		AE14A6152070A1E3003A63FF /* CreateWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE14A6142070A1E3003A63FF /* CreateWalletViewController.swift */; };
 		AE14A61A2070A20E003A63FF /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE14A6192070A20E003A63FF /* NavigationController.swift */; };
 		AE14A61C2070A3E7003A63FF /* ControllableNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE14A61B2070A3E7003A63FF /* ControllableNavigationBar.swift */; };
@@ -262,6 +265,9 @@
 		A12D119CABBC62F1D4268257 /* Pods-Wei.inhouse.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wei.inhouse.xcconfig"; path = "Pods/Target Support Files/Pods-Wei/Pods-Wei.inhouse.xcconfig"; sourceTree = "<group>"; };
 		AE0D464F20F73FB500E6E8A7 /* DeepLinkAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkAction.swift; sourceTree = "<group>"; };
 		AE0D465120F740DF00E6E8A7 /* DeepLinkActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkActionHandler.swift; sourceTree = "<group>"; };
+		AE0F70D9214796AC004DE7B6 /* GasSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasSettingViewController.swift; sourceTree = "<group>"; };
+		AE0F70DB214796C4004DE7B6 /* GasSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GasSettingViewController.storyboard; sourceTree = "<group>"; };
+		AE0F70DE214796E8004DE7B6 /* GasSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasSettingViewModel.swift; sourceTree = "<group>"; };
 		AE14A6142070A1E3003A63FF /* CreateWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWalletViewController.swift; sourceTree = "<group>"; };
 		AE14A6192070A20E003A63FF /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		AE14A61B2070A3E7003A63FF /* ControllableNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllableNavigationBar.swift; sourceTree = "<group>"; };
@@ -710,6 +716,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AE0F70DD214796D5004DE7B6 /* GasSetting */ = {
+			isa = PBXGroup;
+			children = (
+				AE0F70DB214796C4004DE7B6 /* GasSettingViewController.storyboard */,
+				AE0F70D9214796AC004DE7B6 /* GasSettingViewController.swift */,
+				AE0F70DE214796E8004DE7B6 /* GasSettingViewModel.swift */,
+			);
+			path = GasSetting;
+			sourceTree = "<group>";
+		};
 		AE14A6182070A1F6003A63FF /* CreateWallet */ = {
 			isa = PBXGroup;
 			children = (
@@ -965,6 +981,7 @@
 				AEFA44FE20B318F600844D4A /* RestoreWallet */,
 				AED49F5020E4CCCF00C2AF33 /* CurrencySetting */,
 				AE9E863E20EF4156008354E9 /* NetworkSetting */,
+				AE0F70DD214796D5004DE7B6 /* GasSetting */,
 				AEEFC9B220FDD56600D49F89 /* UpdateServiceTerms */,
 				AE9ABA162112D65F00B8A063 /* SignTransaction */,
 			);
@@ -1221,6 +1238,7 @@
 				AE6D4CC920E20723007CF3C5 /* BackupViewController.storyboard in Resources */,
 				DE4C1A0020EA5A8100C20AE5 /* LatestTransactionListViewController.storyboard in Resources */,
 				AE69C85520E0E32600EB1293 /* HomeViewController.storyboard in Resources */,
+				AE0F70DC214796C4004DE7B6 /* GasSettingViewController.storyboard in Resources */,
 				AE6D4CD720E208D0007CF3C5 /* ReceiveViewController.storyboard in Resources */,
 				DE052D4E20D4016B00ACFA49 /* Localizable.strings in Resources */,
 				AE6D4CD020E20898007CF3C5 /* TutorialViewController.storyboard in Resources */,
@@ -1508,6 +1526,7 @@
 				AE3F730B207F7F6300482502 /* Price.swift in Sources */,
 				AE3EB5FF20A83A9000D61CE6 /* Gas.swift in Sources */,
 				1AEA0A91205978250068C2E1 /* KeychainStore.swift in Sources */,
+				AE0F70DF214796E8004DE7B6 /* GasSettingViewModel.swift in Sources */,
 				DE624F892072478600840B06 /* SelectAddressByPasteViewModel.swift in Sources */,
 				AE171B022081BB3200212494 /* UIView+Extension.swift in Sources */,
 				AE1F8C292090B5300088A043 /* Error+Extension.swift in Sources */,
@@ -1517,6 +1536,7 @@
 				1A3BD8FA205C042600FE485D /* Action.swift in Sources */,
 				DE7682DC207F3C28004094BA /* SettingViewController.swift in Sources */,
 				1AEA0A8C205969350068C2E1 /* UIViewController+Rx.swift in Sources */,
+				AE0F70DA214796AC004DE7B6 /* GasSettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

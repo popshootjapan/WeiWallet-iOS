@@ -53,6 +53,10 @@ final class SettingViewController: UITableViewController {
                     case .network:
                         let viewController = NetworkSettingViewController.make()
                         self?.navigationController?.pushViewController(viewController, animated: true)
+                        
+                    case .gasPrice:
+                        let viewController = GasSettingViewController.make()
+                        self?.navigationController?.pushViewController(viewController, animated: true)
                     }
                     
                 case .info:
@@ -74,6 +78,7 @@ final class SettingViewController: UITableViewController {
         enum GeneralCellType: Int {
             case currency
             case network
+            case gasPrice
         }
         
         enum InfoCellType: Int {

@@ -154,3 +154,9 @@ extension SignTransactionViewController {
         return Container.shared.resolve(SignTransactionViewController.self, arguments: rawTransaction, actionKind, completionHandler)!
     }
 }
+
+extension GasSettingViewController {
+    static func make() -> GasSettingViewController {
+        return Container.shared.resolve(GasSettingViewController.self)!
+    }
+}

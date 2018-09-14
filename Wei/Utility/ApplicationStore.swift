@@ -26,6 +26,9 @@ protocol ApplicationStoreProtocol {
     /// Represents a current network user is using
     var network: Network { get set }
     
+    /// Represents a gas price
+    var gasPrice: Int { get set }
+    
     /// Clears data in keychain
     func clearData()
 }
@@ -136,6 +139,15 @@ final class ApplicationStore: ApplicationStoreProtocol, Injectable {
                 userDefaultsStore.chainID = chainID
                 userDefaultsStore.testUse = testUse
             }
+        }
+    }
+    
+    var gasPrice: Int {
+        get {
+            return userDefaultsStore.gasPrice ?? Gas.normalGasPriceInGWei
+        }
+        set {
+            userDefaultsStore.gasPrice = newValue
         }
     }
     
