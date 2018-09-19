@@ -20,30 +20,24 @@ final class DeviceChecker: DeviceCheckerProtocol {
     
     init() {
         deviceToken = Observable.create { observer in
-            if #available(iOS 11.0, *) {
-                DCDevice.current.generateToken() { data, error in
-                    #if targetEnvironment(simulator)
-                        observer.onNext("")
-                        observer.onCompleted()
-                        return
-                    #endif
-                    
+            DCDevice.current.generateToken() { data, error in
+                #if targetEnvironment(simulator)
+                    observer.onNext("")
+                    observer.onCompleted()
+                #else
                     if let error = error {
                         observer.onError(error)
                         return
                     }
-                    
+                
                     guard let token = data?.base64EncodedString() else {
                         observer.onCompleted()
                         return
                     }
-                    
+                
                     observer.onNext(token)
                     observer.onCompleted()
-                }
-            } else {
-                observer.onNext("")
-                observer.onCompleted()
+                #endif
             }
             return Disposables.create()
         }
