@@ -22,6 +22,8 @@ final class MockApplicationStore: ApplicationStoreProtocol {
     
     var network: Network = Network.current
     
+    var gasPrice: Int = 0
+    
     func clearData() {
         seed = nil
         mnemonic = nil
@@ -29,5 +31,6 @@ final class MockApplicationStore: ApplicationStoreProtocol {
         isAlreadyBackup = false
         currency = nil
         network = Network.current
+        gasPrice = 0
     }
 }

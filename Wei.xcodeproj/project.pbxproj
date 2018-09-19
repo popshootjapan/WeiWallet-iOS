@@ -1188,6 +1188,7 @@
 				TargetAttributes = {
 					AED6F440205514BB004A280F = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -1200,7 +1201,7 @@
 					};
 					AED6F454205514BB004A280F = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 0930;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						TestTargetID = AED6F440205514BB004A280F;
 					};
@@ -1848,7 +1849,7 @@
 				CODE_SIGN_ENTITLEMENTS = Wei/Wei.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = JUG749AXCX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1862,7 +1863,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "ed89b2ec-689a-42fc-b303-6940768fb10a";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.popshoot.wei";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = arm64;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1877,7 +1878,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -1886,7 +1887,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.popshoot.WeiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wei.app/Wei";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2016,7 +2017,7 @@
 				BUNDLE_DISPLAY_SUFFIX = "-D";
 				CODE_SIGN_ENTITLEMENTS = Wei/Wei.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = JUG749AXCX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2030,7 +2031,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9e168b6c-afd3-4ba2-9bd4-1d4ed8d3ee87";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.popshoot.wei.debug";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = arm64;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2046,7 +2047,7 @@
 				CODE_SIGN_ENTITLEMENTS = Wei/Wei.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = JUG749AXCX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2060,7 +2061,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9980223d-6790-45e5-8b2f-cc4a9dc17d46";
 				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.popshoot.wei.inhouse";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = arm64;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2075,7 +2076,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -2085,7 +2086,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.popshoot.WeiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wei.app/Wei";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2100,7 +2101,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -2109,7 +2110,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.popshoot.WeiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wei.app/Wei";
 				VERSIONING_SYSTEM = "apple-generic";

@@ -12,7 +12,7 @@ import RxCocoa
 
 final class NavigationController: UINavigationController {
     
-    override var childViewControllerForStatusBarStyle: UIViewController? {
+    override var childForStatusBarStyle: UIViewController? {
         return topViewController
     }
     
@@ -67,7 +67,7 @@ final class NavigationController: UINavigationController {
     private func setBaseAppearence() {
         // TODO: change color
         navigationBar.tintColor = UIColor.wei.black
-        navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.black]
+        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         navigationBar.isTranslucent = false
     }
 }

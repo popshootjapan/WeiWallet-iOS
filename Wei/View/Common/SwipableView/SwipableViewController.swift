@@ -68,12 +68,12 @@ final class SwipableViewController: UIViewController {
     }
     
     private func layoutViewControllers() {
-        childViewControllers.forEach(remove(_:))
+        children.forEach(remove(_:))
         viewControllers.enumerated().forEach { index, viewController in
             viewController.view.frame = CGRect(origin: CGPoint(x: scrollView.frame.width * CGFloat(index), y: 0.0), size: scrollView.frame.size)
             scrollView.addSubview(viewController.view)
-            addChildViewController(viewController)
-            viewController.didMove(toParentViewController: self)
+            addChild(viewController)
+            viewController.didMove(toParent: self)
         }
     }
 }

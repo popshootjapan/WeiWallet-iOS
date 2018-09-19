@@ -101,7 +101,7 @@ final class RootViewController: UIViewController {
 
 extension RootViewController {
     #if !PRODUCTION
-    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         super.motionBegan(motion, with: event)
         
         func presentDebugListViewController() {

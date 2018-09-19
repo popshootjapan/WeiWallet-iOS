@@ -68,13 +68,13 @@ final class RestoreWalletViewController: UIViewController {
     }
     
     private func bindKeyboard() {
-        NotificationCenter.default.rx.notification(.UIKeyboardWillShow).asDriver(onErrorDriveWith: .empty())
+        NotificationCenter.default.rx.notification(UIResponder.keyboardWillShowNotification).asDriver(onErrorDriveWith: .empty())
             .drive(onNext: { [weak self] notification in
                 self?.keyboardWillBeShown(notification: notification)
             })
             .disposed(by: disposeBag)
         
-        NotificationCenter.default.rx.notification(.UIKeyboardWillHide).asDriver(onErrorDriveWith: .empty())
+        NotificationCenter.default.rx.notification(UIResponder.keyboardWillHideNotification).asDriver(onErrorDriveWith: .empty())
             .drive(onNext: { [weak self] notification in
                 self?.keyboardWillBeHidden(notification: notification)
             })
@@ -84,7 +84,7 @@ final class RestoreWalletViewController: UIViewController {
     private func keyboardWillBeShown(notification: Notification) {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
             guard let userInfo = notification.userInfo,
-                let keyboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as AnyObject).cgRectValue,
+                let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as AnyObject).cgRectValue,
                 !self.isOpenedKeyboard else {
                     return
             }
@@ -93,7 +93,7 @@ final class RestoreWalletViewController: UIViewController {
             
             let autoCorrectSpaceHeight = CGFloat(44)
             let convertedKeyboardFrame = self.scrollView.superview?.convert(keyboardFrame, to: nil)
-            let contentInsets = UIEdgeInsetsMake(0, 0, convertedKeyboardFrame!.size.height + autoCorrectSpaceHeight, 0)
+            let contentInsets = UIEdgeInsets.init(top: 0, left: 0, bottom: convertedKeyboardFrame!.size.height + autoCorrectSpaceHeight, right: 0)
             
             self.scrollView.contentInset = contentInsets
             self.scrollView.scrollIndicatorInsets = contentInsets
@@ -103,7 +103,7 @@ final class RestoreWalletViewController: UIViewController {
     private func keyboardWillBeHidden(notification: Notification) {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
             guard let userInfo = notification.userInfo,
-                let animationDuration = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as AnyObject).doubleValue,
+                let animationDuration = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as AnyObject).doubleValue,
                 self.isOpenedKeyboard else {
                     return
             }

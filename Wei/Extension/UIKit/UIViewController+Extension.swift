@@ -12,14 +12,14 @@ extension UIViewController {
     func embed(_ childViewController: UIViewController, to view: UIView) {
         childViewController.view.frame = view.bounds
         view.addSubview(childViewController.view)
-        addChildViewController(childViewController)
-        childViewController.didMove(toParentViewController: self)
+        addChild(childViewController)
+        childViewController.didMove(toParent: self)
     }
     
     func remove(_ childViewController: UIViewController) {
-        childViewController.willMove(toParentViewController: nil)
+        childViewController.willMove(toParent: nil)
         childViewController.view.removeFromSuperview()
-        childViewController.removeFromParentViewController()
+        childViewController.removeFromParent()
     }
 }
 

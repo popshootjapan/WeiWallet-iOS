@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private let deepLinkHandler = Container.shared.resolve(DeepLinkActionHandlerProtocol.self)!
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         Fabric.with([Crashlytics.self])
         
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         handleDeepLinkAction(url: url)
         return true
     }
