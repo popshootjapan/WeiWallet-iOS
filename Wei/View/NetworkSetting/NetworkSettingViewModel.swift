@@ -40,7 +40,7 @@ final class NetworkSettingViewModel: InjectableViewModel {
                 let network = Network.all[indexPath.row]
                 self?.applicationStore.network = network
                 Cache.shared.clear()
-                AppDelegate.rootViewController.showHomeViewController()
+                AppDelegate.rootViewController.showTabBarController()
             })
             .disposed(by: disposeBag)
         

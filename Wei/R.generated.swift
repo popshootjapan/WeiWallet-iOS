@@ -40,7 +40,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 28 images.
+  /// This `R.image` struct is generated, and contains static references to 30 images.
   struct image {
     /// Image `bg_header`.
     static let bg_header = Rswift.ImageResource(bundle: R.hostingBundle, name: "bg_header")
@@ -84,6 +84,10 @@ struct R: Rswift.Validatable {
     static let icon_setting = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_setting")
     /// Image `icon_splash_logo`.
     static let icon_splash_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_splash_logo")
+    /// Image `icon_tabsetting`.
+    static let icon_tabsetting = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_tabsetting")
+    /// Image `icon_tabwallet`.
+    static let icon_tabwallet = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_tabwallet")
     /// Image `icon_waitng`.
     static let icon_waitng = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_waitng")
     /// Image `icon_warning`.
@@ -202,6 +206,16 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "icon_splash_logo", bundle: ..., traitCollection: ...)`
     static func icon_splash_logo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_splash_logo, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_tabsetting", bundle: ..., traitCollection: ...)`
+    static func icon_tabsetting(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_tabsetting, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_tabwallet", bundle: ..., traitCollection: ...)`
+    static func icon_tabwallet(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_tabwallet, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "icon_waitng", bundle: ..., traitCollection: ...)`
