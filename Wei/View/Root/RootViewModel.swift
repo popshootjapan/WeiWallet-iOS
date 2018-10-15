@@ -30,7 +30,7 @@ final class RootViewModel: InjectableViewModel {
     }
     
     struct Output {
-        let showHomeViewController: Driver<Void>
+        let showTabBarController: Driver<Void>
         let presentCreateWalletViewController: Driver<Void>
         let presentMaintenanceViewController: Driver<Void>
         let presentAppStoreForForceUpdates: Driver<Void>
@@ -64,7 +64,7 @@ final class RootViewModel: InjectableViewModel {
             .filter { $0.needsAgreeTerms }
             .map { _ in }
         
-        let showHomeViewController = input.viewWillAppear
+        let showTabBarController = input.viewWillAppear
             .filter { applicationStore.seed != nil && applicationStore.accessToken != nil }
         
         // NOTE: app needs to show create wallet view controller if app does not have
@@ -74,7 +74,7 @@ final class RootViewModel: InjectableViewModel {
             .filter { applicationStore.accessToken == nil }
         
         return Output(
-            showHomeViewController: showHomeViewController,
+            showTabBarController: showTabBarController,
             presentCreateWalletViewController: presentCreateWalletViewController,
             presentMaintenanceViewController: presentMaintenanceViewController,
             presentAppStoreForForceUpdates: presentAppStoreForForceUpdates,

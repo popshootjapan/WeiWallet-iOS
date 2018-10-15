@@ -57,6 +57,8 @@
 "Common.USD.Short" = "ドル";
 "Common.JPY.Short" = "円";
 "Common.ETH" = "イーサリアム";
+"Common.Setting" = "設定";
+"Common.Wallet" = "ウォレット";
 
 // MARK: - Tutorial
 "Tutorial.First.Title" = "ようこそWei Walletへ！";

@@ -37,9 +37,9 @@ final class RootViewController: UIViewController {
             .disposed(by: disposeBag)
         
         output
-            .showHomeViewController
+            .showTabBarController
             .drive(onNext: { [weak self] in
-                self?.showHomeViewController()
+                self?.showTabBarController()
             })
             .disposed(by: disposeBag)
         
@@ -76,10 +76,9 @@ final class RootViewController: UIViewController {
             })
     }
     
-    func showHomeViewController() {
-        let viewController = HomeViewController.make()
-        let navigationController = NavigationController(rootViewController: viewController)
-        embed(navigationController, to: view)
+    func showTabBarController() {
+        let viewController = TabBarController()
+        embed(viewController, to: view)
     }
     
     private func presentCreateWalletViewController() {

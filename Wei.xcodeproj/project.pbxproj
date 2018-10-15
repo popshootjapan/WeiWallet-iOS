@@ -44,6 +44,7 @@
 		AE0F70DA214796AC004DE7B6 /* GasSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0F70D9214796AC004DE7B6 /* GasSettingViewController.swift */; };
 		AE0F70DC214796C4004DE7B6 /* GasSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0F70DB214796C4004DE7B6 /* GasSettingViewController.storyboard */; };
 		AE0F70DF214796E8004DE7B6 /* GasSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0F70DE214796E8004DE7B6 /* GasSettingViewModel.swift */; };
+		AE10DB332171EE8700D9F1BB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE10DB322171EE8700D9F1BB /* TabBarController.swift */; };
 		AE14A6152070A1E3003A63FF /* CreateWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE14A6142070A1E3003A63FF /* CreateWalletViewController.swift */; };
 		AE14A61A2070A20E003A63FF /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE14A6192070A20E003A63FF /* NavigationController.swift */; };
 		AE14A61C2070A3E7003A63FF /* ControllableNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE14A61B2070A3E7003A63FF /* ControllableNavigationBar.swift */; };
@@ -268,6 +269,7 @@
 		AE0F70D9214796AC004DE7B6 /* GasSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasSettingViewController.swift; sourceTree = "<group>"; };
 		AE0F70DB214796C4004DE7B6 /* GasSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GasSettingViewController.storyboard; sourceTree = "<group>"; };
 		AE0F70DE214796E8004DE7B6 /* GasSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasSettingViewModel.swift; sourceTree = "<group>"; };
+		AE10DB322171EE8700D9F1BB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		AE14A6142070A1E3003A63FF /* CreateWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWalletViewController.swift; sourceTree = "<group>"; };
 		AE14A6192070A20E003A63FF /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		AE14A61B2070A3E7003A63FF /* ControllableNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllableNavigationBar.swift; sourceTree = "<group>"; };
@@ -984,6 +986,7 @@
 				AE0F70DD214796D5004DE7B6 /* GasSetting */,
 				AEEFC9B220FDD56600D49F89 /* UpdateServiceTerms */,
 				AE9ABA162112D65F00B8A063 /* SignTransaction */,
+				AE10DB322171EE8700D9F1BB /* TabBarController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1422,6 +1425,7 @@
 				1AB9224820765FB600DEF52B /* RateService.swift in Sources */,
 				AED6F491205525DC004A280F /* RootViewController.swift in Sources */,
 				DE91338E20A03B39003CDE67 /* UIDevice+WeiExtension.swift in Sources */,
+				AE10DB332171EE8700D9F1BB /* TabBarController.swift in Sources */,
 				1A798C162081F23600812D80 /* DateFormatter.swift in Sources */,
 				AE43C3A220D0E45A0050BDDE /* LocaleLanguage.swift in Sources */,
 				1A798C032081DE7200812D80 /* LatestTransactionListViewCell.swift in Sources */,
