@@ -772,7 +772,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 42 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 44 localization keys.
     struct localizable {
       /// en translation: App will restart after switching a network
       /// 
@@ -878,6 +878,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let transactionSent = Rswift.StringResource(key: "Transaction.Sent", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Setting
+      /// 
+      /// Locales: en, ja
+      static let commonSetting = Rswift.StringResource(key: "Common.Setting", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Share QR code
       /// 
       /// Locales: en, ja
@@ -902,6 +906,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let commonUSDShort = Rswift.StringResource(key: "Common.USD.Short", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Wallet
+      /// 
+      /// Locales: en, ja
+      static let commonWallet = Rswift.StringResource(key: "Common.Wallet", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Wei Wallet is the simplest ethereum wallet for everyone.
       /// 
       /// Locales: en, ja
@@ -1125,6 +1133,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("Transaction.Sent", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Setting
+      /// 
+      /// Locales: en, ja
+      static func commonSetting(_: Void = ()) -> String {
+        return NSLocalizedString("Common.Setting", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Share QR code
       /// 
       /// Locales: en, ja
@@ -1165,6 +1180,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func commonUSDShort(_: Void = ()) -> String {
         return NSLocalizedString("Common.USD.Short", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Wallet
+      /// 
+      /// Locales: en, ja
+      static func commonWallet(_: Void = ()) -> String {
+        return NSLocalizedString("Common.Wallet", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Wei Wallet is the simplest ethereum wallet for everyone.

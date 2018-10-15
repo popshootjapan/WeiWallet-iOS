@@ -42,16 +42,16 @@ extension TabBarItem {
         switch self {
         case .wallet:
             items = (
-                "Wallet",
-                UIImage(named: "icon_tabwallet")!,
-                UIImage(named: "icon_tabwallet")!
+                R.string.localizable.commonWallet(),
+                R.image.icon_tabwallet()!,
+                R.image.icon_tabwallet()!
             )
             
         case .setting:
             items = (
-                "設定",
-                UIImage(named: "icon_tabsetting")!,
-                UIImage(named: "icon_tabsetting")!
+                R.string.localizable.commonSetting(),
+                R.image.icon_tabsetting()!,
+                R.image.icon_tabsetting()!
             )
         }
         
@@ -64,7 +64,7 @@ extension TabBarItem {
         return tabBarItem
     }
     
-    func makeViewController() -> UIViewController {
+    fileprivate func makeViewController() -> UIViewController {
         let viewController: UIViewController
         
         switch self {

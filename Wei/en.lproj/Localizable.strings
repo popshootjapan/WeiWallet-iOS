@@ -57,6 +57,8 @@
 "Common.USD.Short" = "USD";
 "Common.JPY.Short" = "JPY";
 "Common.ETH" = "Ethereum";
+"Common.Setting" = "Setting";
+"Common.Wallet" = "Wallet";
 
 // MARK: - Tutorial
 "Tutorial.First.Title" = "Welcome to Wei Wallet！";
