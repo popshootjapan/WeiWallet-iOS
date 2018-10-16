@@ -126,6 +126,7 @@
 		AE6D4D0820E215F2007CF3C5 /* SendConfirmationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4D0A20E215F2007CF3C5 /* SendConfirmationViewController.storyboard */; };
 		AE6D4D0F20E225D5007CF3C5 /* SettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4D1120E225D5007CF3C5 /* SettingViewController.storyboard */; };
 		AE6D4D1620E22679007CF3C5 /* MaintenanceViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4D1820E22679007CF3C5 /* MaintenanceViewController.storyboard */; };
+		AE76DCAA2175C4B700FE3A5A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE76DCA92175C4B700FE3A5A /* R.generated.swift */; };
 		AE8C9FC6209EF85F00C616E1 /* DebugListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */; };
 		AE8C9FC8209EF87300C616E1 /* DebugListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */; };
 		AE979E8020D7B6F5009B353F /* Decimal+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */; };
@@ -140,7 +141,6 @@
 		AE9E864020EF416B008354E9 /* PublicNetworkSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E863F20EF416B008354E9 /* PublicNetworkSettingViewModel.swift */; };
 		AE9E864220EF43FF008354E9 /* PublicNetworkSettingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E864120EF43FF008354E9 /* PublicNetworkSettingViewCell.swift */; };
 		AE9E864420EF4434008354E9 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E864320EF4434008354E9 /* Network.swift */; };
-		AEC16E8120FF0B63001FC632 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE052D4920D3FC7C00ACFA49 /* R.generated.swift */; };
 		AEC36ADA20C538EF00FE4737 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC36AD820C538EF00FE4737 /* RealmSwift.framework */; };
 		AEC36ADB20C538EF00FE4737 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC36AD920C538EF00FE4737 /* Realm.framework */; };
 		AEC36ADD20C5851E00FE4737 /* LocalTransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC36ADC20C5851E00FE4737 /* LocalTransactionRepository.swift */; };
@@ -378,6 +378,7 @@
 		AE6D4D1720E22679007CF3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MaintenanceViewController.storyboard; sourceTree = "<group>"; };
 		AE6D4D1A20E2267B007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MaintenanceViewController.strings; sourceTree = "<group>"; };
 		AE6D4D1C20E2267C007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MaintenanceViewController.strings; sourceTree = "<group>"; };
+		AE76DCA92175C4B700FE3A5A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugListViewController.swift; sourceTree = "<group>"; };
 		AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DebugListViewController.storyboard; sourceTree = "<group>"; };
 		AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extension.swift"; sourceTree = "<group>"; };
@@ -848,6 +849,25 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		AE76DCA42175C0E600FE3A5A /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				DE052D4920D3FC7C00ACFA49 /* R.generated.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		AE76DCAB2175C75100FE3A5A /* PublicNetworkSetting */ = {
+			isa = PBXGroup;
+			children = (
+				AE9E863C20EF413D008354E9 /* PublicNetworkSettingViewController.storyboard */,
+				AE9E863A20EF411A008354E9 /* PublicNetworkSettingViewController.swift */,
+				AE9E863F20EF416B008354E9 /* PublicNetworkSettingViewModel.swift */,
+				AE9E864120EF43FF008354E9 /* PublicNetworkSettingViewCell.swift */,
+			);
+			path = PublicNetworkSetting;
+			sourceTree = "<group>";
+		};
 		AE8C9FC9209EF87800C616E1 /* Debug */ = {
 			isa = PBXGroup;
 			children = (
@@ -870,10 +890,7 @@
 		AE9E863E20EF4156008354E9 /* NetworkSetting */ = {
 			isa = PBXGroup;
 			children = (
-				AE9E863C20EF413D008354E9 /* PublicNetworkSettingViewController.storyboard */,
-				AE9E863A20EF411A008354E9 /* PublicNetworkSettingViewController.swift */,
-				AE9E863F20EF416B008354E9 /* PublicNetworkSettingViewModel.swift */,
-				AE9E864120EF43FF008354E9 /* PublicNetworkSettingViewCell.swift */,
+				AE76DCAB2175C75100FE3A5A /* PublicNetworkSetting */,
 			);
 			path = NetworkSetting;
 			sourceTree = "<group>";
@@ -907,6 +924,7 @@
 				AED6F442205514BB004A280F /* Products */,
 				901D5927EDB75C4C0C808B02 /* Pods */,
 				4E3D8670668DA686F753BC9F /* Frameworks */,
+				AE76DCA42175C0E600FE3A5A /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -922,6 +940,7 @@
 		AED6F443205514BB004A280F /* Wei */ = {
 			isa = PBXGroup;
 			children = (
+				AE76DCA92175C4B700FE3A5A /* R.generated.swift */,
 				AED6F444205514BB004A280F /* AppDelegate.swift */,
 				AED6F49A2055288B004A280F /* DI */,
 				AED6F49B20552893004A280F /* View */,
@@ -1143,11 +1162,11 @@
 			buildPhases = (
 				2F94948716B1E8DCCE699B79 /* [CP] Check Pods Manifest.lock */,
 				1A3BD900205C1CB500FE485D /* Carthage */,
+				DE052D4820D3F8F200ACFA49 /* Rswift */,
 				AED6F43D205514BB004A280F /* Sources */,
 				AED6F43E205514BB004A280F /* Frameworks */,
 				AED6F43F205514BB004A280F /* Resources */,
 				776C2038DB265A3BD53F7031 /* [CP] Embed Pods Frameworks */,
-				DE052D4820D3F8F200ACFA49 /* Rswift */,
 			);
 			buildRules = (
 			);
@@ -1305,7 +1324,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 			showEnvVarsInLog = 0;
 		};
 		2F94948716B1E8DCCE699B79 /* [CP] Check Pods Manifest.lock */ = {
@@ -1391,7 +1410,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/Wei\"";
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/Wei\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1498,6 +1517,7 @@
 				AED49F5420E4D18800C2AF33 /* CurrencySettingViewCell.swift in Sources */,
 				AE14A64920789851003A63FF /* SendBaseViewController.swift in Sources */,
 				AE0D465020F73FB500E6E8A7 /* DeepLinkAction.swift in Sources */,
+				AE76DCAA2175C4B700FE3A5A /* R.generated.swift in Sources */,
 				DE624F80207245C500840B06 /* SelectAddressByQRViewModel.swift in Sources */,
 				AE14A6202070A560003A63FF /* CreateWalletViewModel.swift in Sources */,
 				AED6F497205527EF004A280F /* Container+Extension.swift in Sources */,
@@ -1526,7 +1546,6 @@
 				AE9ABA182112DA7400B8A063 /* SignTransactionViewModel.swift in Sources */,
 				DE3A38392084969A00AB44B0 /* BalanceAccessoryView.swift in Sources */,
 				AEC36ADD20C5851E00FE4737 /* LocalTransactionRepository.swift in Sources */,
-				AEC16E8120FF0B63001FC632 /* R.generated.swift in Sources */,
 				AE3F730B207F7F6300482502 /* Price.swift in Sources */,
 				AE3EB5FF20A83A9000D61CE6 /* Gas.swift in Sources */,
 				1AEA0A91205978250068C2E1 /* KeychainStore.swift in Sources */,
