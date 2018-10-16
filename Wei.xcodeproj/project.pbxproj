@@ -129,6 +129,8 @@
 		AE76DCAA2175C4B700FE3A5A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE76DCA92175C4B700FE3A5A /* R.generated.swift */; };
 		AE76DCAD2175C87900FE3A5A /* NetworkSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE76DCAC2175C87900FE3A5A /* NetworkSettingViewController.storyboard */; };
 		AE76DCAF2175C8B300FE3A5A /* NetworkSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE76DCAE2175C8B300FE3A5A /* NetworkSettingViewController.swift */; };
+		AE76DCB22175CD4600FE3A5A /* PrivateNetworkSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE76DCB12175CD4600FE3A5A /* PrivateNetworkSettingViewController.storyboard */; };
+		AE76DCB42175CD4C00FE3A5A /* PrivateNetworkSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE76DCB32175CD4C00FE3A5A /* PrivateNetworkSettingViewController.swift */; };
 		AE8C9FC6209EF85F00C616E1 /* DebugListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */; };
 		AE8C9FC8209EF87300C616E1 /* DebugListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */; };
 		AE979E8020D7B6F5009B353F /* Decimal+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */; };
@@ -383,6 +385,8 @@
 		AE76DCA92175C4B700FE3A5A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		AE76DCAC2175C87900FE3A5A /* NetworkSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NetworkSettingViewController.storyboard; sourceTree = "<group>"; };
 		AE76DCAE2175C8B300FE3A5A /* NetworkSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSettingViewController.swift; sourceTree = "<group>"; };
+		AE76DCB12175CD4600FE3A5A /* PrivateNetworkSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrivateNetworkSettingViewController.storyboard; sourceTree = "<group>"; };
+		AE76DCB32175CD4C00FE3A5A /* PrivateNetworkSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateNetworkSettingViewController.swift; sourceTree = "<group>"; };
 		AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugListViewController.swift; sourceTree = "<group>"; };
 		AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DebugListViewController.storyboard; sourceTree = "<group>"; };
 		AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extension.swift"; sourceTree = "<group>"; };
@@ -881,6 +885,15 @@
 			path = NetworkSetting;
 			sourceTree = "<group>";
 		};
+		AE76DCB52175CD6800FE3A5A /* PrivateNetworkSetting */ = {
+			isa = PBXGroup;
+			children = (
+				AE76DCB12175CD4600FE3A5A /* PrivateNetworkSettingViewController.storyboard */,
+				AE76DCB32175CD4C00FE3A5A /* PrivateNetworkSettingViewController.swift */,
+			);
+			path = PrivateNetworkSetting;
+			sourceTree = "<group>";
+		};
 		AE8C9FC9209EF87800C616E1 /* Debug */ = {
 			isa = PBXGroup;
 			children = (
@@ -905,6 +918,7 @@
 			children = (
 				AE76DCB02175C91300FE3A5A /* NetworkSetting */,
 				AE76DCAB2175C75100FE3A5A /* PublicNetworkSetting */,
+				AE76DCB52175CD6800FE3A5A /* PrivateNetworkSetting */,
 			);
 			path = NetworkSetting;
 			sourceTree = "<group>";
@@ -1271,6 +1285,7 @@
 				AE6D4CE520E20AA6007CF3C5 /* SendBaseViewController.storyboard in Resources */,
 				AE3F7306207E791100482502 /* SwipableViewController.storyboard in Resources */,
 				AE6D4CEC20E20AEA007CF3C5 /* SelectAddressByPasteViewController.storyboard in Resources */,
+				AE76DCB22175CD4600FE3A5A /* PrivateNetworkSettingViewController.storyboard in Resources */,
 				AE6D4CC920E20723007CF3C5 /* BackupViewController.storyboard in Resources */,
 				DE4C1A0020EA5A8100C20AE5 /* LatestTransactionListViewController.storyboard in Resources */,
 				AE76DCAD2175C87900FE3A5A /* NetworkSettingViewController.storyboard in Resources */,
@@ -1563,6 +1578,7 @@
 				DE3A38392084969A00AB44B0 /* BalanceAccessoryView.swift in Sources */,
 				AEC36ADD20C5851E00FE4737 /* LocalTransactionRepository.swift in Sources */,
 				AE3F730B207F7F6300482502 /* Price.swift in Sources */,
+				AE76DCB42175CD4C00FE3A5A /* PrivateNetworkSettingViewController.swift in Sources */,
 				AE3EB5FF20A83A9000D61CE6 /* Gas.swift in Sources */,
 				1AEA0A91205978250068C2E1 /* KeychainStore.swift in Sources */,
 				AE0F70DF214796E8004DE7B6 /* GasSettingViewModel.swift in Sources */,

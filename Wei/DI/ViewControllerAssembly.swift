@@ -148,6 +148,13 @@ final class ViewControllerAssembly: Assembly {
             return viewController
         }
         
+        // MARK: - PrivateNetworkSettingViewController
+        
+        container.register(PrivateNetworkSettingViewController.self) { resolver in
+            let viewController = UIStoryboard.instantiateViewController(of: PrivateNetworkSettingViewController.self)
+            return viewController
+        }
+        
         // MARK: - TransactionHistoryViewController
         
         container.register(TransactionHistoryViewController.self) { resolver in

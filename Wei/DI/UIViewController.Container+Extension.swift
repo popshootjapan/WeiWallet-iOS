@@ -112,6 +112,12 @@ extension PublicNetworkSettingViewController {
     }
 }
 
+extension PrivateNetworkSettingViewController {
+    static func make() -> PrivateNetworkSettingViewController {
+        return Container.shared.resolve(PrivateNetworkSettingViewController.self)!
+    }
+}
+
 extension TransactionHistoryViewController {
     static func make() -> TransactionHistoryViewController {
         return Container.shared.resolve(TransactionHistoryViewController.self)!

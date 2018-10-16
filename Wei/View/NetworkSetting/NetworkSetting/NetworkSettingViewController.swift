@@ -30,7 +30,8 @@ final class NetworkSettingViewController: UITableViewController {
             navigationController?.pushViewController(viewController, animated: true)
             
         case .privateNetwork:
-            print("private")
+            let viewController = PrivateNetworkSettingViewController.make()
+            navigationController?.pushViewController(viewController, animated: true)
         }
     }
 }
