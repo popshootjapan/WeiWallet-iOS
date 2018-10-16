@@ -144,10 +144,10 @@ final class ViewModelAssembly: Assembly {
             ))
         }
         
-        // MARK: - NetworkSettingViewModel
+        // MARK: - PublicNetworkSettingViewModel
         
-        container.register(NetworkSettingViewModel.self) { resolver in
-            return NetworkSettingViewModel(dependency: (
+        container.register(PublicNetworkSettingViewModel.self) { resolver in
+            return PublicNetworkSettingViewModel(dependency: (
                 resolver.resolve(ApplicationStoreProtocol.self)!
             ))
         }

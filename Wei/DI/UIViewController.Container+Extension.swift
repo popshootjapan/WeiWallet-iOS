@@ -100,9 +100,9 @@ extension CurrencySettingViewController {
     }
 }
 
-extension NetworkSettingViewController {
-    static func make() -> NetworkSettingViewController {
-        return Container.shared.resolve(NetworkSettingViewController.self)!
+extension PublicNetworkSettingViewController {
+    static func make() -> PublicNetworkSettingViewController {
+        return Container.shared.resolve(PublicNetworkSettingViewController.self)!
     }
 }
 

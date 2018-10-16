@@ -134,11 +134,11 @@ final class ViewControllerAssembly: Assembly {
             return viewController
         }
         
-        // MARK: - NetworkSettingViewController
+        // MARK: - PublicNetworkSettingViewController
         
-        container.register(NetworkSettingViewController.self) { resolver in
-            let viewController = UIStoryboard.instantiateViewController(of: NetworkSettingViewController.self)
-            viewController.viewModel = resolver.resolve(NetworkSettingViewModel.self)!
+        container.register(PublicNetworkSettingViewController.self) { resolver in
+            let viewController = UIStoryboard.instantiateViewController(of: PublicNetworkSettingViewController.self)
+            viewController.viewModel = resolver.resolve(PublicNetworkSettingViewModel.self)!
             return viewController
         }
         

@@ -1,5 +1,5 @@
 //
-//  NetworkSettingViewController.swift
+//  PublicNetworkSettingViewController.swift
 //  Wei
 //
 //  Created by Ryo Fukuda on 2018/07/06.
@@ -10,9 +10,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-final class NetworkSettingViewController: UITableViewController {
+final class PublicNetworkSettingViewController: UITableViewController {
     
-    var viewModel: NetworkSettingViewModel!
+    var viewModel: PublicNetworkSettingViewModel!
     
     private let selectedNetwork = PublishSubject<Network>()
     private let disposeBag = DisposeBag()
@@ -47,7 +47,7 @@ final class NetworkSettingViewController: UITableViewController {
         
         output
             .networks
-            .drive(tableView.rx.items(cellType: NetworkSettingViewCell.self))
+            .drive(tableView.rx.items(cellType: PublicNetworkSettingViewCell.self))
             .disposed(by: disposeBag)
     }
     

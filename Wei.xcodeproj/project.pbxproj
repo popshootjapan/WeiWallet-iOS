@@ -135,10 +135,10 @@
 		AE9ABA132112D65500B8A063 /* SignTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ABA122112D65500B8A063 /* SignTransactionViewController.swift */; };
 		AE9ABA152112D65A00B8A063 /* SignTransactionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9ABA142112D65A00B8A063 /* SignTransactionViewController.storyboard */; };
 		AE9ABA182112DA7400B8A063 /* SignTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ABA172112DA7400B8A063 /* SignTransactionViewModel.swift */; };
-		AE9E863B20EF411A008354E9 /* NetworkSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E863A20EF411A008354E9 /* NetworkSettingViewController.swift */; };
-		AE9E863D20EF413D008354E9 /* NetworkSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9E863C20EF413D008354E9 /* NetworkSettingViewController.storyboard */; };
-		AE9E864020EF416B008354E9 /* NetworkSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E863F20EF416B008354E9 /* NetworkSettingViewModel.swift */; };
-		AE9E864220EF43FF008354E9 /* NetworkSettingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E864120EF43FF008354E9 /* NetworkSettingViewCell.swift */; };
+		AE9E863B20EF411A008354E9 /* PublicNetworkSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E863A20EF411A008354E9 /* PublicNetworkSettingViewController.swift */; };
+		AE9E863D20EF413D008354E9 /* PublicNetworkSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9E863C20EF413D008354E9 /* PublicNetworkSettingViewController.storyboard */; };
+		AE9E864020EF416B008354E9 /* PublicNetworkSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E863F20EF416B008354E9 /* PublicNetworkSettingViewModel.swift */; };
+		AE9E864220EF43FF008354E9 /* PublicNetworkSettingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E864120EF43FF008354E9 /* PublicNetworkSettingViewCell.swift */; };
 		AE9E864420EF4434008354E9 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E864320EF4434008354E9 /* Network.swift */; };
 		AEC16E8120FF0B63001FC632 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE052D4920D3FC7C00ACFA49 /* R.generated.swift */; };
 		AEC36ADA20C538EF00FE4737 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC36AD820C538EF00FE4737 /* RealmSwift.framework */; };
@@ -387,10 +387,10 @@
 		AE9ABA122112D65500B8A063 /* SignTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignTransactionViewController.swift; sourceTree = "<group>"; };
 		AE9ABA142112D65A00B8A063 /* SignTransactionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignTransactionViewController.storyboard; sourceTree = "<group>"; };
 		AE9ABA172112DA7400B8A063 /* SignTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignTransactionViewModel.swift; sourceTree = "<group>"; };
-		AE9E863A20EF411A008354E9 /* NetworkSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSettingViewController.swift; sourceTree = "<group>"; };
-		AE9E863C20EF413D008354E9 /* NetworkSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NetworkSettingViewController.storyboard; sourceTree = "<group>"; };
-		AE9E863F20EF416B008354E9 /* NetworkSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSettingViewModel.swift; sourceTree = "<group>"; };
-		AE9E864120EF43FF008354E9 /* NetworkSettingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSettingViewCell.swift; sourceTree = "<group>"; };
+		AE9E863A20EF411A008354E9 /* PublicNetworkSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicNetworkSettingViewController.swift; sourceTree = "<group>"; };
+		AE9E863C20EF413D008354E9 /* PublicNetworkSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PublicNetworkSettingViewController.storyboard; sourceTree = "<group>"; };
+		AE9E863F20EF416B008354E9 /* PublicNetworkSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicNetworkSettingViewModel.swift; sourceTree = "<group>"; };
+		AE9E864120EF43FF008354E9 /* PublicNetworkSettingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicNetworkSettingViewCell.swift; sourceTree = "<group>"; };
 		AE9E864320EF4434008354E9 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		AEC36AD820C538EF00FE4737 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		AEC36AD920C538EF00FE4737 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
@@ -870,10 +870,10 @@
 		AE9E863E20EF4156008354E9 /* NetworkSetting */ = {
 			isa = PBXGroup;
 			children = (
-				AE9E863C20EF413D008354E9 /* NetworkSettingViewController.storyboard */,
-				AE9E863A20EF411A008354E9 /* NetworkSettingViewController.swift */,
-				AE9E863F20EF416B008354E9 /* NetworkSettingViewModel.swift */,
-				AE9E864120EF43FF008354E9 /* NetworkSettingViewCell.swift */,
+				AE9E863C20EF413D008354E9 /* PublicNetworkSettingViewController.storyboard */,
+				AE9E863A20EF411A008354E9 /* PublicNetworkSettingViewController.swift */,
+				AE9E863F20EF416B008354E9 /* PublicNetworkSettingViewModel.swift */,
+				AE9E864120EF43FF008354E9 /* PublicNetworkSettingViewCell.swift */,
 			);
 			path = NetworkSetting;
 			sourceTree = "<group>";
@@ -932,7 +932,6 @@
 				AED6F44B205514BB004A280F /* Assets.xcassets */,
 				AED6F44D205514BB004A280F /* LaunchScreen.storyboard */,
 				AED6F450205514BB004A280F /* Info.plist */,
-				DE052D4920D3FC7C00ACFA49 /* R.generated.swift */,
 				07F188CF2073EEF900135586 /* Wei.entitlements */,
 				079A5EF920851C21009067A2 /* Settings.bundle */,
 				DE052D5020D4016B00ACFA49 /* Localizable.strings */,
@@ -1259,7 +1258,7 @@
 				DE9272C8208AD55000E03AB9 /* TutorialTopView.xib in Resources */,
 				AE69C84E20E0E25600EB1293 /* MyWalletViewController.storyboard in Resources */,
 				AED6F44C205514BB004A280F /* Assets.xcassets in Resources */,
-				AE9E863D20EF413D008354E9 /* NetworkSettingViewController.storyboard in Resources */,
+				AE9E863D20EF413D008354E9 /* PublicNetworkSettingViewController.storyboard in Resources */,
 				AE6D4CFA20E20DBD007CF3C5 /* SelectAmountViewController.storyboard in Resources */,
 				AE6D4D1620E22679007CF3C5 /* MaintenanceViewController.storyboard in Resources */,
 				AE6D4CC220E20679007CF3C5 /* SuggestBackupViewController.storyboard in Resources */,
@@ -1421,7 +1420,7 @@
 				DE0DDCF4207F977200735C3C /* SendBaseViewModel.swift in Sources */,
 				DE7682E0207F3C88004094BA /* SettingViewModel.swift in Sources */,
 				DE9272C6208AD54700E03AB9 /* TutorialTopView.swift in Sources */,
-				AE9E863B20EF411A008354E9 /* NetworkSettingViewController.swift in Sources */,
+				AE9E863B20EF411A008354E9 /* PublicNetworkSettingViewController.swift in Sources */,
 				1AB9224820765FB600DEF52B /* RateService.swift in Sources */,
 				AED6F491205525DC004A280F /* RootViewController.swift in Sources */,
 				DE91338E20A03B39003CDE67 /* UIDevice+WeiExtension.swift in Sources */,
@@ -1512,11 +1511,11 @@
 				1AB430BB2096FCC800109A06 /* PageControl.swift in Sources */,
 				AE14A6152070A1E3003A63FF /* CreateWalletViewController.swift in Sources */,
 				AE9ABA132112D65500B8A063 /* SignTransactionViewController.swift in Sources */,
-				AE9E864220EF43FF008354E9 /* NetworkSettingViewCell.swift in Sources */,
+				AE9E864220EF43FF008354E9 /* PublicNetworkSettingViewCell.swift in Sources */,
 				DEC5772B2074D79200DC3923 /* ReceiveViewModel.swift in Sources */,
 				DE9133C620AEFE78003CDE67 /* MnemonicWord.swift in Sources */,
 				DEF040C920692E9600DFE35A /* UIColor+WeiExtension.swift in Sources */,
-				AE9E864020EF416B008354E9 /* NetworkSettingViewModel.swift in Sources */,
+				AE9E864020EF416B008354E9 /* PublicNetworkSettingViewModel.swift in Sources */,
 				DE9272C2208ACF4E00E03AB9 /* TutorialViewController.swift in Sources */,
 				AE14A61C2070A3E7003A63FF /* ControllableNavigationBar.swift in Sources */,
 				DE7682EA207F4AFD004094BA /* TransactionHistoryViewController.swift in Sources */,

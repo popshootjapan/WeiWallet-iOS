@@ -1,5 +1,5 @@
 //
-//  NetworkSettingViewModel.swift
+//  PublicNetworkSettingViewModel.swift
 //  Wei
 //
 //  Created by Ryo Fukuda on 2018/07/06.
@@ -9,7 +9,7 @@
 import RxSwift
 import RxCocoa
 
-final class NetworkSettingViewModel: InjectableViewModel {
+final class PublicNetworkSettingViewModel: InjectableViewModel {
     
     typealias Dependency = (
         ApplicationStoreProtocol
