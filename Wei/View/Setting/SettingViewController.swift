@@ -51,7 +51,7 @@ final class SettingViewController: UITableViewController {
                         self?.navigationController?.pushViewController(viewController, animated: true)
                         
                     case .network:
-                        let viewController = PublicNetworkSettingViewController.make()
+                        let viewController = NetworkSettingViewController.make()
                         self?.navigationController?.pushViewController(viewController, animated: true)
                         
                     case .gasPrice:

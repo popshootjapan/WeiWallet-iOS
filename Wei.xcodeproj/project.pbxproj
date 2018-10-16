@@ -127,6 +127,8 @@
 		AE6D4D0F20E225D5007CF3C5 /* SettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4D1120E225D5007CF3C5 /* SettingViewController.storyboard */; };
 		AE6D4D1620E22679007CF3C5 /* MaintenanceViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6D4D1820E22679007CF3C5 /* MaintenanceViewController.storyboard */; };
 		AE76DCAA2175C4B700FE3A5A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE76DCA92175C4B700FE3A5A /* R.generated.swift */; };
+		AE76DCAD2175C87900FE3A5A /* NetworkSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE76DCAC2175C87900FE3A5A /* NetworkSettingViewController.storyboard */; };
+		AE76DCAF2175C8B300FE3A5A /* NetworkSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE76DCAE2175C8B300FE3A5A /* NetworkSettingViewController.swift */; };
 		AE8C9FC6209EF85F00C616E1 /* DebugListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */; };
 		AE8C9FC8209EF87300C616E1 /* DebugListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */; };
 		AE979E8020D7B6F5009B353F /* Decimal+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */; };
@@ -379,6 +381,8 @@
 		AE6D4D1A20E2267B007CF3C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MaintenanceViewController.strings; sourceTree = "<group>"; };
 		AE6D4D1C20E2267C007CF3C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MaintenanceViewController.strings; sourceTree = "<group>"; };
 		AE76DCA92175C4B700FE3A5A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		AE76DCAC2175C87900FE3A5A /* NetworkSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NetworkSettingViewController.storyboard; sourceTree = "<group>"; };
+		AE76DCAE2175C8B300FE3A5A /* NetworkSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSettingViewController.swift; sourceTree = "<group>"; };
 		AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugListViewController.swift; sourceTree = "<group>"; };
 		AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DebugListViewController.storyboard; sourceTree = "<group>"; };
 		AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extension.swift"; sourceTree = "<group>"; };
@@ -868,6 +872,15 @@
 			path = PublicNetworkSetting;
 			sourceTree = "<group>";
 		};
+		AE76DCB02175C91300FE3A5A /* NetworkSetting */ = {
+			isa = PBXGroup;
+			children = (
+				AE76DCAC2175C87900FE3A5A /* NetworkSettingViewController.storyboard */,
+				AE76DCAE2175C8B300FE3A5A /* NetworkSettingViewController.swift */,
+			);
+			path = NetworkSetting;
+			sourceTree = "<group>";
+		};
 		AE8C9FC9209EF87800C616E1 /* Debug */ = {
 			isa = PBXGroup;
 			children = (
@@ -890,6 +903,7 @@
 		AE9E863E20EF4156008354E9 /* NetworkSetting */ = {
 			isa = PBXGroup;
 			children = (
+				AE76DCB02175C91300FE3A5A /* NetworkSetting */,
 				AE76DCAB2175C75100FE3A5A /* PublicNetworkSetting */,
 			);
 			path = NetworkSetting;
@@ -1259,6 +1273,7 @@
 				AE6D4CEC20E20AEA007CF3C5 /* SelectAddressByPasteViewController.storyboard in Resources */,
 				AE6D4CC920E20723007CF3C5 /* BackupViewController.storyboard in Resources */,
 				DE4C1A0020EA5A8100C20AE5 /* LatestTransactionListViewController.storyboard in Resources */,
+				AE76DCAD2175C87900FE3A5A /* NetworkSettingViewController.storyboard in Resources */,
 				AE69C85520E0E32600EB1293 /* HomeViewController.storyboard in Resources */,
 				AE0F70DC214796C4004DE7B6 /* GasSettingViewController.storyboard in Resources */,
 				AE6D4CD720E208D0007CF3C5 /* ReceiveViewController.storyboard in Resources */,
@@ -1440,6 +1455,7 @@
 				DE7682E0207F3C88004094BA /* SettingViewModel.swift in Sources */,
 				DE9272C6208AD54700E03AB9 /* TutorialTopView.swift in Sources */,
 				AE9E863B20EF411A008354E9 /* PublicNetworkSettingViewController.swift in Sources */,
+				AE76DCAF2175C8B300FE3A5A /* NetworkSettingViewController.swift in Sources */,
 				1AB9224820765FB600DEF52B /* RateService.swift in Sources */,
 				AED6F491205525DC004A280F /* RootViewController.swift in Sources */,
 				DE91338E20A03B39003CDE67 /* UIDevice+WeiExtension.swift in Sources */,
