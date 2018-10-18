@@ -57,12 +57,12 @@ final class PrivateNetworkSettingViewController: UITableViewController {
             let chainIDTextField = textFields[1] as UITextField
             
             guard let endpointText = endpointTextField.text, let url = URL(string: endpointText) else {
-                print("Invaid url")
+                self?.presentInvalidURLAlert()
                 return
             }
             
             guard let chainIDText = chainIDTextField.text, let chainID = Int(chainIDText) else {
-                print("Invalid chain id")
+                self?.presentInvalidChainID()
                 return
             }
             
@@ -70,6 +70,18 @@ final class PrivateNetworkSettingViewController: UITableViewController {
         })
         
         alertController.addAction(UIAlertAction(title: R.string.localizable.commonCancel(), style: .cancel))
+        present(alertController, animated: true)
+    }
+    
+    private func presentInvalidURLAlert() {
+        let alertController = UIAlertController(title: "Invalid URL", message: nil, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alertController, animated: true)
+    }
+    
+    private func presentInvalidChainID() {
+        let alertController = UIAlertController(title: "Invalid ChainID", message: nil, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default))
         present(alertController, animated: true)
     }
 }
