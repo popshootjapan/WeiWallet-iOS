@@ -152,6 +152,7 @@ final class ViewControllerAssembly: Assembly {
         
         container.register(PrivateNetworkSettingViewController.self) { resolver in
             let viewController = UIStoryboard.instantiateViewController(of: PrivateNetworkSettingViewController.self)
+            viewController.viewModel = resolver.resolve(PrivateNetworkSettingViewModel.self)!
             return viewController
         }
         

@@ -131,6 +131,7 @@
 		AE76DCAF2175C8B300FE3A5A /* NetworkSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE76DCAE2175C8B300FE3A5A /* NetworkSettingViewController.swift */; };
 		AE76DCB22175CD4600FE3A5A /* PrivateNetworkSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE76DCB12175CD4600FE3A5A /* PrivateNetworkSettingViewController.storyboard */; };
 		AE76DCB42175CD4C00FE3A5A /* PrivateNetworkSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE76DCB32175CD4C00FE3A5A /* PrivateNetworkSettingViewController.swift */; };
+		AE76DCDE2178B89600FE3A5A /* PrivateNetworkSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE76DCDD2178B89600FE3A5A /* PrivateNetworkSettingViewModel.swift */; };
 		AE8C9FC6209EF85F00C616E1 /* DebugListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */; };
 		AE8C9FC8209EF87300C616E1 /* DebugListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */; };
 		AE979E8020D7B6F5009B353F /* Decimal+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */; };
@@ -387,6 +388,7 @@
 		AE76DCAE2175C8B300FE3A5A /* NetworkSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSettingViewController.swift; sourceTree = "<group>"; };
 		AE76DCB12175CD4600FE3A5A /* PrivateNetworkSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrivateNetworkSettingViewController.storyboard; sourceTree = "<group>"; };
 		AE76DCB32175CD4C00FE3A5A /* PrivateNetworkSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateNetworkSettingViewController.swift; sourceTree = "<group>"; };
+		AE76DCDD2178B89600FE3A5A /* PrivateNetworkSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateNetworkSettingViewModel.swift; sourceTree = "<group>"; };
 		AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugListViewController.swift; sourceTree = "<group>"; };
 		AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DebugListViewController.storyboard; sourceTree = "<group>"; };
 		AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extension.swift"; sourceTree = "<group>"; };
@@ -890,6 +892,7 @@
 			children = (
 				AE76DCB12175CD4600FE3A5A /* PrivateNetworkSettingViewController.storyboard */,
 				AE76DCB32175CD4C00FE3A5A /* PrivateNetworkSettingViewController.swift */,
+				AE76DCDD2178B89600FE3A5A /* PrivateNetworkSettingViewModel.swift */,
 			);
 			path = PrivateNetworkSetting;
 			sourceTree = "<group>";
@@ -1591,6 +1594,7 @@
 				1A3BD8FA205C042600FE485D /* Action.swift in Sources */,
 				DE7682DC207F3C28004094BA /* SettingViewController.swift in Sources */,
 				1AEA0A8C205969350068C2E1 /* UIViewController+Rx.swift in Sources */,
+				AE76DCDE2178B89600FE3A5A /* PrivateNetworkSettingViewModel.swift in Sources */,
 				AE0F70DA214796AC004DE7B6 /* GasSettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

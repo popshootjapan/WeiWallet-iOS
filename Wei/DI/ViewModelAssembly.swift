@@ -212,5 +212,13 @@ final class ViewModelAssembly: Assembly {
                 resolver.resolve(ApplicationStoreProtocol.self)!
             ))
         }
+        
+        // MARK: - PrivateNetworkSettingViewModel
+        
+        container.register(PrivateNetworkSettingViewModel.self) { resolver in
+            return PrivateNetworkSettingViewModel(dependency: (
+                resolver.resolve(ApplicationStoreProtocol.self)!
+            ))
+        }
     }
 }
