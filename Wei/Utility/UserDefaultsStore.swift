@@ -16,6 +16,9 @@ protocol UserDefaultsStoreProtocol {
     /// Represents a current network
     var network: String? { get set }
     
+    /// Represents a custom private network endpoint
+    var privateNetworkEndpoint: String? { get set }
+    
     /// Represents a current chainID (used only in private network)
     var chainID: Int { get set }
     
@@ -46,6 +49,7 @@ final class UserDefaultsStore: UserDefaultsStoreProtocol {
         case currency
         case network
         case chainID
+        case privateNetworkEndpoint
         case testUse
         case gasPrice
     }
@@ -65,6 +69,15 @@ final class UserDefaultsStore: UserDefaultsStoreProtocol {
         }
         set {
             setValue(newValue, for: .network)
+        }
+    }
+    
+    var privateNetworkEndpoint: String? {
+        get {
+            return value(for: .privateNetworkEndpoint)
+        }
+        set {
+            setValue(newValue, for: .privateNetworkEndpoint)
         }
     }
     

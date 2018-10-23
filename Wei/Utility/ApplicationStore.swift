@@ -26,6 +26,9 @@ protocol ApplicationStoreProtocol {
     /// Represents a current network user is using
     var network: Network { get set }
     
+    /// Represents a custom private network endpoint
+    var privateNetworkEndpoint: String? { get set }
+    
     /// Represents a gas price
     var gasPrice: Int { get set }
     
@@ -139,6 +142,15 @@ final class ApplicationStore: ApplicationStoreProtocol, Injectable {
                 userDefaultsStore.chainID = chainID
                 userDefaultsStore.testUse = testUse
             }
+        }
+    }
+    
+    var privateNetworkEndpoint: String? {
+        get {
+            return userDefaultsStore.privateNetworkEndpoint
+        }
+        set {
+            userDefaultsStore.privateNetworkEndpoint = newValue
         }
     }
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class NetworkSettingViewCell: UITableViewCell, InputAppliable {
+final class PublicNetworkSettingViewCell: UITableViewCell, InputAppliable {
     
     @IBOutlet private weak var nameLabel: UILabel!
     

@@ -291,8 +291,8 @@ struct R: Rswift.Validatable {
     static let latestTransactionListViewCell: Rswift.ReuseIdentifier<LatestTransactionListViewCell> = Rswift.ReuseIdentifier(identifier: "LatestTransactionListViewCell")
     /// Reuse identifier `MnemonicWordViewCell`.
     static let mnemonicWordViewCell: Rswift.ReuseIdentifier<MnemonicWordViewCell> = Rswift.ReuseIdentifier(identifier: "MnemonicWordViewCell")
-    /// Reuse identifier `NetworkSettingViewCell`.
-    static let networkSettingViewCell: Rswift.ReuseIdentifier<NetworkSettingViewCell> = Rswift.ReuseIdentifier(identifier: "NetworkSettingViewCell")
+    /// Reuse identifier `PublicNetworkSettingViewCell`.
+    static let publicNetworkSettingViewCell: Rswift.ReuseIdentifier<PublicNetworkSettingViewCell> = Rswift.ReuseIdentifier(identifier: "PublicNetworkSettingViewCell")
     /// Reuse identifier `SettingViewCell`.
     static let settingViewCell: Rswift.ReuseIdentifier<UIKit.UITableViewCell> = Rswift.ReuseIdentifier(identifier: "SettingViewCell")
     /// Reuse identifier `TransactionHistoryViewCell`.
@@ -306,7 +306,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 25 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 27 storyboards.
   struct storyboard {
     /// Storyboard `BackupViewController`.
     static let backupViewController = _R.storyboard.backupViewController()
@@ -330,6 +330,10 @@ struct R: Rswift.Validatable {
     static let myWalletViewController = _R.storyboard.myWalletViewController()
     /// Storyboard `NetworkSettingViewController`.
     static let networkSettingViewController = _R.storyboard.networkSettingViewController()
+    /// Storyboard `PrivateNetworkSettingViewController`.
+    static let privateNetworkSettingViewController = _R.storyboard.privateNetworkSettingViewController()
+    /// Storyboard `PublicNetworkSettingViewController`.
+    static let publicNetworkSettingViewController = _R.storyboard.publicNetworkSettingViewController()
     /// Storyboard `ReceiveViewController`.
     static let receiveViewController = _R.storyboard.receiveViewController()
     /// Storyboard `RestoreWalletViewController`.
@@ -412,6 +416,16 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "NetworkSettingViewController", bundle: ...)`
     static func networkSettingViewController(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.networkSettingViewController)
+    }
+    
+    /// `UIStoryboard(name: "PrivateNetworkSettingViewController", bundle: ...)`
+    static func privateNetworkSettingViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.privateNetworkSettingViewController)
+    }
+    
+    /// `UIStoryboard(name: "PublicNetworkSettingViewController", bundle: ...)`
+    static func publicNetworkSettingViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.publicNetworkSettingViewController)
     }
     
     /// `UIStoryboard(name: "ReceiveViewController", bundle: ...)`
@@ -2245,13 +2259,13 @@ struct _R: Rswift.Validatable {
   
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
+      try maintenanceViewController.validate()
       try createWalletViewController.validate()
       try myWalletViewController.validate()
       try suggestBackupViewController.validate()
       try launchScreen.validate()
       try homeViewController.validate()
       try updateServiceTermsViewController.validate()
-      try maintenanceViewController.validate()
       try latestTransactionListViewController.validate()
       try sendConfirmationViewController.validate()
     }
@@ -2377,6 +2391,24 @@ struct _R: Rswift.Validatable {
       
       let bundle = R.hostingBundle
       let name = "NetworkSettingViewController"
+      
+      fileprivate init() {}
+    }
+    
+    struct privateNetworkSettingViewController: Rswift.StoryboardResourceWithInitialControllerType {
+      typealias InitialController = PrivateNetworkSettingViewController
+      
+      let bundle = R.hostingBundle
+      let name = "PrivateNetworkSettingViewController"
+      
+      fileprivate init() {}
+    }
+    
+    struct publicNetworkSettingViewController: Rswift.StoryboardResourceWithInitialControllerType {
+      typealias InitialController = PublicNetworkSettingViewController
+      
+      let bundle = R.hostingBundle
+      let name = "PublicNetworkSettingViewController"
       
       fileprivate init() {}
     }

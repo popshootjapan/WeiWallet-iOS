@@ -27,9 +27,19 @@ final class GethRepository: GethRepositoryProtocol, Injectable {
     private let geth: Geth
     
     init(dependency: Dependency) {
+        
+        let nodeEndpoint: String
+        switch dependency.network {
+        case .mainnet, .ropsten, .kovan:
+            nodeEndpoint = Environment.current.nodeEndpoint
+        case .private(_, _):
+            nodeEndpoint = dependency.privateNetworkEndpoint
+                ?? Environment.current.nodeEndpoint
+        }
+        
         geth = Geth(configuration: Configuration(
             network: dependency.network,
-            nodeEndpoint: Environment.current.nodeEndpoint,
+            nodeEndpoint: nodeEndpoint,
             etherscanAPIKey: Environment.current.etherscanAPIKey,
             debugPrints: Environment.current.debugPrints
         ))
