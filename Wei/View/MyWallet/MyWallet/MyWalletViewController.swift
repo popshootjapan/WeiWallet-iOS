@@ -16,7 +16,6 @@ final class MyWalletViewController: UIViewController {
     
     @IBOutlet private weak var sendButton: UIButton!
     @IBOutlet private weak var historyButton: UIButton!
-    @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var etherBalanceTitleLabel: UILabel!
     @IBOutlet private weak var etherBalanceLabel: UILabel!
     @IBOutlet private weak var fiatBalanceTitleLabel: UILabel!
@@ -52,25 +51,6 @@ final class MyWalletViewController: UIViewController {
             .etherBalance
             .drive(onNext: { [weak self] balance in
                 self?.etherBalanceLabel.text = balance.ether.string
-            })
-            .disposed(by: disposeBag)
-        
-        output
-            .currency
-            .drive(onNext: { [weak self] currency in
-                self?.fiatBalanceTitleLabel.text = currency.name
-            })
-            .disposed(by: disposeBag)
-        
-        output
-            .network
-            .drive(onNext: { [weak self] network in
-                switch network {
-                case .mainnet:
-                    self?.titleLabel.text = R.string.localizable.commonETH()
-                default:
-                    self?.titleLabel.text = network.name
-                }
             })
             .disposed(by: disposeBag)
 
