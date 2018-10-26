@@ -16,7 +16,6 @@ final class HomeViewController: UIViewController {
     
     @IBOutlet private weak var myWalletContainerView: UIView!
     @IBOutlet private weak var receiveButton: UIButton!
-    @IBOutlet private weak var settingButton: UIButton!
     
     private let disposeBag = DisposeBag()
     
@@ -28,7 +27,6 @@ final class HomeViewController: UIViewController {
     
     private func bindViewModel() {
         let input = HomeViewModel.Input(
-            settingButtonDidTap: settingButton.rx.tap.asDriver(),
             receiveButtonDidTap: receiveButton.rx.tap.asDriver()
         )
         
@@ -38,13 +36,6 @@ final class HomeViewController: UIViewController {
             .presentReceiveViewController
             .drive(onNext: { [weak self] in
                 self?.presentReceiveViewController()
-            })
-            .disposed(by: disposeBag)
-        
-        output
-            .pushSettingViewController
-            .drive(onNext: { [weak self] in
-                self?.pushSettingViewController()
             })
             .disposed(by: disposeBag)
     }
@@ -57,11 +48,6 @@ final class HomeViewController: UIViewController {
     private func presentReceiveViewController() {
         let viewController = ReceiveViewController.make()
         present(viewController, animated: true)
-    }
-    
-    private func pushSettingViewController() {
-        let viewController = SettingViewController.make()
-        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 

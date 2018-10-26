@@ -2327,8 +2327,6 @@ struct _R: Rswift.Validatable {
       
       static func validate() throws {
         if UIKit.UIImage(named: "toolbar_shadow") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'toolbar_shadow' is used in storyboard 'HomeViewController', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "icon_receive") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_receive' is used in storyboard 'HomeViewController', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "icon_setting") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_setting' is used in storyboard 'HomeViewController', but couldn't be loaded.") }
       }
       
       fileprivate init() {}
