@@ -59,6 +59,7 @@
 "Common.ETH" = "Ethereum";
 "Common.Setting" = "Setting";
 "Common.Wallet" = "Wallet";
+"Common.Browser" = "Browser";
 
 // MARK: - Tutorial
 "Tutorial.First.Title" = "Welcome to Wei Wallet！";

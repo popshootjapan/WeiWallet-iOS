@@ -40,6 +40,12 @@ extension LatestTransactionListViewController {
     }
 }
 
+extension BrowserViewController {
+    static func make() -> BrowserViewController {
+        return Container.shared.resolve(BrowserViewController.self)!
+    }
+}
+
 extension CreateWalletViewController {
     static func make() -> CreateWalletViewController {
         return Container.shared.resolve(CreateWalletViewController.self)!

@@ -59,6 +59,7 @@
 "Common.ETH" = "イーサリアム";
 "Common.Setting" = "設定";
 "Common.Wallet" = "ウォレット";
+"Common.Browser" = "ブラウザ";
 
 // MARK: - Tutorial
 "Tutorial.First.Title" = "ようこそWei Walletへ！";

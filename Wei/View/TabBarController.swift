@@ -27,10 +27,11 @@ final class TabBarController: UITabBarController {
 
 enum TabBarItem {
     case wallet
+    case browser
     case setting
     
     static var all: [TabBarItem] {
-        return [.wallet, .setting]
+        return [.wallet, .browser, .setting]
     }
 }
 
@@ -45,6 +46,13 @@ extension TabBarItem {
                 R.string.localizable.commonWallet(),
                 R.image.icon_tabwallet()!,
                 R.image.icon_tabwallet()!
+            )
+            
+        case .browser:
+            items = (
+                R.string.localizable.commonBrowser(),
+                R.image.icon_tabbrowser()!,
+                R.image.icon_tabbrowser()!
             )
             
         case .setting:
@@ -70,6 +78,9 @@ extension TabBarItem {
         switch self {
         case .wallet:
             viewController = HomeViewController.make()
+            
+        case .browser:
+            viewController = BrowserViewController.make()
             
         case .setting:
             viewController = SettingViewController.make()

@@ -132,6 +132,8 @@
 		AE76DCB22175CD4600FE3A5A /* PrivateNetworkSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE76DCB12175CD4600FE3A5A /* PrivateNetworkSettingViewController.storyboard */; };
 		AE76DCB42175CD4C00FE3A5A /* PrivateNetworkSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE76DCB32175CD4C00FE3A5A /* PrivateNetworkSettingViewController.swift */; };
 		AE76DCDE2178B89600FE3A5A /* PrivateNetworkSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE76DCDD2178B89600FE3A5A /* PrivateNetworkSettingViewModel.swift */; };
+		AE85B3AB21897CA8005919DE /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE85B3AA21897CA8005919DE /* BrowserViewController.swift */; };
+		AE85B3AD21897CC9005919DE /* BrowserViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE85B3AC21897CC9005919DE /* BrowserViewController.storyboard */; };
 		AE8C9FC6209EF85F00C616E1 /* DebugListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */; };
 		AE8C9FC8209EF87300C616E1 /* DebugListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */; };
 		AE979E8020D7B6F5009B353F /* Decimal+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */; };
@@ -389,6 +391,8 @@
 		AE76DCB12175CD4600FE3A5A /* PrivateNetworkSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrivateNetworkSettingViewController.storyboard; sourceTree = "<group>"; };
 		AE76DCB32175CD4C00FE3A5A /* PrivateNetworkSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateNetworkSettingViewController.swift; sourceTree = "<group>"; };
 		AE76DCDD2178B89600FE3A5A /* PrivateNetworkSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateNetworkSettingViewModel.swift; sourceTree = "<group>"; };
+		AE85B3AA21897CA8005919DE /* BrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewController.swift; sourceTree = "<group>"; };
+		AE85B3AC21897CC9005919DE /* BrowserViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BrowserViewController.storyboard; sourceTree = "<group>"; };
 		AE8C9FC5209EF85F00C616E1 /* DebugListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugListViewController.swift; sourceTree = "<group>"; };
 		AE8C9FC7209EF87300C616E1 /* DebugListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DebugListViewController.storyboard; sourceTree = "<group>"; };
 		AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extension.swift"; sourceTree = "<group>"; };
@@ -897,6 +901,15 @@
 			path = PrivateNetworkSetting;
 			sourceTree = "<group>";
 		};
+		AE85B3AE21897CDD005919DE /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+				AE85B3AC21897CC9005919DE /* BrowserViewController.storyboard */,
+				AE85B3AA21897CA8005919DE /* BrowserViewController.swift */,
+			);
+			path = Browser;
+			sourceTree = "<group>";
+		};
 		AE8C9FC9209EF87800C616E1 /* Debug */ = {
 			isa = PBXGroup;
 			children = (
@@ -1035,6 +1048,7 @@
 				AE0F70DD214796D5004DE7B6 /* GasSetting */,
 				AEEFC9B220FDD56600D49F89 /* UpdateServiceTerms */,
 				AE9ABA162112D65F00B8A063 /* SignTransaction */,
+				AE85B3AE21897CDD005919DE /* Browser */,
 				AE10DB322171EE8700D9F1BB /* TabBarController.swift */,
 			);
 			path = View;
@@ -1290,6 +1304,7 @@
 				AE6D4CEC20E20AEA007CF3C5 /* SelectAddressByPasteViewController.storyboard in Resources */,
 				AE76DCB22175CD4600FE3A5A /* PrivateNetworkSettingViewController.storyboard in Resources */,
 				AE6D4CC920E20723007CF3C5 /* BackupViewController.storyboard in Resources */,
+				AE85B3AD21897CC9005919DE /* BrowserViewController.storyboard in Resources */,
 				DE4C1A0020EA5A8100C20AE5 /* LatestTransactionListViewController.storyboard in Resources */,
 				AE76DCAD2175C87900FE3A5A /* NetworkSettingViewController.storyboard in Resources */,
 				AE69C85520E0E32600EB1293 /* HomeViewController.storyboard in Resources */,
@@ -1469,6 +1484,7 @@
 				AE1F8C1A208B8E3B0088A043 /* HUD+Rx.swift in Sources */,
 				AEC36ADF20C5855600FE4737 /* RealmManager.swift in Sources */,
 				AE3F7300207E6C8000482502 /* AppStatusRepository.swift in Sources */,
+				AE85B3AB21897CA8005919DE /* BrowserViewController.swift in Sources */,
 				DE0DDCF4207F977200735C3C /* SendBaseViewModel.swift in Sources */,
 				DE7682E0207F3C88004094BA /* SettingViewModel.swift in Sources */,
 				DE9272C6208AD54700E03AB9 /* TutorialTopView.swift in Sources */,

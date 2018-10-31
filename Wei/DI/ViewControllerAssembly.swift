@@ -54,6 +54,13 @@ final class ViewControllerAssembly: Assembly {
             return viewController
         }
         
+        // MARK: - BrowserViewController
+        
+        container.register(BrowserViewController.self) { resolver in
+            let viewController = UIStoryboard.instantiateViewController(of: BrowserViewController.self)
+            return viewController
+        }
+        
         // MARK: - CreateWalletViewController
         
         container.register(CreateWalletViewController.self) { resolver in

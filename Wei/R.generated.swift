@@ -40,7 +40,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 30 images.
+  /// This `R.image` struct is generated, and contains static references to 31 images.
   struct image {
     /// Image `bg_header`.
     static let bg_header = Rswift.ImageResource(bundle: R.hostingBundle, name: "bg_header")
@@ -84,6 +84,8 @@ struct R: Rswift.Validatable {
     static let icon_setting = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_setting")
     /// Image `icon_splash_logo`.
     static let icon_splash_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_splash_logo")
+    /// Image `icon_tabbrowser`.
+    static let icon_tabbrowser = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_tabbrowser")
     /// Image `icon_tabsetting`.
     static let icon_tabsetting = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_tabsetting")
     /// Image `icon_tabwallet`.
@@ -208,6 +210,11 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.icon_splash_logo, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "icon_tabbrowser", bundle: ..., traitCollection: ...)`
+    static func icon_tabbrowser(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_tabbrowser, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "icon_tabsetting", bundle: ..., traitCollection: ...)`
     static func icon_tabsetting(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_tabsetting, compatibleWith: traitCollection)
@@ -306,10 +313,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 27 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 28 storyboards.
   struct storyboard {
     /// Storyboard `BackupViewController`.
     static let backupViewController = _R.storyboard.backupViewController()
+    /// Storyboard `BrowserViewController`.
+    static let browserViewController = _R.storyboard.browserViewController()
     /// Storyboard `CreateWalletViewController`.
     static let createWalletViewController = _R.storyboard.createWalletViewController()
     /// Storyboard `CurrencySettingViewController`.
@@ -366,6 +375,11 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "BackupViewController", bundle: ...)`
     static func backupViewController(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.backupViewController)
+    }
+    
+    /// `UIStoryboard(name: "BrowserViewController", bundle: ...)`
+    static func browserViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.browserViewController)
     }
     
     /// `UIStoryboard(name: "CreateWalletViewController", bundle: ...)`
@@ -786,7 +800,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 44 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 45 localization keys.
     struct localizable {
       /// en translation: App will restart after switching a network
       /// 
@@ -796,6 +810,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, ja
       static let errorTitleNoConnection = Rswift.StringResource(key: "Error.Title.NoConnection", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
+      /// en translation: Browser
+      /// 
+      /// Locales: en, ja
+      static let commonBrowser = Rswift.StringResource(key: "Common.Browser", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ja"], comment: nil)
       /// en translation: Cancel
       /// 
       /// Locales: en, ja
@@ -977,6 +995,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, ja
       static func errorTitleNoConnection(_: Void = ()) -> String {
         return NSLocalizedString("Error.Title.NoConnection", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Browser
+      /// 
+      /// Locales: en, ja
+      static func commonBrowser(_: Void = ()) -> String {
+        return NSLocalizedString("Common.Browser", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Cancel
@@ -2275,6 +2300,15 @@ struct _R: Rswift.Validatable {
       
       let bundle = R.hostingBundle
       let name = "BackupViewController"
+      
+      fileprivate init() {}
+    }
+    
+    struct browserViewController: Rswift.StoryboardResourceWithInitialControllerType {
+      typealias InitialController = BrowserViewController
+      
+      let bundle = R.hostingBundle
+      let name = "BrowserViewController"
       
       fileprivate init() {}
     }
