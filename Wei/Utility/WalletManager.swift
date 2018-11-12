@@ -58,11 +58,11 @@ final class WalletManager: WalletManagerProtocol, Injectable {
     }
     
     func address() -> String {
-        return wallet.generateAddress()
+        return wallet.address()
     }
     
     func privateKey() -> String {
-        return wallet.dumpPrivateKey()
+        return wallet.privateKey().toHexString()
     }
     
     func sign(rawTransaction: RawTransaction) throws -> String {
@@ -70,10 +70,10 @@ final class WalletManager: WalletManagerProtocol, Injectable {
     }
     
     func sign(message: String) throws -> String {
-        return try wallet.sign(message: message)
+        return try wallet.personalSign(message: message)
     }
     
     func sign(hex: String) throws -> String {
-        return try wallet.sign(hex: hex)
+        return try wallet.personalSign(hex: hex)
     }
 }

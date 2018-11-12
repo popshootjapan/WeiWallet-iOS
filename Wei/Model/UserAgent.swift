@@ -19,6 +19,10 @@ struct UserAgent {
         return UserAgent(device: device.systemName, systemVersion: device.systemVersion, locale: locale, version: version, buildNumber: buildNumber)
     }
     
+    static var bundleIdentifier: String {
+        return Bundle.main.bundleIdentifier!
+    }
+    
     private static var device: UIDevice {
         return UIDevice.current
     }
