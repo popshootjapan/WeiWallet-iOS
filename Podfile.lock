@@ -5,10 +5,12 @@ PODS:
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
   - R.swift.Library (4.0.0)
+  - TrustWeb3Provider (0.1.7)
 
 DEPENDENCIES:
   - Crashlytics
   - R.swift
+  - TrustWeb3Provider (from `https://github.com/TrustWallet/trust-web3-provider`, commit `f4e0ebb1b8fa4812637babe85ef975d116543dfd`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -17,12 +19,23 @@ SPEC REPOS:
     - R.swift
     - R.swift.Library
 
+EXTERNAL SOURCES:
+  TrustWeb3Provider:
+    :commit: f4e0ebb1b8fa4812637babe85ef975d116543dfd
+    :git: https://github.com/TrustWallet/trust-web3-provider
+
+CHECKOUT OPTIONS:
+  TrustWeb3Provider:
+    :commit: f4e0ebb1b8fa4812637babe85ef975d116543dfd
+    :git: https://github.com/TrustWallet/trust-web3-provider
+
 SPEC CHECKSUMS:
   Crashlytics: 7f2e38d302d9da96475b3d64d86fb29e31a542b7
   Fabric: a2917d3895e4c1569b9c3170de7320ea1b1e6661
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
+  TrustWeb3Provider: 50fa391bdf170feb43dd4419992931510a5751d8
 
-PODFILE CHECKSUM: 9e421cb3c4cda97e9d4dc8f48876ca4e2fdfce93
+PODFILE CHECKSUM: d7fbc6044fa141d58b1fac468d61c4b5a03af29c
 
 COCOAPODS: 1.5.0
