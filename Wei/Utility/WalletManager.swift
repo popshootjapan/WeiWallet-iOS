@@ -70,10 +70,10 @@ final class WalletManager: WalletManagerProtocol, Injectable {
     }
     
     func sign(message: String) throws -> String {
-        return try wallet.sign(message: message)
+        return try wallet.personalSign(message: message)
     }
     
     func sign(hex: String) throws -> String {
-        return try wallet.sign(hex: hex)
+        return try wallet.personalSign(hex: hex)
     }
 }
