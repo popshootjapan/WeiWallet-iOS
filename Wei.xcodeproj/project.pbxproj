@@ -140,6 +140,7 @@
 		AE979E8220D8BD8F009B353F /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E8120D8BD8F009B353F /* Amount.swift */; };
 		AE979E8420D8D009009B353F /* Fiat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E8320D8D009009B353F /* Fiat.swift */; };
 		AE979E8620D8DE73009B353F /* AddressValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E8520D8DE73009B353F /* AddressValidator.swift */; };
+		AE997D352199537D00763A1F /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE997D342199537D00763A1F /* Logger.swift */; };
 		AE9ABA132112D65500B8A063 /* SignTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ABA122112D65500B8A063 /* SignTransactionViewController.swift */; };
 		AE9ABA152112D65A00B8A063 /* SignTransactionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9ABA142112D65A00B8A063 /* SignTransactionViewController.storyboard */; };
 		AE9ABA182112DA7400B8A063 /* SignTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ABA172112DA7400B8A063 /* SignTransactionViewModel.swift */; };
@@ -399,6 +400,7 @@
 		AE979E8120D8BD8F009B353F /* Amount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amount.swift; sourceTree = "<group>"; };
 		AE979E8320D8D009009B353F /* Fiat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fiat.swift; sourceTree = "<group>"; };
 		AE979E8520D8DE73009B353F /* AddressValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressValidator.swift; sourceTree = "<group>"; };
+		AE997D342199537D00763A1F /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		AE9ABA122112D65500B8A063 /* SignTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignTransactionViewController.swift; sourceTree = "<group>"; };
 		AE9ABA142112D65A00B8A063 /* SignTransactionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignTransactionViewController.storyboard; sourceTree = "<group>"; };
 		AE9ABA172112DA7400B8A063 /* SignTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignTransactionViewModel.swift; sourceTree = "<group>"; };
@@ -707,6 +709,7 @@
 				AE43C3A720D10E880050BDDE /* UserDefaultsStore.swift */,
 				AE0D464F20F73FB500E6E8A7 /* DeepLinkAction.swift */,
 				AE0D465120F740DF00E6E8A7 /* DeepLinkActionHandler.swift */,
+				AE997D342199537D00763A1F /* Logger.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -1562,6 +1565,7 @@
 				AEC4C92921352C5B0053E404 /* QRImageView.swift in Sources */,
 				AE3F72FE207E6BD100482502 /* UserAgent.swift in Sources */,
 				DE624F912072482800840B06 /* SendConfirmationViewController.swift in Sources */,
+				AE997D352199537D00763A1F /* Logger.swift in Sources */,
 				DE624F85207246F700840B06 /* SelectAddressByPasteViewController.swift in Sources */,
 				AEEFC9B120FDD50800D49F89 /* UpdateServiceTermsViewModel.swift in Sources */,
 				AED49F5420E4D18800C2AF33 /* CurrencySettingViewCell.swift in Sources */,
