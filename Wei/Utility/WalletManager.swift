@@ -18,9 +18,9 @@ protocol WalletManagerProtocol {
     
     func sign(rawTransaction: RawTransaction) throws -> String
     
-    func sign(message: String) throws -> String
+    func personalSign(message: String) throws -> String
     
-    func sign(hex: String) throws -> String
+    func personalSign(hex: String) throws -> String
 }
 
 final class WalletManager: WalletManagerProtocol, Injectable {
@@ -69,11 +69,11 @@ final class WalletManager: WalletManagerProtocol, Injectable {
         return try wallet.sign(rawTransaction: rawTransaction)
     }
     
-    func sign(message: String) throws -> String {
+    func personalSign(message: String) throws -> String {
         return try wallet.personalSign(message: message)
     }
     
-    func sign(hex: String) throws -> String {
+    func personalSign(hex: String) throws -> String {
         return try wallet.personalSign(hex: hex)
     }
 }

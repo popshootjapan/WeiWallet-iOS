@@ -59,7 +59,7 @@ final class CreateWalletViewModel: InjectableViewModel {
                     return weakSelf.registrationRepository
                         .signUp(
                             address: weakSelf.walletManager.address(),
-                            sign: try weakSelf.walletManager.sign(message: "Welcome to Wei wallet!"),
+                            sign: try weakSelf.walletManager.personalSign(message: "Welcome to Wei wallet!"),
                             token: deviceToken
                         )
                         .asObservable()

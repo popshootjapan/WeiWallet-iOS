@@ -47,13 +47,6 @@ extension WKWebViewConfiguration {
         }
         
         Trust.init(rpcURL, {
-        getAccounts: function (cb) { cb(null, [addressHex]) },
-        processTransaction: function (tx, cb){
-        console.log('signing a transaction', tx)
-        const { id = 8888 } = tx
-        Trust.addCallback(id, cb)
-        webkit.messageHandlers.signTransaction.postMessage({"name": "signTransaction", "object": tx, id: id})
-        },
         signMessage: function (msgParams, cb) {
         const { data } = msgParams
         const { id = 8888 } = msgParams
@@ -68,13 +61,6 @@ extension WKWebViewConfiguration {
         Trust.addCallback(id, cb)
         webkit.messageHandlers.signPersonalMessage.postMessage({"name": "signPersonalMessage", "object": { data }, id: id})
         },
-        signTypedMessage: function (msgParams, cb) {
-        const { data } = msgParams
-        const { id = 8888 } = msgParams
-        console.log("signing a typed message", msgParams)
-        Trust.addCallback(id, cb)
-        webkit.messageHandlers.signTypedMessage.postMessage({"name": "signTypedMessage", "object": { data }, id: id})
-        }
         }, {
         address: addressHex,
         networkVersion: chainID

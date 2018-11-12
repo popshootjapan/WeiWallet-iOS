@@ -80,7 +80,7 @@ final class RestoreWalletViewModel: InjectableViewModel {
                 
                 let source = weakSelf.deviceChecker.deviceToken.flatMap { deviceToken -> Observable<String> in
                     return weakSelf.registrationRepository
-                        .signUp(address: wallet.address(), sign: try wallet.sign(message: "Welcome to Wei wallet!"), token: deviceToken)
+                        .signUp(address: wallet.address(), sign: try wallet.personalSign(message: "Welcome to Wei wallet!"), token: deviceToken)
                         .asObservable()
                 }
                 

@@ -75,7 +75,7 @@ final class DeepLinkActionHandler: DeepLinkActionHandlerProtocol, Injectable {
         
         let signedMessage: String?
         do {
-            signedMessage = try walletManager.sign(hex: message)
+            signedMessage = try walletManager.personalSign(hex: message)
         } catch let error {
             fatalError("Failed to sign a message: \(error.localizedDescription)")
         }
