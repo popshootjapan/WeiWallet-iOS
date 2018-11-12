@@ -141,6 +141,7 @@
 		AE979E8420D8D009009B353F /* Fiat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E8320D8D009009B353F /* Fiat.swift */; };
 		AE979E8620D8DE73009B353F /* AddressValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE979E8520D8DE73009B353F /* AddressValidator.swift */; };
 		AE997D352199537D00763A1F /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE997D342199537D00763A1F /* Logger.swift */; };
+		AE997D3721995F7A00763A1F /* WKWebViewConfiguration+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE997D3621995F7A00763A1F /* WKWebViewConfiguration+Extension.swift */; };
 		AE9ABA132112D65500B8A063 /* SignTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ABA122112D65500B8A063 /* SignTransactionViewController.swift */; };
 		AE9ABA152112D65A00B8A063 /* SignTransactionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9ABA142112D65A00B8A063 /* SignTransactionViewController.storyboard */; };
 		AE9ABA182112DA7400B8A063 /* SignTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9ABA172112DA7400B8A063 /* SignTransactionViewModel.swift */; };
@@ -401,6 +402,7 @@
 		AE979E8320D8D009009B353F /* Fiat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fiat.swift; sourceTree = "<group>"; };
 		AE979E8520D8DE73009B353F /* AddressValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressValidator.swift; sourceTree = "<group>"; };
 		AE997D342199537D00763A1F /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		AE997D3621995F7A00763A1F /* WKWebViewConfiguration+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WKWebViewConfiguration+Extension.swift"; sourceTree = "<group>"; };
 		AE9ABA122112D65500B8A063 /* SignTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignTransactionViewController.swift; sourceTree = "<group>"; };
 		AE9ABA142112D65A00B8A063 /* SignTransactionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignTransactionViewController.storyboard; sourceTree = "<group>"; };
 		AE9ABA172112DA7400B8A063 /* SignTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignTransactionViewModel.swift; sourceTree = "<group>"; };
@@ -677,6 +679,7 @@
 				AE1F8C282090B5300088A043 /* Error+Extension.swift */,
 				AE3EB60020AC7D1800D61CE6 /* String+Extension.swift */,
 				AE979E7F20D7B6F5009B353F /* Decimal+Extension.swift */,
+				AE997D3621995F7A00763A1F /* WKWebViewConfiguration+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1628,6 +1631,7 @@
 				AE3EB5FF20A83A9000D61CE6 /* Gas.swift in Sources */,
 				1AEA0A91205978250068C2E1 /* KeychainStore.swift in Sources */,
 				AE0F70DF214796E8004DE7B6 /* GasSettingViewModel.swift in Sources */,
+				AE997D3721995F7A00763A1F /* WKWebViewConfiguration+Extension.swift in Sources */,
 				DE624F892072478600840B06 /* SelectAddressByPasteViewModel.swift in Sources */,
 				AE171B022081BB3200212494 /* UIView+Extension.swift in Sources */,
 				AE1F8C292090B5300088A043 /* Error+Extension.swift in Sources */,
